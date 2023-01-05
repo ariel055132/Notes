@@ -25,10 +25,10 @@ Output: [8,9,9,9,0,0,0,1]
 ### Pseudocode
 
 - Initialize current node to dummy head of the returning list.
-- Initialize carry to 00.
+- Initialize carry to 0.
 - Loop through lists l1 and l2 until you reach both ends and carry is 0.
-  - Set x to node l1*l*1's value. If l1 has reached the end of l1, set to 0.
-  - Set y to node l2*l*2's value. If l2 has reached the end of l2, set to 0.
+  - Set x to node l1's value. If l1 has reached the end of l1, set to 0.
+  - Set y to node l2's value. If l2 has reached the end of l2, set to 0.
   - Set sum = x + y + carry
   - Update carry = sum / 10.
   - Create a new node with the digit value of (sum mod 10) and set it to current node's next, then advance current node to next.
