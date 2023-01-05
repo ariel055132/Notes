@@ -55,6 +55,8 @@ public class Solution {
 * Both start at head node, fast is twice as fast as slow.
 * If fast reaches end, it means there is no cycle.
 * Otherwise it will catch up to slow pointer eventually.
+* Time Complexity: O(N)
+* Space Complexity: O(1)
 
 ```java
 public class Solution {
