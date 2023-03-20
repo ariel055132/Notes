@@ -109,5 +109,7 @@ class Solution150 {
 ```
 
 * Time Complexity: O(n), where n is the length of the array.
+  * We need to do the linear search, and process all operators.
+  * Therefore, the total cost is proportional to the length of the input array.
 * Space complexity: O(n) / O(n/2)
-  * In the worst case, the stack will have all the numbers on it at the same time, 
+  * In the worst case, the stack will have all the numbers on it at the same time. This is never more than half the length of the input array.
