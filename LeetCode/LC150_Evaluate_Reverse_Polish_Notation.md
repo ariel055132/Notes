@@ -54,15 +54,14 @@ Explanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
 
 
 
-## Code
+## Approach 1: Using stack
 
 * Loop through the whole expression.
   1. If it is number/operand, push it to the stack
   2. If it is operator, then pop up two number, calculate the result, and push back the result to stack.
+* PsuedoCode are shown at the following.
 
-* PseudoCode
-
-```text
+```
 stack = new Stack()
 for each token in tokens:
 	if token is a number:
@@ -76,6 +75,8 @@ return stack.pop()
 ```
 
 
+
+## Approach 1: Code
 
 * Acutal Code for the question
 
