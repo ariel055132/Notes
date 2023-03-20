@@ -60,6 +60,25 @@ Explanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
   1. If it is number/operand, push it to the stack
   2. If it is operator, then pop up two number, calculate the result, and push back the result to stack.
 
+* PseudoCode
+
+```text
+stack = new Stack()
+for each token in tokens:
+	if token is a number:
+		stack.push(token)
+	else token is operator (+-*/):
+		number_2 = stack.pop()
+		number_1 = stack.pop()
+		result = apply_operator(token, number_1, number_2)
+		stack.push(result)
+return stack.pop()
+```
+
+
+
+* Acutal Code for the question
+
 ```java
 class Solution150 {
     public int evalRPN(String[] tokens) {
@@ -88,3 +107,6 @@ class Solution150 {
 }
 ```
 
+* Time Complexity: O(n), where n is the length of the array.
+* Space complexity: O(n) / O(n/2)
+  * In the worst case, the stack will have all the numbers on it at the same time, 
