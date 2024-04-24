@@ -65,5 +65,25 @@ list.replaceAll(str -> {
 });
 ```
 
+## sort()
+* 方法簽名為：void sort(Comparator<? super E> c)
+* 作用：拖過方法c的比較方法對Container的element進行Sorting，並儲存sorting後的結果
+```java
+// Example：假設有一個String List，需要按照String中每一個element的長度對List進行排序
+// for loop
+Collections.sort(list, new Comparator<String>() {
+            @Override
+            public int compare(String str1, String str2) {
+                // 也可以這樣寫：return str1.length() - str2.length();
+                return Integer.compare(str1.length(), str2.length());
+            }
+});
+// lamdba
+list.sort((str1, str2) -> {
+    // list.sort((str1, str2) -> str1.length()-str2.length());
+    return Integer.compare(str1.length(), str2.length());
+});
+```
+
 # Reference
 1. https://objcoding.com/2019/03/04/lambda/#lambda-and-anonymous-classesi
