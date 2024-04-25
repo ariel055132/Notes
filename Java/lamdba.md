@@ -5,6 +5,7 @@
 # lamdba in Java Collection Framework
 * 為引入Lamdba Expression，Java 8 新增了 java.util.function 包，
 
+# Collections的方法
 ## forEach()
 * 方法簽名為：void forEach(Consumer<? super E> action)
 * Consumer只是一個function接口，裡面只有一個待實作方法void accept(T t)
@@ -85,5 +86,45 @@ list.sort((str1, str2) -> {
 });
 ```
 
+# Map的方法
+## forEach()
+* 其實和Collections的forEach()方法差不多，只是Container從List換成Map
+```java
+// Example：假設有一個key為number，value為char/string的Map，要輸出Map中所有mapping關係
+// for loop
+Map<Integer, String> map = new HashMap<>();
+    map.put(1, "one");
+    map.put(2, "two");
+    map.put(3, "three");
+    // for loop
+    for (Map.Entry<Integer, String> entry : map.entrySet()) {
+        System.out.println(entry.getKey() + " = " + entry.getValue());
+    }
+    // lamdba
+    list.forEach((k, v) -> System.out.println(k + " = " + v));
+
+```
+
+## getOrDefault(key, default value)
+* 方法簽名：V getOrDefault(Object key, V defaultValue)
+* 作用：按照給定的Key查詢Map中對應的Value，若沒有找到則return default value
+* 
+```java
+// Example: 假設有一個key為number，value為char/string的Map，需要輸出Key值為4的value，若沒有的話，輸出No value
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "one");
+map.put(2, "two");
+map.put(3, "three");
+// 以往作法：containsKey() + if-else 進行判斷
+if (map.containsKey(4)) {
+    System.out.println(map.get(4));
+} else {
+    System.out.println("No Value");
+}
+// 使用getOrDefault()   
+System.out.println(map.getOrDefault(3, "No value")); // three
+System.out.println(map.getOrDefault(4, "No value")); // No value
+
+```
 # Reference
 1. https://objcoding.com/2019/03/04/lambda/#lambda-and-anonymous-classesi
