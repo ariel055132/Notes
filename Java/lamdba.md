@@ -108,7 +108,7 @@ Map<Integer, String> map = new HashMap<>();
 ## getOrDefault(key, default value)
 * 方法簽名：V getOrDefault(Object key, V defaultValue)
 * 作用：按照給定的Key查詢Map中對應的Value，若沒有找到則return default value
-* 
+* 與get的差別：get不會處理空值，但getOrDefault會處理空值
 ```java
 // Example: 假設有一個key為number，value為char/string的Map，需要輸出Key值為4的value，若沒有的話，輸出No value
 Map<Integer, String> map = new HashMap<>();
@@ -124,7 +124,34 @@ if (map.containsKey(4)) {
 // 使用getOrDefault()   
 System.out.println(map.getOrDefault(3, "No value")); // three
 System.out.println(map.getOrDefault(4, "No value")); // No value
-
 ```
+
+## putIfAbsent(key, default value)
+* 方法簽名：V putIfAbsent(K key, V value)
+* 若map不存在key值，或者key值的mapping 值為null時，將value指定的值放入到Map中，否則不對Map進行修改
+* 與Put的相同之處：如果之前沒有添加過相同的key-value，put()和putIfAbsent()兩種方法所return的值均為null
+* 與Put的不同：如果以前有添加過相同的key-value，put會用新的value replace調原本的value，並return 原本的value；但putIfAbsent則不會用新的value進行replace。
+```java
+Map<Integer, String> map = new HashMap<>();
+System.out.println(map.put(1, "one")); // null 
+System.out.println(map.get(1)); // one
+
+System.out.println();
+
+System.out.println(map.put(1, "one V2")); // one
+System.out.println(map.get(1)); // one V2
+
+System.out.println();
+
+System.out.println(map.putIfAbsent(1, "one V3")); // one V2
+System.out.println(map.get(1)); // one V2
+
+System.out.println();
+
+System.out.println(map.putIfAbsent(2, "two")); // null
+System.out.println(map.get(2)); // two
+```
+
 # Reference
 1. https://objcoding.com/2019/03/04/lambda/#lambda-and-anonymous-classesi
+2. https://blog.csdn.net/cnds123321/article/details/113793574
