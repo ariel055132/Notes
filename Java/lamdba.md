@@ -152,6 +152,19 @@ System.out.println(map.putIfAbsent(2, "two")); // null
 System.out.println(map.get(2)); // two
 ```
 
+# Stream
+* 中間操作 (intermediate operations):
+* 結束操作 (terminal operations): 完成中間操作的同時，return stream的最終結果。計算完成後，該stream就會失效。
+  * forEach(), **collect()**, count(), reduce()
+* 可以透過看method的return value來判斷該method時中間操作，結束操作
+  * 若return value為stream，則大多數為中間操作；否則是結束操作
+
+## filter()
+* 方法簽名：Stream<T>filter(Predicate<? super T> predicate)
+* 目的：return 一個只滿足predicate條件元素的Stream
+* 作用：過濾stream中與設定條件相符的元素，並將相關結果組成一個新的stream
+
 # Reference
 1. https://objcoding.com/2019/03/04/lambda/#lambda-and-anonymous-classesi
 2. https://blog.csdn.net/cnds123321/article/details/113793574
+3. https://javarush.com/tw/groups/posts/tw.3974.177java-8--java-stream-
