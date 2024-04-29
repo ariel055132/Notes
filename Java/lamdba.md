@@ -163,6 +163,15 @@ System.out.println(map.get(2)); // two
 * 方法簽名：Stream<T>filter(Predicate<? super T> predicate)
 * 目的：return 一個只滿足predicate條件元素的Stream
 * 作用：過濾stream中與設定條件相符的元素，並將相關結果組成一個新的stream
+```java
+// 需求：保留長度為3的string
+List<String> list = new ArrayList<>(Arrays.asList("I", "Love", "You", "Too"));
+list = list.stream().filter(str -> str.length() == 3).collect(Collectors.toList());
+list.forEach(str -> System.out.println(str)); // You, Too
+```
+* filter是中間操作，因此若只調用filter()將不會有實際計算，代表不會輸出任何訊息。
+* 因此使用collect()來對filter後的結果進行收集。
+* 也因為collect()是結束操作，因此它可以用來輸出訊息。
 
 # Reference
 1. https://objcoding.com/2019/03/04/lambda/#lambda-and-anonymous-classesi
