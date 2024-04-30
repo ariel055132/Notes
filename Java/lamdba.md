@@ -170,8 +170,29 @@ list = list.stream().filter(str -> str.length() == 3).collect(Collectors.toList(
 list.forEach(str -> System.out.println(str)); // You, Too
 ```
 * filter是中間操作，因此若只調用filter()將不會有實際計算，代表不會輸出任何訊息。
-* 因此使用collect()來對filter後的結果進行收集。
+* 因此使用collect()來對filter後的stream進行收集。
 * 也因為collect()是結束操作，因此它可以用來輸出訊息。
+
+## distinct()
+* 方法簽名：Stream<T> distinct()
+* 作用：過濾重複出現的element，並return一個新的stream
+```java
+List<String> list = new ArrayList<>(Arrays.asList("I", "Love", "You", "Too", "Too"));
+list = list.stream().distinct().collect(Collectors.toList());
+list.forEach(str -> System.out.println(str));
+```
+
+## sorted()
+* 方法簽名：Stream<T>　sorted() / Stream<T>　sorted(Comparator<? super T> comparator)
+* 對container裡面的元素進行排序，可使用自然順序排序，也可自定義一個排序器進行排序
+* 前者方法簽名為使用自然順序進行排序，後者則是定義一個排序器
+```java
+// 使用自定義的排序器，對element的長度進行從小到大的排序
+List<String> list = new ArrayList<>(Arrays.asList("I", "Love", "You", "Too"));
+list = list.stream().sorted((str1, str2) -> Integer.compare(str1.length(), str2.length())).collect(Collectors.toList());
+list.forEach(str -> System.out.println(str)); 
+
+```
 
 # Reference
 1. https://objcoding.com/2019/03/04/lambda/#lambda-and-anonymous-classesi
