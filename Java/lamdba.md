@@ -200,7 +200,18 @@ list.forEach(str -> System.out.println(str));
 
 ## map()
 * 方法簽名為：<R> Stream<R> map(Function<? super T,? extends R> mapper)
-* 作用：對當前的Stream中的每一個元素進行轉換
+* 作用：對當前的Stream中的每一個element
+* 總結：對當前的Stream中的每一個element進行轉換
+```java
+List<String> list = new ArrayList<>(Arrays.asList("I", "Love", "You", "Too"));
+list = list.stream().map(str -> str.toUpperCase()).collect(Collectors.toList());
+list.forEach(str -> System.out.println(str));
+```
+* 上述的程式將會把list中的所有element轉為uppercase(大寫)，然後在print出來
+
+## flatmap()
+* 方法簽名為：<R> Stream<R> flatMap(Function<? super T,? extends Stream<? extends R>> mapper)
+* 作用：對每個element執行mapper指定的操作，並把mapper return的stream的所有element組成一個新的stream
 ```java
 List<List<Integer>> list = new ArrayList<>();
 list.add(Arrays.asList(1, 2, 3));
