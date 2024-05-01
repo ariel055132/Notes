@@ -181,18 +181,34 @@ List<String> list = new ArrayList<>(Arrays.asList("I", "Love", "You", "Too", "To
 list = list.stream().distinct().collect(Collectors.toList());
 list.forEach(str -> System.out.println(str));
 ```
+* 以上的Code會將其中一個Too過濾掉
+* 只會Output："I", "Love", "You", "Too"
 
 ## sorted()
 * 方法簽名：Stream<T>　sorted() / Stream<T>　sorted(Comparator<? super T> comparator)
 * 對container裡面的元素進行排序，可使用自然順序排序，也可自定義一個排序器進行排序
 * 前者方法簽名為使用自然順序進行排序，後者則是定義一個排序器
 ```java
-// 使用自定義的排序器，對element的長度進行從小到大的排序
+// 使用自定義的排序器，對element的長度進行從小到大(ascending)的排序
 List<String> list = new ArrayList<>(Arrays.asList("I", "Love", "You", "Too"));
 list = list.stream().sorted((str1, str2) -> Integer.compare(str1.length(), str2.length())).collect(Collectors.toList());
 list.forEach(str -> System.out.println(str)); 
-
+// 進行從大到小(descending)的排序
+list = list.stream().sorted((str1, str2) -> Integer.compare(str2.length(), str1.length())).collect(Collectors.toList());
+list.forEach(str -> System.out.println(str));
 ```
+
+## map()
+* 方法簽名為：<R> Stream<R> map(Function<? super T,? extends R> mapper)
+* 作用：對當前的Stream中的每一個元素進行轉換
+```java
+List<List<Integer>> list = new ArrayList<>();
+list.add(Arrays.asList(1, 2, 3));
+list.add(Arrays.asList(4, 5));
+list.stream().flatMap(intArray -> intArray.stream())
+            .forEach(i -> System.out.println(i));
+```
+* 將上述的2D ArrayList中的每一個element打印出來
 
 # Reference
 1. https://objcoding.com/2019/03/04/lambda/#lambda-and-anonymous-classesi
