@@ -27,9 +27,13 @@
 3. ouka_gufeng_s1 **(model)**
 4. 7 **(CFG scale)**
 5. 25 **(Steps)**
-6. UniPC **(Sampler)**
+6. UniPC **(Sampler 優化器)**
 7. 1816323143 **(Seed)**
 8. 2 **(Clip skip)**
+9. R-ESRGAN 4x+ **(Hires.fix-Upscaler 放大算法)**
+10. 20 **(Hires.fix-Hires steps)**
+11. 0.7 **(Hires.fix-Denoising strength)**
+12. 2 **(Hires.fix-Upscale by)** 
 
 # Prompts Tested 4
 
