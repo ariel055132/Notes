@@ -11,7 +11,7 @@
 * Consumer只是一個function接口，裡面只有一個待實作方法void accept(T t)
 * 作用：對Container中的每一個element執行action
 ```java
-// Example: 假設有一個String的List，需要打印出其中長度>3的String
+// Example: 假設有一個String的List，需要打印出其中長度 >3 的String
 // for loop 實現
 ArrayList<String> list = new ArrayList<>(Arrays.asList("I", "love", "you", "too"));
 for(String str : list){
@@ -68,7 +68,7 @@ list.replaceAll(str -> {
 
 ## sort()
 * 方法簽名為：void sort(Comparator<? super E> c)
-* 作用：拖過方法c的比較方法對Container的element進行Sorting，並儲存sorting後的結果
+* 作用：透過方法c的比較方法對Container的element進行Sorting，並儲存sorting後的結果
 ```java
 // Example：假設有一個String List，需要按照String中每一個element的長度對List進行排序
 // for loop
@@ -108,7 +108,7 @@ Map<Integer, String> map = new HashMap<>();
 ## getOrDefault(key, default value)
 * 方法簽名：V getOrDefault(Object key, V defaultValue)
 * 作用：按照給定的Key查詢Map中對應的Value，若沒有找到則return default value
-* 與get的差別：get不會處理空值，但getOrDefault會處理空值
+* 與get的差別：get不會處理空值，但getOrDefault會處理空值(deafault value)
 ```java
 // Example: 假設有一個key為number，value為char/string的Map，需要輸出Key值為4的value，若沒有的話，輸出No value
 Map<Integer, String> map = new HashMap<>();
@@ -154,6 +154,7 @@ System.out.println(map.get(2)); // two
 
 # Stream
 * 中間操作 (intermediate operations):
+  * concat(), distinct(), filter()
 * 結束操作 (terminal operations): 完成中間操作的同時，return stream的最終結果。計算完成後，該stream就會失效。
   * forEach(), **collect()**, count(), reduce()
 * 可以透過看method的return value來判斷該method時中間操作，結束操作
