@@ -5,24 +5,20 @@
 
 
 ## Authentication Methods
-
+* There are several ways to login to AWS IAM.
 1. API / CLI
-   * Access Keys
+   * Access Keys (Combined with Access Keys ID, Secret access keys, aka. long term credentials) -> IAM -> AWS API
 2. Console
-   * Username, Password
-
-
+   * Username, Password, MFA Token (Optional) -> IAM -> Management Console.
+* Multi Factor Authentication
+  * Use multiple alternative to login (such as password, biometric, physical device...)
 
 ## Terminology
-
 1. Account Root User
-
    * User has full permissions
-
    * Avoid using it + enable MFA (multifactor authentication)
 
 2. Users
-
    * up to 5000 individual user account can be created.
    * Have no permissions by default
 
