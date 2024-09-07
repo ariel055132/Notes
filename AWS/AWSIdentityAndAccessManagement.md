@@ -34,6 +34,12 @@
 5. (identity-based) Policies
    * defines the permissions for the identities or resources they are associated with.
 
+## Types of policy
+1. Identity-based policy: attached to users, groups, or roles
+2. Resource-based policy: attached to a resource; define permissions for a principal/user accessing the resource
+3. IAM permission boundaries: set the maximum permissions an identity-based policy can grant an IAM entity
+4. AWS Organizations services control policies (SCP): specify the maximum permissions for an organization or OU
+
 ## Permission Boundaries
 * Define the maximum permissions that are available to an IAM entity via an identity based policy
 * Prevent **privilege escalation attack**
@@ -64,3 +70,8 @@
    * Checking whether *user* can have policies to use the resources via **identity-based policy**
    * Checking whether *resource* have the rights to use via **resource-based policy**
 4. Determining whether the request is allowed or denied
+
+## Determination Rules
+1. By default, all requests are implicitly denied (through the roor user has full access)
+2. An explicit allow in an identity-based or resources-based policy overrides this default
+3. If a permissions boundary, Organization SCP, or session policy is present, it might override the allow with an implicit deny
