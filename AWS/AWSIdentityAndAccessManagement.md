@@ -102,3 +102,6 @@
 * **Effect** is either *allow* or *deny*, we wanna deny something or allow it.
 * **Action** lists the specific resource operations that the policy affects. (whay specifically we want to allow or deny)
 * **Resource** lists the specific resources that the policy applies to.
+
+## AWS IAM Best practices
+1. Require human users to use federation with an identity provider to access AWS using **temporary credentials**. 
