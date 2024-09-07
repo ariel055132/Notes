@@ -75,3 +75,30 @@
 1. By default, all requests are implicitly denied (through the roor user has full access)
 2. An explicit allow in an identity-based or resources-based policy overrides this default
 3. If a permissions boundary, Organization SCP, or session policy is present, it might override the allow with an implicit deny
+
+## IAM policy structure
+* Written as *json*
+```json
+{
+   "Version": "2012-10-17",
+   "Statement": [
+      {
+         "Effect": "Allow",
+         "Action": [
+            "s3:*",
+            "dynamodb:GetItem"
+         ],
+         "Resource": [
+            "resource1",
+            "resource2"
+         ]
+      }
+   ]
+}
+```
+* Statement: a block of code and has a series of individual **actions**, effects **resources**.
+* All properties (Action, Resource) in a single statement block are evaluated together
+* A policy may contain more than one permission statement.
+* **Effect** is either *allow* or *deny*, we wanna deny something or allow it.
+* **Action** lists the specific resource operations that the policy affects. (whay specifically we want to allow or deny)
+* **Resource** lists the specific resources that the policy applies to.
