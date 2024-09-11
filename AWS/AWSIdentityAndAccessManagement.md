@@ -54,16 +54,18 @@
    * Username, Password, MFA Token (Optional) -> IAM -> Management Console.
 * Multi Factor Authentication (MFA)
   * Use multiple alternative to login (such as password, biometric, physical device...)
+  * ~Something you have
 
 ## Permission Boundaries
 * Define the maximum permissions that are available to an IAM entity via an identity based policy
 * Prevent **privilege escalation attack**
-  * Vertical attacks: An attacker gains access to an account with the intent to perform actions as that user. (直接獲得帳號的Access權限，並以該用戶的身分進行操作)
-  * Horizontal attacks: Gain access to accounts with limited permissions requiring an escalation of privileges, such as to an administor role, to perform the desired actions (透過獲取/新增具有一定權限的帳戶，並通過提升他們的權限來執行攻擊)
+  * *Vertical attacks*: An attacker gains access to an account with the intent to perform actions as that user. (直接獲得帳號的Access權限，並以該用戶的身分進行操作)
+  * *Horizontal attacks*: Gain access to accounts with limited permissions requiring an escalation of privileges, such as to an administor role, to perform the desired actions (透過獲取/新增具有一定權限的帳戶，並通過提升他們的權限來執行攻擊)
 
 ## Policy Evaluation
 * What is happening when somebody tries to make access to a particular resource
-* Why evaluation is need? All permissions are not allowed by default, everything is denied.
+* Why evaluation is need? 
+  * All permissions are not allowed by default, everything is denied before setting up policy to allow some of the resource access / application activation.
 1. Any **explicit deny** ?
    * explicit deny: override any allow.
    * Yes -> Deny
