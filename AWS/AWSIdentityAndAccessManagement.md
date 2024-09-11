@@ -5,17 +5,7 @@
 * First, We need to login to AWS IAM via console, CLI, and API. We need to **authenticate** ourself. (Showing who we are, trying to prove who we are.)
 * After login in, we can create user, role, policy......
 * After that, when we are trying to make a request for an action or operations on an AWS resource. AWS determines whether to **authorize** the request (deny/allow)
-
-
-
-## Authentication Methods
-* There are several ways to login to AWS IAM.
-1. API / CLI
-   * Access Keys (Combined with Access Keys ID, Secret access keys, aka. long term credentials) -> IAM -> AWS API
-2. Console
-   * Username, Password, MFA Token (Optional) -> IAM -> Management Console.
-* Multi Factor Authentication
-  * Use multiple alternative to login (such as password, biometric, physical device...)
+* **To conclude, the user need to authenticate himself, then perform authorized operations in the console.**
 
 ## Terminology
 1. Principal
@@ -37,7 +27,7 @@
 5. Roles
    * An identity which has permissions assigned to it via policy
    * For example, if you are a development role, you can take on the development permissions.
-6. (identity-based) Policies
+6. Policies
    * defines the permissions for the identities or resources they are associated with.
    * For more, watch Types of policy
 
@@ -54,6 +44,16 @@
 * IAM user
    1. Use Friendly name to login + AWS account ID or alias
    2. Limited permissions (Can be limited via policy)
+
+## Authentication Methods
+* Before perform operations in AWS console, we need to authenticate ourselfes.
+* There are several ways to login to AWS IAM as the following
+1. API / CLI
+   * Access Keys (Combined with Access Keys ID, Secret access keys, aka. long term credentials) -> IAM -> AWS API
+2. Console
+   * Username, Password, MFA Token (Optional) -> IAM -> Management Console.
+* Multi Factor Authentication (MFA)
+  * Use multiple alternative to login (such as password, biometric, physical device...)
 
 ## Permission Boundaries
 * Define the maximum permissions that are available to an IAM entity via an identity based policy
