@@ -1,6 +1,10 @@
 # AWS Identity and Access Management (IAM)
 
-## Objectives
+## What is IAM?
+* A place allows us to create user, role, federated user, make application before making a request for an action or operation on an AWS resource.
+* First, We need to login to AWS IAM via console, CLI, and API. We need to **authenticate** ourself. (Showing who we are, trying to prove who we are.)
+* After login in, we can create user, role, policy......
+* After that, when we are trying to make a request for an action or operations on an AWS resource. AWS determines whether to **authorize** the request (deny/allow)
 
 
 
@@ -14,31 +18,42 @@
   * Use multiple alternative to login (such as password, biometric, physical device...)
 
 ## Terminology
-1. Account Root User
+1. Principal
+   * A person/user or application that can make a request for an *action* or *operation* on an AWS resource.
+2. Account Root User
    * User has full permissions
+   * Cannot restrict most 
    * Avoid using it + enable MFA (multifactor authentication)
-2. Users
+3. Users
    * up to 5000 individual user account can be created.
    * Have no permissions by default
-
    * The users gains the *permissions* applied to the *group* through the *policy*.
-   * *Friendly name* : 
-   * *Amazon resources name* : 
-
-3. User Groups
+   * *Friendly name* : alias of Amazon resources name (e.g: Adrian)
+   * *Amazon resources name*: A unique identifier in AWS (e.g. aws:12234234235 :user/Adrian)
+4. User Groups
    * A collection of users.
-   * You can add multiple common users, and then applying permission policies to the same group (determine what users are allowed to do, what API actions are they allowed)\
+   * You can add multiple common users, and then applying permission policies to the same group (determine what users are allowed to do, what API actions are they allowed)
    * It is easier to manage the permission for those users.
-4. Roles
+5. Roles
    * An identity which has permissions assigned to it via policy
-5. (identity-based) Policies
+   * For example, if you are a development role, you can take on the development permissions.
+6. (identity-based) Policies
    * defines the permissions for the identities or resources they are associated with.
+   * For more, watch Types of policy
 
 ## Types of policy
 1. Identity-based policy: attached to users, groups, or roles
 2. Resource-based policy: attached to a resource; define permissions for a principal/user accessing the resource
 3. IAM permission boundaries: set the maximum permissions an identity-based policy can grant an IAM entity
 4. AWS Organizations services control policies (SCP): specify the maximum permissions for an organization or OU
+
+## Root User VS IAM User
+* Root user
+   1. Use email address to login
+   2. Unrestricted permissions (difficult to restrict)
+* IAM user
+   1. Use Friendly name to login + AWS account ID or alias
+   2. Limited permissions (Can be limited via policy)
 
 ## Permission Boundaries
 * Define the maximum permissions that are available to an IAM entity via an identity based policy
