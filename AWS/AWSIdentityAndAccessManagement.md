@@ -35,7 +35,8 @@
 1. Identity-based policy: attached to users, groups, or roles
 2. Resource-based policy: attached to a resource; define permissions for a principal/user accessing the resource
 3. IAM permission boundaries: set the maximum permissions an identity-based policy can grant an IAM entity
-4. AWS Organizations services control policies (SCP): specify the maximum permissions for an organization or OU
+4. AWS Organizations services control policies (SCP): specify the maximum permissions for an organization
+5. Session Policy: used with AssumeRole* API actions
 
 ## Root User VS IAM User
 * Root user
@@ -76,22 +77,28 @@
 
 
 ## Steps for Authorizing Requests to AWS
-1. Authentication: ~Logging In (checks the identity of the user)
+1. **Authentication**: ~Logging In (checks the identity of the user) to AWS IAM
+   * Console, CLI, API
 2. User **Forming Request context** with the following:
    * **Actions** - the actions / operation the principal(users) wants to perform
    * **Resources** - the AWS resource object upon which actions are performed
    * **Principal** - the user, role, federated user, or application that sent the request
    * **Environment Data** - Information about the IP address, user agent, SSL status, time of day
    * **Resource Data** - data related to the resource that is being requested
-3. **Evaluating Request context**
+3. **Evaluating** Request context
    * Checking whether *user* can have policies to use the resources via **identity-based policy**
    * Checking whether *resource* have the rights to use via **resource-based policy**
-4. Determining whether the request is allowed or denied
+4. **Determining** whether the request is *allowed* or *denied*
 
 ## Determination Rules
 1. By default, all requests are implicitly denied (through the roor user has full access)
 2. An explicit allow in an identity-based or resources-based policy overrides this default
 3. If a permissions boundary, Organization SCP, or session policy is present, it might override the allow with an implicit deny
+
+## 
+* identity-based policy & Resource-based policy: 全部
+* identity-based policy & Permission Boundary: and
+* identity-based policy & SCP: and
 
 ## IAM policy structure
 * Written as *json*
@@ -122,3 +129,27 @@
 
 ## AWS IAM Best practices
 1. Require human users to use federation with an identity provider to access AWS using **temporary credentials**. 
+
+## Architecture Patterns
+1. A select group of users / priviledged users only should be allowed to change their IAM passwords. -> Create a group for the users and apply a permissions policy that grants the iam:ChangePassword API permission
+2. An Amazon EC2 instance must be delegated with permissions to an Amazon Dynamo DB table. -> Create a role and assign a permissions policy to the rolw that grants access to the database service.
+3. A company has created their first AWS account. They need to assign permissions to users based on job function. -> Use AWS managed policies that are aligned with common job functions
+4. A solution architect needs to restrict access to an AWS service based on the source IP address of the requester. -> Create an IAM permissions policy and use the *Condition element* to control access based on source IP address.
+5. A developer needs to make programmatic API calls from the AWS CLI. -> Instruct the developer to create a set of access keys and use those for programmatic access.
+6. A group of users require full access to all Amazon EC2 API actions. -> Create a permissions policy that uses a wildcard(*) for the Action element relating to EC2 
+
+## Q/A
+1. What is the best practice for applying permissions to many users who perform the same job role?
+   * Add the users to an IAM group and apply a permissions policy to the group.
+   * (Easier to control the permission at the same time.)
+2. **Whihc IAM identity is used for assigning permissions to multiple users?
+   * *Group* (not policy)
+   * Although IAM policy can assign permissions, you should use a group to assign the permissions to multiple users.
+3. How can you add an extra level of security to your root account?
+   * Adding MFA 
+4. Which IAM entity can be used to delegate (委派) permissions?
+   * *Role*
+   * It's good to provide permissions to resources for users and services without using permanent credentials.
+5. Which element of an IAM policy document can be used to specify that a policy should take effect only if the caller is coming from a specific source IP address?
+   * *Condition* (Action, Resource, Effect)
+6. 
