@@ -50,9 +50,11 @@
 * Before perform operations in AWS console, we need to authenticate ourselfes.
 * There are several ways to login to AWS IAM as the following
 1. API / CLI
-   * Access Keys (Combined with Access Keys ID, Secret access keys, aka. long term credentials) -> IAM -> AWS API
-2. Console
-   * Username, Password, MFA Token (Optional) -> IAM -> Management Console.
+   * Access Keys (Combined with Access Keys ID, Secret access keys, aka. long term credentials) are used for *programmatic* access.
+2. Console Password 
+   * Username, Password, MFA Token can be used to login to *AWS Management Console*
+3. SSL/TLS certificates
+   * Used for *server*.
 * Multi Factor Authentication (MFA)
   * Use multiple alternative to login (such as password, biometric, physical device...)
   * ~Something you have
@@ -142,7 +144,7 @@
 1. What is the best practice for applying permissions to many users who perform the same job role?
    * Add the users to an IAM group and apply a permissions policy to the group.
    * (Easier to control the permission at the same time.)
-2. **Whihc IAM identity is used for assigning permissions to multiple users?
+2. **Which IAM identity is used for assigning permissions to multiple users?
    * *Group* (not policy)
    * Although IAM policy can assign permissions, you should use a group to assign the permissions to multiple users.
 3. How can you add an extra level of security to your root account?
