@@ -65,6 +65,10 @@
    * Can use with all instance types
 
 
+## Private Subnets and Bastion Hosts
+
+## EC2 instance lifecycle
+
 
 ## Reference
 1. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
