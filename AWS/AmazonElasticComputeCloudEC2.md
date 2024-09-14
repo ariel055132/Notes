@@ -12,7 +12,7 @@
 ## Public, Private, and Elastic IP address
 ### Public IP address
 * Associated with a private IP address on the instance
-* Lost when the instances is closed/stopped, another new public IP address is gained.
+* Lost when the instances is closed/stopped, another new public IP address is gained. (Dynamic address)
 * Used in public subnets
 * Free to use them.
 * Cannot be moved between instances (because it will lose when you are trying to move the address.)
@@ -22,7 +22,7 @@
 * Used in Public and Private Subnets
 
 ### Elastic IP address
-* static public IP address.
+* *static* public IP address.
 * charged even you are not using
 * Associated with a private IP address on the instance.
 * Can be moved between instances and Elastic network adapters.
@@ -50,6 +50,19 @@
 3. **Spread**
    * Strictly places a small group of instances across *distinct underlying hardware* to reduce correlated failures.
    * Each instance is loacted on *a separate AWS rack*.
+
+## Network Interfaces
+1. ENI (Elastic Network Interface)
+   * Basic adapter type for when you don't have any high-performance requirements
+   * Can use with all instance types
+2. ENA (Elastic Network Adapter)
+   * Enhanced networking performance
+   * Higher bandwidth and lower inter-instance latency
+   * Must choose supported instance type
+3. EFA (Elastic Fabric Adapter)
+   * Use with high performance computing and MPI and ML use cases
+   * Tightly coupled applications
+   * Can use with all instance types
 
 
 
