@@ -33,5 +33,17 @@
   1. Connect using public addresses via internet gateway
   2. Connect using private addresses via S3 Gateway endpoint.
 
+## File Storage VS Object Storage
+### File Storage
+* Store data in **directories**, create hierarchies of directories
+* Network connection is maintained (once you mounted that file system, it's there for you to use and save data)
+* E.G: Windows, Amazon EFS
+
+### Object Storage
+* Store data in bucket, flat namespace (no hierarchies of directories)
+* hierarchies can be mimicked with prefixes
+* Access by REST API and cannot be mounted
+* Network connected is completed (close immediately) after each REST API request
+
 ## Reference
 1. https://docs.aws.amazon.com/zh_tw/AmazonS3/latest/userguide/Welcome.html
