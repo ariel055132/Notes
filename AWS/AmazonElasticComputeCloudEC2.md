@@ -26,3 +26,12 @@
 * charged even you are not using
 * Associated with a private IP address on the instance.
 * Can be moved between instances and Elastic network adapters.
+
+## EC2 Metadata
+* Data about your EC2 instance
+* Instance MetaData Service (IMDS) - V1: older and less secure
+* Instance MetaData Service (IMDS) - V2: newer, more secure and requires a session token for authorization (default)
+
+## EC2 User Data
+* The code/script is run when the instance starts for the **first time**
+* limited to **16KB** in raw form, before it is **base64-encoded**
