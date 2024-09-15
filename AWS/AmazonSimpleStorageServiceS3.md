@@ -49,6 +49,26 @@
 * *Glacier*: For Archival data (~History data)
 ### 
 
+## Ways to access to buckets in S3 
+* We can access to buckets in S3 via *IAM Policies*, *Bucket Policies*, and *Access Control List (ACLs)* 
+* IAM Policies and Bucket Policies are recommended to use rather than ACLs
+### IAM Policies
+* Identity-based policies (User, Group, Role -> Principal)
+* We can specify what actions are allowed on what AWS resources with policies, and attach the policy to the user, user group, or role 
+* Written in JSON using the AWS access policy language
+* **To conclude, IAM Policy is used to define what actions a principal can perform in their AWS environment**
+* From an audit perspective, if the goal is to answer questions like *"What can a specific user do in the AWS environment?"*, using IAM policies is appropriate.
+* If you need to control access to AWS services other than S3, you may use IAM policies.
+* If you have numerous S3 buckets each with different permission requirements, you may use IAM policies.
+
+### S3 Bucket Policies
+* Resource-based policies
+* attached to Amazon S3 buckets only
+
+### S3 Access Control List (ACLs)
+* *Legacy access control mechanism* that predates IAM
+* It can be attached to a bucket or object directly
+
 ## File Storage VS Object Storage
 ### File Storage
 * Store data in **directories**, create hierarchies of directories
