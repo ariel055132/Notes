@@ -6,6 +6,9 @@
     1. An *object-based storage system*
     2. Access the object in the bucket via URL
         * We will store our **data/files (objects)** inside the **container (bucket)** with the **REST API request**
+    3. The size limit of a single file is *0 bytes to 5 TB*, with no limit on overall storage capacity.
+    4. After successfully upload a file to S3, you will receive HTTP 200 response.
+    5. By default, a single AWS account can store up to 100 buckets. However, you can request AWS to increase the limit.
 
 ## Terminology
 1. Durability
@@ -42,12 +45,42 @@
 
 ## Storage Class
 * Ref: S3StorageClassesPerformance.png
-* All data will be stored to *S3 standard* automatically if you don't specify where you want to store the object.
-* *S3 Standard intelligent-tiering* will automatically move data between storage classes based on how you are actually utilizing that data -> Cost and Performance Optimization
+* Storage class adjustments can be made at object level, not just the bucket level.
 * Minimum capacity charge per object: Each object you store will be charged at a minimum of 128kB.
-* *IA*: Infrequently accessed data
-* *Glacier*: For Archival data (~History data)
-### 
+
+### S3 Standard  
+* default storage class 
+
+### IA (Infrequently Accessed)
+* *Access frequency is lower* compared to the Standard Storage Class, but when needed, the *data can still be retrieved immediately*
+* Cost is cheaper than Standard Storage Class, but there is a *minimum charge for 30 days of storage*
+* Access Performance is slower than Standard Storage Class
+* Usage: Disaster recovery, backup...
+
+## One Zone - IA
+* One Availability Zone
+* The data will total lost when the availability zone is crashed
+* Better access performance because the data is stored in a single Availability Zone 
+  * Lower latency and higher throughput 
+* Cheaper than IA 
+* Usage: Second backup, temporary datasets...
+
+### S3 Standard intelligent-tiering
+* Automatically move infrequently accessed files to a most cost-effective access tier, while frequently accessed remain in the standard tier
+  > IA tier at most, and will not automatically move it to a lower-cost tiers like One Zone IA or Glacier
+
+### Glacier
+* For *Archiving data* (~History Data)
+* Data is automatically encrypted using AES-256 bit encryption when stored
+* *minimum charge for 90 days of storage*
+
+### Glacier Deep Archive
+* Lowest cost storage
+* *minimum charge for 180 days of storage*
+* Usage: 
+  1. For industries that retain datasets for 7-10 years to meet regulatory compliance requirements
+  2. Backup
+  3. Disaster recovery
 
 ## Ways to access to buckets in S3 
 * We can access to buckets in S3 via *IAM Policies*, *Bucket Policies*, and *Access Control List (ACLs)* 
