@@ -85,6 +85,18 @@
 * Transition Actions: Define when objects transition to another storage class
 * Expiration actions: Define when objects expire (deleted by S3)
 
+## S3 Encryption
+* All S3 buckets and objects have encryption configured by default
+* No additional cost and no impact on performance when encryption is done
+### Encryption options
+1. Server side encryption with S3 manage keys (SSE-S3)
+   * Default encryption method
+2. Server side encryption with AWS KMS managed keys (SSE-KMS)
+3. Server side encryption with Client provided keys (SSE-C)
+4. Client-side encryption
+   * The encryption and decryption is taking place on client side, not server side / in AWS.
+   * AWS just see the encrypted objects and it has no way to decrypting them.
+ 
 ## File Storage VS Object Storage
 ### File Storage
 * Store data in **directories**, create hierarchies of directories
