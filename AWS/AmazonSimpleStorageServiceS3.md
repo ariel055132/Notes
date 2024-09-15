@@ -69,6 +69,22 @@
 * *Legacy access control mechanism* that predates IAM
 * It can be attached to a bucket or object directly
 
+## S3 Versioning
+* Versioning is a means of keeping multiple variants of an object in the same bucket.
+* Use it to preservce, retrieve, and restore every version of every object stored in your S3 bucket
+* Recover objects from *accidental delection* or *overwrite* easily
+
+## S3 Replication
+* Cross-Region Replication (CRR)
+  * Replicate objects in a source S3 bucket to a destination S3 bucket
+  1. Reduce latency for users accessing objects in different geographic locations.
+  2. Improve the operational efficiency of compute systems accessing objects in S3
+* Same-Resion Replication (SRR)
+
+## S3 Lifecycle Management
+* Transition Actions: Define when objects transition to another storage class
+* Expiration actions: Define when objects expire (deleted by S3)
+
 ## File Storage VS Object Storage
 ### File Storage
 * Store data in **directories**, create hierarchies of directories
