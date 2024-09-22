@@ -146,7 +146,21 @@ example of IAM policy
 4. Client-side encryption
    * The encryption and decryption is taking place on client side, not server side / in AWS.
    * AWS just see the encrypted objects and it has no way to decrypting them.
- 
+
+## Multipart upload & Transfer Acceleration
+* Upload approaches
+### Multipart upload
+* Upload objects in parts independently, in parallel and in any order
+* ~Split the files into multiple parts, and upload them in parallel
+* can be used for objects from 5 MB up to 5 TB
+* Must be used for objects larger than 5GB
+### Transfer Acceleration
+* enabled at the bucket level
+* Uses CloudFront edge locations to improve performance of transfers from client to s3 bucket
+* tries to get content closer to users by caching it in edge locations around the world 
+* AWS only charges if there is a performance improvement
+* Useful when a company is looking to improve the speed of uploading from a very remote location somewhere far away from the bucket.
+
 ## File Storage VS Object Storage
 ### File Storage
 * Store data in **directories**, create hierarchies of directories
