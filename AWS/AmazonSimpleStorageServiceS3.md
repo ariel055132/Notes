@@ -85,10 +85,11 @@
 ## Ways to access to buckets in S3 
 * We can access to buckets in S3 via *IAM Policies*, *Bucket Policies*, and *Access Control List (ACLs)* 
 * IAM Policies and Bucket Policies are recommended to use rather than ACLs
+  
 ### IAM Policies
 * Identity-based policies (User, Group, Role -> Principal)
 * We can specify what actions are allowed on what AWS resources with policies, and attach the policy to the user, user group, or role 
-* Written in JSON using the AWS access policy language
+* Written in JSON using the AWS access policy language, where *principal* element is not required in the body
 * **To conclude, IAM Policy is used to define what actions a principal can perform in their AWS environment**
 * From an audit perspective, if the goal is to answer questions like *"What can a specific user do in the AWS environment?"*, using IAM policies is appropriate.
 * If you need to control access to AWS services other than S3, you may use IAM policies.
@@ -98,9 +99,25 @@
 * Resource-based policies
 * attached to Amazon S3 buckets only
 
+```json
+example of IAM policy
+{
+  "Version": "2012-10-07",
+  "Statement": [
+    {
+      "Sid": "Statement1",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "bucket/*"
+    }
+  ]
+}
+```
+
 ### S3 Access Control List (ACLs)
-* *Legacy access control mechanism* that predates IAM
-* It can be attached to a bucket or object directly
+* *Legacy access control mechanism* that predates IAM, not recommended
+* It can be attached to a *bucket* or *object* directly
 
 ## S3 Versioning
 * Versioning is a means of keeping multiple variants of an object in the same bucket.
