@@ -172,6 +172,17 @@ example of IAM policy
 * Only pay for the storage space used
 * must configure a separate bucket as the destination
 
+## Cross-Origin Resource Sharing (CORS)
+* Origin: Defined by DNS name, protocol, and port
+  * For example, you are connect from a client to a specific domain name using HTTP (protocol) on port 80
+* Allows requests from an origin to another origin
+
+## S3 Object Lamdba
+* use Lamdba functions (self-defined / pre-built) to process the output of S3 GET requests
+1. PII Access Control - detect PII and restricts access
+2. PII Redaction - detect PII and return documents with the PII redacted
+3. Decompression - decrypts objects compressed with bzip2, etc.
+
 ## File Storage VS Object Storage
 ### File Storage
 * Store data in **directories**, create hierarchies of directories
