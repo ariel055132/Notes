@@ -159,7 +159,18 @@ example of IAM policy
 * Uses CloudFront edge locations to improve performance of transfers from client to s3 bucket
 * tries to get content closer to users by caching it in edge locations around the world 
 * AWS only charges if there is a performance improvement
-* Useful when a company is looking to improve the speed of uploading from a very remote location somewhere far away from the bucket.
+* Useful when a company is looking to *improve the speed of uploading from a very remote location somewhere far away from the bucket*.
+
+## S3 Select and Glacier Select
+* S3 Select: Use *SQL expressions* to access the individual object rather than the whole object.
+* Glacier Select: Same as the above but from the archive database.
+
+## Server Access Logging
+* *log* around the events/requests that happen in Amazon S3 buckets
+* Details include *the requester, bucket name, request time, request action, response status, and error code*
+* Disabled by default, need to setup 
+* Only pay for the storage space used
+* must configure a separate bucket as the destination
 
 ## File Storage VS Object Storage
 ### File Storage
