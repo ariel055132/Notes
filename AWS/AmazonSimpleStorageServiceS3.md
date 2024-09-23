@@ -7,8 +7,10 @@
     2. Access the object in the bucket via URL
         * We will store our **data/files (objects)** inside the **container (bucket)** with the **REST API request**
     3. The size limit of a single file is *0 bytes to 5 TB*, with no limit on overall storage capacity.
-    4. After successfully upload a file to S3, you will receive HTTP 200 response.
-    5. By default, a single AWS account can store up to 100 buckets. However, you can request AWS to increase the limit.
+    4. After successfully upload a file to S3, you will receive *HTTP 200 response*.
+    5. By default, a single AWS account can store up to *100 buckets*. However, you can request AWS to increase the limit.
+    6. S3 is a universal namespace so *bucket names must be unique globally*
+        * Best practice to create buckets in regions that are physically closest to you users to reduce latency 
 
 ## Terminology
 1. Durability
@@ -19,10 +21,13 @@
    * A measurement of the amount of time the data is available to you
    * expressed as a percent of time per year, E.G: 99.99%
 
-## Object
+## S3 Object
 * The file that you want to upload / store inside the bucket
+* Supports any file type
+* Permission can be defined on objects at any time
+* Storage class is set at the object level
 * The data consists of following items:
-  1. **Key**: object name
+  1. **Key**: object name, which is used to store and retrieved
   2. **Value**: Actual data of the object / file
   3. **Version ID**: Version control with ID
   4. **Metadata**: Additional data used to record information related to the object.
@@ -87,7 +92,7 @@
 * IAM Policies and Bucket Policies are recommended to use rather than ACLs
   
 ### IAM Policies
-* Identity-based policies (User, Group, Role -> Principal)
+* **Identity-based policies** (User, Group, Role -> Principal)
 * We can specify what actions are allowed on what AWS resources with policies, and attach the policy to the user, user group, or role 
 * Written in JSON using the AWS access policy language, where *principal* element is not required in the body
 * **To conclude, IAM Policy is used to define what actions a principal can perform in their AWS environment**
@@ -98,6 +103,8 @@
 ### S3 Bucket Policies
 * Resource-based policies
 * attached to Amazon S3 buckets only
+* Use it when you want to grant cross-account access to S3 environment, without using IAM roles
+* Use it instead of IAM policies when your IAM policies are reaching the size limits.
 
 ```json
 example of IAM policy
@@ -132,8 +139,22 @@ example of IAM policy
 * Same-Resion Replication (SRR)
 
 ## S3 Lifecycle Management
-* Transition Actions: Define when objects transition to another storage class
-* Expiration actions: Define when objects expire (deleted by S3)
+* In order to manage the objects so that they are *stored cost effectively* throughout their lifecycle, we need *Lifecycle Management configuration*
+## Transition Actions 轉換動作
+* Define when *objects transition to another storage class*
+* Rules Ref: S3TransitionActions.jpg
+* General Rule 與 Specific 其實就是 S3TransitionActions.jpg 的 Rule
+### General Rule
+1. Only objects with a *size of more than 128KB* can be transitioned.
+2. *S3 Standard* storage class can be transited to any other storage class.
+3. Any storage class to the *Glacier* or *Deep Archive* storage class.
+### Specific Rule
+4. *S3 Standard-IA* storage class can be transited to *S3 Intelligent-Tiering* or *S3 One Zone-IA* storage class.
+5. *S3 Intelligent-Tiering* storage class can be transited to *S3 One Zone-IA* storage class.
+6. *S3 Glacier* storage class can be transited to *S3 Glacier Deep Archive* storage.
+
+## Expiration Actions
+* Define when objects expire (deleted by S3)
 
 ## S3 Encryption
 * All S3 buckets and objects have encryption configured by default
