@@ -80,7 +80,7 @@
 * *minimum charge for 90 days of storage*
 
 ### Glacier Deep Archive
-* Lowest cost storage
+* *Lowest* cost storage
 * *minimum charge for 180 days of storage*
 * Usage: 
   1. For industries that retain datasets for 7-10 years to meet regulatory compliance requirements
@@ -260,7 +260,15 @@ example of IAM policy
    * Stored at lowest cost: S3 Glacier Deep Archive
 5. A company wishes to manage all encryption of S3 objects through their application with **their own encryption keys**
    * Use *client-side encryption* with client managed keys
-   * Their own encryption keys
+   * Their own encryption keys: leads to client side encryption, as other encryption approaches
+6. Unencrypted objects in an Amazon S3 bucket must be encrypted
+   * Re-upload the object and specify the encryption an encryption key
+7. **An administrator requires a notification when objects are deleted from an Amazon S3 bucket**
+   * Configure an event notification that uses the SNS service
+8. **A group of customers without AWS credentials must be granted time-limited access to a software update that is stored in an Amazon S3 bucket**
+   * Generate a *persigned URL* (timeless)
+9. Solutions architects require both programmatic and console access across AWS accounts
+   * Configure cross-account access using IAM roles
 
 ## Reference
 1. https://docs.aws.amazon.com/zh_tw/AmazonS3/latest/userguide/Welcome.html
