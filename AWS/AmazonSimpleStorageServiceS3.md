@@ -137,11 +137,15 @@ example of IAM policy
   3. Authorized IAM users
 
 ## S3 Replication
+### On Demand Replication
+
+### Live Replication
 * Cross-Region Replication (CRR)
-  * Replicate objects in a source S3 bucket to a destination S3 bucket
+  * Replicate objects in a *source S3 bucket to a destination S3 bucket*
   1. Reduce latency for users accessing objects in different geographic locations.
   2. Improve the operational efficiency of compute systems accessing objects in S3
-* Same-Resion Replication (SRR)
+* Single-Region Replication (SRR)
+  * Replicate objects across S3 bucket in the same AWS region
 
 ## S3 Lifecycle Management
 * In order to manage the objects so that they are *stored cost effectively* throughout their lifecycle, we need *Lifecycle Management configuration*
@@ -242,8 +246,23 @@ example of IAM policy
 6. Use Amazon S3 Transfer Acceleration to mimimize Latency caused by distance
 
 ## Architecture Patterns - Amazon S3
-
+1. If company is concerned about **accidental deletion** of Amazon S3 objects
+   * Enable *S3 Versioning* (recover objects easily)
+2. Data stored in S3 is frequently accessed for 30 days then is rarely accessed, but must be immediately retrievable
+   * Use a *lifecycle policy* to transition objects from *S3 standard to S3 Standard-IA* after 30 days.
+   * Objects is saved to S3 standard bucket in default
+   * rarely accessed, but immediately retrievable -> IA, but not Glacier (not immediately retrievable)
+3. A backup of S3 objects within a specific folder in a bucket must be **replicated to another region**
+   * Configure *cross-region replication* and specify the folder name as a prefix
+   * **Q. Why need to specify the folder name as a prefix.**
+4. Previous versions of objects in a versioning-enabled S3 bucket must be stored long term at the **lowest cost**
+   * Create a lifecycle policy/rule that transitions previous versions to S3 Glacier Deep Archive.
+   * Stored at lowest cost: S3 Glacier Deep Archive
+5. A company wishes to manage all encryption of S3 objects through their application with **their own encryption keys**
+   * Use *client-side encryption* with client managed keys
+   * Their own encryption keys
 
 ## Reference
 1. https://docs.aws.amazon.com/zh_tw/AmazonS3/latest/userguide/Welcome.html
 2. Storage Class: https://aws.amazon.com/tw/s3/storage-classes/#General_purpose 
+3. S3 Replication: https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html
