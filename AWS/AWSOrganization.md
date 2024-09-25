@@ -86,5 +86,16 @@
    * **The architect should switch roles to access the new account ??**
 5. Multiple member accounts in AWS Organizations require the same permissions to be restricted using SCPs
    * Create an *Organization Unit (OU)* and add the member accounts then attach the *SCP* to the OU
-6. The developers in a company each have their own AWS accounts for testing. The security team wish to enable central governance.
+6. The developers in a company each have their own AWS accounts for testing. The security team wish to enable **central governance**.
    * Create an AWS Organizations and send an invite to each developer's AWS account to join the Organization
+
+## QA
+1. Which can be used to enforce tag standardizations?
+   * Tag Policy
+2. AWS Organization Policies are applied to which following entities?
+   * Root accounts or Organizational Units
+3. Which is the main benefit of AWS Organization?
+   * Consolidation of multiple AWS accounts into an organization (this)
+   * Consolidated billing
+   * OUs
+   * Easy login for users
