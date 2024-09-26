@@ -7,10 +7,13 @@
 ## DNS (Domain Name System)
 * Objective
   * Converting a website entered by the user into the IP address of the web server they wish to connect to
-* How
-  1. Each DNS server has a *zone file*, it contains lots of records that map the host name or the domain name to a value including IP addresses
-  2. Computer can connect to the IP addresses with the help of zone file
-
+* How it work (Procedure)
+  1. Users enters website address (aka. Domain Names) in browser, for example: www.google.com
+  2. DNS Server receive the domain names entered by user, it needs to resolved it to the IP address of the web server that the user wants to connect to
+    * Each DNS server has a *zone file*, it contains lots of records that map the host name or the domain name to a value including IP addresses
+    * DNS server is trying to map the domain name to the IP address, and return the IP to the user.
+  3. Computer connects to the IP addresses given by DNS Server
+   
 ## Amazon Route 53
 * An advanced DNS (with more routing policy)
 ### Routing Policy
@@ -37,3 +40,22 @@
    * Route 53 can check your instances / load balances
 3. Traffic Flow
    * A bit more logic in terms of how you direct traffic to different services
+
+
+## Amazon CloudFront Origins
+* CloudFront is a *CDN service* provided by AWS through edge servers deployed worldwide. 
+* It 
+* *Origin*: The location where content is stored, and from which CloudFront gets content to serve to viewers
+* Edge Location: Distributed around the world
+* Distribution: What you create in cloudfront
+  * name / access point of distribution & Multiple source of origin inside distribution
+  * define behaviors (Path Pattern, Viewer Protocol Policy, Cache Policy, Origin Request Policy)
+  1. Speed up distribution of static and dynamic content
+  2. Distribute media files using HTTP and HTTPs
+  3. Add from web forms
+  4. Use live streaming to stream an event in real time
+* Regional Edge Cache: sits between edge locations and the origin
+
+
+## Reference
+1. http://dns-learning.twnic.net.tw/bind/intro6.html (DNS Introduction)
