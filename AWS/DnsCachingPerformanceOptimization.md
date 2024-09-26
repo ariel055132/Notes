@@ -7,6 +7,8 @@
 ## DNS (Domain Name System)
 * Objective
   * Converting a website entered by the user into the IP address of the web server they wish to connect to
+  * Input: domain name / website address (e.g www.google.com)
+  * Output: IP address of the domain name (to be precise, host server IP)
 * How it work (Procedure)
   1. Users enters website address (aka. Domain Names) in browser, for example: www.google.com
   2. DNS Server receive the domain names entered by user, it needs to resolved it to the IP address of the web server that the user wants to connect to
@@ -21,23 +23,26 @@
    * Providing the IP address associated with the specific domain name
 2. Failover
    * If primary is down/failed (Based on health checks), routes to secondary destination
+   * 設定哪個IP Address 是Primary，哪些是 Secondary，
+   * Health checks need to enable if you need to use failover routing
 3. Geolocation
    * Use geographic location you are in to route you to the closest region
 4. Geoproximity
    * Route you to the closest region within a geographic area
 5. Latency
-   * Directs you based on the lowest latency route to resource
+   * Directs you based on the **lowest latency** route to resource
 6. Multivalue answer
    * Returns several IP addresses and functions as a basic load balancer
 7. Weighted
    * Uses the relative weights assigned to resources to determine which to route to
+   * 自訂比例，設定某百份比的DNS查詢流量回應某個record
 8. IP-based
    * uses the IP addresses of clients to make routing decisions
 ### Features
 1. Domain Registration
    * You can register your own public domain name using Amazon route 53
 2. Health Checks
-   * Route 53 can check your instances / load balances
+   * Route 53 can check your instances / load balances, whether they are healthy or not
 3. Traffic Flow
    * A bit more logic in terms of how you direct traffic to different services
 
