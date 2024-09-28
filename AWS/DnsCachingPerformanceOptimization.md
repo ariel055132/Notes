@@ -29,8 +29,11 @@
    * 設定哪個IP Address 是Primary，哪些是 Secondary，
    * Health checks need to enable if you need to use failover routing
 3. Geolocation
-   * Ref: *AmazonRoute53_GeolocationRoutingPolicy.png*
+   * Ref: *AmazonRoute53_GeolocationRoutingPolicy_V2.png*
    * Use geographic location you are in to route you to the closest region
+   * Zone List will conclude A geo-location column, which save the IP belongs to which Region
+      * *Default* Geolocation must be added in order to process the unknown location of DNS Query 
+   * Health Check can be add into geolocation routing policy
 4. Geoproximity
    * Route you to the closest region within a geographic area
    * Must create a policy in traffic flow
@@ -56,11 +59,15 @@
 
 
 ## Amazon CloudFront Origins
-* CloudFront is a *CDN service* provided by AWS through edge servers deployed worldwide. 
-* It 
-* *Origin*: The location where content is stored, and from which CloudFront gets content to serve to viewers
-* Edge Location: Distributed around the world
-* Distribution: What you create in cloudfront
+1. CloudFront is a *CDN service* provided by AWS through *edge servers deployed worldwide*. (AWS 透過建立在全世界各地的 edge server所提供的CDN服務)
+  * CDN (Content Delivery/Distribution Network) 內容傳遞網路
+    * A geographically distributed network of proxy servers and their data centers
+    * Goal is to provide high availability and performance by distributing the service spatially relative to end users 
+  * Why edge servers have to established around the world?
+    * Ensure that most users have a relatively closer source to access data
+2. *Origin*: The location where content is stored, and from which CloudFront gets content to serve to viewers
+3. *Edge Location*: A place to place edge servers
+4. Distribution: What you create in cloudfront
   * name / access point of distribution & Multiple source of origin inside distribution
   * define behaviors (Path Pattern, Viewer Protocol Policy, Cache Policy, Origin Request Policy)
   1. Speed up distribution of static and dynamic content
