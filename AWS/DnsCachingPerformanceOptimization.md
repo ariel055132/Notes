@@ -33,6 +33,7 @@
    * Use geographic location you are in to route you to the closest region
 4. Geoproximity
    * Route you to the closest region within a geographic area
+   * Must create a policy in traffic flow
 5. Latency
    * Ref: *AmazonRoute53_LatencyRoutingPolicy.png*
    * Directs you based on the **lowest latency** route to resource
