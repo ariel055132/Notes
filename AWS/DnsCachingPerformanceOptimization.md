@@ -29,6 +29,7 @@
    * 設定哪個IP Address 是Primary，哪些是 Secondary，
    * Health checks need to enable if you need to use failover routing
 3. Geolocation
+   * Ref: *AmazonRoute53_GeolocationRoutingPolicy.png*
    * Use geographic location you are in to route you to the closest region
 4. Geoproximity
    * Route you to the closest region within a geographic area
