@@ -5,6 +5,7 @@
 * AWS Global Accelerator: similar as Amazon CloudFront
 
 ## DNS (Domain Name System)
+* Ref: *DNS_Procedure.png*
 * Objective
   * Converting a website entered by the user into the IP address of the web server they wish to connect to
   * Input: domain name / website address (e.g www.google.com)
@@ -20,8 +21,10 @@
 * An advanced DNS (with more routing policy)
 ### Routing Policy
 1. Simple
+   * Ref: *AmazonRoute53_SimpleRoutingPolicy.png*
    * Providing the IP address associated with the specific domain name
 2. Failover
+   * Ref: *AmazonRoute53_FailOverRoutingPolicy.png*
    * If primary is down/failed (Based on health checks), routes to secondary destination
    * 設定哪個IP Address 是Primary，哪些是 Secondary，
    * Health checks need to enable if you need to use failover routing
@@ -30,10 +33,13 @@
 4. Geoproximity
    * Route you to the closest region within a geographic area
 5. Latency
+   * Ref: *AmazonRoute53_LatencyRoutingPolicy.png*
    * Directs you based on the **lowest latency** route to resource
 6. Multivalue answer
+   * Ref: *AmazonRoute53_MultiValueRoutingPolicy.png*
    * Returns several IP addresses and functions as a basic load balancer
 7. Weighted
+   * Ref: *AmazonRoute53_WeightedRoutingPolicy_V2.png*
    * Uses the relative weights assigned to resources to determine which to route to
    * 自訂比例，設定某百份比的DNS查詢流量回應某個record
 8. IP-based
