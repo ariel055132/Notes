@@ -67,7 +67,7 @@
     * Ensure that most users have a relatively closer source to access data
 2. *Origin*: The location where content is stored, and from which CloudFront gets content to serve to viewers
 3. *Edge Location*: A place to place edge servers
-4. Distribution: What you create in cloudfront
+4. *Distribution*: What you create in cloudfront
   * name / access point of distribution & Multiple source of origin inside distribution
   * define behaviors (Path Pattern, Viewer Protocol Policy, Cache Policy, Origin Request Policy)
   1. Speed up distribution of static and dynamic content
