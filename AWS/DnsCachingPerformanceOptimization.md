@@ -59,6 +59,7 @@
 
 
 ## Amazon CloudFront Origins
+* Ref: AmazonCloudFront_Concept_V2.png
 1. CloudFront is a *CDN service* provided by AWS through *edge servers deployed worldwide*. (AWS 透過建立在全世界各地的 edge server所提供的CDN服務)
   * CDN (Content Delivery/Distribution Network) 內容傳遞網路
     * A geographically distributed network of proxy servers and their data centers
@@ -66,15 +67,22 @@
   * Why edge servers have to established around the world?
     * Ensure that most users have a relatively closer source to access data
 2. *Origin*: The location where content is stored, and from which CloudFront gets content to serve to viewers
-3. *Edge Location*: A place to place edge servers
-4. *Distribution*: What you create in cloudfront
+3. *Edge Location*: A place to place edge servers 
+   * users can obtain data and input data to edge location
+   * it will cache the data from 
+4. *Distribution*: Endpoints provided by CDN service, allow users to access the nearest edge server
   * name / access point of distribution & Multiple source of origin inside distribution
   * define behaviors (Path Pattern, Viewer Protocol Policy, Cache Policy, Origin Request Policy)
-  1. Speed up distribution of static and dynamic content
-  2. Distribute media files using HTTP and HTTPs
-  3. Add from web forms
-  4. Use live streaming to stream an event in real time
+  * Currently **support web distrbition** only
+    1. Speed up distrbution of static and dynamic content
+    2. Distribute media files using HTTP and HTTPS
+    3. Add, update, or delete object, and submit data from web forms
+  * RTMP (~live streaming) is not supported since 2020
 * Regional Edge Cache: sits between edge locations and the origin
+
+## Advantages of usign CloudFront
+1. Users can fetch data from the nearest edge server, resulting in much **faster access** speed and significantly improve user experience (使用者可以從最近的 edge server 拉資料，速度快多了，體驗自然大幅上升)
+2. **Cost is lowered**, because the amount of data transmitted
 
 
 ## Reference
