@@ -101,9 +101,23 @@
    * If found, return the object to edge location.
    * If not (cache miss), it will send a request to the origin to fetch the object, and send it to the edge location afterwards.
 
-### Path Patterns
+## Path Patterns
 * Ref: AmazonCloudFront_PathPattern.png
 * Objective: Allow administrators to route traffic to different Origins based on the request content
+
+## CloudFront SSL/TLS (Server Name Indication)
+* Get the certificate from AWS Certificate Manager from us-east-1 or trusted third party CA
+* Default CF Domain name can be changed using CNAMES
+1. S3 Origins has its own certificate (cannot be changed)
+2. You can put your own certificates or use ACM to generate certificate to Custom Origin.
+
+
+## Lamdba@Edge
+* Allows you to run Node.js and Python functions to *customize the content CloudFront delivers*
+
+## AWS Global Accelerator
+* A network service allows you to utilize the AWS Global Network to send data to your applications
+* Get better bandwidth and latency and much more consistency
 
 ### Notes
 1. Headers can be used to control the cache
