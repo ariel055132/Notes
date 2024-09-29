@@ -19,6 +19,10 @@
    
 ## Amazon Route 53
 * An advanced DNS (with more routing policy)
+* You can transfer domains to Route 53 only if the Top-Level Domain (TLD) is supported
+* You can transfer a domain from Route 53 to another registrar by contacting AWS support
+* You can transfer a domain to another account in AWS
+* You can have a domain registrated in one AWS account and hosted zone in another AWS account
 ### Routing Policy
 1. Simple
    * Ref: *AmazonRoute53_SimpleRoutingPolicy.png*
@@ -49,14 +53,24 @@
    * 自訂比例，設定某百份比的DNS查詢流量回應某個record
 8. IP-based
    * uses the IP addresses of clients to make routing decisions
-### Features
-1. Domain Registration
+* *Failover routing* provides *active-passive configuration* for disaster recovery, while the others are *active-active configuration*
+  
+### Features / Function
+1. Domain Name Registration
    * You can register your own public domain name using Amazon route 53
-2. Health Checks
-   * Route 53 can check your instances / load balances, whether they are healthy or not
-3. Traffic Flow
+2. Health Checks of resources
+   * Route 53 can check instances health by connecting to it
+3. DNS resolution
    * A bit more logic in terms of how you direct traffic to different services
 
+### Hosted Zone
+* Container for records, which include information about how to route traffic for a domain (such as example.com) and all of its subdomains (such as www.example.com, retail.example.com)
+1. *Public Host Zone*
+   * determines how traffic is routed on the **Internet**
+   * It can be query if other are using the correct DNS server setting
+2. Private Hosted zone for VPC
+   * determines how traffic is routed within **VPC**
+   * Need to set enableDnsHostname, enableDnsSupport to true
 
 ## Amazon CloudFront Origins
 * Ref: AmazonCloudFront_Concept_V2.png
