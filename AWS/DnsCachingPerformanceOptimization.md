@@ -1,8 +1,7 @@
 # AWS DNS, Caching, and Performance Optimization
-* Introduction of the following setting
-* Amazon Route 53: DNS Server
-* Amazon CloudFront: Content delivery network
-* AWS Global Accelerator: similar as Amazon CloudFront
+* **Amazon Route 53**: DNS Server
+* **Amazon CloudFront**: Content delivery network
+* **AWS Global Accelerator**: similar as Amazon CloudFront
 
 ## DNS (Domain Name System)
 * Ref: *DNS_Procedure.png*
@@ -79,7 +78,11 @@
    * determines how traffic is routed within **VPC**
    * Need to set enableDnsHostname, enableDnsSupport to true
 
-### Amazon Route 53 - Health Checks
+### Amazon Route 53 - Health Checks (of resources)
+* monitor the health and performance of the underlying resources
+1. Monitor the *endpoint* (e.g web server / IP address)
+2. *Calculated* health checks
+3. Monitor the status of a *CloudWatch* alarm
 
 ## Amazon CloudFront Origins
 * Ref: AmazonCloudFront_Concept_V2.png
