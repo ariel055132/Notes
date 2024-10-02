@@ -26,12 +26,16 @@
 ### Routing Policy
 1. Simple
    * Ref: *AmazonRoute53_SimpleRoutingPolicy.png*
+   * A simple round-robin policy and can be applied when there is a single resource doing the function for the domain
+   * Help configure **standard DNS records**, with no special Route 53 routing such as weighted or latency
+   * does **not support health checks**
+   * With Alias record enabled, only one AWS resource or one record can be specified in the current hosted zone
    * Providing the IP address associated with the specific domain name
 2. Failover
    * Ref: *AmazonRoute53_FailOverRoutingPolicy.png*
-   * If primary is down/failed (Based on health checks), routes to secondary destination
-   * 設定哪個IP Address 是Primary，哪些是 Secondary，
-   * Health checks need to enable if you need to use failover routing
+   * Allows **active-passive failover configuration**
+   * One resource (primary) takes all traffic when it's healthy and the other resource takes all traffic when the first is not healthy
+   * **Health checks need to enable** if you need to use failover routing
 3. Geolocation
    * Ref: *AmazonRoute53_GeolocationRoutingPolicy_V2.png*
    * Use geographic location you are in to route you to the closest region
@@ -43,14 +47,16 @@
    * Must create a policy in traffic flow
 5. Latency
    * Ref: *AmazonRoute53_LatencyRoutingPolicy.png*
-   * Directs you based on the **lowest latency** route to resource
+   * Respond to DNS Query based on **which data center gives user the lowest network latency**
+   * **Support health checks**
 6. Multivalue answer
    * Ref: *AmazonRoute53_MultiValueRoutingPolicy.png*
    * Returns several IP addresses and functions as a basic load balancer
 7. Weighted
    * Ref: *AmazonRoute53_WeightedRoutingPolicy_V2.png*
-   * Uses the relative weights assigned to resources to determine which to route to
-   * 自訂比例，設定某百份比的DNS查詢流量回應某個record
+   * Uses the relative weights assigned to resources to determine which to route to (自訂比例，設定某百份比的DNS查詢流量回應某個record)
+   * Weights can be assigned between **any number from 0 to 255 inclusive**
+   * **Support health checks**
 8. IP-based
    * uses the IP addresses of clients to make routing decisions
 * *Failover routing* provides *active-passive configuration* for disaster recovery, while the others are *active-active configuration*
@@ -63,14 +69,17 @@
 3. DNS resolution
    * A bit more logic in terms of how you direct traffic to different services
 
-### Hosted Zone
+### Amazon Route 53 - Hosted Zone
 * Container for records, which include information about how to route traffic for a domain (such as example.com) and all of its subdomains (such as www.example.com, retail.example.com)
+* **Just finding the domain name**, but not its IPs
 1. *Public Host Zone*
    * determines how traffic is routed on the **Internet**
    * It can be query if other are using the correct DNS server setting
 2. Private Hosted zone for VPC
    * determines how traffic is routed within **VPC**
    * Need to set enableDnsHostname, enableDnsSupport to true
+
+### Amazon Route 53 - Health Checks
 
 ## Amazon CloudFront Origins
 * Ref: AmazonCloudFront_Concept_V2.png
@@ -137,6 +146,20 @@
 1. Headers can be used to control the cache
    * *Cache-Control max-age=(seconds)* : Specifies how long CloudFront should wait before fetching the object again from the origin server
    * *Expires* : Specify an expiration date and time
+
+## Architecture Patterns
+1. An elastic Load Balancer must be resolvable using a company's public domain name. A route 53 hosted zone exists.
+   * Create an **Alias** record that records the domain name to the ELB.
+2. A website runs across *two AWS regions*. All traffic goes to one region and *should be redirected only if the website is unavailable*.
+   * Create a **failover routing policy** in AWS Route 53 and configure health checks on the primary
+3. Websites run in several countries and distribution rights require *restricting access to content based on the geographic source of the distribution*.
+   * Use AWS Route 53 **geolocation routing policy** and restrict distributions based on geographic location.
+4. A CloudFront distribution has multiple S3 Origins. Requests should be served from different origins based on file type being requested. **(Question)**
+   * Modify the CloudFront behavior and configure a path pattern.
+5. Content is accessed using an application and CloudFront distribution. Need to control access to multiple files on the distribution **(Question)**
+   * Configure signed cookies and update the application
+6. Application runs behind an Application Load Balancer in multiple Regions. Need to intelligently route traffic based on latency and availability.
+   * Create an AWS Global Accelerator and add the ALBs.
 
 ## Reference
 1. http://dns-learning.twnic.net.tw/bind/intro6.html (DNS Introduction)
