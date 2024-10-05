@@ -38,4 +38,11 @@
 * We can backup data by creating **snapshot**
 * snapshot: A point in time copy of the data on the volume. Each snapshot is incremental. 
 * We can create volume from a snapshot in another AZ, then creating an AMI (Amazon Machine Image). And attach the snapshot to the image (~similar as copying the data to another)
-* 
+
+## EBS Snapshots and DLM
+* DLM (Data Lifecycle Manager): Automates the creation, retention, and deletion of EBS snapshots and EBS-backed AMIs
+1. Protect valuable data by enforcing a *regular backup schedule*
+2. Create standardized AMIs that can be refreshed at ergular intervals
+3. Retain backups as required by auditors or internal compliance
+4. Reduce storage costs by deleting outdated backups
+5. Create disaster recovery backup policies that backup data to isolated accounts
