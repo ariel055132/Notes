@@ -3,18 +3,6 @@
 * **Amazon CloudFront**: Content delivery network
 * **AWS Global Accelerator**: similar as Amazon CloudFront
 
-## DNS (Domain Name System)
-* Ref: *DNS_Procedure.png*
-* Objective
-  * Converting a website entered by the user into the IP address of the web server they wish to connect to
-  * Input: domain name / website address (e.g www.google.com)
-  * Output: IP address of the domain name (to be precise, host server IP)
-* How it work (Procedure)
-  1. Users enters website address (aka. Domain Names) in browser, for example: www.google.com
-  2. DNS Server receive the domain names entered by user, it needs to resolved it to the IP address of the web server that the user wants to connect to
-    * Each DNS server has a *zone file*, it contains lots of records that map the host name or the domain name to a value including IP addresses
-    * DNS server is trying to map the domain name to the IP address, and return the IP to the user.
-  3. Computer connects to the IP addresses given by DNS Server
    
 ## Amazon Route 53
 * An advanced DNS (with more routing policy)
@@ -59,14 +47,6 @@
 8. IP-based
    * uses the IP addresses of clients to make routing decisions
 * *Failover routing* provides *active-passive configuration* for disaster recovery, while the others are *active-active configuration*
-  
-### Features / Function
-1. Domain Name Registration
-   * You can register your own public domain name using Amazon route 53
-2. Health Checks of resources
-   * Route 53 can check instances health by connecting to it
-3. DNS resolution
-   * A bit more logic in terms of how you direct traffic to different services
 
 ### Amazon Route 53 - Hosted Zone
 * Container for records, which include information about how to route traffic for a domain (such as example.com) and all of its subdomains (such as www.example.com, retail.example.com)
