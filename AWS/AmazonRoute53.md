@@ -9,7 +9,9 @@
 
 ## Domain Registration (申請Domain Name)
 1. The user will choose a domain and check that it is available to register
-2. 
+2. The user need to choose registrar to register the domain
+3. The registrar check whether the domain name is available and pass all additional checks, and then It will provide registry with the details of the domain name
+4. (After one year) the user can renew the domain name, otherwise the domain name is released. Others can purchase it.
 
 ## DNS (Domain Name System)
 * Ref: *DNS_Procedure.png*
