@@ -58,18 +58,6 @@
    * determines how traffic is routed within **VPC**
    * Need to set enableDnsHostname, enableDnsSupport to true
 
-### Amazon Route 53 - Health Checks (of resources)
-* monitor the health and performance of the underlying resources
-* For a health check to succeed, the router and firewall rules must allow inbound traffic from the IP addresses that the health checkers use
-1. Monitor the *endpoint* (e.g web server / IP address)
-   * Evaluates the health of the endpoint based on 
-2. *Calculated* health checks
-   * monitor the status of other health checks 
-   * Use parent health checks to check child health checks
-   * One parent health check can monitor the health of up to 255 child health checks
-3. Monitor the status of a *CloudWatch* alarm
-   * Monitor the data stream for the corresponding alarm instead of monitoring the alarm state
-
 ## Amazon CloudFront Origins
 * Ref: AmazonCloudFront_Concept_V2.png
 1. CloudFront is a *CDN service* provided by AWS through *edge servers deployed worldwide*. (AWS 透過建立在全世界各地的 edge server所提供的CDN服務)
