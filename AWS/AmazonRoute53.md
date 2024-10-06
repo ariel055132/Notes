@@ -7,8 +7,9 @@
   3. *Health Checking*: Monitor the health of resources 
   4. *Security*: Support both DNSSEC for domain registration and DNSSEC signing
 
-## Domain Registration
-
+## Domain Registration (申請Domain Name)
+1. The user will choose a domain and check that it is available to register
+2. 
 
 ## DNS (Domain Name System)
 * Ref: *DNS_Procedure.png*
@@ -41,3 +42,46 @@
 4. If Route 53 considers the endpoint *unhealthy*, it **notifies CloudWatch**.
    * If user does not set up notification, the status of Route 53 health checks can be checked in the Route 53 console.
 5. (Optional) If user configured notification for the health check, CloudWatch triggers an alarm and use Amazon SNS to send notification to specified users
+
+### Routing Policy
+1. Simple
+   * Ref: *AmazonRoute53_SimpleRoutingPolicy.png*
+   * A simple round-robin policy and can be applied when there is a single resource doing the function for the domain
+   * Help configure **standard DNS records**, with no special Route 53 routing such as weighted or latency
+   * does **not support health checks**
+   * With Alias record enabled, only one AWS resource or one record can be specified in the current hosted zone
+   * Providing the IP address associated with the specific domain name
+2. Failover
+   * Ref: *AmazonRoute53_FailOverRoutingPolicy.png*
+   * Allows **active-passive failover configuration**
+   * One resource (primary) takes all traffic when it's healthy and the other resource takes all traffic when the first is not healthy
+   * **Health checks need to enable** if you need to use failover routing
+3. Geolocation
+   * Ref: *AmazonRoute53_GeolocationRoutingPolicy_V2.png*
+   * Use geographic location you are in to route you to the closest region
+   * Zone List will conclude A geo-location column, which save the IP belongs to which Region
+      * *Default* Geolocation must be added in order to process the unknown location of DNS Query 
+   * Health Check can be add into geolocation routing policy
+4. Geoproximity
+   * Route you to the closest region within a geographic area
+   * Must create a policy in traffic flow
+5. Latency
+   * Ref: *AmazonRoute53_LatencyRoutingPolicy.png*
+   * Respond to DNS Query based on **which data center gives user the lowest network latency**
+   * **Support health checks**
+6. Multivalue answer
+   * Ref: *AmazonRoute53_MultiValueRoutingPolicy.png*
+   * Returns several IP addresses and functions as a basic load balancer
+7. Weighted
+   * Ref: *AmazonRoute53_WeightedRoutingPolicy_V2.png*
+   * Uses the relative weights assigned to resources to determine which to route to (自訂比例，設定某百份比的DNS查詢流量回應某個record)
+   * Weights can be assigned between **any number from 0 to 255 inclusive**
+   * **Support health checks**
+8. IP-based
+   * uses the IP addresses of clients to make routing decisions
+* *Failover routing* provides *active-passive configuration* for disaster recovery, while the others are *active-active configuration*
+
+
+## Reference
+1. https://jayendrapatil.com/aws-route-53/#AWS_Route_53
+2. 
