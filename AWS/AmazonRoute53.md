@@ -37,6 +37,10 @@
 ### Health Checking Overall Procedure 
 * Ref: *AmazonRoute53_HealthChecking.png*
 1. User **create a health check** and specify values that define how the health check to work
+   * *IP address* / domain name of the endpoint / CloudWatch alarm
+   * The *protocol* (HTTP, HTTPS, GET) that you want Route 53 
+   * *Failure threshold* (Consecutive times the endpoint must fail to respond to request before Route 53 considers it unhealthy)
+   * *How to get notified* when Route 53 detect that the endpoint is unhealthy.
 2. Route 53 starts to **send the request to the endpoint** specified by user. If the endpoint responds to the request, Route 53 considers the endpoint to be *healthy* and do nothing.
 3. If the **endpoint does not respond to request**, Route 53 starts to **count the number of consecutive requests** that the endpoint does not respond to:
    * If the count reaches failure threshold specified in health check, Route 53 considers the endpoint unhealthy
@@ -44,6 +48,23 @@
 4. If Route 53 considers the endpoint *unhealthy*, it **notifies CloudWatch**.
    * If user does not set up notification, the status of Route 53 health checks can be checked in the Route 53 console.
 5. (Optional) If user configured notification for the health check, CloudWatch triggers an alarm and use Amazon SNS to send notification to specified users
+
+### Health Check Notes
+* Why we need to use *CloudWatch Alarm*?
+  * Since Route 53 Health Checks cannot monitor private endpoints. Therefore **monitoring private endpoints must be archieved by using CloudWatch Alarms instead**.
+  1. Configure a CloudWatch Alarm to the private resources that need to be monitored.
+  2. Create a Health Check to monitor this CloudWatch alarm for checking the healthy 
+* Health checker how to evaluate the health of the endpoint?
+  1. Response time
+  2. Specified failure threshold - Whether the endpoint responds to a number of consecutive health checks
+* Health check is considered healthy?
+  1. HTTP, HTTPS & with String matching
+      * TCP connection can be established within four seconds.
+      * Returns 2xx or 3xx within two seconds after connecting
+      * Route 53 searches the response body for the specified string which must appear entirely in the first 5,120 bytes of the response body or the endpoint fails the health check.
+      * (More precise) If more than 18% of the responses are normal, it will be marked as healthy. Otherwise, unhealthy.
+  2. TCP
+      * TCP connection can be established within ten seconds.
 
 ### Routing Policy
 1. Simple
