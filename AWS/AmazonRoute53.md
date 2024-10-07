@@ -2,10 +2,20 @@
 * Ref: *AmazonRoute53_How53Route.png*
 * It is a highly available and scalable **DNS (Domain Name Service) web service**.
 * It provide the following functions:
-  1. *Domain Registration*: Allow domain name registration
+  1. *Domain Registration*: Allow domain name registration to hosted zone
   2. *Domain Name System (DNS) service*: Translate domains (e.g: ww.google.com) into IP address (192.169.0.0)
   3. *Health Checking*: Monitor the health of resources 
   4. *Security*: Support both DNSSEC for domain registration and DNSSEC signing
+
+## Amazon Route 53 - Hosted Zone
+* Container for records, which include information about how to route traffic for a domain (such as example.com) and all of its subdomains (such as www.example.com, retail.example.com)
+* **Just finding the domain name**, but not its IPs
+1. *Public Host Zone*
+   * determines how traffic is routed on the **Internet**
+   * It can be query if other are using the correct DNS server setting
+2. *Private Hosted zone*
+   * determines how traffic is routed within **VPC**
+   * Need to set enableDnsHostname, enableDnsSupport to true
 
 ## Domain Registration (申請Domain Name)
 1. The user will choose a domain and check that it is available to register
@@ -25,6 +35,17 @@
     * Each DNS server has a *zone file*, it contains lots of records that map the host name or the domain name to a value including IP addresses
     * DNS server is trying to map the domain name to the IP address, and return the IP to the user.
   3. Computer connects to the IP addresses given by DNS Server
+
+### DNS Zones and Records
+1. A (IPv4 Address record) 
+   * Maps a domain name to an IPv4 IP address (e.g google.com to 52.23.21.43)
+2. AAAA (IPv6 Address record)
+2. CNAME
+   * Maps a domain name to another domain name (e.g google1.com to google2.com)
+3. MX (Mail Exchange)
+   * Returns the mail servers for a domain name
+4. TXT (Text) Format
+5. SRV
 
 ## Health Checking
 * Objective: monitor the health and performance of the underlying resources
@@ -65,11 +86,22 @@
       * (More precise) If more than 18% of the responses are normal, it will be marked as healthy. Otherwise, unhealthy.
   2. TCP
       * TCP connection can be established within ten seconds.
+  3. CALCULATED
+      * It will **monitor the status of other health checks**.
+      * Route 53 adds up the number of health checks that Route 53 health checkers considered to be healthy.
+      * Compare the number of health check is greater than the value of HealthThreshold.
+      * If greater, it is considered as healthy. Otherwise, unhealthy.
+      * It can be used to perform **maintenance of the website system** without causing all health checks to fail
+  4. CLOUDWATCH_METRIC
+      * Check the health of the **CloudWatch alarm**.
+      * If the state of the alarm is **OK**, the health check is considered **healthy**.
+      * If the state is **ALARM**, the health check is considered **unhealthy**.
+      * If CloudWatch does **not have sufficient data to determine whether the state** is OK / ALARM, the health check status depends on the **setting for InsufficientDataHealthStatus**: Healthy, Unhealthy, or LastKnownStatus
 
 ### Routing Policy
 1. Simple
    * Ref: *AmazonRoute53_SimpleRoutingPolicy.png*
-   * A simple round-robin policy and can be applied when there is a single resource doing the function for the domain
+   * A **round-robin** policy and can be applied when there is a single resource doing the function for the domain
    * Help configure **standard DNS records**, with no special Route 53 routing such as weighted or latency
    * does **not support health checks**
    * With Alias record enabled, only one AWS resource or one record can be specified in the current hosted zone
@@ -95,6 +127,7 @@
 6. Multivalue answer
    * Ref: *AmazonRoute53_MultiValueRoutingPolicy.png*
    * Returns several IP addresses and functions as a basic load balancer
+   * **Support Health Checks**, only the values for healthy resources are returned
 7. Weighted
    * Ref: *AmazonRoute53_WeightedRoutingPolicy_V2.png*
    * Uses the relative weights assigned to resources to determine which to route to (自訂比例，設定某百份比的DNS查詢流量回應某個record)

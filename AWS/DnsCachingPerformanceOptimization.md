@@ -11,16 +11,6 @@
 * You can transfer a domain to another account in AWS
 * You can have a domain registrated in one AWS account and hosted zone in another AWS account
 
-### Amazon Route 53 - Hosted Zone
-* Container for records, which include information about how to route traffic for a domain (such as example.com) and all of its subdomains (such as www.example.com, retail.example.com)
-* **Just finding the domain name**, but not its IPs
-1. *Public Host Zone*
-   * determines how traffic is routed on the **Internet**
-   * It can be query if other are using the correct DNS server setting
-2. Private Hosted zone for VPC
-   * determines how traffic is routed within **VPC**
-   * Need to set enableDnsHostname, enableDnsSupport to true
-
 ## Amazon CloudFront Origins
 * Ref: AmazonCloudFront_Concept_V2.png
 1. CloudFront is a *CDN service* provided by AWS through *edge servers deployed worldwide*. (AWS 透過建立在全世界各地的 edge server所提供的CDN服務)
