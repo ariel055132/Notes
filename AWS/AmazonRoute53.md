@@ -76,8 +76,8 @@
   1. Configure a CloudWatch Alarm to the private resources that need to be monitored.
   2. Create a Health Check to monitor this CloudWatch alarm for checking the healthy 
 * Health checker how to evaluate the health of the endpoint?
-  1. Response time
-  2. Specified failure threshold - Whether the endpoint responds to a number of consecutive health checks
+  1. **Response time**
+  2. **Specified failure threshold** - Whether the endpoint responds to a number of consecutive health checks (esp. for CALAULATED health check)
 * Health check is considered healthy?
   1. HTTP, HTTPS & with String matching
       * TCP connection can be established within four seconds.
@@ -137,7 +137,16 @@
    * uses the IP addresses of clients to make routing decisions
 * *Failover routing* provides *active-passive configuration* for disaster recovery, while the others are *active-active configuration*
 
+## Traffic Flow
+* Objective: 
+  1. Allow users to create routing configuration for resources
+  2. Track the related records and relationships in a hosted zone
+* It also includes a **versioning** feature that allows you to maintain a history of changes to your routing policies
+* Easily **roll back** to a previous policy version using the console or API
+
+## QA
+1. You have deployed a web application targeting a global audience across multiple AWS Regions under the domain name example.com. You decide to use Route 53 Latency-Based Routing to serve web requests to users from the region closest to the user. To provide business continuity in the event of server downtime you configure weighted record sets associated with two web servers in separate Availability Zones per region. During a DR test you notice that when you disable all web servers in one of the regions Route 53 does not automatically direct all users to the other region. What could be happening? (Choose 2 ans)
 
 ## Reference
-1. https://jayendrapatil.com/aws-route-53/#AWS_Route_53
-2. 
+1. https://jayendrapatil.com/aws-route-53/#AWS_Route_53 (Route 53)
+2. https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html (Resolver)
