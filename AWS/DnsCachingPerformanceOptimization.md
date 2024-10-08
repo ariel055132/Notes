@@ -33,10 +33,6 @@
     3. Add, update, or delete object, and submit data from web forms
   * RTMP (~live streaming) is not supported since 2020
 
-## Advantages of using CloudFront
-1. Users can fetch data from the nearest edge server, resulting in much **faster access** speed and significantly improve user experience (使用者可以從最近的 edge server 拉資料，速度快多了，體驗自然大幅上升)
-2. **Cost is lowered**, because the amount of data transmitted
-
 ## CloudFront Caching
 * Ref: AmazonCloudFront_CachingBasic.png
 * Objects are cached for a Time To Live (TTL) period, which defaults to 24 hours.
