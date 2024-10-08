@@ -144,6 +144,31 @@
 * It also includes a **versioning** feature that allows you to maintain a history of changes to your routing policies
 * Easily **roll back** to a previous policy version using the console or API
 
+## Route 53 Resolver
+* Automatically answers DNS queries for
+1. Local VPC domain names for EC2 instances
+2. Records in private hosted zones
+3. Performs recursive lookups against public name servers in the internet for public domain names
+* When we need? Because the development environment maybe hybrid.
+### Inbound Endpoint
+* Allow DNS queries to your VPC from your on-premises network or another VPC
+* all the result is returned by Route 53 via the inbound endpoint
+* 讓外部環境中的資源查詢AWS內部資源用
+
+### Outbound Endpoint
+* Allow DNS queries from your VPC to your on-premises network or another VPC
+* All the result is returned by Route 53 via the outbound endpoint
+* 讓AWS內部資源查詢外部資源用
+
+### Resolver Rule
+* Use this to control how DNS query is transfered to DNS resolver
+1. Conditional Forwarding Rules
+   * Used to specify which domain name queries should be forwarded to which DNS server.
+2. System Rules
+   * (Optional) Overwrite/override the rules above.
+3. Auto-defined System Rules
+   * For AWS domain or private hosted zone 
+
 ## QA
 1. You have deployed a web application targeting a global audience across multiple AWS Regions under the domain name example.com. You decide to use Route 53 Latency-Based Routing to serve web requests to users from the region closest to the user. To provide business continuity in the event of server downtime you configure weighted record sets associated with two web servers in separate Availability Zones per region. During a DR test you notice that when you disable all web servers in one of the regions Route 53 does not automatically direct all users to the other region. What could be happening? (Choose 2 ans)
 
