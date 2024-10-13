@@ -2,6 +2,7 @@
 
 ## What is IAM?
 * A place allows us to create user, role, federated user, make application before making a request for an action or operation on an AWS resource.
+* 控制誰可以做什麼
 * First, We need to login to AWS IAM via console, CLI, and API. We need to **authenticate** ourself. (Showing who we are, trying to prove who we are.)
 * After login in, we can create user, role, policy......
 * After that, when we are trying to make a request for an action or operations on an AWS resource. AWS determines whether to **authorize** the request (deny/allow)
@@ -10,30 +11,38 @@
 ## Terminology
 1. Principal
    * A person/user or application that can make a request for an *action* or *operation* on an AWS resource.
+   * Before send request, thet must be authenticated
 2. Account Root User
-   * User has full permissions
+   * User has full permissions, the first account created
    * Cannot restrict most 
    * Avoid using it + enable MFA (multifactor authentication)
+   * Create only create 5000 individual user account at most with one root user
 3. Users
-   * up to 5000 individual user account can be created.
-   * Have no permissions by default
+   * Have **no permissions by default** 
+     * Before granting the permmision through policy, AWS will deny all the requests from users
    * The users gains the *permissions* applied to the *group* through the *policy*.
    * *Friendly name* : alias of Amazon resources name (e.g: Adrian)
    * *Amazon resources name*: A unique identifier in AWS (e.g. aws:12234234235 :user/Adrian)
 4. User Groups
    * A collection of users.
-   * You can add multiple common users, and then applying permission policies to the same group (determine what users are allowed to do, what API actions are they allowed)
+   * You can add multiple common users, and then applying permission policies to the same group 
    * It is easier to manage the permission for those users.
 5. Roles
    * An identity which has permissions assigned to it via policy
-   * For example, if you are a development role, you can take on the development permissions.
+   * For example, if you are a development role, you can take on the development permissions
+   * Does not have any static credentials
+   * Help to prevent accidential access to or modification of sensitive resources
 6. Policies
    * defines the permissions for the identities or resources they are associated with.
+   * AWS determines whether to **authorize** (allow/deny) the request by checking policies
    * For more, watch Types of policy
 
 ## Types of policy
-1. Identity-based policy: attached to users, groups, or roles
-2. Resource-based policy: attached to a resource; define permissions for a principal/user accessing the resource
+1. Identity-based policy
+   * attached to **users, groups, or roles**
+2. Resource-based policy
+   * attached to a **resource** 
+   * define permissions for a principal/user accessing the resource
 3. IAM permission boundaries: set the maximum permissions an identity-based policy can grant an IAM entity
 4. AWS Organizations services control policies (SCP): specify the maximum permissions for an organization
 5. Session Policy: used with AssumeRole* API actions
@@ -133,9 +142,12 @@
 1. Require human users to use federation with an identity provider to access AWS using **temporary credentials**. 
 
 ## Architecture Patterns
-1. A select group of users / priviledged users only should be allowed to change their IAM passwords. -> Create a group for the users and apply a permissions policy that grants the iam:ChangePassword API permission
-2. An Amazon EC2 instance must be delegated with permissions to an Amazon Dynamo DB table. -> Create a role and assign a permissions policy to the rolw that grants access to the database service.
-3. A company has created their first AWS account. They need to assign permissions to users based on job function. -> Use AWS managed policies that are aligned with common job functions
+1. A select group of users / priviledged users only should be allowed to change their IAM passwords. 
+   * Create a group for the users and apply a permissions policy that grants the iam:ChangePassword API permission
+2. An Amazon EC2 instance must be delegated with permissions to an Amazon Dynamo DB table. 
+   * Create a role and assign a permissions policy to the rolw that grants access to the database service.
+3. A company has created their first AWS account. They need to assign permissions to users based on job function. 
+   * Use AWS managed policies that are aligned with common job functions
 4. A solution architect needs to restrict access to an AWS service based on the source IP address of the requester. -> Create an IAM permissions policy and use the *Condition element* to control access based on source IP address.
 5. A developer needs to make programmatic API calls from the AWS CLI. -> Instruct the developer to create a set of access keys and use those for programmatic access.
 6. A group of users require full access to all Amazon EC2 API actions. -> Create a permissions policy that uses a wildcard(*) for the Action element relating to EC2 
