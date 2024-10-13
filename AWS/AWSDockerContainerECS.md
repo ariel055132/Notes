@@ -44,11 +44,22 @@
       3. Ports to be opened
       4. Data Volumes
 
-## ECS and IAM roles
+## ECS and IAM roles (Not Completed)
 1. Amazon ECS container instance IAM role
+   * used by EC2 and external instances to provide permissions to the container agent to **call AWS APIs**
 2. Task IAM role
+   * Permission granted in IAM role are assumed by the containers running in the task
 3. Amazon ECS task execution IAM role
-4. Amazon ECS infrastructure 
+   * Grants 
+4. Amazon ECS infrastructure IAM role
+   * Allow Amazon ECS to manage infrastucture resources in your clusters on your behalf
+
+## ECS Scaling
+1. Service Auto Scaling
+   * Automatically adjusts the desired task count up or down using the Application Auto Scaling Service
+   * Supports target tracking, step, and scheduled scaling policies
+2. Cluster Auto Scaling
+   * Uses a Capacity Provider to scale the number of EC2 cluster instances using EC2 Auto Scaling
 
 ## AWS EC2 Launch Type
 * **Configure and deploy EC2 instances in cluster** to run containers 
