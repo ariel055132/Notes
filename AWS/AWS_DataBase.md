@@ -19,6 +19,31 @@
    * Fast temporary storage for small amounts of data
    * In-memory database
 
+## Amazon Database - RDS (Relational Database Service)
+* Manage **Relational Database in the cloud**
+* Use **Amazon EBS volumes** for storage
+* Backups can be taken using **EBS snapshots**
+  * (Automated) backup
+  * (Manual) Backup the entire DB instance, not just individual databases
+  * do not expire
+* Scaling up (vertically)
+  * Scales up by changing the instance type
+  * 2 CPUs, 8 GB RAM change to 4 CPUs, 32 GB RAM
+* Scaling out (horizontally)
+  * Reads horizontally with **read** Replicas
+### RDS Security
+* You can only enable encryption for an Amazon RDS DB instance when you create it, not after the DB instance is created.
+* In other words, **DB instances that are encrypted cannot be modified to disable encryption**
+* AWS KMS is used for managing encryption keys
+1. *RDS Security Group*
+   * **Manage network access to Amazon RDS instances**
+   * Database security group default to a **"deny all" access mode**, customers must specifically authorize network ingress.
+   * You must set of IP addresses using CIDR notation, and only network traffic originating from these addresses is recognized by your Amazon RDS instance
+   * For example, you set the IP address access port as 3306. It means that requests from port 3306 can be access to DB. Other ports cannot access.
+2. *RDS Encryption*
+   * Encrypte the connection with SSL/TLS
+   * RDS encrypt will be done to DB Volume and DB Snapshot
+
 ## Note
 ### Relational VS Non-Relational Database
 * *Relational* 
