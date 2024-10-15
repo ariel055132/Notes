@@ -37,3 +37,29 @@
 * key/value store
 * can be put in front of databases such as RDS and DynamoDB
 * Run on Amazon EC2 instance, choose an instance family/type
+### Usecase
+1. Data that is relatively static and frequently accessed
+2. Applications that are tolerant of stale data
+3. Data is slow and expensive to get compared to cache retrieval
+4. Require push-button scalability for memory, writes and reads
+5. Often used for storing session state
+### Examples
+1. Web session store
+   * Load
+2. Database caching
+   * Cache popular queries to offload work from RDS and return results faster to users
+3. Leaderboards
+   * Use cache to provide a live leaderboard for millions of users of your mobile app
+4. Streaming data dashboards
+### Scaling
+1. Memcached
+   * Add nodes to a cluster
+   * Scale vertically - node create a new cluster manually
+2. Redis
+   * Cluster mode disabled
+     * add replica or change node type
+     * create a new cluster and migrates data
+   * Cluster mode enabled
+     * Online resharding to add or remove shards; vertically scaling to change node type
+     * Offline resharding to add or remove shards change node type or upgrade engine
+   * 
