@@ -80,3 +80,46 @@
 * Fully managed ETL service, for preparing data for analysis
 * Discovers data and store the metadata in the AWS Glue Data Catalog
 * Use a crawler to populate the AWS Glue Data Catalog with tables
+
+## Amazon OpenSearch service (ElasticSearch)
+* Successor to **Amazon Elasticsearch Service**
+* Distributed search and analytics suite
+* Support queries using SQL syntax
+* Scale by adding / removing instances
+* Availability in up to three Availability Zones
+* Backup using snapshots
+* Encryption at-rest and in-transit
+1. Fully Managed
+   * Search, visualiza, and analyze *text and unstructured data*
+2. Petabyte Scale
+3. Secure
+   * Deploy to Amazon VPC and integrates with IAM
+4. Highly Available
+5. Scalable
+   * You can scale up by deploy nodes and replicas across different AZs
+
+### Deployment
+1. Define cluster (number of instance, instance type, storage option)
+2. Ingest data into opensearch service domains, you may visualize the data with Kibana DashBoard
+3. Deploy cluster
+   * VPC (secure intra VPC communications)
+   * VPN / Proxy 
+   * No IP-based access policies
+
+### Access Control
+1. Resource-based policies (aka. domain access policy)
+2. Identity-based policies
+   * Attached to users or roles
+3. IP-based policies 
+   * Restrict access to one or more IP addresses or CIDR blocks
+4. Fine-grained access Control
+   * Role-based access Control
+   * Security at the index, document, and field level
+   * OpenSearch DashBoard multi-tenancy
+   * HTTP basic authentication for OpenSearch and OpenSearch Dashboards
+
+## ELK Stack
+* *E*lasticsearch, *L*ogstash, *K*ibana
+* Used to aggregate logs from systems and applications, analyze these log
+* Connect them to Amazon OpenSearch Service
+
