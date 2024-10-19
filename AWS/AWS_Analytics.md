@@ -123,3 +123,36 @@
 * Used to aggregate logs from systems and applications, analyze these log
 * Connect them to Amazon OpenSearch Service
 
+## AWS Batch
+* Running batch workload on AWS
+1. Lauched a Batch Job
+2. Job will go in Job Queue with Job Definition
+3. Job will launch in Batch Compute Environment
+
+## Other DB services
+### Amazon DocumentDB
+   * Provides MongoDB compatibility
+   * built for **JSON data management** at scale
+   * Scales automatically up to 64 TB
+   * support millions of requests per second with up to 15 low latency read replicas
+   * Designed for 99.99% availability and replicates six copies of your data across three AZs
+   * Can migrate from MongoDB using the AWS Database Migration Service
+### Amazon Keyspaces (Apache Cassandra)
+   * enables you to use the Cassandra Query Language (CQL) API `
+   * Serverless and fully managed
+   * Scales automatically in response to application traffic
+   * Can serve thousands of requests per second with virtually unlimited throughput and storage
+   * Consistent, single-digit-millisecond response times at any scale
+   * 99.99% availability SLA within an AWS Region
+### Amazon Neptune
+   * Fully managed **graph database** service
+   * Offers greater than 99.99% availability
+   * Storage is fault-tolerant and self-healing
+   * DB volumes grow in increments of 10 GB up to a maximum of 64 TB
+### Amazon Quantum Ledger Database
+   * Fully managed **ledger database**
+   * built in immutable journal that stores entry of every data change
+   * append only, data can only be added, cannot be overwritten or deleted
+   * Use cryptography to create a concise summary of your change history
+   * Cryptographic hash function (SHA-256)
+   * serverless and offers automatic scalability
