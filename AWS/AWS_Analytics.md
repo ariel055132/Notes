@@ -156,3 +156,32 @@
    * Use cryptography to create a concise summary of your change history
    * Cryptographic hash function (SHA-256)
    * serverless and offers automatic scalability
+
+## Other Analysis Service
+### Amazon TimeStream
+* **Time Series database service** for IoT and operational applications
+* Faster and cheaper than relational databases
+* Keeps recent data in memory and moves historical data to a cost optimized storage tier based upon user defined policies
+* Serverless and scales automatically
+### Amazon DataExchange
+* **Data Marketplace** with over 3000 products from 250+ providers
+* supports Data Files, Data Tables, and Data APIs
+* Consume directly into data lakes, applications, analytics, and machine learning models
+* Automatically export new or updated datasets to Amazon S3
+* Query data table with AWS Data Exchange for Amazon RedShift
+* Use AWS-native authentication and governance, AWS SDKs, and consistent API documentation
+### AWS Data Pipeline
+* Managed **ETL (Extract-Transform-Load) service**
+* Process and move data between different AWS compute and storage service
+* Data sources can be also **on-premises**
+* Data can be procssed and transformed
+* Results can be loaded to services such as Amazon S3
+### AWS Lake Formation
+* Data lake: A **centralized repository** that allows you to store all your structured and unstructured data at any scale
+* Set up secure data lakes in days
+* Data can be collected from databases and object storage
+* Saved to Amazon S3 data lake
+### Amazon Managed Streaming for Apache Kafka (MSK)
+* ingesting and processing streaming data in real-time
+* Build and run Apache Kafka application
+* fully managed service
