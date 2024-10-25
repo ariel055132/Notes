@@ -71,3 +71,23 @@
    * *Maximum Receives*: Specify the maximum receives before a messagge is sent to the dead-letter queue
 * Delay Queue
   * postpone the delivery of new messages to consumers for a number of seconds
+
+### Short Polling AND Long Polling
+* Short Polling: return the message **immediately** 
+* Long Polling: retrieve message whthin **some seconds** 
+
+## Amazon SNS (Simple Notification Service)
+* Highly available, durable, secure, fully managed publisher/subscribers **messaging service**
+### Procedure
+1. Event Producer sends one message to one of the Amazon SNS Topic
+2. Amazon SNS Topic will forwards the message to different subscibers (Lamdba, Web Application, etc.) via Transport Protocols
+
+## AWS Step Function
+* Build distributed applications as a series of steps in a visual workflow
+1. Define the steps of your workflow. (JSON-Based Amazon States Language)
+2. Start the execution to visualize and verify the steps of your applications are operating as intended. 
+
+## AWS EventBridge
+* Event-bus
+1. Event sources generates events, those events will enter EventBridge Event Bus
+2. EventBridge Event Bus will distribute the events to different destination according to the rules.
