@@ -16,7 +16,7 @@
    * (**Alarms**)
 3. CloudWatch Logs
    * Centralized collection of system and application logs (**Log Collection**) 
-4. CloudWatch Events
+4. CloudWatch Events / Eventbridge
    * Stream of system events describing changes to AWS resources and can trigger actions (**Automated Action**)
 
 ### CloudWatch Metrics
@@ -39,3 +39,26 @@
    * INSUFFICIENT_DATA (Not enough data)
 2. Composite alarm
    * Uses a rule expression and takes into account multiple alarms
+
+### CloudWatch Logs
+* Amazon EC2 / On-premises servers will send the *application logs* to Amazon CloudWatch.
+  * If Unified CloudWatch agent is installed on EC2 / On-premises servers, *system logs* are also send to Amazon CloudWatch.
+  * Lamdba can also be input to Amazon CloudWatch, but permission is required
+* CloudWatch export the collections of logs to Amazon S3 / Kinesis Data Streams / Kinesis Data Firehose for data processing.
+
+### Unified CloudWatch Agent
+* Collect System-logs
+* The logs will send to CloudWatch when it is generated. (The logs will not be loss even the instances is terminated)
+
+### CloudTrail
+* Capture information about the **API actions** that are happening in your AWS account
+  * *Management Events* (data about management operation that are performed on resources in AWS account)
+  * *Data events* (resources operations performed in resource, S3)
+  * *Insights events* 
+* Management events are logged and retained for 90 days
+
+1. CloudTrail record the API actions, and It may do the following actions:
+* S3 Bucket can create a trail for indefinite retention, and also enable log file integrity validation (check whether the log file is modified...)
+* Notifications can be triggered through SNS topic when CloudTrail publishes log files
+* Forward logs to CloudWatch Logs
+* Forward logs to CloudWatch Events and trigger a Lamdba function
