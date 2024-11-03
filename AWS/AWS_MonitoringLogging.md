@@ -62,3 +62,15 @@
 * Notifications can be triggered through SNS topic when CloudTrail publishes log files
 * Forward logs to CloudWatch Logs
 * Forward logs to CloudWatch Events and trigger a Lamdba function
+
+### Metrics Analysis and tracing
+1. *AWS X-ray*
+   * Visualize the components of your application
+   * Identify performance bottlenecks
+   * Troubleshoot request that resulted in an error
+   * *X-ray agent* is required (X-ray SDK is used to capture metadata for requests made to databases)
+2. *Promethesus*  
+   * Monitor and alert on the performance of containerized workloads
+   * Automatically scales the ingestion, storage, alerting, and querying of operational metrics as workloads grow and shrink
+3. *Grafana*
+   * Data Visualization of monitoring and opreational data
