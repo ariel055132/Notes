@@ -73,8 +73,14 @@
   * postpone the delivery of new messages to consumers for a number of seconds
 
 ### Short Polling AND Long Polling
-* Short Polling: return the message **immediately** 
-* Long Polling: retrieve message whthin **some seconds** 
+1. Short Polling (短輪詢): return the message **immediately** 
+   * Regardless of whether the server has updated data or not, requests are frequently sent, which may result in repeated and inefficient requests. (不管 Server 端有沒有更新資料，都會頻繁地發送 Request，可能會出現頻繁又無效的 request。)
+   * Each request establishes a complete connection, and the HTTP/1.1 headers are not compressed. If the data updates are relatively small, a large portion of the transmission will consist of repeated headers. (每次 Request都是完整的連線，HTTP/1.1 的 Header 是沒有壓縮的，如果每次更新的資料其實不多，會發現大部份都是在傳輸重複的 Header。)
+   * Polling occupies HTTP connections, frequently opening and closing TCP/IP connections. (Polling會佔用 HTTP 連線，頻繁地開啟與關閉 TCP/IP 連線。)
+2. Long Polling: retrieve message whthin **some seconds** 
+   * Not suitable for scenarios where messages are updated frequently. (不適合頻繁更新訊息的狀況。)
+   * If a connection issue occurs, Long Polling has to wait until a timeout before sending a new request, which may result in delays in data retrieval. (如果某次連線出了問題，Long Polling 必須等到 timeout 後才會發新的 request，資料的獲取上會出現延遲。)
+   * Each request establishes a complete connection, and the headers are not compressed. (跟Short Polling一樣，每次 Request都是完整連線，且Header 是沒有壓縮的。)
 
 ## Amazon SNS (Simple Notification Service)
 * Highly available, durable, secure, fully managed publisher/subscribers **messaging service**
@@ -89,5 +95,7 @@
 
 ## AWS EventBridge
 * Event-bus
-1. Event sources generates events, those events will enter EventBridge Event Bus
-2. EventBridge Event Bus will distribute the events to different destination according to the rules.
+1. **Event sources** generates events, those events will enter **EventBridge Event Bus**
+2. EventBridge Event Bus will distribute the events to different **target** according to the rules.
+
+## AWS API Gateway
