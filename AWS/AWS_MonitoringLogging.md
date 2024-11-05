@@ -27,8 +27,8 @@
 * System-level metrics include memory and disk usage
 * (You have EC2 and CloudWatch, then EC2 instances is sending metrics either every 5 minutes / 1 minute. If you install the Unified CloudWatch Agent, you also get additional information includes memory and disk usage)
 * Can publish custom metrics using CLI or API
-  * Standard resolution: Data having a one-minute granularity 
-  * High resolition: Data at a granularity of one second
+  * *Standard resolution*: Data having a **one-minute** granularity 
+  * *High resolition*: Data at a granularity of **one second**
   * 資料顆粒度...(～詳細程度)
 
 ### CloudWatch Alarms
@@ -74,3 +74,12 @@
    * Automatically scales the ingestion, storage, alerting, and querying of operational metrics as workloads grow and shrink
 3. *Grafana*
    * Data Visualization of monitoring and opreational data
+
+## Architecture Patterns
+1. Need to stream logs from Amzon EC2 instances in an Auto Scaling Group **(?)**
+   * Install the Unified CloudWatch Agent and collect logs files in Amazon CloudWatch
+2. Need to collect from EC2 instances with a **1 second granularity**
+   * Create a custom metric with *high resolution*
+   * Standard resolution: one minute granularity
+3. The application logs from on-premises servers must be proessed by AWS Lambda in real time
+   * Install the unified CloudWatch Agent on the servers and use a subscription filter in CloudWatch to connect to a Lamdba function.
