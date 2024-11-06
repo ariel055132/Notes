@@ -68,6 +68,13 @@
 ## Private Subnets and Bastion Hosts
 
 ## EC2 instance lifecycle
+1. You get the Operating System of EC2 instances from AMI
+2. Try to launch the EC2 instances (pending state)
+3. After the EC2 instances is launched, it will change to running state
+4. You can choose reboot, shut-down, stop the instances
+   * Reboot: Rebooting state, then return to running state (== OS reboot, DNS name and all IPv4 and IPv6 addresses retained)
+   * Shut-down: shutting-down state, then go to terminated state (== deleting the EC2 instances, cannot recover a terminated instance. Root EBS volumes are deleted)
+   * Stop: Stopping state, relevant to EBS-backed volumes only, finally enter stopped state (instances is migrated to a different host, private IPv4 addresses and IPv6 addresses retained, public addresses released)
 
 
 ## NAT Gateways & Instances (Network Address Translations)
