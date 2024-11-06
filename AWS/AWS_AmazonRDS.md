@@ -1,6 +1,9 @@
 # Amazon Relational Database Service - RDS
 * A web service that makes it easier to setup, operate, and scale a relational database in the cloud
 
+## Featires
+1. CPU, Memory, Storage **(Resource) can be scaled independently**.
+2. **Automated backups and manual backups** can be trigger as need. (Restore the )
 
 ## RDS Components
 
