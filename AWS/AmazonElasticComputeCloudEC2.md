@@ -96,6 +96,65 @@
 * Runds on isolated and hardened virtual machines
 * Protect and securely processes highly senitive data
 
+## Pricing Options
+1. On-Demand
+   * Standard rate, no discount, no commitments
+   * Suitable for dev test, short term / unpredictable workloads
+2. Reserved
+   * 1 or 3-year commitment
+   * up to 75% discount
+   * Suitable for steady state, predictable workloads and reserved capacity
+3. Spot Instances
+   * Get discounts of up to 90% for unused capacity
+   * Can be terminated at any time
+4. Dedicated instances
+   * Physical isolation at the host hardware level from instances belonging to other customers
+   * pay per instance
+5. Dedicated Hosts
+   * Physical server dedicated for your use
+   * Pay per host
+6. Savings Plans
+   * 1 / 3-year commitment to a consistent amount of usage
+   * Pay by money per hour
+
+## EC2 Billing
+1. Billed per second (minimum of 1 minute)
+   * For Amazon Linux, Windows, and Ubuntu
+   * On-Demand, Reserved, and Spot forms
+2. Billed per hour (minimum of 1 hour)
+   * Commercial Linux distros such as Red Hat EL, SUSE ES
+
+## EC2 Reserved Instances (RIs)
+1. Standard RI
+   * Change AZ, instance size, network type
+   * ModifyReservedInstances API
+2. Convertible RI
+   * Change AZ, instance size, network type
+   * Change family, OS, tenancy, payment option
+   * ExchangeReservedInstances API
+
+## On-Demand Capacity Reservation
+* Reserve compute capacity for EC2 instances in a specific Az
+* Any duration can be specified
+* Lowered the risk of being unable to get On-Demand capacity
+* Does not require any commitments and can be canceled at any time
+* Specify
+  1. AZ in which to reserve the capacity
+  2. Number of instances for which to reserve capacity
+  3. Instance attributes (instance type, tenancy, platform)
+
+## AWS Saving Plan
+1. Compute Savings Plan
+2. EC2 Savings Plan
+
+## EC2 Spot Instances
+1. Spot Instance: one / more EC2 instance
+2. Spot Fleet: launches and maintains the number of Spot / On-Demand instances to meet specified target capacity
+3. EC2 fleet: Launches and maintains specified number of spot in a single API call
+
+## Dedicated Instances (DI) and Dedicated Hosts (DH)
+1. Enables the use of dedicated physical servers ()
+
 ## Reference
 1. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
 2. https://hackmd.io/@gdw7l5sPTOyNv76kZ_twjA/SJvjP7du3
