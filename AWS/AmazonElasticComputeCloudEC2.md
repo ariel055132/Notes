@@ -70,6 +70,15 @@
 ## EC2 instance lifecycle
 
 
+## NAT Gateways & Instances (Network Address Translations)
+* Translate the address often between public address and private address
+* Enable the instances that we deploy into private subnets to connect to the internet, but the internet outside cannot access to the private subnets instances
+1. Deploy a NAT Gateway in a public subnet, the ec2 instances in private subnet connect to the NAT Gateway. (The NAT Gateway need to have a public IP address for communication --> elastic IP address)
+* Before having NAT Gateway, NAT instances are created to do the same thing
+  * Uses a special AMI with the string amzn-ami-vpn-nat 
+  * Disable source/destination checks
+* NAT instances vs NAT Gateway
+
 ## Reference
 1. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
 2. https://hackmd.io/@gdw7l5sPTOyNv76kZ_twjA/SJvjP7du3
