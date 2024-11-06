@@ -86,6 +86,16 @@
   * Disable source/destination checks
 * NAT instances vs NAT Gateway
 
+## AWS Nitro System
+* next generation of EC2 instances, support more virtualized and bare metal instances types
+* Nitro instances and nitro enclaves
+* Breaks the function in EC2 instances, put those function into specialized hardware with a Nirto Hypervisor --> Optimization, Security (hardware), Better performance (network, computing)
+
+## Nitro Enclaves
+* Isolated compute environments
+* Runds on isolated and hardened virtual machines
+* Protect and securely processes highly senitive data
+
 ## Reference
 1. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
 2. https://hackmd.io/@gdw7l5sPTOyNv76kZ_twjA/SJvjP7du3
