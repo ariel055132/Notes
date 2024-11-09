@@ -6,6 +6,7 @@
   3. Configuration of route tables and network gateways
 
 ## AWS Global Infrastructure
+* Ref: AWSGlobalInfrastructure.png
 1. **Region 區域**
    * Separate physical separation in the world (一個實體地區，例如：東京，德州...)
 2. **Availability Zone (AZ) 邏輯資料中心**
@@ -19,7 +20,9 @@
    * managed the network latency, performance....
    * Ensure the data transfer is fast
 * You can spread your data, instances to several AZs (High Availability), less correlation in terms of failure.
-* All of the regions are connected around the world by **AWS global network**, .
+* **AWS Outposts** (內部部署私有雲端): On-premises servers can deploy their subnet/instance inside, and connect to region
+* **AWS Local Zone**: ~AZ, but resources is deployed a bit closer to where you are (lower latency when you access the resources)
+* **AWS WaveLength Zone**: For make instance available to 5G network
 
 
 ## Reference
