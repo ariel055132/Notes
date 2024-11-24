@@ -25,6 +25,14 @@
 ### @NoArgsConstructor
 * 生成一個空欄位的 constructor
 * 若 class 中有 param 是 final，不能使用 @NoArgsConstructor，除非使用 @NoArgsConstructor (force = true)
+### @ToString
+* 生成 class 中的param ToString method
+### @EqualsAndHashCode
+* 生成 Equals 的方法與 HashCode 計算
+### @Builder
+* 生成 builder 設計模式
+* 處理多個 parm 生成情況
+* 幹掉 NoArgsConstructor...
 
 ## Note
 * Why Lombok can generate the codes with Annotation?
