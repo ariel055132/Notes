@@ -28,11 +28,32 @@
 |@FutureOrPresent / @PastOrPresent | **日期/時間**類型，必須為未來/過去 或當下的時間       |
 
 ## 自定義Validation
-* SpringValidation 能做的 Validation
+* SpringValidation 能做的 Validation 可能不足以應付業務使用，有可能需要我們自定義新的Validation方法
+* 步驟如下：建立 Annotation -> 建立 Validator -> 
 1. 建立 Annotation
-   ```java
+```java
+    @Target({FIELD, PARAMETER})
+    @Retention(RUNTIME)
+    @Documented
+    @Constraint(validatedBy = PasswordRuleValidator.class)
+    public @interface PasswordRule {
+        int upperLetter() default 1;
+        int lowerLetter() default 1;
+        int number() default 1;
+        int nonAlphaNum() default 0;
 
-   ```
-2. 建立 Validator
-3. 在對應欄位使用 Annotation
-4. 啟動 Validator
+        String message() default "Invalid password";
+        Class<?>[] groups() default {};
+        Class<? extends Payload>[] payload() default {};
+    }
+```
+* @Target: 此Annotation適用於哪些位置上
+* @Retention: 什麼時候才要讓此Annotation生效 (Runtime->程式執行的時候)
+* @Documented: 是否需要將其建立文件
+* message: 錯誤訊息內容，可直接在這邊設定，也可以在 application 檔案那邊進行設定  
+1. 建立 Validator
+* 在上一步所建立的 Annotation，將發現 Validator 是不存在的，因此需要自行建立
+* 建立一個 Validator 實作(implements) *ConstraintValidator*，需要帶入和 Annotation於預期傳入的參數類別
+* 
+1. 在對應欄位使用 Annotation
+2. 啟動 Validator
