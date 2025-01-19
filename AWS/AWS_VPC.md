@@ -56,5 +56,20 @@
 * When you create a VPC, you must specify a range of IPv4 addresses for the VPC in the form of CIDR (Classless Inter-Domain Routing) blocks 
 
 
+## Security Groups and Network ACLs
+* Protect EC2 instances, databases, and other services that sit inside an Amazon VPC
+### Stateful and Stateless Firewall
+* Stateful firewall allows the return traffic automatically
+* Stateless firewall checks for an allow rule for both connections
+### Security Group VS Network ACL
+* Instance Level VS Subnet Level
+* Allow Rules only VS Allow and Deny Rules
+* Stateful VS Stateless
+* Evaluates all rules VS processes rules in order
+* Applies to an instances only if associated VS
+
+## VPC Peering
+* Routing Addresses internally for VPCs
+
 ## Reference
 1. https://hackmd.io/@AWSlearning/BJvnmhRg2#%E2%97%86-NACL-vs-SG-%E7%9A%84%E5%AE%89%E5%85%A8%E8%A8%AD%E5%AE%9A%E4%BB%8B%E7%B4%B9 (AWS VPC 網路架構 (觀念講解篇))

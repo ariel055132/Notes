@@ -29,7 +29,7 @@
 
 ## 自定義Validation
 * SpringValidation 能做的 Validation 可能不足以應付業務使用，有可能需要我們自定義新的Validation方法
-* 步驟如下：建立 Annotation -> 建立 Validator -> 
+* 步驟如下：建立 Annotation -> 建立 Validator -> 使用 Validator 
 1. 建立 Annotation
 ```java
     @Target({FIELD, PARAMETER})
@@ -57,3 +57,6 @@
 * 
 1. 在對應欄位使用 Annotation
 2. 啟動 Validator
+
+
+## Reference

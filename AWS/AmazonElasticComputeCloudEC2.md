@@ -153,7 +153,8 @@
 3. EC2 fleet: Launches and maintains specified number of spot in a single API call
 
 ## Dedicated Instances (DI) and Dedicated Hosts (DH)
-1. Enables the use of dedicated physical servers ()
+1. Enables the use of dedicated physical servers (DI, DH no)
+2. Per Instance billing ()
 
 ## Reference
 1. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html

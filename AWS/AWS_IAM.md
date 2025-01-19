@@ -1,8 +1,9 @@
 # AWS Identity and Access Management (IAM)
 
 ## What is IAM?
-* A place allows us to create user, role, federated user, make application before making a request for an action or operation on an AWS resource.
-* 控制誰可以做什麼
+* A place allows us to *create user*, *role*, *federated user*, make application before making a request for an action or operation on an AWS resource.
+
+## How to use IAM?
 * First, We need to login to AWS IAM via console, CLI, and API. We need to **authenticate** ourself. (Showing who we are, trying to prove who we are.)
 * After login in, we can create user, role, policy......
 * After that, when we are trying to make a request for an action or operations on an AWS resource. AWS determines whether to **authorize** the request (deny/allow)
