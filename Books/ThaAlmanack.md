@@ -8,4 +8,29 @@
 4. Taught through apprenticeships, not schools
 5. Often high technical or creative, it cannot be outsourced or automated
 
-## 
+### Internal & External Motivation
+* External: Market trend
+
+### Process * Outcome Focus
+
+### Unique Combination & Standard Paths
+
+* What do you do on weekends that feel like *play* to you but look *work* to others?
+* What topics makes you lose track of time when you are learning about them?
+* What unique combination of interests do you have that seems unrelated?
+
+## Accountability
+* Embrace accountability and take business risks under your own name. Society will reward you with responsibility, equity, and leverage.
+* There is no much to fear in terms of failure
+
+## Equity
+* If you do not own a pirce of business, you do not have a path towards financial freedom.
+* Without ownership, your inputs are very closely tied to your outputs
+
+## Leverage
+1. Labor
+2. Money
+
+## Be Patient
+* Immedidate does not work
+* Put yourself in the position with the specific knowledge, with accountability, with leverage with the authentic skill set you have, to be the best in the time at what you do
