@@ -34,3 +34,13 @@
 ## Be Patient
 * Immedidate does not work
 * Put yourself in the position with the specific knowledge, with accountability, with leverage with the authentic skill set you have, to be the best in the time at what you do
+
+# Conclusion
+* Spend more time making the big decisions. There are basically three really big decisions you make in your early life: 
+  1. where you live?
+  2. who you’re with?
+  3. what you do?
+* Figure out what you’re good at, and start helping other people with it. Give it away. Pay it forward. 
+* Find work that feels like play
+* How to get lucky?
+  1. Become the best at what you do. Refine what you do until this is true. Opportunity will seek you out.
