@@ -123,3 +123,16 @@ public class JacksonConfiguration {
 
 3. 包裝成 Utils
 * 全域的 Class 若需要使用 Json 進行操作，直接Call Utils，確保都只有一個 utils 被使用
+
+
+## Annotations
+1. @JsonPropertyOrder
+* Specify the order of properties on Serialization
+
+
+## Others
+1. 若要使用 Java 8 的 LocalDate, LocalDateTime 等功能，需要額外 import module: com.fasterxml.jackson.datatype:jackson-datatype-jsr310，再 register module
+```java
+ObjectMapper objectMapper = new ObjectMapper();
+objectMapper.registerModule(new JavaTimeModule());
+```
