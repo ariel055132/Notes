@@ -127,8 +127,34 @@ public class JacksonConfiguration {
 
 ## Annotations
 1. @JsonPropertyOrder
-* Specify the order of properties on Serialization
+* Specify the order of properties on Serialization 
+* 確保欄位的顯示順序是 follow 在 @JsonPropertyOrder 所設定的順序
+2. @JsonProperty
+* 確保欄位的顯示名稱是 follow 在 @JsonProperty 所設定的名字，下面的例子就是將 lastName 改為 surname
+```java
+@Data
+public class Person {
+    private String firstName;
 
+    @JsonProperty("surname")
+    private String lastName;
+}
+```
+3. @JsonIgnore
+* Jackson 在進行 Serialize 和 deserialize 將忽略此字段
+4. @JsonInclude
+* 適用於在什麼情況下需要排除/保持 Entity 的 Properties 
+* include 什麼東西視孚 enum 怎麼設定，比較常用就這兩個
+	* JsonInclude.Include.ALWAYS: 一直 include (例如：如果需要顯示欄位值為 null 的欄位，就需要使用此 enum)
+	* JsonInclude.Include.NON_NULL: 屬性不為 null 才 include
+5. @JsonFormat
+* 確保 Jackson 在進行 Serialize 和 Deserialize
+* 比較常用於 LocalDate 的 pattern
+```java
+// 將 birthDate 根據 yyyy-MM-dd 來轉換，避免轉成 yyyy-mm-ddTHH:mm:ss.xxxxxx
+@JsonFormat(pattern = "yyyy-MM-dd")
+private LocalDate birthDate;
+```  
 
 ## Others
 1. 若要使用 Java 8 的 LocalDate, LocalDateTime 等功能，需要額外 import module: com.fasterxml.jackson.datatype:jackson-datatype-jsr310，再 register module
