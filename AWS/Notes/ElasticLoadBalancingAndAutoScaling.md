@@ -54,7 +54,57 @@
            * Health Check grace period: How long to wait before checking the health status of the instance
         6. Group Size and Scaling Policies
         7. Types
-           * Manual
+           * Manual: Make changes to ASG size manually
            * Dynamic: automatically scales based on demand 
            * Predictive: use Machine Learning algorithms to predict
            * Scheduled: based on a schedule
+
+* High Availability (HA)
+  * Minimal service interruption
+  * Design with no single point of failure
+  * Uptime measured in %
+  * Synchronous or asychronous replication
+  * Lower cost compared to FT
+  * E.G: Elastic Load Balancing, EC2 Auto Scaling
+
+* Fault Tolerance (FT)
+  * No service interruption
+  * Specialized hardware with instantaneous failover
+  * No downtime
+  * Synchronous replication
+  * E.G: Disk Mirroring (RAID 1)
+
+* Durability
+  * Protection against data loss & data corruption
+* Availability
+  * The amount of time the data is available to access
+
+
+* Amazon Elastic Load Balancing
+  * Provides high availability and fault tolerance
+  1. Application Load Balancer (ALB)
+    * Web Application with L7 routing
+    * Microservices architectures
+    * Lamdba targets
+  2. Network Load Balancer (NLB)
+    * TCP and UDP based applications
+    * Ultra-low latency
+  3. Gateway Load Balancer
+    * 3 rd party virtual network appliances
+
+* EC2 Scaling policies
+    1. Dynamic Scaling - Target Tracking
+       * Scales the capacity of scaling group based on a target metric value 
+
+
+* Cross-Zone Load Balancing
+  * To make the load more balanced
+
+* Session State and Session Stickiness
+  * Does the application store any information? (aka. Session state data)
+  * session data will be stored in DynamoDb Table
+
+* Secure Listeners for ELB
+  * In Application Load Balancer (ALB), we can add SSL / TLS Certificate to connection in order to implement encrypted connections
+  * From User to load balancer, load balancer to instances.
+  * In Network Load Balancer, cannot add encryption to connections all the time
