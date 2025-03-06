@@ -26,7 +26,7 @@
     * Adding more machine or node to the system
     * More preferred in cloud (raise flexibility and availability)
 
-* Auto Scaling
+* Auto Scaling Group (ASG)
     * Automatically launches and terminates instances when instances need to be replaced or need to increase or decrease the capacity of cluster
     * Maintain availability and scale capacity
     * Integrates with AWS services
@@ -42,3 +42,19 @@
         * Instances are sending information to CloudWatch.
         * The report can reveal the status of the instances
         * If the status is failed, ASG will replace it.
+    * Config
+        1. Launch Template 
+            * Specifies the EC2 instance configuration
+        2. Configure purchase options
+        3. Configure VPC and Subnets
+        4. Attach Load Balancer
+        5. Configure health checks EC2 & ELB
+           * EC2: EC2 status checks
+           * ELB: ELB (Load Balancing) health checks in addition to EC2 status checks
+           * Health Check grace period: How long to wait before checking the health status of the instance
+        6. Group Size and Scaling Policies
+        7. Types
+           * Manual
+           * Dynamic: automatically scales based on demand 
+           * Predictive: use Machine Learning algorithms to predict
+           * Scheduled: based on a schedule
