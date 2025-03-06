@@ -1,11 +1,11 @@
 # AWS Organization 
 * It allows people to consolidate **mulitple AWS accounts** into an **organization** that **create and centrally manage**
-  1. single bill in management account (aka. *consolidated billing*)
+  1. single bill in management / main account (aka. *consolidated billing*)
   2. *Apply centralized governance* across different AWS accounts
 
 ## Terminology
 1. Management / Root / Master / Main Account
-   * The account through which you create the Organization and then connects in the other accounts
+   * The account through which you **create the Organization** and then connects in the other accounts
 2. Organizational Units (OUs)
    * A type of organizational container
    * Apply things like Service Control Policies, tag Policies
@@ -13,17 +13,18 @@
    * Have a single bill in the management account
    * may be good when you get volume discount discount (~the more you use, the less you pay per unit)
    * Limit of 20 linked accounts for consolidated billing (default)
-4. Paying Account (in Consolidated Billing)
+4. All Features
+5. Paying Account (in Consolidated Billing)
    * independent and cannot access resources of other accounts
-5. Linked Accounts (in Consolidated Billing)
+6. Linked Accounts (in Consolidated Billing)
    * all linked accounts are independent
-6. Service Control Policies (SCPs)
-   * control the *maximum available/enabled permissions*, not grant permission
+7. Service Control Policies (SCPs)
+   * control the *maximum available/enabled permissions* to a given account, not grant permission
    * must have all features enabled in Organization
    * can be applied to accounts or Organization Units (OUs)
    * affect only IAM users and roles, not resources policies
    * affect the root account in member accounts
-7. Tag Policy
+8. Tag Policy
    * enforce tag standardization
 
 ## Migration
