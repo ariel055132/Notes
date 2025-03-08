@@ -11,8 +11,12 @@
    * Separate physical separation in the world (一個實體地區，例如：東京，德州...)
 2. **Availability Zone (AZ) 邏輯資料中心**
    * Region has multiple AZs (at least 3)
-   * We can create *public (public access) & private (internal usage) subnet* inside the AZs
-   * We can deploy *instances* into public / private subnet
+   * We can create *public (public access) & private (internal usage, no direct connectivity from the outside world) subnet (~IP networking space)* inside the AZs
+   * We can deploy *EC2 instances* into public / private subnet
+   * *VPC router* will take care of routing within the VPC and the outside of the VPC
+   * *Internet gateway* attaches to VPC and connect to the Internet
+     * egrass internet: send data out of the outside Internet 
+     * ingress internet: receive data from the outside Internet
 3. **Data Center 實體資料中心**
    * The actual place where servers and hardware equipment are installed (實際放上主機與硬體設備等的地方)
    * An availability zone is composed of one or more data centers
@@ -20,10 +24,13 @@
    * Regions are connected to AWS global network
    * managed the network latency, performance....
    * Ensure the data transfer is fast
-* You can spread your data, instances to several AZs (High Availability), less correlation in terms of failure.
-* **AWS Outposts** (內部部署私有雲端): On-premises servers can deploy their subnet/instance inside, and connect to region
-* **AWS Local Zone**: ~AZ, but resources is deployed a bit closer to where you are (lower latency when you access the resources)
-* **AWS WaveLength Zone**: For make instance available to 5G network
+* Advantages: 
+  * *High Availability*: You can spread your data, instances to several AZs
+  * *Less correlation* in terms of failure
+* **AWS Outposts** (內部部署私有雲端): On-premises servers (aka. *Corporate data center*) can deploy their subnet/instance inside, and connect to region
+* **AWS Local Zone**: ~AZ, but resources is deployed a bit closer to where you are, leads to lower latency
+* **AWS WaveLength Zone**: For make instance available to 5G network, for server and mobile applications
+* **Amazon CloudFront Network**: Content Delivery Network, cache the content around the world, users access the content from the instances geographically near to them. E.G. Australia users will get the content from the instances in Australia, but not the US. 
 
 ## IP addressing 
 ### Structure of IPv4 Address
@@ -35,6 +42,7 @@
 * 168 --> 10101000 = (2^7 + 2^5 + 2^3 = 128 + 32 + 8 = 168)
 * 0 --> 00000000 = 0
 * 1 --> 00000001 = (2^0 = 1)
+
 ### Networks and Hosts
 * 192.168.0 --> network ID
 * 1 --> Host ID (unique value per individual computer)
@@ -55,18 +63,32 @@
 * Network ACL: Subnet-level firewall (only sees traffic going in and out of the subnet)
 * When you create a VPC, you must specify a range of IPv4 addresses for the VPC in the form of CIDR (Classless Inter-Domain Routing) blocks 
 
+## AWS CIDR Blocks
+* CIDR Block Size can be between /16 and /28
+* Cannot overlap with any existing CIDR Blocks that is associated with the VPC
+* Cannot increase / decrease the size of an existing CIDR block
 
 ## Security Groups and Network ACLs
 * Protect EC2 instances, databases, and other services that sit inside an Amazon VPC
 ### Stateful and Stateless Firewall
 * Stateful firewall allows the return traffic automatically
 * Stateless firewall checks for an allow rule for both connections
-### Security Group VS Network ACL
-* Instance Level VS Subnet Level
-* Allow Rules only VS Allow and Deny Rules
-* Stateful VS Stateless
-* Evaluates all rules VS processes rules in order
-* Applies to an instances only if associated VS
+
+### Network ACLs
+* Apply at the subnet level (Region -> Availability Zone -> Subnet)
+* Check the ingress, engress network traffic to the subnet
+* Do not check the traffic between instances (Subnet level)
+* Support allow and deny rules
+* Stateless
+* Process rules in order
+* Automatically applies to all instances in the subnets its associated with
+
+### Security Group 
+* Instance Level (Region -> Availability Zone -> Subnet -> Instances)
+* Support allow rules
+* Stateful
+* Evaluates all rules
+* Applies to an instance only if associated with a group
 
 ## VPC Peering
 * Routing Addresses internally for VPCs
