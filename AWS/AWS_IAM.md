@@ -113,6 +113,7 @@
 * identity-based policy & SCP: and
 
 ## IAM policy structure
+* Each AWS service has its own set of actions that describe tasks you can perform with that service -> API
 * Written as *json*
 ```json
 {
@@ -141,6 +142,26 @@
 
 ## AWS IAM Best practices
 1. Require human users to use federation with an identity provider to access AWS using **temporary credentials**. 
+2. **Requite workloads to use temporary credentials with IAM roles to access AWS**
+   * Create Users
+   * Add user to user Groups
+   * Apply (privilege) policies to user Groups
+   * Users access to AWS with policies
+   * More safety because no need to use long-time credentials
+3. MFA
+4. Rotate access keys regularly for use cases that require long-term credentials
+5. Safeguard root user credentials & do not use them for everyday tasks
+6. Apply Least-privilege permissions (give users the permission they need only)
+7. **Get started with AWS managed policies** & move toward least-privilege policies
+   * AWS generated some common policies with different situations
+   * Reference from them, and optimize it
+8. Use **IAM Access Analyzer** to generate least-privilege policies based on access activity
+9. Clean up unused users, roles, permissions, policies, and credentials regularly
+10. Use condition in IAM policies to further restrict access
+    * With specified IP address
+11. Verify public and cross-account access to resources with IAM Access Analyzer
+12. Use IAM Access Analyzer to validate your IAM policies to ensure secure and functional permissions
+13. Establish permissions guardrails across multiple accounts
 
 ## Architecture Patterns
 1. A select group of users / priviledged users only should be allowed to change their IAM passwords. 
@@ -153,6 +174,16 @@
 5. A developer needs to make programmatic API calls from the AWS CLI. -> Instruct the developer to create a set of access keys and use those for programmatic access.
 6. A group of users require full access to all Amazon EC2 API actions. -> Create a permissions policy that uses a wildcard(*) for the Action element relating to EC2 
 
+## Exam Cram
+* IAM is used to securely control individual and group access to AWS resources
+* Manage: Users, Groups, Access policies, Roles, User credentials, password policies, MFA, CLI credentials
+* New Users are created with NO access to any AWS services, only login to AWS console
+* Permissions must be explicitly granted to allow a user to access an AWS service
+
+* IAM is global (not apply to regions)
+* eventually consistent
+* Authentication methods: Console password (AWS Management Console), Access keys (programmatic access), Server Certificates (SSL/TLS certficates)
+ 
 ## Q/A
 1. What is the best practice for applying permissions to many users who perform the same job role?
    * Add the users to an IAM group and apply a permissions policy to the group.
