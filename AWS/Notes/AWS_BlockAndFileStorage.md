@@ -1,15 +1,12 @@
 # Amazon Block And File Storage
-* Object based storage: Amazon S3
-* Block Storage: Amazon EBS (Elastic Block Store)
-* File-based storage: Amazon EFS (Elastic File System)
-* Multiple file system: Amazon FSx
-* Gateway: AWS Storage Gateway
 
 ## Storage System
-* There are three storage system in AWS
-1. Block Storage
-2. File Storage
-3. Object Storage
+* There are multiple storage system in AWS
+1. Block Storage -> Amazon Elastic Block Store
+2. File Storage -> Amazon Elastic File System
+3. Object Storage -> Amazon Simple Storage Services (S3)
+4. Multiple file system: Amazon FSx
+5. Gateway: AWS Storage Gateway
 
 ### Block Storage
 * leads to **Hard drives** (HDD: Magnetic Drives; SSD: Flash Memory) 
@@ -73,13 +70,21 @@
    * Use Case: Big Data, Data Warehouses, Log processing
 2. Cold HDD
    * Use Case: Storage for data that is infrequently used, scenarios where the lowest storage cost is important
+* Ref: source/BlockAndFileStorage/HDDBackedVolumes.png
 
 ## EBS Copying, Sharing, and Encryption
 * We can backup data by creating **snapshot**
-* snapshot: A point in time copy of the data on the volume. Each snapshot is incremental. 
+* Snapshot: 
+  * A point in time copy of the data on the volume. 
+  * Each snapshot is *incremental*.
+  * For Example, user created three snapshots A (the earliest), B, C (the latest).
+  * SnapShot A is the whole copy of the volume when it is created. SnapShot B is going to be the changes since Snapshot A. SnapShot C is going to be the changes since SnapShot B.
+  * Therefore, SnapShot A + SnapShot B + SnapShot C === Volume
+  * You can save up more spaces by deleting older snapshots and just keep the latest snapshots
 * We can create volume from a snapshot in another AZ, then creating an AMI (Amazon Machine Image). And attach the snapshot to the image (~similar as copying the data to another)
+* Ref: source/BlockAndFileStorage/EBSCopyingSnapShot.png
 
-## EBS Snapshots and DLM
+## EBS Snapshots and DLM (Data Lifecycle Manager)
 * DLM (Data Lifecycle Manager): Automates the creation, retention, and deletion of EBS snapshots and EBS-backed AMIs
 1. Protect valuable data by enforcing a *regular backup schedule*
 2. Create standardized AMIs that can be refreshed at ergular intervals
