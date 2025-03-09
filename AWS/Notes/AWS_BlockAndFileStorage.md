@@ -5,10 +5,15 @@
 * Multiple file system: Amazon FSx
 * Gateway: AWS Storage Gateway
 
-## Block vs File vs Object Storage
+## Storage System
+* There are three storage system in AWS
+1. Block Storage
+2. File Storage
+3. Object Storage
+
 ### Block Storage
 * leads to **Hard drives** (HDD: Magnetic Drives; SSD: Flash Memory) 
-* A lot of them use in cloud, as they are cost-effective and good for some cases
+* A lot of them use in cloud, as they are **cost-effective** and good for some cases
 * The OS read/write at the **block level**. Disks can be internal, or network attached
 
 ### File Storage 
