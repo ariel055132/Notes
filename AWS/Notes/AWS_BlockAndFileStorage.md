@@ -14,16 +14,18 @@
 ### Block Storage
 * leads to **Hard drives** (HDD: Magnetic Drives; SSD: Flash Memory) 
 * A lot of them use in cloud, as they are **cost-effective** and good for some cases
-* The OS read/write at the **block level**. Disks can be internal, or network attached
+* The OS read/write at the **block level**, see volumes that can be partitioned and formatted 
+* Disks can be internal, or network attached
 
 ### File Storage 
 * A block based Storage that a **file system has been created on top**
-* The file system can be shared by many users, and come from many sources
+* The file system can be **shared by many users**, and come from many sources
+* Disks always be network attached (E.G: NAS)
 
 ### Object Storage
-* The user implements object operation to **bucket** with HTTP protocol, cannot be mounted
-* Object can be all file type
-* no hierarchy for files
+* The user implements object operation to **bucket** (aka. Object Storage Container) with **HTTP protocol** (e.g GET, PUT, POST, SELECT, DELETE), cannot be mounted
+* Object can be all file type (files, image, videos, doc, etc.)
+* no hierarchy for files (no file path.)
 
 ## EBS Deployment and Volume Types
 * Objectives: How to deploy our volumnes and connect to them, Understand the available volume types
