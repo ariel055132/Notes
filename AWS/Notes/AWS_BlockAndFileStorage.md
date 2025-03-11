@@ -103,3 +103,15 @@
    * high performance
    * temporary storage of information that changes frequently (buffers, caches, scratch data)
    * cannot be attaches / deattached
+
+## Using RAID (Redundant Array of Independent Disks) with EBS
+* Not provided by AWS, configure through your OS (*OS Level*)
+* *RAID 0* and *RAID 1* are potential options on EBS
+   1. RAID 0
+      * striping data across disks 
+      * Performance
+      * If one disk fails, the entire RAID set fails
+   2. RAID 1
+      * Mirroring data across disks (Writing the same data to two different volumes)
+      * Redundancy / Fault Tolerance
+      * If one disk fails, the other disks is still working
