@@ -91,3 +91,15 @@
 3. Retain backups as required by auditors or internal compliance
 4. Reduce storage costs by deleting outdated backups
 5. Create disaster recovery backup policies that backup data to isolated accounts
+
+## EC2 instance Volumes
+1. Elastic Block Store Volumes (EBS)
+   * Attached to *network*
+   * Connect to them via ENI (Network Interface card)
+   * data is persistent
+2. Instance Store
+   * *Physically* Attached to the host
+   * Ephemeral - data is lost when the instance is powered down
+   * high performance
+   * temporary storage of information that changes frequently (buffers, caches, scratch data)
+   * cannot be attaches / deattached
