@@ -105,7 +105,7 @@
    * cannot be attaches / deattached
 
 ## Using RAID (Redundant Array of Independent Disks) with EBS
-* Not provided by AWS, configure through your OS (*OS Level*)
+* *OS Level* (Not provided by AWS, configure through your OS)
 * *RAID 0* and *RAID 1* are potential options on EBS
    1. RAID 0
       * striping data across disks 
@@ -115,3 +115,18 @@
       * Mirroring data across disks (Writing the same data to two different volumes)
       * Redundancy / Fault Tolerance
       * If one disk fails, the other disks is still working
+
+## Amazon Elastic File System (EFS)
+* Shared File System
+* Connect instances to it from multiple availability zones (Regional)
+* *Data Consistency*: Write operations for Regional File system are durably stored across Availability Zones
+* *File Locking*: NFS Client applications can use NFS v4 file locking for read and write operations on EFS files
+* Storage Class
+  1. EFS Standard: Use SSDs for lower latency performance
+  2. EFS Infrequent Access (IA): Cost effective option
+  3. EFS Archive: Even cheaper for less active data (~Cold Storage)
+* EFS Replication: data is replicated for disaster recovery purposes with RPO / RTO in the minutes
+* Automatic Backup
+* Performance Options
+  * Provisioned Throughput: Specify a level of throughput that the file system can drive independent of the file system's size
+  * Bursting Throughput: Scales with the amount of storage and supports bursting to higher levels
