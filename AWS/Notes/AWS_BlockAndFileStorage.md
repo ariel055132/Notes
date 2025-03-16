@@ -72,6 +72,10 @@
    * Use Case: Storage for data that is infrequently used, scenarios where the lowest storage cost is important
 * Ref: source/BlockAndFileStorage/HDDBackedVolumes.png
 
+### HDD-backed Volumes vs SSD-backed Volumes
+* Storage，存 Log -> HDD-backed
+* 日常運作 -> SSD-backed
+
 ## EBS Copying, Sharing, and Encryption
 * We can backup data by creating **snapshot**
 * Snapshot: 
@@ -130,3 +134,25 @@
 * Performance Options
   * Provisioned Throughput: Specify a level of throughput that the file system can drive independent of the file system's size
   * Bursting Throughput: Scales with the amount of storage and supports bursting to higher levels
+
+## Amazon FSx
+* Fully managed *Third party file systems*
+   1. Amazon FSx for Windows File Server: Windows-based application
+   2. Amazon FSx for Lustre: Compute-intensive workloads (HPC)
+
+### Amazon FSx for Windows File Server
+   * Native *Windows File System*
+   * Fully support for the SMB protocol, Windows NTFS, Microsoft Active Directory integration
+     * Access Control Lists, shadow copies, user quotas
+     * NTFS file system that can be accessed from up to thousands of compute instances using SMB protocol
+   * *High Availability*: replicates data within an Availability Zone
+   * *Multi-AZ*: file systems include an active and standby file server in separate AZs
+   * Ref: source/BlockAndFileStorage/AmazonFSxForWindows.png
+     1. Multiple instances can connect to Amazon FSx for file storage.
+     2. AWS Managed Microsoft AD is for authentication
+     3. On-premises client can connect to FSx via VPN / Direct COnnect connection.
+
+### Amazon FSx for Lustre
+   * Optmized for fast processing of workloads
+   * Works natively with *S3*, transparently access S3 objects as files, write the changes of files back to S3
+   * POSIX-compliant file system interface
