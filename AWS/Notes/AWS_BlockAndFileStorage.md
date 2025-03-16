@@ -141,18 +141,43 @@
    2. Amazon FSx for Lustre: Compute-intensive workloads (HPC)
 
 ### Amazon FSx for Windows File Server
-   * Native *Windows File System*
-   * Fully support for the SMB protocol, Windows NTFS, Microsoft Active Directory integration
-     * Access Control Lists, shadow copies, user quotas
-     * NTFS file system that can be accessed from up to thousands of compute instances using SMB protocol
-   * *High Availability*: replicates data within an Availability Zone
-   * *Multi-AZ*: file systems include an active and standby file server in separate AZs
-   * Ref: source/BlockAndFileStorage/AmazonFSxForWindows.png
-     1. Multiple instances can connect to Amazon FSx for file storage.
-     2. AWS Managed Microsoft AD is for authentication
-     3. On-premises client can connect to FSx via VPN / Direct COnnect connection.
+* Native *Windows File System*
+* Fully support for the SMB protocol, Windows NTFS, Microsoft Active Directory integration
+   * Access Control Lists, shadow copies, user quotas
+   * NTFS file system that can be accessed from up to thousands of compute instances using SMB protocol
+* *High Availability*: replicates data within an Availability Zone
+* *Multi-AZ*: file systems include an active and standby file server in separate AZs
+* Ref: source/BlockAndFileStorage/AmazonFSxForWindows.png
+   1. Multiple instances can connect to Amazon FSx for file storage.
+   2. AWS Managed Microsoft AD is for authentication
+   3. On-premises client can connect to FSx via VPN / Direct COnnect connection.
 
 ### Amazon FSx for Lustre
-   * Optmized for fast processing of workloads
-   * Works natively with *S3*, transparently access S3 objects as files, write the changes of files back to S3
-   * POSIX-compliant file system interface
+* Optmized for fast processing of workloads
+* Works natively with *S3*, transparently access S3 objects as files, write the changes of files back to S3
+* POSIX-compliant file system interface
+
+## AWS Storage Gateway
+* Connect on-premises storage to AWS
+* Ref: source/BlockAndFileStorage/StorageGateway.png
+
+### AWS Storage Gateway - File Gateway
+* File Gateway
+  * File System is mounted using NFS or SMB
+  * A local cache provides low latency access to recently used data
+  * A virtual gateway appliance runs on Hyper-V (Windows), VMWare (Linux), EC2 (AWS).
+  * Files are stored in AWS
+
+### AWS Storage Gateway - Volume Gateway
+* Volume Gateway
+   1. Cached Volume Mode
+      * A cache of the most recently used data on-premise / on-site
+      * Rest of the data is stored in S3
+      * iSCSI: protocol for transfering data between gateway and server
+   2. Stored Volume Mode: 
+      * Entire dataset is stored on-site
+      * Asynchronously backed up to S3 (snapshots)
+   3. Tape Gateway
+      * Backup server can use many common backup applications
+      * S3 Standard is used for writing to tapes
+      * Once tapes are ejected from backup / S3, stoed to S3 Glacier / S3 Glacier Deep Archive
