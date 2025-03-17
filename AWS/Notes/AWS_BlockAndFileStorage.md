@@ -2,8 +2,8 @@
 
 ## Storage System
 * There are multiple storage system in AWS
-1. Block Storage -> Amazon Elastic Block Store
-2. File Storage -> Amazon Elastic File System
+1. Block Storage -> Amazon Elastic Block Store (EBS)
+2. File Storage -> Amazon Elastic File System (EFS)
 3. Object Storage -> Amazon Simple Storage Services (S3)
 4. Multiple file system: Amazon FSx
 5. Gateway: AWS Storage Gateway
@@ -85,7 +85,7 @@
   * SnapShot A is the whole copy of the volume when it is created. SnapShot B is going to be the changes since Snapshot A. SnapShot C is going to be the changes since SnapShot B.
   * Therefore, SnapShot A + SnapShot B + SnapShot C === Volume
   * You can save up more spaces by deleting older snapshots and just keep the latest snapshots
-* We can create volume from a snapshot in another AZ, then creating an AMI (Amazon Machine Image). And attach the snapshot to the image (~similar as copying the data to another)
+* We can *create volume from a snapshot* in another AZ, then *creating an AMI* (Amazon Machine Image). And *attach the snapshot* to the image (~similar as copying the data to another)
 * Ref: source/BlockAndFileStorage/EBSCopyingSnapShot.png
 
 ## EBS Snapshots and DLM (Data Lifecycle Manager)
@@ -174,10 +174,33 @@
       * A cache of the most recently used data on-premise / on-site
       * Rest of the data is stored in S3
       * iSCSI: protocol for transfering data between gateway and server
-   2. Stored Volume Mode: 
+   2. Stored Volume Mode
       * Entire dataset is stored on-site
       * Asynchronously backed up to S3 (snapshots)
    3. Tape Gateway
       * Backup server can use many common backup applications
       * S3 Standard is used for writing to tapes
       * Once tapes are ejected from backup / S3, stoed to S3 Glacier / S3 Glacier Deep Archive
+
+## Architecture Patterns
+1. Simple method for *backing up Amazon EBS Volumes* is required that is *fully automated*
+   * Using DLM (Data Lifecycle Manager) to create a backup schedule
+2. A distributed applications that has many nodes that each hold a copy of data that is synchronized between them. Need the best performance
+   * Using Stored Volume Mode 
+   * **This This This** Use instance stores for storing the data with the best performance
+3. Application must startup quickly when launched by *Auto Scaling Group (ASG)* but *requires app dependencies and code to be installed*.
+   * Create an AMI which contains application dependencies and code
+   * Do not need to run the installation process of code when launching instances
+4. Many Linux instances must be attached to a shared file system that scales elastically
+   * **???**Create an Amazon EFS file system and mount from each instance.
+5. Company requires a managed file system that uses the *NTFS file system*
+   * Using Amazon FSx for Windows File Server
+6. *On-premises servers* must be able to attach a block storage system *locally*. *Data should be backed up to S3 as snapshots*.
+   * Using / Deploy an AWS Storage Gateway volume in stored volume mode.
+7. An Amazon EBS volume must be *moved between Regions*.
+   * Take a snapshots and copy the snapshot between Regions.
+8. *Root EBS volumes* for a critical application *must not be deleted on termination*
+   * Root EBS volumes must be deleted on termination, but extra non-boot volumes will not be deleted.
+   * Therefore, we need to modify the delete on terminatino attribute when launching the EC2 instances.
+9. On-permises servers use NFS to attach a file system. The file system should be replaced with an *AWS service that uses Amazon S3 with a local machine*.
+   * Deploy an AWS Storage Gateway file Gateway.
