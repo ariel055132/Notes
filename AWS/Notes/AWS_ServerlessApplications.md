@@ -1,18 +1,25 @@
 # AWS Serverless Application
 * Serverless
   * Do not have to manage anything underneath the platform at all, all of them done by platform (ready to use)
-* AWS Lamdba
+* AWS Lamdba, message buses, notification services, orchestration services
 * API Gateway: Connect to an application via a rest API or an HTTP API
 
 ## Serverless Services 
-* **No instances** to manage
-* No hardware provision
+* **No instances** to manage (No need to manage EC2)
+* No hardware provision (coz No instances)
 * No management of operating systems or software
 * **Capacity provisioning and patching is handled automatically**
 * Provides automatic scaling and high availability
+* Developers just need to provided their code / applications to run
 
 ## Event-Driven Architecture
+* use events to trigger and communicate between services.
 
+* For example, 
+* When a user is going to upload a file through a static website (==event).
+* The AWS lamdba is triggered and process the file, the file will be put into S3.
+* The SQS queue / CloudWatch will be triggered (something is inside S3)
+* It may process the message with SNS or email, or store the log inside the DB in AWS.
 
 ## AWS Lamdba
 * One of the serverless services from amazon
@@ -32,6 +39,11 @@
    * Event is queued for processing and a response is returned immediately
    * Retries up to 3 times
 3. Event source mapping 
+### Use Cases
+1. Quickly process data at scale
+   * AWS Lamdba can instantly scale out more than 18k vCPUs to meet resource-intensive and unpredictable demand
+2. Run Interactive web and mobile backends
+3. 
 
 ## Application Integration
 1. **Simple queue service**

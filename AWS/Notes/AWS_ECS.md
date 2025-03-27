@@ -112,3 +112,6 @@
    * Control access to repositories and the images within them
 5. Image
    * push and pull images to your repositories
+
+## App Runner
+* Fully managed service for deploying containerized web apps and APIs
