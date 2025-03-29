@@ -53,15 +53,16 @@ def isBalanced(root):
 ```
 
 ## Traversal
-1. Preorder Traversal (*Left-Right-Root Pattern*)
+### Preorder Traversal (*Root-Left-Right Pattern*)
 ```python
 def preOrder(root):
+    if root is NULL, then return 
+    Process Root
     preOrder(root.left)
     preOrder(root.right)
-    Process Root
 ```
 
-2. Inorder Traversal (*Left-Root-Right Pattern*)
+### Inorder Traversal (*Left-Root-Right Pattern*)
 * Data is sorted when inorder is used.
 ```python
 // In order Traversal with Recursion
@@ -72,7 +73,9 @@ def inOrder(root):
     inOrder(root.right)
 ```
 
-1. Post Order (*Left-Right-Root Traversal*)
+### Post Order (*Left-Right-Root Traversal*)
+* Used for *tree deletion* coz subtrees are deleted before the current node.
+* Useful for generating the postfix expression from an expression tree 
 ```python
 def postOrder(root):
     if not root: return
