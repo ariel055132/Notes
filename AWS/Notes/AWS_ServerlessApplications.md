@@ -26,47 +26,91 @@
 * Execute code only when needed and scales automatically
 * Maximum execution time: 15 mins (No applicable to run services which exceed 15 mins)
 * You pay only for the compute time you consume
+* Ref: https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
 ### Benefits
 1. No servers to manage
 2. Continuous scaling
 3. Millisecond biling
 4. Integrates with almost other AWS services
 ### Invocations
+* Functions can executed concurrency
 1. Synchronous (同步)
    * Wait for the function to process the event and return a response
    * Error handling happens client side (retries, exponential backoff)
+   * E.G: CLI, SDK, API Gateway
 2. Asychronous (非同步)
    * Event is queued for processing and a response is returned immediately
    * Retries up to 3 times
+   * E.G: S3, SNS, Cloudwatch events
 3. Event source mapping 
+   * Lamdba polls the source (Check whether the source need Lamdba do something)
+   * E.G: SQS, Kinesis Data Streams, DynamoDB Streams
 ### Use Cases
-1. Quickly process data at scale
+1. Data Processing
    * AWS Lamdba can instantly scale out more than 18k vCPUs to meet resource-intensive and unpredictable demand
-2. Run Interactive web and mobile backends
+   * AWS Kinesis
+   * AWS S3
+2. Run Interactive web and mobile backends / Serverless backends
 3. 
 
-## Application Integration
-1. **Simple queue service**
-   * Message queuing service
+## Application Integration Service
+1. **Simple queue service (SQS)**
+   * (What it does): Message queue, store and forward patterns
+     * The application will do something, it may generate some response and logs.
+     * The response and logs will be input into the messaging queue.
+     * Another application may dig in the message queue and seek whether they need to do something.
+   * (Use Cases): Building distrbuted / *decoupled* applications
 2. **Simple Notification Service**
-   * Sending notifications
+   * (What it does): Set up, and send notifications from the cloud
+   * (Use Cases): Sending notifications (SNS / Email) when *CloudWatch* alarm is triggered 
 3. **Step functions**
    * Orchestration & Worflow
+   * (What it does): Out of the box coordinations of AWS service components with visual workflow
+   * (Use Cases): Order processing workflow
 4. Simple Workflow Service
-5. Amazon MQ
+   * (What it does): Need to support external processes / specialized execution logic
+   * (Use Cases): Human-enabled workflows like an order fulfilment system / procedural requests
+   * Step functions is prefered
+5. Amazon MQ (Message Queue)
+   * (What it does): *Message broker services* for Apache Active MQ and RabbitMQ
+   * (Use Cases): Need a message queue that supports industry standard APIs and protocols
 6. Amazon Kinesis
+   * (What it does): Collect, process, and analyze *streaming data*
+   * (Use Cases): Collect data from IoT devices for later processing
+
+### Kinesis vs SQS vs SNS
+* Kinesis
+   1. Consumers pull data
+   2. As many consumers as you need
+   3. Routes related to records the same record processor
+   4. Multiple applications can access stream concurrently
+   5. Ordering at the shard level
+   6. Can consume records in correct order at later time
+   7. Must provision throughput
+
+* SQS (Simple Queue Service)
+   1. Consumers pull data
+   2. Data is deleted after being consumed
+   3. Can have as many workers (consumers) as you need
+   4. No ordering gruarantee (Except with FIFO queues)
 
 ## Amazon SQS (Simple Queue Service)
 1. **Decoupling** (解耦)
    * When a backend system receives a call, it immediately responds with a request identifier and then asynchronously processes the request
    * When the web is getting busy suddenly, it can just put the message into the queue. The otherside will process the message in queue after they finished their original task.
+   * NO dependency on the two different processing layers actually talking directly synchronously
 2. **Direct Integration**
-   * both web/app tiers connect to each other directly, all of them must keep up with workload or failure will occur
+   * both web/app tiers connect to each other directly
+   * all of them must keep up with workload or failure will occur 
+   * -> We need decoupled integration
+* Ref: source/Serverless/DecouplingWithSQSQueue.png
 ### Queue Types
 1. **Standard Queue**
    * *Unlimited Throughput*: Supports a nearly unlimited number of transactions per second (TPS) per API action. 每秒訊息的傳輸量(TPS)幾乎是沒有限制
    * *Best-effor ordering*: Try best to maintain the ordering of the sent message  盡可能維持訊息的順序
    * *At-least-once delivery*: A message is delivered at least once, but occasionally more than one copy of a message is delivered 每個訊息至少傳送一次，但有時候同一個訊息不只傳送一次
+   * If your application can handle messages that *might arrive more than once or out of order*, it is recommended to use Standard Queues.
+      1. Allocating tasks to multiple worker nodes - E.G, handling a high volume of credit card validation requests
 2. **FIFO (First-In First-Out) Queue** 
    * *High Throughput*: Support 300 messages per second
    * *First-In-First-Out Delivery*: The order in which messages are sent and received is strictly preserved
@@ -75,7 +119,8 @@
    * *Message Group ID*: Tag that specifies that a message belongs to a specific messge group in order to guaranteed message belongs to same message group to be processed in a FIFO order
    * *Message Deduplication ID*: The token used for deduplication of messages within the deduplication interval. Ensure exactly once processing
 * Dead Letter Queue
-   * Used for analyze/handling message failure in SQS queue
+   * Used for analyze/handling message failure in SQS queue 
+   * it is a **standard or FIFO queue** that has been specified as a dead-letter queue in the configuration of **another standard or FIFO queue**.
    * You can set aside and isolate message that cannot be processed correctly to determine why their processing did not succeed
    * Failures: ReceiveCount > maxReceiveCount for queue --> Cannot receive the message
    * *Use Redrive Policy*: Enable Redrive Policy
@@ -83,8 +128,8 @@
    * *Maximum Receives*: Specify the maximum receives before a messagge is sent to the dead-letter queue
 * Delay Queue
   * postpone the delivery of new messages to consumers for a number of seconds
-
 ### Short Polling AND Long Polling
+* Polling: where and how your consumer is trying to find messages in the queue
 1. Short Polling (短輪詢): return the message **immediately** 
    * Regardless of whether the server has updated data or not, requests are frequently sent, which may result in repeated and inefficient requests. (不管 Server 端有沒有更新資料，都會頻繁地發送 Request，可能會出現頻繁又無效的 request。)
    * Each request establishes a complete connection, and the HTTP/1.1 headers are not compressed. If the data updates are relatively small, a large portion of the transmission will consist of repeated headers. (每次 Request都是完整的連線，HTTP/1.1 的 Header 是沒有壓縮的，如果每次更新的資料其實不多，會發現大部份都是在傳輸重複的 Header。)
