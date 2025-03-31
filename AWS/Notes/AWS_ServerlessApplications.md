@@ -95,6 +95,7 @@
    4. No ordering gruarantee (Except with FIFO queues)
 
 ## Amazon SQS (Simple Queue Service)
+* Pull-based: the consumer pulls the message from the queue
 1. **Decoupling** (解耦)
    * When a backend system receives a call, it immediately responds with a request identifier and then asynchronously processes the request
    * When the web is getting busy suddenly, it can just put the message into the queue. The otherside will process the message in queue after they finished their original task.
@@ -141,18 +142,68 @@
 
 ## Amazon SNS (Simple Notification Service)
 * Highly available, durable, secure, fully managed publisher/subscribers **messaging service**
+* Provides high-throughput, *push-based*, many-to-many messaging
+* Components: 
+  1. Publisher: Endpoint where send the information
+  2. SNS Topic: "access point" for allowing recipients to dynamically subscribe for identical copies of the same notification
+  3. Subscribers: Actual Services / endpoint where the information is received
+
 ### Procedure
-1. Event Producer sends one message to one of the Amazon SNS Topic
-2. Amazon SNS Topic will forwards the message to different subscibers (Lamdba, Web Application, etc.) via Transport Protocols
+1. Event Producer (*Publisher*) sends one message to one of the Amazon SNS Topic
+2. *Amazon SNS Topic* will forwards the message to different *subscibers* (Lamdba, Web Application, etc.) via Transport Protocols
+
+### Amazon SNS + Amazon SQS Fan-Out
+* You can subscribe one / more Amazon SQS Queues to an Amazon SNS topic
+* Amazon SQS manages the subscription and any necessary permissions
+* When you publish a message to a topic, Amazon SNS sends the message to every subscribed queue
 
 ## AWS Step Function
-* Build distributed applications as a series of steps in a visual workflow
-1. Define the steps of your workflow. (JSON-Based Amazon States Language)
+* Build distributed applications as a series of steps in a *visual workflow* (state machines)
+1. Define the steps of your workflow. (*JSON-Based Amazon States Language*)
 2. Start the execution to visualize and verify the steps of your applications are operating as intended. 
+   * AWS Step function *operates and scales* the steps of your application and underlying compute for you to help ensure your application executes reliably under increasing demand
 
 ## AWS EventBridge
-* Event-bus
+* Serverless Event-bus, building distrbuted event-bus applications
 1. **Event sources** generates events, those events will enter **EventBridge Event Bus**
 2. EventBridge Event Bus will distribute the events to different **target** according to the rules.
 
+* Event sources will process and generate state changes (*events*)
+* Events will sent to *eventBridge event bus*
+* The information is then *processed by rules* (Done by AWS Step Function) 
+* The final / processed information will be sent through to various destinations
+
 ## AWS API Gateway
+* Front door to your business logic or your application on AWS
+* Can import Swagger / OpenAPI 3.0 definitions (YAML / JSON)
+
+### Deployment Types
+1. Edge-optimized endpoint
+   * Amazon CloudFront (AWS Cloud) -> Amazon API Gateway
+   * Reduce latency for requests from around the world
+2. Regional endpoint
+   * Services in the same (region) -> Amazon API Gateway
+   * Reduced latency for requests that originate in the same region
+   * Can also configure your own CDN and protect with WAF
+3. Private Endpoint
+   * Services in the same (VPC) -> Amazon API Gateway
+   * Securely expose your REST APIs only to other services within your VPC or connect via Direct Connect
+
+### Structure of a REST API
+* A web Application will make a request via a published API
+* The APIs will map the *request parameters* (GET, POST, PUT) of *method request* to the *format* required by the backend
+* The request will be sent to endpoint / backend server
+* The backend server will process the requests and send back the response to endpoint
+* The endpoint will map the *status codes*, *headers*, and *payload* received from backend into format for client
+
+### Integration
+1. API Gateway + Lamdba functions
+  * Proxy Integration: Just pass through the message, no changes / process is made
+  * Custom Integration: Do some customized operations before pass the message
+2. API Gateway + HTTP Endpoint
+  * HTTP proxy integration
+  * HTTP custom integration
+3. For *AWS service action* you have the AWS integration of the non-proxy type only
+
+### Caching
+* Add cache by provisioning an *Amazon API Gateway cache* and specifying its size in gigabytes
