@@ -60,9 +60,11 @@
      * The response and logs will be input into the messaging queue.
      * Another application may dig in the message queue and seek whether they need to do something.
    * (Use Cases): Building distrbuted / *decoupled* applications
-2. **Simple Notification Service**
+   * *Pull-based*
+2. **Simple Notification Service (SNS)**
    * (What it does): Set up, and send notifications from the cloud
    * (Use Cases): Sending notifications (SNS / Email) when *CloudWatch* alarm is triggered 
+   * *Push-based*
 3. **Step functions**
    * Orchestration & Worflow
    * (What it does): Out of the box coordinations of AWS service components with visual workflow
@@ -206,4 +208,27 @@
 3. For *AWS service action* you have the AWS integration of the non-proxy type only
 
 ### Caching
-* Add cache by provisioning an *Amazon API Gateway cache* and specifying its size in gigabytes
+* Add cache by provisioning an *Amazon API Gateway cache* and specifying its size in *gigabytes*
+1. Reduce the number of calls to the backend
+2. Improve the latency of requests to the API
+
+### Throttling
+* sets a limit on a steady-state rate and a burst of request submissions against all APIs in your account
+1. By default, API Gateway limits the steady-state request rate to *10000 requests* per second, 5000 concurrent request rate per second
+2. Otherwise, 429 too many request error is raised
+
+### Usage Plans and API keys
+* Different Usage Plan in AWS to allow more throttling of requests.
+  * Premium Plan can accept more requests per second than basic Plan
+* Users connect to *specific public endpoint* with *API Key* that is configured in a usage plan.
+
+## Architecture Patterns - Serverless
+1. Applications includes EC2 and RDS. Spikes in traffic causing writes to be dropped by RDS
+   * Decouple EC2 and RDS database with an SQS queues
+   * use lamdba to oricess records in the queue
+2. Web app includes a web tier and processing tier. *Must be decoupled* and processing tier should *dynamically scale* based on number of jobs
+   * Decouple the web tier and processing tier with SQS
+   * Scale with Auto Scaling based on the queue length
+3. Lamdba function *execution time has increased significantly* as the payload size increased.
+   * Optimize execution time by increasing memory available to the function which will proportionally increase CPU
+* 
