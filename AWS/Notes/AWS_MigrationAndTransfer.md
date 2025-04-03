@@ -23,12 +23,12 @@
 
 ## AWS Application Discovery Service
 * Collect data from on-premises data center
-1. Discovery Connector
+1. *Discovery Connector*
    * Support VMWare server
    * Deploy per vCenter
    * Collect static Configuration Data, VM utilization metrics
    * Support OS running in VMware vCenter
-2. Discovery Agent
+2. *Discovery Agent*
    * Support VMware, physical server
    * Deploy per server
    * Collect static configuration data, time series performance info (export), network inbound/outbound (export), running processes (export)
@@ -44,11 +44,21 @@
 
 ## AWS Database Migration Service (DMS)
 * *Migrating databases* from on-premises, Amazon EC2 / Amazon RDS
-* Support homogenous migration (同質，E.G：Oracle -> Oracle), as well as heterogeneous (異質，E.G: Oracle -> Amazon Aurora)
+  * Cloud to Cloud
+  * On-Premises to Cloud
+* Support *homogenous migration* (同質，E.G：Oracle -> Oracle), as well as *heterogeneous migration* (異質，E.G: Oracle -> Amazon Aurora)
 * Data is continuously replicated while the application is live, minimizing downtime
 * Pay Based on compute resources used during the migration and log storage
 * Fully managed migration process
 * Use with *Schema Conversion tool* for converting Schemas 
+
+### DMS Use Caess
+1. Development and Test
+   * Use the cloud for dev/test workloads
+2. Database consolidation
+   * Consolidate multiple source DBs to a single target DB
+3. Continuous Data Replication
+   * use for DR, dev/test, single source multi-target / multi-source single target
 
 ## AWS Application Migration Service (MGN)
 * Highly automated lift-and-shift (rehost) solution for migrating application to AWS
@@ -84,7 +94,8 @@
 4. *Snowcone*
    * *Small device* use for edge computing, storage and data transfer
    * Can transfer data *offline* / online with AWS DataSync agent
-* Differences between 2 and 3 = ="??
+* Differences between 2 and 3 
+   * One is for computation, another one is mainly for storage 
 
 * *Snowball Client* is a software that is installed on a local computer and is used to identify, compress, encrypt and transfer data
 * Use 256-bit encryption and tamper-resistant enclosures with TPM
