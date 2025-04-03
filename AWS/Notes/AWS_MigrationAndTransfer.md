@@ -35,7 +35,7 @@
    * Support OS including Amazon Linux, Ubuntu, Windows Server, CentOS
 
 ## AWS Server Migration Service (SMS)
-* Agentless service for migrating on-premises and cloud-based VMs to AWS
+* *Agentless service* for migrating on-premises and cloud-based VMs to AWS
 * Source platforms can be VMware, Hyper-V or Azure
 * AWS Server Migration Service Connector is installed on the source platform
 * Server volumes are replicated (encrypted with TLS) and saved as AMIs which can then be launched as EC2 instances
@@ -43,8 +43,12 @@
 * Replicate servers to AWS for 90 days 
 
 ## AWS Database Migration Service (DMS)
-* Migrating databases from on-premises, Amazon EC2 / Amazon RDS
-* Support homogenous migration (), as well as heterogeneous
+* *Migrating databases* from on-premises, Amazon EC2 / Amazon RDS
+* Support homogenous migration (同質，E.G：Oracle -> Oracle), as well as heterogeneous (異質，E.G: Oracle -> Amazon Aurora)
+* Data is continuously replicated while the application is live, minimizing downtime
+* Pay Based on compute resources used during the migration and log storage
+* Fully managed migration process
+* Use with *Schema Conversion tool* for converting Schemas 
 
 ## AWS Application Migration Service (MGN)
 * Highly automated lift-and-shift (rehost) solution for migrating application to AWS
