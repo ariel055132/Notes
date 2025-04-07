@@ -34,7 +34,9 @@
 
 ### EBS Deployment
 * EBS volume exists within a **single availability zone** only. 
-* EBS volume data persists independently of the life of the instance
+* EBS volume data **persists independently of the life of the instance**
+* EBS volume are replicated within an AZ.
+  * Raise the *durability* of the data.
 * EBS volume do not need to be attached to an instance
 * The data is actually replicated to multiple copies in the same AZ. 
 * Only one instances can be connected to one EBS volumn (Instance and EBS volume must in the same Availability Zone), multiple instances connect is forbidden (unless enable **EBS multiple attach**).
@@ -44,6 +46,9 @@
 * **Root EBS volumes are deleted** on termination by default. (When you terminate your instance, all of that data, that volume, will be completely deleted and lost forever)
 * **Extra non-boot volumes are not deleted** on termination by default.
 * Ref: source/BlockAndFileStorage/EBSDeployment.png
+
+### Why multiple instances cannot connect to the same EBS unless EBS multiple attach is enabled?
+
 
 ### EBS Multiple attach
 * Connect from multiple instances to a single EBS volume, but it is only available for **Nitro system-based** EC2 instances.
@@ -158,7 +163,8 @@
 * POSIX-compliant file system interface
 
 ## AWS Storage Gateway
-* Connect on-premises storage to AWS
+* A hybrid cloud storage service that *connects on-premises environment with AWS Cloud storage*
+* It allows you to seamlessly integrate your existing on-premises infrastructure with AWS
 * Ref: source/BlockAndFileStorage/StorageGateway.png
 
 ### AWS Storage Gateway - File Gateway
