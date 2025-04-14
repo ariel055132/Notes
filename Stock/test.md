@@ -14,12 +14,19 @@
 * MorningStar -> Key Ratios -> Full Key Ratios Data
 * Earnings Per Share (EPS)
 * Book Value Per share (Equiry Per Share -> NAVPS)
+  * MorningStar -> Key Metrics -> Financial Health -> Book Value / Share
+* PB Ratio
+  * MorningStar -> Valuation -> Price / Book
+* PE Ratio
+  * MorningStar -> Valuation -> Price / Earnings
+* EPS Ratio
+  * 10K Report -> Search EPS -> Basic EPS
 
-3. 報酬率 (at least: 9-10% 收息，12-15% 賺價)
+1. 報酬率 (at least: 9-10% 收息，12-15% 賺價)
 * 個人預期投資回報
 * 基準指標回報
 * 通脹率
 
-4. 股息
+1. 股息
 * MorningStar -> Dividends -> Dividend Per Share
 * Trading View -> Indicators -> Dividend Yield (參考股息率)
