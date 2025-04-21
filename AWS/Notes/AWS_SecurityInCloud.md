@@ -57,3 +57,20 @@
 2. The application will make a call to the AWS Security Token Service (STS)
 3. AWS STS will return a temporary security credentials to application for further access.
 * Ref: source/Security/IAM_Web_IdentityFederation.png
+
+### IAM Identity Center 
+* Successor to AWS Single Sign-On (SSO)
+* *Enables centralized permissions management and SSO (Single Sign on)*
+  * SSO: Able to access to multiple systems through one username and password
+* Identity sources can be Identity Center directory, Active directory, standard providers using SAML 2.0
+* Integration with organizations -> access to data sources with the accounts in the organization
+* Also can add additional AWS accounts
+* Ref: source/Security/IAM_IdentityCenter.png
+
+### Amazon Cognito
+* used for adding *sign-in and sign-up functionality* to *web and mobile applications*
+* *User Pools*: Store the user identities, federated to an identity source
+* *Identity Pools*: Getting temporary, limited-privilege credentials for AWS services
+
+
+* Ref: source/Security/Amazon_Cognito.png (Use Cases / Examples)
