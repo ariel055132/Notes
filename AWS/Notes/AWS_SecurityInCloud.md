@@ -96,6 +96,7 @@
 * The *KMS keys* are protected by hardware security modules (HSMs), primary resources in AWS KMS
 * Used to be known as "customer master keys" or CMKs
 * the keys contain the *key material* used to encrypt and decrypt data
+  * *Encryption at rest*
 * User can import their own key material
 * An Original KMS Keys can encrypted data up to *4KB* in size
 * For larger files, need to generate, encrypt, and decrypt with *Data Encryption Keys (DEKs)*
@@ -160,3 +161,69 @@
   * *kms:ViaService* condition key can be used to limit key usage to specific AWS services
 * *Cryptographic erasure* means removing the ability to decrypt data and can be achieved when using *imported key material* and deleting that key material (*DeleteImportedKeyMaterial API*)
 * An InvalidKeyId exception when using SSM Parameter Store indicates the KMS key is not enabled
+
+## AWS Cloud HSM
+* Cloud-baed hardware security module (HSM)
+* Generate and use your own encryption keys on the AWS Cloud
+* CloudHSM runs in your Amazon VPC
+* Use FIPS 140-2 level 3 validated HSMs 
+* Managed service and automatically scales
+* Retain control of your encryption keys - you control access
+  * (AWS has no visibility of your encryption keys)
+
+### Use Cases
+* Offload SSl/TLS processing from web servers
+* Protect private keys for an issuing certificate authority (CA)
+* Store the master for Oracle DB Transparent Data Encryption
+* Custom key store for AWS KMS - retain control of the HSM that protects the master keys
+
+## AWS Certificate Manager (ACM)
+* Issuing SSL/TLS X.509 certificates (use for encryption in transit)
+* Single domains, multiple domain names and wildcards
+* Integrates with several AWS services including:
+  1. Elastic Load Balancing
+  2. Amazon CloudFront
+  3. AWS Elastic Beanstalk
+  4. AWS Nitro Enclaves
+  5. AWS CloudFormation
+* *Public certificates* are signed by the *AWS public Certificate Authority*
+* User can also create a Private CA with ACM, then ACM can then issue private certificates
+* User can import certificates from third-party issuers
+* *ACM is used for encryption for transit, KSM is used for encryption at rest*
+
+## AWS Web Application Firewall (WAF)
+* Web Application firewall
+* Allow users to create rules to filter web traffic based on conditions that include IP addresses, HTTP headers and body, or custom URIs 
+  * ~Web ACLs (Access Control List)
+* Easy to create rules that block *common web exploits* like *SQL injection* and *cross site scripting*
+
+### Use Cases 
+* Ref: source/Security/AWS_WAF_usecase.png
+
+### Terminology
+1. Web ACLs
+   * Used to protect a set of AWS resources
+2. Rules
+   * Contains a statement that defines the inspection criteria
+   * Also an action to take if a web request meets the criteria 
+3. Rule Action
+   * Tell AWS WAF what to do with a web request when it matches the criteria defined in the rule
+   1. Count: *Count the request* but does not determine whether to block or allow t.
+   2. Allow: *allow the request to be forwarded* to AWS resource for processing and response
+   3. Block： *Block the request* and AWS resource responds with an HTTP *403 status code*
+4. Rule Groups
+   * Apply rules to groups 
+   * Therefore, no need to set up rules to each user individually 
+   * ~IAM user groups
+5. IP Sets
+   * Provides a collection of IP addresses and IP address ranges that you want to use together in a rule statement
+6. Regex pattern set (?)
+   * Provides a collection of regular expresions that you want to use together in a rule statement
+* Match Statement
+   * Ref: source/Security/AWS_WAF_MatchStatements.png 
+   * Compare the web request or its origin against condition that you provide
+   1. Geographic match
+   2. IP set match
+   3. Regex pattern set
+   4. Size Constraint
+   5.  
