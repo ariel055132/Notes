@@ -227,3 +227,36 @@
    3. Regex pattern set
    4. Size Constraint
    5.  
+
+## Amazon Inspector
+* Perform *network and host assessment* for EC2 services
+  * Check for *security exposures and vulnerabilities* in EC2 instances
+* Can be configured to run on a schedule
+* Agent must be installed on EC2 for host assessments
+* Network assessments do not required an agent (but agent is preferred)
+
+### Network assessment
+* Network configuration analysis to *check for ports reachable from outside the VPC* (檢查EC2 Service 開放了哪些接口)
+* If the Inspector Agent is installed on your EC2 instances, the assessment also *finds processes reachable on port* (檢查哪些服務會使用已開放的 Port)
+* Price based on the number of instance assessments
+
+### Host Assessment
+* *Vulnerable software* (CVE), Host hardening (CIS benchmarks), and security best practices
+* *Requires an agent* (auto install with SSM Run Command)
+* Price based on the number of instance assessments
+
+## Amazon Macie
+* Seldom appear in the exam question
+* Use *Machine learning and pattern matching* to discover, monitor, and help you *protect sensitive data on Amazon S3* (Data security and data privacy service)
+
+### How Macie protect data privacy?
+1. Identify a variety of data types, including
+   * PII (Personally Identifiable Information)
+   * PHI (Protected Health Information)
+   * Regulatory Documents
+   * API Keys
+   * Secret Keys
+2. Identify changes to policy and access control lists
+3. Continuously monitor the security posture of Amazon S3
+4. Generate security findings that you can view using Macie console, AWS Security Hub, or Amazon EventBridge
+5. Manage multiple AWS accounts using AWS Organizations
