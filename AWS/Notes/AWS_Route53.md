@@ -1,9 +1,9 @@
 # Amazon Route 53
-* Ref: *AmazonRoute53_How53Route.png*
+* Ref: *source/AmazonRoute53/AmazonRoute53_How53Route.png*
 * It is a highly available and scalable **DNS (Domain Name Service) web service**.
 * It provide the following functions:
   1. *Domain Registration*: Allow domain name registration to hosted zone
-  2. *Domain Name System (DNS) service*: Translate domains (e.g: ww.google.com) into IP address (192.169.0.0)
+  2. *Domain Name System (DNS) service*: Translate domains (e.g: ww.google.com) into IP address (e.g: 192.169.0.0)
   3. *Health Checking*: Monitor the health of resources 
   4. *Security*: Support both DNSSEC for domain registration and DNSSEC signing
 
