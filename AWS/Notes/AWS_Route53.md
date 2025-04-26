@@ -2,13 +2,20 @@
 * Ref: *source/AmazonRoute53/AmazonRoute53_How53Route.png*
 * It is a highly available and scalable **DNS (Domain Name Service) web service**.
 * It provide the following functions:
-  1. *Domain Registration*: Allow domain name registration to hosted zone
-  2. *Domain Name System (DNS) service*: Translate domains (e.g: ww.google.com) into IP address (e.g: 192.169.0.0)
-  3. *Health Checking*: Monitor the health of resources 
-  4. *Security*: Support both DNSSEC for domain registration and DNSSEC signing
+  1. **Domain Registration**: Allow domain name registration to hosted zone in *zone file*
+  2. **Domain Name System (DNS) service**: 
+      * Translate domains (e.g: ww.google.com) into IP address (e.g: 192.169.0.0)
+      * Responds to DNS queries using a *global network* of authoritative DNS servers, which reduces latency
+      * Route Internet traffic to CloudFront, Elastic Beanstalk, ELB, or S3. *No charges for DNS queries* to these resource.
+  3. **Health Checking**: 
+      * Monitor the health of resources 
+      * *Sends automated requests over the Intenet to the application* to verify that it's reachable, available and functional
+      * *CloudWatch alarms* can be configured for the health checks to sends notifications when a resource becomes unavailable
+  4. **Security**: 
+      * Support both *DNSSEC* for domain registration and DNSSEC signing
 
 ## Amazon Route 53 - Hosted Zone
-* Container for records, which include information about how to route traffic for a domain (such as example.com) and all of its subdomains (such as www.example.com, retail.example.com)
+* Container for records, which include information about **how to route traffic for a domain (such as example.com) and all of its subdomains (such as www.example.com, retail.example.com)**
 * **Just finding the domain name**, but not its IPs
 1. *Public Host Zone*
    * determines how traffic is routed on the **Internet**
@@ -24,17 +31,18 @@
 4. (After one year) the user can renew the domain name, otherwise the domain name is released. Others can purchase it.
 
 ## DNS (Domain Name System)
-* Ref: *DNS_Procedure.png*
+* Ref: *source/AmazonRoute53/DNS_Procedure.png*
 * Objective
-  * Converting a website entered by the user into the IP address of the web server they wish to connect to
-  * Input: domain name / website address (e.g www.google.com)
-  * Output: IP address of the domain name (to be precise, host server IP)
-* How it work (Procedure)
-  1. Users enters website address (aka. Domain Names) in browser, for example: www.google.com
-  2. DNS Server receive the domain names entered by user, it needs to resolved it to the IP address of the web server that the user wants to connect to
-    * Each DNS server has a *zone file*, it contains lots of records that map the host name or the domain name to a value including IP addresses
-    * DNS server is trying to map the domain name to the IP address, and return the IP to the user.
-  3. Computer connects to the IP addresses given by DNS Server
+  * Converting a website entered by the user into the IP address of the web server they wish to connect to (將一般的英文網址轉換為電腦用的數字IP地址)
+  * Input: domain name / website address (e.g: www.google.com)
+  * Output: IP address of the domain name (to be precise, host server IP, e.g: 192.168.0.0)
+
+### DNS Procedure
+1. Users enters website address (aka. Domain Names) in browser, for example: www.google.com
+2. DNS Server receive the domain names entered by user, it needs to resolved it to the IP address of the web server that the user wants to connect to
+   * Each DNS server has a *zone file*, it contains lots of records that map the host name or the domain name to a value including IP addresses
+   * DNS server is trying to map the domain name to the IP address, and return the IP to the user.
+3. Computer connects to the IP addresses given by DNS Server
 
 ### DNS Zones and Records
 1. A (IPv4 Address record) 
@@ -48,7 +56,7 @@
 5. SRV
 
 ## Health Checking
-* Objective: monitor the health and performance of the underlying resources
+* **Monitor the health and performance of the underlying resources**
 * For a health check to succeed, the router and firewall rules must allow inbound traffic from the IP addresses that the health checkers use
 * Health Checking Types are as follows:
     1. Monitor the *endpoint* (e.g web server / IP address)
@@ -98,10 +106,10 @@
       * If the state is **ALARM**, the health check is considered **unhealthy**.
       * If CloudWatch does **not have sufficient data to determine whether the state** is OK / ALARM, the health check status depends on the **setting for InsufficientDataHealthStatus**: Healthy, Unhealthy, or LastKnownStatus
 
-### Routing Policy
+## Routing Policy
 1. Simple
    * Ref: *AmazonRoute53_SimpleRoutingPolicy.png*
-   * A **round-robin** policy and can be applied when there is a single resource doing the function for the domain
+   * A **round-robin** policy and can be applied when there is a single resource doing the function for the domain (最基本的 routing，只看 zone list 上的記錄來給 IP，若zone list 上有多個相同 domain name 的 IP，則透過隨機的方式來給 IP)
    * Help configure **standard DNS records**, with no special Route 53 routing such as weighted or latency
    * does **not support health checks**
    * With Alias record enabled, only one AWS resource or one record can be specified in the current hosted zone
@@ -109,12 +117,12 @@
 2. Failover
    * Ref: *AmazonRoute53_FailOverRoutingPolicy.png*
    * Allows **active-passive failover configuration**
-   * One resource (primary) takes all traffic when it's healthy and the other resource takes all traffic when the first is not healthy
-   * **Health checks need to enable** if you need to use failover routing
+   * One resource (primary) takes all traffic when it's healthy and the other resource takes all traffic when the first is not healthy (檢查Primary的server是否健康，若為否，呼叫Secondary的server)
+   * **Health checks need to enable** if you use failover routing
 3. Geolocation
    * Ref: *AmazonRoute53_GeolocationRoutingPolicy_V2.png*
-   * Use geographic location you are in to route you to the closest region
-   * Zone List will conclude A geo-location column, which save the IP belongs to which Region
+   * Use *geographic location* you are in to route you to the closest region (按照地理位置來進行 routing)
+   * Zone List will conclude A *geo-location column*, which save the IP belongs to which Region
       * *Default* Geolocation must be added in order to process the unknown location of DNS Query 
    * Health Check can be add into geolocation routing policy
 4. Geoproximity
@@ -122,7 +130,7 @@
    * Must create a policy in traffic flow
 5. Latency
    * Ref: *AmazonRoute53_LatencyRoutingPolicy.png*
-   * Respond to DNS Query based on **which data center gives user the lowest network latency**
+   * Respond to DNS Query based on **which data center gives user the lowest network latency** (根據網路傳送延遲來判斷，往延遲低的地方送)
    * **Support health checks**
 6. Multivalue answer
    * Ref: *AmazonRoute53_MultiValueRoutingPolicy.png*
@@ -135,7 +143,17 @@
    * **Support health checks**
 8. IP-based
    * uses the IP addresses of clients to make routing decisions
-* *Failover routing* provides *active-passive configuration* for disaster recovery, while the others are *active-active configuration*
+* Conclusion:
+  * *Active-Passive Configuration*
+    * Involves a **primary active system** and a **secondary passive system** that remains inactive until the primary system fails
+    * Primary active system handles all incoming requests while the passive system remains on standby, ready to take over if the primary system encounters a failure or becomes unavailable
+    * **Redundancy and reliability**
+  * *Active-Active Configuration*
+    * **Multiple identical resources are simultaneously active and serving requests** 
+    * Incoming requests are distributed across all active resources
+    * **Load Balancing and maximizing resource utilization -> High Availability**
+  * 只有 Simple Routing Policy 不支援 Health Checking，其他 Routing Policy 都支援 Health Checking
+  * 只有 failover routing 是 active-passive configuration，其他的 routing 都是 active-active configuration
 
 ## Traffic Flow
 * Objective: 
@@ -149,7 +167,8 @@
 1. Local VPC domain names for EC2 instances
 2. Records in private hosted zones
 3. Performs recursive lookups against public name servers in the internet for public domain names
-* When we need? Because the development environment maybe hybrid.
+* When we need? 
+  * Because the development environment maybe hybrid.
 ### Inbound Endpoint
 * Allow DNS queries to your VPC from your on-premises network or another VPC
 * all the result is returned by Route 53 via the inbound endpoint
@@ -169,9 +188,32 @@
 3. Auto-defined System Rules
    * For AWS domain or private hosted zone 
 
+## DNSSEC 
+
 ## QA
 1. You have deployed a web application targeting a global audience across multiple AWS Regions under the domain name example.com. You decide to use Route 53 Latency-Based Routing to serve web requests to users from the region closest to the user. To provide business continuity in the event of server downtime you configure weighted record sets associated with two web servers in separate Availability Zones per region. During a DR test you notice that when you disable all web servers in one of the regions Route 53 does not automatically direct all users to the other region. What could be happening? (Choose 2 ans)
 
+## Quiz
+1. A company provides videos for new employees around the world. They need to store the videos in one location and then provide low-latency access for the employees around the world. Which service would be best suited to providing fast access to the content?
+   * Use Amazon CloudFront
+2. An Architect is designing a web application that has points of presence in several regions around the world. The Architect would like to provide automatic routing to the nearest region, with failover possible to other regions. Customers should receive 2 IP addresses for whitelisting. How can this be achieved?
+   * Use AWS Global Accelerator
+3. Which of the following are NOT valid origins for Amazon CloudFront?
+   * AWS Lamdba Function
+4. An Architect needs to point the domain name dctlabs.com to the DNS name of an Elastic Load Balancer. Which type of record should be used?
+   * Alias Record
+5. A company hosts copies of the same data in Amazon S3 buckets around the world and needs to *ensure that customers connect to the nearest S3 bucket*. Which Route 53 routing policy should be used?
+   * Latency Routing Policy 
+   * The latency routing policy directs based on the lowest latency to the AWS resource.
+   * Latency increases over distance so this ensure customers connect to the closest S3 bucket
+6. A media organization *offers news in local languages* around the world. Which Route 53 routing policy should be used to direct readers to the website with the correct language?
+   * Geolocation Routing Policy
+   * Need to identify specific geographic locations and associate them with the correct language version
+7. Which routing policy would you use to *route to a secondary destination* in the event a *primary is down*?
+   * Failover Routing Policy
+   * It based on health checks and will route to a secondary destination when the primary is down
+
 ## Reference
 1. https://jayendrapatil.com/aws-route-53/#AWS_Route_53 (Route 53)
-2. https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html (Resolver)
+2. https://www.geeksforgeeks.org/active-active-vs-active-passive-architecture/ 
+3. https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html (Resolver)
