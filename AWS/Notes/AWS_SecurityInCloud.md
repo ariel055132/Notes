@@ -260,3 +260,26 @@
 3. Continuously monitor the security posture of Amazon S3
 4. Generate security findings that you can view using Macie console, AWS Security Hub, or Amazon EventBridge
 5. Manage multiple AWS accounts using AWS Organizations
+
+## Amazon GuardDuty
+* Intelligent *threat detection service*
+* Detects account compromise, instance compromise, malicious reconnaissance, and bucket compromise
+* Integration
+    1. AWS CloudTrail Management Events
+    2. AWS CloudTrail S3 Data Events
+    3. Amazon VPC Flow Logs
+    4. DNS Logs
+
+## AWS Shield
+* *Protect against DDOS attacks* (Distributed denial of service attacks)
+* Safeguards web application running on AWS with always-on detection and automatic inline mitigations
+* Helps to minimize application downtime and latency 
+* 2 Tiers
+    1. Standard - No Cost (included with Amazon CloudFront) 
+        * Provide network flow monitoring
+        * Standardized protection and for the undelying AWS Service
+    2. Advanced - 3k USD per month and 1 year commitment 
+
+## Defense in Depth
+* Refers to the practice of implementing security at multiple layers within your application and infrastructure
+* So that if you do fail in your security, it will not lead to any major exposure.
