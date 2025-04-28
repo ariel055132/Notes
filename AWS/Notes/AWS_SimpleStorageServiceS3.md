@@ -270,6 +270,13 @@ example of IAM policy
 9. Solutions architects require both programmatic and console access across AWS accounts
    * Configure cross-account access using IAM roles
 
+## Quiz
+1. The maximum file allowed in Amazon S3 is *5 TB*.
+2. Amazon S3 uses a *Standards-based REST web interfaces*  to manage objects.
+3. What type of consistency model is provided in Amazon S3 when you upload a new version of an object?
+   * Strong Read after write consistency
+4. 
+
 ## Reference
 1. https://docs.aws.amazon.com/zh_tw/AmazonS3/latest/userguide/Welcome.html
 2. Storage Class: https://aws.amazon.com/tw/s3/storage-classes/#General_purpose 
