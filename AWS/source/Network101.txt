@@ -1,0 +1,60 @@
+Network 101
+What happens when you type a URL in browser?
+
+- client server model (Request Response Cycle)
+	Your computer (Browser/Client) request to web server
+	(Web Server request to database)
+	(Database response to web server)
+	Web server response to computer
+
+- DNS hierarchy
+	Speed up the Domain Name searching
+	Root Server -> DNS Resolver (8.8.8.8) -> TLD -> Server
+- DNS Cache Pollution (DNS Hijacking, DNSSEC)
+whois, namecheap, godaddy
+
+
+- CNAME
+www.example.com
+example.com --> redirect --> www.example.com
+
+- A record
+
+- MX
+
+- NS
+權威 Domain Name Server
+
+- Domain Name + FQDN + URL
+- nslook (True DNS data enquiry，先查詢 DNS)
+- dig (Domain Information Groper, ~nslook)
+- ping (ICMP)
+- traceroute (UDP / ICMP)
+- telnet (build TCP Connection, 3 way-handshake)
+	termination TCP Connection, 4-way handshake
+- curl (HTTP / HTTPS)
+- port scan
+
+- CDN: Content Delivery Network
+
+- TCP/ IP model
+	1. Application (Browser) (Data) (HTTP/1.1, HTTP/2)
+	2. Transport 傳輸層  (HTTP Header/Data)
+	3. Network / Internet  (TCP Header/HTTP Header/Data)
+	4. Network Access  (EH/IP Header/TCP Header/HTTP Header/Data/ET)
+
+- Hub, Switch, Router
+	(Broadcast message) -> Hub
+
+- Protocol
+	IETF -> RFC
+	fixed length, separated by \r\n
+- TCP (Transmission Control Protocol) / UDP (User Datagram Protocol)
+	Client 也有 Port Number
+
+1 台 Web Server，聽80 Port，可接受多少 TCP 連線 ? 2^16?
+
+- IP (Network Protocol)
+
+- Link (MAC, Media Access Control 硬體網線地址)
+

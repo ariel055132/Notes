@@ -1,0 +1,320 @@
+EC2 enable you to run virtual servers in the cloud.
+
+- What is EC2
+- How to deploy them
+- How to configure them
+- make sure they have the right storage systems attached, the right IP address, they can communicate on the network
+- Pricing models
+
+=== 
+
+* EC2 instances are virtual servers running in AWS data centers
+1. Run Windows / Linux / MacOs on dedicated hardware
+2. Connect to network via Elastic Network Interface (ENI)
+launched in public / private subnets in VPC (Virtual Private Cloud)
+3. Elastic Block Store (EBS) volumes are attached to EC2 instances for persistent storage
+
+===
+
+Flexible: Instances can be stopped when not needed, and then started again
+On-Demand
+
+Storage volumes are always chared based on the amount of space that you actually provision, not necessarily use
+
+Instance families: provide varying combination of hardware resources
+	- General Purpose
+	- Compute Optimized
+	- Memory Optimized (e.g m5.large)
+		m is the family name
+		5 is the generation number
+		large is the size of the instance
+	- Accelerated Computing
+	- Storage Optimized
+
+===
+
+Network interface
+
+General 
+	- Instances in public subnet have a private IP and public IP (dynamic address)
+	- Instances in private subnet have private IP only 
+
+ENI (Elastic Network Interface)
+	- Basic Adapter type for when you do not have any high-performance requirements
+	- Can be used with all instance types
+
+ENA (Elastic Network Adapter)
+	- Enhanced networking performance
+	- Higher bandwidth and lower inter-instance latency
+	- Choose supported instance type
+
+EFA (Elastic Fabric Adapter)
+	- HPC (High Performance computing) and MPI (Message Passage Interface) and ML use cases
+	- Tightly coupled applications
+	- Can use with all instance types
+
+=== 
+
+types of IP
+
+Public IP
+
+
+Private IP
+
+
+Elastic IP
+
+
+=== 
+
+Storage
+
+Elastic Block Store (EBS) directly attached to EC2 instances over the network
+
+Criteria for selecting the storage class
+- Durability
+- Volumn Size
+- Max IOPS
+- Max Throughput
+- Multi-Attach Support
+
+=== 
+
+Launch EC2 instances
+
+key pair important to Windows (Remote Desktop Protocol)
+For linux, connect to it via cloudShell (Secure Shell Protocol)
+
+Set up security groups
+	- Inbound rules
+	- Outbound rules
+
+
+=== 
+
+Connect to EC2 instances
+
+ping for testing
+	- Check port 22 is enabled in security group or not
+	- Have a public IP?
+
+
+=== 
+
+EC2 User Data & (Instance) Meta Data
+
+Instance Meta Data Service (IMDS)
+- IMDSv1 (older and less secure)
+- IMDSv2 (newer, more secure, requires a session token for authorization)
+
+User Data
+The code runs when the instances starts for the first time (~script)
+16Kb in raw-form, base64-encoded
+Encoding is automatic with the console and AWS CLI
+
+=== 
+
+- Get the IMDSv1 data
+
+Help
+curl http://169.254.189.254/latest/meta-data/
+
+Instance ID
+curl http://169.254.189.254/latest/meta-data/instance-id
+
+AMI ID
+curl http://169.254.189.254/latest/meta-data/ami-id
+
+Instance type
+curl http://169.254.189.254/latest/meta-data/instance-type
+
+- Get the IMDSv2 data
+
+1. Create a session and get a token
+TOKEN=${curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-ttl-seconds: 21600"}
+
+2. Use the token to request metadata
+curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.189.254/latest/meta-data/instance-id
+
+
+===
+
+Access Keys and IAM roles with EC2
+
+Use IAM role instead of IAM user to access the instance is more secured.
+
+
+=== 
+
+EC2 placement groups
+
+Control how AWS deploy EC2 instances and place in availability zones
+
+- Cluster
+	pack instances close together inside an / the same availability zone
+	achieve low-latency network performance -> tightly-coupled node-to-node communications
+	for HPC (High-Performance Computing) application
+
+- Partition
+	spread instances across logical partitions
+	do not share the underlying hardware 
+	large distributed and replicated workloads
+
+- Spread
+	place a small group of instances across distinct underlying hardware to reduce correlated failures
+
+
+=== 
+
+NAT (Network Address Translations) for public addresses
+
+
+===
+
+Bastion Hosts (堡壘機) and Private Subnets
+
+
+=== 
+
+EC2 Pricing Options
+
+- On Demand
+	Standard rate, no discount, no commitments
+	short term / unpredictable workloads
+
+- Reserved
+	Steady-state, 1 / 3 year commitments, up to 75% discount
+	predictable workloads and reserved capacity
+
+- Spot Instances
+	Low price for unused capacity, up to 90% discount, may be terminated by AWS
+	workloads with flexible start and end times
+
+- Dedicated instances
+	Physical isolation at the host hardware level from instances belonging to other customers (aka. not sharing hardware)
+	pay per instance
+
+- Dedicated Hosts
+	Physical server dedicated for your use (Socket/core visibility, host affinity), pay per host
+	workloads with server-bound software licenses
+
+- Savings Plan
+	Flexible pricing with commitment to a set spend over time
+
+=== 
+
+EC2 Billing criteria (General)
+
+- The amount of time that your instances are running 
+	billed per second, minimum of 1 minute
+	for Amazon Linux, Windows, RHEL, and Ubuntu / Ubuntu Pro
+
+- EBS Volumes also billed per second, minimum of 1 minute
+	The capacity of volume is provisioned to use
+
+- Linux distros hourly pricing, minimum of 1 hour 
+
+EC2 Billing criteria (Reserved Instances)
+
+- Standard Reserved Instances
+	Can change availability zones, instance size, networking type 
+	(ModifyReservedInstances API)
+
+- Convertible Reserved Instances
+	Can change availability zones, instance size, networking type + family, OS, tenancy, payment option
+	(ExchangeReservedInstances API)
+
+Cam pay All upfront, Partial upfront, no upfront
+
+When the attributes of a used instance match the attributes of an reserved instances, discount is applied
+
+=== 
+EC2 On-Demand Capacity Reservations
+
+Reserve compute capacity for EC2 instances in a specific availability zone
+Any duration can be specified
+Mitigates against the risk of being unable to get On-Demand capacity
+Does not require any term commitments and can be cancalled at any time
+- Availability Zone in which to reserve the capacity
+- The number of instances for which to reserve capacity
+- The instance attributes (instance type, platform/OS...)
+
+===
+
+ML Capacity Blocks
+ML model training and fine-tuning
+ML experiments and prototypes
+
+===
+
+Saving Plan
+- Compute Savings Plan
+	1 / 3 year
+	EC2, Fargate, Lamdba
+
+- EC2 instance saving plans
+	1 / 3 year
+	Amazon EC2 instances 
+
+- Machine Learning Saving Plans
+	1 / 3 year
+	Amazon SageMaker
+
+===
+
+EC2 Spot Instances
+- Spot Instance
+	1 / more EC2 instances
+- Spot Fleet
+	Maintain instance to meet specified target capacity
+- EC2 Fleet
+	Maintain instances in a single API call
+
+===
+
+Dedicated plan
+
+- Dedicated Instances
+
+
+- Dedicated Hosts
+
+
+===
+
+EC2 Pricing Use Cases
+
+
+
+=== 
+
+Exam Crams
+
+- Key pairs are used to securely connect to EC2 Instance
+
+- Storage is either Amazon EBS (persistent) / instance store (non-persistent)
+
+- Amazon Machine Image (AMI) provides the information required to launched an instance
+	template for the root volume for the instance
+	Launch permission
+
+- Instance metadata is data about your instance that you use to configure or manage the running instance
+
+- User data is data that is supplied by the user at instance launched in the form of a script
+
+
+- Advantages of EC2
+	Elastic Computing: easily launch hundreds to thousands of EC2 instances within minutes
+	Complete Control: Control instances with full access
+	Flexible: Choice of instance type, operating system, software packages
+	Reliable: Instances can be rapidly commissioned and replaced
+
+
+
+
+
+
+
+
+
