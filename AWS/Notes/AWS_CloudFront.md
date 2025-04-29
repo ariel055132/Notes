@@ -30,6 +30,8 @@
 3. If the requested object does not exist in the cache at the edge location (aka *cache miss*), it will go to the nearest **regional edge cache** to fetch it.
 4. If the object is in the regional edge cache, CloudFront forwards it to the edge location that requested it
 5. For objects not cached at either the edge location / regional edge cache location, the objects are requested from the **origin server** and return it to user via the regional edge cache and edge location
+
+### More about Content Delivery
 * CloudFront will add the object to the cache in the regional edge cache location in addition to the edge location
 * When an object's expiration time is reached, CloudFront verifies with the Origin server for any updates upon receiving a new request. 
   * If the Origin server confirms the current version is still valid, CloudFront continues using the cached object. 
@@ -57,15 +59,47 @@
     * Origin Request Policy
 
 ## Behaviors
+* How to obtain the files
 1. Path Pattern
 2. Viewer Protocol
 3. Cache Policy
 4. Origin Request Policy
   
 ### Path Patterns
-* help define which path the Cache behaviour would apply to.
+* Ref: *source/CloudFront/AmazonCloudFront_PathPatterns.png*
+* help define which path the Cache behaviour would apply to, where to send the request to origin.
 * A default (*) pattern need to be created and multiple cache distributions can be added with patterns to tak priority over the default path
+* In the picture, jpg files is put into origin 1, while mp4 files is put into origin 2.
+* Therefore, when users request jpg files, the request will be sent to origin 1.
+* When users request mp4 files, the request will be sent to origin 2.
+* When users request other files, the request will be sent to origin 1 (Default patterns)
 
 ### Viewer Protocol Policy (Viewer -> CloudFront)
-* Define **the allowed access protocol to CloudFront** by define viewer protocol policy (哪些網路協定才能存取CloudFront內容)
-1. HTTPS only - supports HTTPS only 
+* Define **the allowed access protocol to CloudFront** by define **viewer protocol policy** (根據網路協定，判斷是否能存取CloudFront內容)
+* CloudFront can then cache multiple version of an object based on the values in one or more **request headers**
+* Controlled in a behavior to do one of the following
+  1. Forward all headers to origin
+  2. Forward a whitelist of headers that developer specify
+  3. Forward only the default headers
+* Protocols
+  1. HTTPS only - supports HTTPS only 
+  2. HTTP and HTTPS - supports both
+  3. HTTP redirected to HTTPS - HTTP is automatically redirected to HTTPS
+
+## CloudFront Signed URLs
+* **Creating a URL that can be used to access to files** that **otherwise would not be accessible** (專門存取相關 file 的 url)
+* Can specify beginning and expiration date and time, IP address
+* Signed URLs should be used for **individual files** and clients that **do not support cookies**.
+
+### How to use
+* Ref: *source/CloudFront/AmazonCloudFront_SignedURLs.png*
+1. Mobile app **authenticates** to serverless application and **requests signed URL**
+2. Serverless application returns the signed URL to mobile app
+3. Mobile app uses the signed URL to access the distribution and the content which has been granted for access to Amazon CloudFront.
+4. CloudFront return the content to mobile app.
+
+## CloudFront Signed Cookies
+* Similar to Signed URLs
+* Use signed cookies when do not want to change URLs
+* Can be used when you want to provide access to multiple restricted files
+
