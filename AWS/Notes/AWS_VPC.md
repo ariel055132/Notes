@@ -9,14 +9,17 @@
 * Ref: AWSGlobalInfrastructure.png
 1. **Region 區域**
    * Separate physical separation in the world (一個實體地區，例如：東京，德州...)
+   * Each region consists of multiple Availability Zone
 2. **Availability Zone (AZ) 邏輯資料中心**
    * Region has multiple AZs (at least 3)
-   * We can create *public (public access) & private (internal usage, no direct connectivity from the outside world) subnet (~IP networking space)* inside the AZs
+   * We can create subnet inside the AZs:
+      * *public subnet*: Has a direct route to internet gateway, Resources in a public subnet can access the public Internet  
+      * *private subnet*: Does not have a direct route to internet gateway, require a *NAT* device to access the public internet
    * We can deploy *EC2 instances* into public / private subnet
    * *VPC router* will take care of routing within the VPC and the outside of the VPC
    * *Internet gateway* attaches to VPC and connect to the Internet
-     * egrass internet: send data out of the outside Internet 
-     * ingress internet: receive data from the outside Internet
+     * *egrass internet*: send data out of the outside Internet 
+     * *ingress internet*: receive data from the outside Internet
 3. **Data Center 實體資料中心**
    * The actual place where servers and hardware equipment are installed (實際放上主機與硬體設備等的地方)
    * An availability zone is composed of one or more data centers

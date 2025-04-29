@@ -2,7 +2,7 @@
 * Mostly is a company has on-premises servers / infra and how to migrate to AWS Cloud
 
 ## AWS Migration Tools Overview
-1. AWS Application Discovery Service
+1. **AWS Application Discovery Service**
    * Collect data about servers in on-permises Data Center (Agentless / Agent-based discovery)
    * Server hostnames, IP addresses, MAC addresses
    * As well as resource allocation and utilization details of key resources including CPU, network, memory, and disk
@@ -80,20 +80,22 @@
   * Amazon FSx (Windows, Lustre, OpenZFS, and NetApp ONTAP)
 
 ## AWS Snow Family
-1. *AWS Snowball / Snowmobile* 
-   * Migrating large volumes (50-80 TB, petabyte scale) of data to AWS physically
+1. *AWS Snowball* 
+   * Migrating large volumes (**50-80 TB**, petabyte scale) of data to AWS physically
    * For situation that the company needs to move a large amount of data, but they only have a small Internet link
    * The company has a high-burdened Internet link, the existing Internet link will be affected when it is used to transfer the Internet 
 2. *Snowball Edge Compute Optimized*
-   * Provides block and object storage and optional GPU (100 TB, petabyte scale)
+   * Provides block and object storage and optional GPU (**100 TB**, petabyte scale)
    * Use it for *Edge Cases* (Data Collection, machine learning and processing, and storage in environments with Intermittent connectivity)
    * For situation that have a factory somewhere and do not have good Internet link
 3. *Snowball Edge Storage Optmized*
-   * Provides block storage and Amazon *S3-compatible object storage* (100 TB, exabyte scale)
+   * Provides block storage and Amazon *S3-compatible object storage* (**100 TB**, exabyte scale)
    * Use for local storage and large-scale data transfer
 4. *Snowcone*
    * *Small device* use for edge computing, storage and data transfer
    * Can transfer data *offline* / online with AWS DataSync agent
+5. *Snowmobile*
+   * 100 PB 
 * Differences between 2 and 3 
    * One is for computation, another one is mainly for storage 
 
@@ -129,3 +131,19 @@
    * *AWS Database Migration Service (AWS DMS)* and Schema Conversion Tool (SCT) can be used for DB migration
    * *Custom AMI / code-level migration* can be used for Elastic Beanstalk migration
 7. Refactor: Re-architect to a cloud-native serverless architecture
+
+
+## Quiz
+1. An organization must transfer 100 TB of data into AWS within the next 2 weeks and **cannot use their internet links**. What should a solutions architect recommend?
+   * Order 2x 50TB Snowball devices.
+   * SnowMobile is not available now.
+2. Which of the following migration options is NOT possible when using AWS Database Migration Service (DMS)?
+   * Amazon RDS Aurora to Amazon EC2
+   * Oracle DB to Amazon Aurora
+   * Amazon EC2 to Amazon RDS MariaDB
+   * Amazon EC2 to Amazon Redshift
+   * All of these are possible (*this*)
+3. Which source platforms are supported for migrating VMs using AWS Server Migration Service (SMS)?
+   * VMWare, Hyper-V, Azure
+4. What does an organization need to pay for when using AWS DataSync?
+   * Per-GB transferred and storage

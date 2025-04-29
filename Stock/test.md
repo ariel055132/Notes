@@ -30,3 +30,20 @@
 1. 股息
 * MorningStar -> Dividends -> Dividend Per Share
 * Trading View -> Indicators -> Dividend Yield (參考股息率)
+
+## Bond
+* 用熊市的心態看 Bond
+* 票面價值 (pay value)
+* 票面息 (coupon)
+* 贖回日期 
+* 到期收益率 = 票面息 (買入前可計算之回報) / 投入本金 (到期日取回本金)
+  * 淨賣出收益率
+* 預期報酬 = 收益率 (%) - 違約率 (%)
+* 加息，價格跌；反之亦然
+
+### Reference
+1. S&P Global Ratings
+2. FSM
+3. IB Bond Search Tool
+   * Ask Yield
+   * Callable

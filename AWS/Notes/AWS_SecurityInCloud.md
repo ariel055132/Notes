@@ -71,8 +71,6 @@
 * used for adding *sign-in and sign-up functionality* to *web and mobile applications*
 * *User Pools*: Store the user identities, federated to an identity source
 * *Identity Pools*: Getting temporary, limited-privilege credentials for AWS services
-
-
 * Ref: source/Security/Amazon_Cognito.png (Use Cases / Examples)
 
 ### Encryption Primer
