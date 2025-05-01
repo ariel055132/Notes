@@ -96,5 +96,29 @@
 ## VPC Peering
 * Routing Addresses internally for VPCs
 
+## VPC Endpoint
+* https://joehuang-36936.medium.com/vpc-endpoints-interface-gateway-%E6%AF%94%E8%BC%83-5c9cf0f53723
+* Connect to an instance in Amazon service without using the public internet (connect privately)
+1. Interface Endpoint
+2. Gateway Endpoint
+   * Route table entry is required with the prefix list for destination and the gateway ID
+* Service Provider Model
+
+## AWS Client VPN
+* Connect client computer to AWS data center / 
+
+## Site to Site VPN
+* Connects directly from AWS resources to Customer on-premises servers
+* Virtual Private Gateway (VGW) - Customer Gateway
+
+## AWS Direct Connect (DX)
+* Ref: *source/VPC/AWS_Direct_Connect_DX.png*
+* Private Connection into AWS
+* AWS Direct Connect Location
+  * A DX port (1000-Base-LX or 10GBASE-LR) must be allocated in a DX location
+  1. AWS Cage: AWS Direct Connect Endpoint
+  2. Customer / Partner Cage: Customer / Partner router
+
 ## Reference
 1. https://hackmd.io/@AWSlearning/BJvnmhRg2#%E2%97%86-NACL-vs-SG-%E7%9A%84%E5%AE%89%E5%85%A8%E8%A8%AD%E5%AE%9A%E4%BB%8B%E7%B4%B9 (AWS VPC 網路架構 (觀念講解篇))
+2. https://joehuang-36936.medium.com/vpc-endpoints-interface-gateway-%E6%AF%94%E8%BC%83-5c9cf0f53723 (VPC Interface Endpoints vs VPC Gateway Endpoints)
