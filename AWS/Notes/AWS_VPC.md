@@ -112,9 +112,11 @@
 
 ## VPC Endpoint
 * https://joehuang-36936.medium.com/vpc-endpoints-interface-gateway-%E6%AF%94%E8%BC%83-5c9cf0f53723
-* Connect to an instance in Amazon service without using the public internet (connect privately)
+* Enable connection between VPC and supported AWS services 
+* **VPC connect to services privately, not exposed to the public internet**
 1. Interface Endpoint
 2. Gateway Endpoint
+   * **A gateway that is a target for a route in your route table used for traffic used for traffic destined to either Amazon S3 or Dynamo DB**
    * Route table entry is required with the prefix list for destination and the gateway ID
 * Service Provider Model
 
