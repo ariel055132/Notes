@@ -53,17 +53,31 @@
 ## VPC structure
 * Ref: VPCStructure.png
 ### General
-* Red Border == Region (e.g )
+1. *Subnet*
+   * segment of VPC's IP address range where user can place group of isolated resources 
+2. *Internet Gateway* 
+   * VPC side of a connection to the public internet (VPC 與外界 Internet 連線的方式)
+   * Egress-only Internet Gateway is for IPv6 network (Outbound connection only)
+3. *NAT (Network Address Translation) Gateway*
+   * Services for resources in private subnet to access the Internet
+   * (讓在Private Subnet的資源可存取外界 Internet，同時外界 Internet 無法與 Private Subnet 連線)
+4. *Router* 
+  * Interconnect subnets and direct traffic between Internet Gateways, virtual private Gateways, 
+  * (透過 Router 連結 所有 Gateway，做 Routing)
+5. *Peering Connection (VPC Peering)*
+  * Direct connection between two VPCs
+  * enables user to route traffic via private IP address between two peered VPCs
+6. 
+7. 
 
-* VPC Router takes care of all routing for connections that are going outside of a subnet (within the VPC and outside of VPC)
-* Internet Gateway is connected to VPC router, for sending data out of the Internet (IPv4 network, inbound & outbound connection)
-  * Egress-only Internet Gateway is for IPv6 network (Outbound connection only)
-* Peering Connection: Direct connection between two VPCs
-* VPC Endpoints: Private Connection to public AWS service
-* NAT instance: Enable Internet access for EC2 instances in private subnets (managed by you) outbound only
-* NAT Gateway: Enable Internet access for EC2 instances in private subnets (managed by AWS) outbound only
-* Security Group: Instance-level firewall
-* Network ACL: Subnet-level firewall (only sees traffic going in and out of the subnet)
+8. *VPC Endpoints*
+  * Private Connection to public AWS service
+9.  NAT instance
+  * Enable Internet access for EC2 instances in private subnets (managed by you) outbound only
+10. *Network ACL (Access Control List)*
+  * Instance-level firewall
+11. *Security Group* 
+  * Subnet-level firewall (only sees traffic going in and out of the subnet)
 * When you create a VPC, you must specify a range of IPv4 addresses for the VPC in the form of CIDR (Classless Inter-Domain Routing) blocks 
 
 ## AWS CIDR Blocks
@@ -77,7 +91,7 @@
 * Stateful firewall allows the return traffic automatically
 * Stateless firewall checks for an allow rule for both connections
 
-### Network ACLs
+### Network ACLs (Access Control List)
 * Apply at the subnet level (Region -> Availability Zone -> Subnet)
 * Check the ingress, engress network traffic to the subnet
 * Do not check the traffic between instances (Subnet level)
@@ -112,12 +126,28 @@
 * Virtual Private Gateway (VGW) - Customer Gateway
 
 ## AWS Direct Connect (DX)
-* Ref: *source/VPC/AWS_Direct_Connect_DX.png*
+* Ref: *source/VPC/AWS_Direct_Connect_DX.png* (General)
+* Ref: *source/VPC/AWS_Direct_Connect_DX_2.png* (Private VIF & Public VIF)
 * Private Connection into AWS
+* DX Connections are not encrypted
 * AWS Direct Connect Location
   * A DX port (1000-Base-LX or 10GBASE-LR) must be allocated in a DX location
   1. AWS Cage: AWS Direct Connect Endpoint
   2. Customer / Partner Cage: Customer / Partner router
+* Advantages
+  1. **Private connectivity** between AWS and on-premises data center / office
+  2. **Consistent network experience** - increased speed/latency & bandwidth/throughput
+  3. Lower costs for organizations that transfer large volumes of data
+* Private VIF
+  * Connect to a single VPC in the same AWS Region using a VGW
+* Public VIF
+  * Connect to AWS Public Services in any Region
+  * Cannot connect to the Internet
+
+## AWS Direct Connect Gateway
+
+## AWS Transit Gateway
+* Network transit hub that interconnects VPCs and on-premises networks
 
 ## Reference
 1. https://hackmd.io/@AWSlearning/BJvnmhRg2#%E2%97%86-NACL-vs-SG-%E7%9A%84%E5%AE%89%E5%85%A8%E8%A8%AD%E5%AE%9A%E4%BB%8B%E7%B4%B9 (AWS VPC 網路架構 (觀念講解篇))
