@@ -71,3 +71,23 @@ Which solution meets these requirements MOST cost-effectively?
       * 複製 S3 buckets，並把它們放到不同地方，其實很貴
       * 複製和資料持續更新的花費其實蠻多
     * Provision accelerators in AWS Global Accelerator. Associate the supplied IP addresses with the S3 bucket. Edit the Route 53 entries to point to the IP addresses of the accelerators.
+      * AWS Global Accelerator 為建立加速器，透過 AWS Global Network 將流量導向最接近使用者 Region
+      * Global Accelerator 提供 User 與加速器關聯的兩個 static IP address
+      * 但 Route 53 只會根據 IP address，來轉出對應的 Domain Name / HTTP address，因此 Global Accelerator 無法使用
+    * Add an Amazon CloudFront distribution in front of the S3 bucket. Edit the Route 53 entries to point to the CloudFront distribution. (*This This This*)
+    * Enable S3 Transfer Acceleration on the bucket. Edit the Route 53 entries to point to the new endpoint.
+      * S3 Transfer Acceleration 只能
+
+9. A global company hosts its web application on **Amazon EC2 instances behind an Application Load Balancer (ALB)**. The web application has static data and dynamic data. The company stores its **static data in an Amazon S3 bucket**. The company wants to **improve performance and reduce latency for the static data and dynamic data**. The company is using its own domain name registered with Amazon Route 53.
+What should a solutions architect do to meet these requirements?
+    * *source: source/CloudFront/AmazonCloudFront_DynamicStaticContent.png*
+    * Create an Amazon CloudFront distribution that has the S3 bucket and the ALB as origins. Configure Route 53 to route traffic to the CloudFront distribution. (*This This This*)
+    * Create an Amazon CloudFront distribution that has the ALB as an origin. Create an AWS Global Accelerator standard accelerator that has the S3 bucket as an endpoint. Configure Route 53 to route traffic to the CloudFront distribution.
+    * Create an Amazon CloudFront distribution that has the S3 bucket as an origin. Create an AWS Global Accelerator standard accelerator that has the ALB and the CloudFront distribution as endpoints. Create a custom domain name thats points to the accelerator DNS name. Use the custom domain name as an endpoint for the web application. as endpoints.
+    * Create an Amazon CloudFront distribution that has the ALB as an origin. Create an AWS Global Accelerator standard accelerator that has the S3 bucket as an endpoint. Create two domain names. Point one domain name to the CloudFront DNS name for Dynamic content. Point the other domain name to the accelerator DNS name for static content. Use the domain names as endpoints for the web application.
+
+
+
+
+10. A solutions architect is designing a new **hybrid architecture** to **extend a company's on-premises infrastructure to AWS**. The company requires a highly available connection with consistent low latency to an AWS Region. The company needs to minimize costs and is **willing to accept slower traffic if the primary connection fails**.
+    * Provision an AWS Direct Connect connection to a Region. Provision a VPN connection as a backup if the primary Direct Connect connection fails. (*This This This*)
