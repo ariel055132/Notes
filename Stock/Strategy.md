@@ -46,3 +46,13 @@
 2. EPS -> 盈利/增長的公司 (市盈率, PE Ratio)
 3. EPS * PE = 合理價
 4. ROE * PB = 合理價
+
+
+##
+
+
+## 型態分析
+* 三點
+* 第三點 用 candlestick 來畫
+* 上昇趨勢買 / 下降趨勢賣
+* TradingView -> Add ray
