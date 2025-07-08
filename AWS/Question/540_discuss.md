@@ -1,6 +1,13 @@
 # Question 540
 ## Question
 
+C. is chose
+Amazon RDS Multi-AZ Cluster (not just traditional Multi-AZ) supports read scaling by providing readable standby instances, including a reader endpoint.
+	•	This provides:
+	•	High availability (automated failover between AZs)
+	•	Improved performance (read queries go to reader instance, not primary)
+	•	Operational efficiency (no custom replication setup)
+	•	Reporting queries can use the reader instance, offloading the primary instance.
 
 A. DMS + Multi-region RDS
     * AWS DMS is good for initial migrations and ongoing replication, but managing multiple RDS instances across regions adds operational complexity.
