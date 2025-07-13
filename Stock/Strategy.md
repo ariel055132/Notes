@@ -14,9 +14,17 @@
    * 資產 - 負債 = 股東權益
 2. Income Statement (賺錢能力)
    * 收入 - 支出 = 盈利
-   * ROE (Return On Equity, 股本回報率) -> 資產型
-   * EPSg (Earnings per Share, 每股盈利增長) -> others
+
 3. Cash Flow ()
+* 選股原則_賺價_指標.png
+
+### 指標
+* ROE (Return On Equity, 股本回報率) -> 資產型
+* EPSg (Earnings per Share, 每股盈利增長) -> others
+* 最好是兩個指標都 Pass
+* 若不是兩個指標都 Pass，Alternative 選法如下
+  1. 判斷要買的公司是 資產型 / 增長型
+  2. 資產型
 
 ### 選啥
 * 優質股 Indicators： Net Income g vs EPSg
@@ -25,6 +33,7 @@
 3. 維持 5-10 年期
 4. 同行比較 (同 industry 的股票如何)
 5. 突發事故 (COVID，Recession?) (若有，可以有1年例外)
+* 選股原則_賺價.png
 
 * 收息股
 1.  ROE: 8%+
