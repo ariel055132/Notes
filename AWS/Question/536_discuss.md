@@ -27,3 +27,6 @@ B. Multi-AZ with a larger secondary standby
 D. Multi-AZ cluster with two readable standby instances
 	* Sounds like Amazon Aurora, not standard RDS PostgreSQL.
 	* If using Aurora, this would work, but it’s more expensive and requires switching engine — not the most cost-effective option.
+
+instance deployment (instance <-> replica (一個 passive standby)) 只建 instance，需要額外成本建立 replica
+cluster deployment (instance + replica （多了2個 active standby)) 在建立 cluster 的時候，已經包含 replica了(可以利用 active standby 當作 read replica)，成本比較低
