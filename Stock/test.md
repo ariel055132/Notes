@@ -11,25 +11,32 @@
    * 若公司是服務比重(E.G:科技公司)
    * (合理)股價 = 預期EPS (用EPSg% 來算) * 市盈率 PE Ratio (Price-per-equity ratio, Price/Earnings)
 
-* MorningStar -> Key Ratios -> Full Key Ratios Data
-* Earnings Per Share (EPS)
-* Book Value Per share (Equiry Per Share -> NAVPS)
+## Source of the indicators / numbers
+1. ROE (Return On Equity %)
+   * MorningStar -> Key Metrics -> Profitabiity and Efficiency 
+2. EPS (Earnings Per Share)
+   * MorningStar -> Key Ratios -> Full Key Ratios Data
+   * Should be same as 6
+3. Book Value Per share (Equity Per Share -> NAVPS)
   * MorningStar -> Key Metrics -> Financial Health -> Book Value / Share
-* PB Ratio
+4. PB Ratio
   * MorningStar -> Valuation -> Price / Book
-* PE Ratio
+5. PE Ratio
   * MorningStar -> Valuation -> Price / Earnings
-* EPS Ratio
+6. EPS Ratio
+  * MorningStar -> Key Metrics -> Financial Summary -> Basic EPS
   * 10K Report -> Search EPS -> Basic EPS
+7. Dividend Per Share
+  * MorningStar -> Dividends -> Dividend Per Share
+8. Dividend Yield (股息率)
+  * Trading View -> Indicators -> Dividend Yield 
+9. 報酬率
+  * 個人預期投資回報
+  * 基準指標回報
+  * 通脹率
+  * 9-10% 收息
+  * 12-15% 賺價
 
-1. 報酬率 (at least: 9-10% 收息，12-15% 賺價)
-* 個人預期投資回報
-* 基準指標回報
-* 通脹率
-
-1. 股息
-* MorningStar -> Dividends -> Dividend Per Share
-* Trading View -> Indicators -> Dividend Yield (參考股息率)
 
 ## Bond
 * 用熊市的心態看 Bond
