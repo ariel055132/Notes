@@ -26,3 +26,18 @@ spring.jpa.hibernate.ddl-auto=update
   1. Local development -> convenient
   2. Unit testing -> fast schema setup
   3. Production -> risky (may cause unintended changes or failures)
+
+## 權限不夠
+* 在 MySQL 建立了一個人的使用帳戶，但可能在對 Table 進行操作時可能顯示權限不夠，導致操作失敗
+* 解決方法如下：
+```txt
+1. 確認真的有建立相關帳戶
+SELECT User,Host FROM mysql.user;
+
+2. 查詢帳號權限
+SHOW GRANTS FOR username;
+
+3. 若沒有相關權限，給予相關權限，並進行儲存/更新
+GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'host_address';
+FLUSH PRIVILEGES;
+```
