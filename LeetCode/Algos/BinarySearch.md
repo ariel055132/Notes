@@ -33,4 +33,34 @@ def binary_search(left, right):
     return left 
 ```
 
-2. 
+2. Return the lower_bound / upper_bound of a val in a sorted array (maybe not unique value)
+* lower_bound(x): first element of i, such that A[i] >= x
+* upper_bound(x): first element of i, such that A[i] > x
+* A = [1, 2, 2, 2, 4, 4, 5]
+* lower_bound(A, 2) = 1
+* upper_bound(A, 2) = 4
+```python
+def lower_bound(A, val, left, right):
+    while left < right:
+        mid = left + (right - left) // 2
+        # The condition of lower_bound
+        if A[mid] >= val:
+            right = m
+        else:
+            left = mid + 1
+    return left
+
+def upper_bound(A, val, left, right):
+    while left < right:
+        mid = left + (right - left) // 2
+        # The condition of upper_bound
+        if A[mid] > val:
+            right = m
+        else:
+            left = mid + 1
+    return left
+```
+* LC69. Sqrt(x)
+* LC278. First Bad Version Interactive Problem
+* LC 875. Koko eating bananas
+* LC 378. Kth Smallest Element in a sorted matrix
