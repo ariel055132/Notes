@@ -13,9 +13,16 @@
 
 ## Template
 1. [left, right)
+* [left, right): 左閉右開
+  * [3, 5):  包含 3，4
 * Time complexity: O(log(right - left)*(f(m) + g(m)))
 * Space complexity: O(1)
+* Overflow will happen if number = 2^31 - 1
 ```python
+"""
+Returns the smallest number m in range [left, right) such that
+g(m) is true. Returns r if not found
+"""
 def binary_search(left, right):
     while left < right:
         # The middle index
@@ -33,7 +40,7 @@ def binary_search(left, right):
     return left 
 ```
 
-2. Return the lower_bound / upper_bound of a val in a sorted array (maybe not unique value)
+1. Return the lower_bound / upper_bound of a val in a sorted array (maybe not unique value)
 * lower_bound(x): first element of i, such that A[i] >= x
 * upper_bound(x): first element of i, such that A[i] > x
 * A = [1, 2, 2, 2, 4, 4, 5]
@@ -64,3 +71,18 @@ def upper_bound(A, val, left, right):
 * LC278. First Bad Version Interactive Problem
 * LC 875. Koko eating bananas
 * LC 378. Kth Smallest Element in a sorted matrix
+
+3. [left, right]
+* [left, right]: 左閉右閉
+  * [3, 5] 包含3，4，5
+* 盡量用這個吧
+```python
+def binary_search(left, right):
+    while left <= right:
+        mid = left + (right - left) // 2
+        if g(m):
+            right = mid - 1 # new range [l, m-1]
+        else:
+            left = mid + 1 # new range [m + 1, r]
+    return left
+```
