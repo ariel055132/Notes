@@ -86,3 +86,15 @@ def binary_search(left, right):
             left = mid + 1 # new range [m + 1, r]
     return left
 ```
+
+## Practice
+1. Search in Rotated Sorted Array
+2. Find First and Last Position of Element in Sorted Array
+3. Search a 2D Matrix
+4. Find Peak Element
+5. Find Smallest Letter Greater Than Target
+6. Peak Index in a Mountain Array
+7. Count of Range Sum
+8. Search in Rotated Sorted Array II
+9. Find Minimum in Rotated Sorted Array
+10. Binary Search 
