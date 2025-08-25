@@ -25,6 +25,8 @@ int n = grid[0].length;
 // horizontal
 for (int i = 0; i < n; i++) {
     for (int j = 0; j < m - 1; j++) {
+        // Create a weight grid[i][j+1] edge from (i,j) to (i,j+1)
+        // Create a weight grid[i][j] edge from (i,j+1) to (i,j)
         if (grid[i][j] == 1 && grid[i][j+1] == 1) {
             // Do something
         }
@@ -34,6 +36,8 @@ for (int i = 0; i < n; i++) {
 // Vertical
 for (int i = 0; i < n - 1; i++) {
     for (int j = 0; j < m; j++) {
+        // Create a weight grid[i+1][j] edge from (i,j) to (i+1,j)
+        // Create a weight grid[i][j] edge from (i+1,j) to (i,j)
         if (grid[i+1][j] == 1 && grid[i][j] == 1) {
             // Do something
         }
