@@ -98,3 +98,12 @@ def binary_search(left, right):
 8. Search in Rotated Sorted Array II
 9. Find Minimum in Rotated Sorted Array
 10. Binary Search 
+11. 2529. 正整数和负整数的最大计数 https://leetcode.cn/problems/maximum-count-of-positive-integer-and-negative-integer/
+2300. 咒语和药水的成功对数 https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/
+2563. 统计公平数对的数目 https://leetcode.cn/problems/count-the-number-of-fair-pairs/
+275. H 指数 II https://leetcode.cn/problems/h-index-ii/
+875. 爱吃香蕉的珂珂 https://leetcode.cn/problems/koko-eating-bananas/
+2187. 完成旅途的最少时间 https://leetcode.cn/problems/minimum-time-to-complete-trips/
+2861. 最大合金数 https://leetcode.cn/problems/maximum-number-of-alloys/
+2439. 最小化数组中的最大值 https://leetcode.cn/problems/minimize-maximum-of-array/
+2517. 礼盒的最大甜蜜度 https://leetcode.cn/problems/maximum-tastiness-of-candy-basket/
