@@ -45,5 +45,10 @@
     * Store result in cache for further request
     * Return response to client
 * **Cache Consideration**
+  1. Consider using cache when data is read frequently but modified infrequently
+  2. Do not store important data in cache as it is volatile memory
+  3. Design a proper expiration policy.
+  4. Migrating failures: Setup miltiple cache servers
+  5. **Eviction Policy**: Once the cache is full, any requests to add items to the cache might cause existing items to be removed. Least-recently-used (LRU) is most popular.
 
 #### Content Delivery Network (CDN) 
