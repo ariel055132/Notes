@@ -44,5 +44,6 @@
     * Query database from database
     * Store result in cache for further request
     * Return response to client
+* **Cache Consideration**
 
 #### Content Delivery Network (CDN) 
