@@ -27,6 +27,22 @@
    * E.G: MySQL, Oracle DB, PostgreSQL
 2. Non-Relational Database (NoSQL)
    * DynamoDB, MongoDB 
-   * Super-low latency, unstructured data, need to serialize and deserialize data, store massive amount of data (?)
+   * Advantage: Super-low latency, unstructured data, need to serialize and deserialize data, store massive amount of data (?)
 3. Replication
-  * Master Database
+   * Creating copies of database to improve reliability, availability, and performance
+   * **Master Database** (Original): Handles write operations (INSERT, UPDATE, DELETE)
+   * **Slave Database** (Copies): Handles read operations (QUERY)
+   * Master-Slave Replication: Data flow from master to slaves (ensure data integrity)
+
+#### Caching
+* *Temporary Storage area* that store the result of expensive responses or frequently accessed data in memory so that subsequent requests are served more quickly
+* E.G: Redis
+* **Cache Flow**
+  1. Web server receives request and checks cache for data
+  2. **Cache hit**: Return cache data directly to client
+  3. **Cache miss**: 
+    * Query database from database
+    * Store result in cache for further request
+    * Return response to client
+
+#### Content Delivery Network (CDN) 
