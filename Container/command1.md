@@ -1,16 +1,16 @@
-# docker container run [參數] {image 名稱} [CMD]
+# Command 練習 
+* 指令格式：docker container run [參數] {image 名稱} [CMD]
 
 # 觀察以下指令的執行過程與結果
-docker container run alpine echo "Hello, Docker"
-## echo "hello world" 是啟動這個 container 的 process
-##  舊版指令: docker run alpine echo "hello world" 
+* docker container run alpine echo "Hello, Docker"
+* 顯示 Hello, Docker
 
 # 練習基本指令
-docker container ls # 為什麼看不到上一行指令建立的 container?
+## 顯示目前 Docker Container
+* docker container ls 
+* 為什麼看不到上一行指令建立的 container?
+* 因為該 Container  
 docker container ls -a
-## 舊版指令:
-## docker ps 
-## docker ps -a
 
 # 移除 container
 docker container rm {container name or id}
