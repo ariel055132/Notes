@@ -78,7 +78,18 @@ podman run -d -p 5566:80 {image name}
 # Google Container Registry: podman login gcr.io
 # GitHub Container Registry: podman login ghcr.io
 # Quay.io: podman login quay.io
-# Enter username & password
 podman login {registry}
 
+# Enter username & password
+
+# Create a tag for your image
+podman tag {local image name} docker.io/{username}/{image name}:{version no}
+
+# Show the new image
+podman images
+
+# Push the image to registry
+podman push {username/image name}:{version no}
+
+# Create the registry before push the image
 ```
