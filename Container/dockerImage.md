@@ -91,5 +91,11 @@ podman images
 # Push the image to registry
 podman push {username/image name}:{version no}
 
-# Create the registry before push the image
+# Create the registry before pushing the image
 ```
+
+# Reference
+* https://israynotarray.com/docker/20220423/196903828/
+* https://github.com/containers/podman/discussions/22118
+* https://hackmd.io/@sjwangtw/ByQiaYieee?utm_source=preview-mode&utm_medium=rec
+* https://ithelp.ithome.com.tw/articles/10191139
