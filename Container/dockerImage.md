@@ -70,3 +70,15 @@ podman rm {old container ID / Name}
 ## Step 3. Activate the image again
 podman run -d -p 5566:80 {image name}
 ```
+
+## Publish the image to registry
+```yaml
+# Step 1. Login to registry
+# Docker Hub: podman login docker.io
+# Google Container Registry: podman login gcr.io
+# GitHub Container Registry: podman login ghcr.io
+# Quay.io: podman login quay.io
+# Enter username & password
+podman login {registry}
+
+```
