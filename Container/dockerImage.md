@@ -94,6 +94,18 @@ podman push {username/image name}:{version no}
 # Create the registry before pushing the image
 ```
 
+## Test the published image
+```yaml
+# Pull the images from registry
+podman pull docker.io/appleadrian/my-web-backup:v1
+
+# Create the new container with the pulled image
+podman run -d -p 5566:80 docker.io/appleadrian/my-web-backup:v1
+
+# Test the container with curl
+curl localhost:5566
+```
+
 # Reference
 * https://israynotarray.com/docker/20220423/196903828/
 * https://github.com/containers/podman/discussions/22118
