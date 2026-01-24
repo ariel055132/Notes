@@ -1,6 +1,6 @@
 # 策略
 ## 大趨勢
-1. FREDFUNDS
+1. FEDFUNDS
    * (首次)上升：熊(三)轉牛(一)
    * (首次)下跌：牛(三)轉熊(一)
 2. UNEMPLOYMENT RATE
@@ -24,7 +24,8 @@
 * 最好是兩個指標都 Pass
 * 若不是兩個指標都 Pass，Alternative 選法如下
   1. 判斷要買的公司是 資產型 / 增長型
-  2. 資產型
+  2. 資產型(e.g: 銀行，房地產...)，看ROE是否ok
+  3. 增長型(e.g: 科技股)，看EPSg是否ok
 
 ### 選啥
 * 優質股 Indicators： Net Income g vs EPSg
@@ -34,6 +35,8 @@
 4. 同行比較 (同 industry 的股票如何)
 5. 突發事故 (COVID，Recession?) (若有，可以有1年例外)
 * 選股原則_賺價.png
+* 選股原則_賺價_指標.png
+* 選股原則_賺價_指標結果.png
 
 * 收息股
 1.  ROE: 8%+
