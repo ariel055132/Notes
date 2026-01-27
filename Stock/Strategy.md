@@ -1,15 +1,32 @@
 # 策略
-## 大趨勢
+## 大趨勢 (同步)
 1. FEDFUNDS
    * (首次)上升：熊(三)轉牛(一)
    * (首次)下跌：牛(三)轉熊(一)
 2. UNEMPLOYMENT RATE
+   * Trading Economics: United States Unemployment Rate
    * 連續上升3個月：牛(三)轉熊(一) 
    * 連續下跌3個月：熊(三)轉牛(一)
    * < 5% / 新低：牛三
 3. INFLATION
    * 連跌3個月：牛轉熊(2-3%)
    * 連升3個月：熊轉牛(1-2%)
+
+## 大趨勢 (預判)
+1. 製造業員工平均工時
+   * Investing.com (United Status Average Weekly Hours)
+   * 升 (牛)
+   * 跌 (熊)
+2. M2
+3. 十年期國庫債卷及聯邦基金利差 (US10Y)
+
+* Philly Fed United States Leading Index (L1)
+* Philly Fed US Coincident Index (L2)
+* US Lagging Index (L3)
+* L1 growth rate < L2 & L3 Growth Rate -> (熊)
+* L1 growth rate > L2 & L3 Growth Rate -> (牛)
+* Search Macro Micro Leading Index (Year to Year)
+* The conference Board
 
 ## 股票
 ### 選股
@@ -65,9 +82,19 @@
 
 ## Pro
 1. 組合管理
+   * 用長遠目光看待投資
 2. 交易法則
 3. 部署交易系統
+   * Profit and Loss Ratio (P/L Ratio)
+   * 風險1，回報5 -> 勝率 17%
+   * 風險1，回報3 -> 勝率 25%
+   * 風險1，回報2 -> 勝率 34%
+   * 風險1，回報1 -> 勝率 50%
+   * 推高止賺
 
+## 三原則
+1. 升穿/跌穿 3 天
+2. 3 %
 
 ## 型態分析
 * 三點
