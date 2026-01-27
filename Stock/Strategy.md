@@ -19,6 +19,8 @@
    * 跌 (熊)
 2. M2
 3. 十年期國庫債卷及聯邦基金利差 (US10Y)
+4. US10Y - FEDFUNDS > 0 (Inverted? 牛一，熊二)
+5. US10Y - FEDFUNDS < 0 (停止加息，牛三)
 
 * Philly Fed United States Leading Index (L1)
 * Philly Fed US Coincident Index (L2)
