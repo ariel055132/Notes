@@ -18,9 +18,13 @@
    * 升 (牛)
    * 跌 (熊)
 2. M2
-3. 十年期國庫債卷及聯邦基金利差 (US10Y)
+3. 十年期國庫債卷及聯邦基金利差 (TradingView: US10Y)
 4. US10Y - FEDFUNDS > 0 (Inverted? 牛一，熊二)
 5. US10Y - FEDFUNDS < 0 (停止加息，牛三)
+6. 建築許可 
+   * Investing.com (US building permits)
+7. US10Y - US01Y > 0 (good)
+8. US10Y - US01Y < 0 (bad)
 
 * Philly Fed United States Leading Index (L1)
 * Philly Fed US Coincident Index (L2)
@@ -31,6 +35,13 @@
 * The conference Board
 
 ## 股票
+## Beta Coefficient
+1. < 1 : 低 (升得比指數慢)
+2. = 1 : 一般 (升得和指數一樣)
+3. > 1 : 高 (升得比指數快)
+* 牛市：1.5-2
+* 熊市：0.8-1.2
+
 ### 選股
 1. Balance Sheet (資產負債表)
    * 資產 - 負債 = 股東權益
@@ -74,6 +85,10 @@
 * 股息 Source: MorningStar -> Dividends 
   * Dividends & Splits -> Dividend per share
   * Dividends & Splits -> Payout Ratio (%)
+  * TradingView -> Indicators -> Dividend yield
+
+### Screener
+* Finviz
 
 ## 估值
 1. NAVPS (Net Asset value per share) -> 重資產的公司 (市帳率, PB Ratio)
@@ -103,3 +118,4 @@
 * 第三點 用 candlestick 來畫
 * 上昇趨勢買 / 下降趨勢賣
 * TradingView -> Add ray
+* TradingView -> Correlation 
