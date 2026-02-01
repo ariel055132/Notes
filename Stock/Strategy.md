@@ -1,4 +1,7 @@
 # 策略
+## Overview
+1. 看大趨勢
+
 ## 大趨勢 (同步)
 1. FEDFUNDS
    * (首次)上升：熊(三)轉牛(一)
@@ -79,12 +82,13 @@
 
 ### Source
 * Source: MorningStar -> Key Metrics
-  * Profitability and Efficiency -> Return on equity (%) 
+  * Profitability and Efficiency -> Return on equity (%) (ROE)
   * Growth -> EPS (%) - Year Over Year
   * Growth -> Net Income - Year Over Year 
 * 股息 Source: MorningStar -> Dividends 
   * Dividends & Splits -> Dividend per share
   * Dividends & Splits -> Payout Ratio (%)
+  * Dividends & Splits -> Total Yield (%)
   * TradingView -> Indicators -> Dividend yield
 
 ### Screener
@@ -92,9 +96,17 @@
 
 ## 估值
 1. NAVPS (Net Asset value per share) -> 重資產的公司 (市帳率, PB Ratio)
+   * GuruFocus -> Book Value
 2. EPS -> 盈利/增長的公司 (市盈率, PE Ratio)
 3. EPS * PE = 合理價
 4. ROE * PB = 合理價
+5. PE 市盈率
+6. PEG 市盈增長率
+   * = 1: 正常
+   * < 1: 低
+   * > 1: 高 (貴)
+7. PE = PE * Beta
+8. PEG = PEG * Beta
 
 
 ## Pro
