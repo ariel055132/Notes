@@ -1,21 +1,28 @@
 # 策略
 ## Overview
-1. 看大趨勢
+1. 看大趨勢 (牛/熊，熊轉牛，牛轉熊)
+2. 決定資產（股票，房地產，FX，ETF，債卷）
+3. 決定產業 (科網)
+4. 決定股份
+5. 計算估值
+6. 圖表分析
 
-## 大趨勢 (同步)
-1. FEDFUNDS
+## 大趨勢 (同步指標)
+1. 利率
    * (首次)上升：熊(三)轉牛(一)
    * (首次)下跌：牛(三)轉熊(一)
-2. UNEMPLOYMENT RATE
-   * Trading Economics: United States Unemployment Rate
+   * TradingView -> Indicators -> FEDFUNDS
+2. 失業率
    * 連續上升3個月：牛(三)轉熊(一) 
    * 連續下跌3個月：熊(三)轉牛(一)
    * < 5% / 新低：牛三
+   * Trading Economics: United States Unemployment Rate
+   * TradingView: UNRATE
 3. INFLATION
    * 連跌3個月：牛轉熊(2-3%)
    * 連升3個月：熊轉牛(1-2%)
 
-## 大趨勢 (預判)
+## 大趨勢 (領先指標)
 1. 製造業員工平均工時
    * Investing.com (United Status Average Weekly Hours)
    * 升 (牛)
@@ -36,6 +43,11 @@
 * L1 growth rate > L2 & L3 Growth Rate -> (牛)
 * Search Macro Micro Leading Index (Year to Year)
 * The conference Board
+
+## 大趨勢 (如何看)
+1. 熊轉牛：領先指標 + FEDFUNDS 減無可減 + FEDFUNDS 首次加息
+2. 牛轉熊：FEDFUNDS 首次加息
+3. 加息週期：牛 / 減息週期：熊
 
 ## 股票
 ## Beta Coefficient
