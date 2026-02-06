@@ -57,6 +57,18 @@
 * 牛市：1.5-2
 * 熊市：0.8-1.2
 
+## ETF
+1. 行業
+   * Asset class
+   * Sector
+2. Size/Vol
+   * Total Assets
+   * Volume
+3. Leverage / Inverse
+   * 牛市可以 Leverage
+   * Inverse 難
+4. 相關性
+
 ### 選股
 1. Balance Sheet (資產負債表)
    * 資產 - 負債 = 股東權益
