@@ -9,8 +9,10 @@
 ## 顯示目前 Docker Container
 * docker container ls 
 * 為什麼看不到上一行指令建立的 container?
-* 因為該 Container  
-docker container ls -a
+* 因為該 Container 的任務已經執行完畢，並且自動停止
+
+* 而 docker container ls 只會列出正在運行中的 Container，因此不會展示上一步指令建立的 Container
+* 而 docker container ls -a 則會列出所有狀態的 Container
 
 # 移除 container
 docker container rm {container name or id}

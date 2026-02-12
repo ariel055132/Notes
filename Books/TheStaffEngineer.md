@@ -24,3 +24,8 @@
 3. Solvers
    * Wade into one difficult problem at a time
 4. Right hands
+
+## Three Maps
+1. A Locator Map
+2. A topographical map
+3. 
