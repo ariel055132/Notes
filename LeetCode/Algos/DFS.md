@@ -1,3 +1,8 @@
+---
+tags:
+    - DataStructure
+---
+
 * Complexity: O(n + m)
 ```java
 void dfs(int currentNode) {

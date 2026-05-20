@@ -1,4 +1,11 @@
-# Trees
+---
+tags:
+  - DataStructure
+aliases:
+  - BST
+---
+
+# Binary Search Trees
 
 
 ## Traversal

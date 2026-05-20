@@ -1,3 +1,9 @@
+---
+tags:
+  - DataStructure
+aliases:
+  - heap
+---
 # Heap
 ## What is heap?
 * Heap is a specialized tree-based data structure which is essentially an almost complete tree that satisfies the heap property

@@ -1,5 +1,5 @@
 # Amazon Route 53
-* Ref: *source/AmazonRoute53/AmazonRoute53_How53Route.png*
+![Route53](../source/AmazonRoute53/AmazonRoute53_How53Route.png)
 * It is a highly available and scalable **DNS (Domain Name Service) web service**.
 * It provide the following functions:
   1. **Domain Registration**: Allow domain name registration to hosted zone in *zone file*

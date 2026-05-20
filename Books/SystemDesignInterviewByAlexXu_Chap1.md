@@ -5,8 +5,8 @@
 * Key Terminologies
 
 ### Simple Architecture
-1. Server
-2. Database
+1. Server: Handling web/mobile traffic
+2. Database: Handling data
 
 ### Terminology
 #### Scalability
@@ -57,7 +57,7 @@
 * **CDN Workflow**
   1. User
 * **CDN Consideration**
-  1. Cost: CDNs are run by third-party providers (E.G: Amazon CloudFront), and you are charged for data transfers in and out of the CDN.
+  1. *Cost*: CDNs are run by third-party providers (E.G: Amazon CloudFront), and you are charged for data transfers in and out of the CDN.
   2. Setting an appropriate cache expiry: 
   3. CDN fallback: Consider how your website/application copes with CDN failure. If there is a temporary CDN outage, clients should be able to detect the problem and request resources from the origin.
   4. Invalidating files: 
@@ -71,3 +71,8 @@
   * In another word, HTTP requests from users can be sent to any web servers
   * More simpler, more robust, and scalable
   * E.G: Weather checking website (always return the latest weather information to clients)
+
+## Final Architecture
+![Architecture](images/Architecture.png)
+1. User visit DNS for receiving the IP address of the website.
+* Ref: Amazon_Route53.md - DNS Procedure
