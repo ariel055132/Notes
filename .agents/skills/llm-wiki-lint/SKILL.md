@@ -1,3 +1,8 @@
+---
+name: llm-wiki-lint
+description: Run a full wiki health check by finding contradictions, stale claims, orphan pages, missing pages, broken links, and data gaps, then deliver a severity-ranked report, apply operator-approved fixes, and record the lint run in the log.
+
+---
 # LLM Wiki Lint Skill
 
 ## Purpose

@@ -1,3 +1,8 @@
+---
+name: llm-wiki-ingest
+description: Ingest a raw source into the wiki with operator-guided emphasis, then update summaries, related entity/concept pages, index, and log while keeping raw files untouched.
+---
+
 # LLM Wiki Ingest Skill
 
 ## Purpose

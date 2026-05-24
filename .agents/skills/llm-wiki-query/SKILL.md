@@ -1,3 +1,9 @@
+---
+name: llm-wiki-query
+description: Answer operator questions from the wiki first by routing through the index, synthesizing evidence-backed responses with citations, and optionally filing reusable syntheses to the wiki with synchronized index and log updates.
+
+---
+
 # LLM Wiki Query Skill
 
 ## Purpose
