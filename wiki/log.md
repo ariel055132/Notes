@@ -73,3 +73,24 @@
 - **Pages touched**: `wiki/sources/2026-05-24--caching.md`, `wiki/concepts/application-level-caching.md`, `wiki/concepts/cdn-and-edge-caching.md`, `wiki/concepts/client-side-cache.md`, `wiki/concepts/in-process-cache.md`, `wiki/concepts/cache-aside.md`, `wiki/concepts/write-through-cache.md`, `wiki/concepts/write-behind-cache.md`, `wiki/concepts/read-through-cache.md`, `wiki/concepts/freshness-budget.md`, `wiki/concepts/cache-invalidation.md`, `wiki/concepts/ttl-jitter.md`, `wiki/concepts/stale-while-revalidate.md`, `wiki/concepts/request-coalescing.md`, `wiki/concepts/cache-warming.md`, `wiki/concepts/cache-stampede.md`, `wiki/concepts/cache-penetration.md`, `wiki/concepts/negative-caching.md`, `wiki/concepts/cache-avalanche.md`, `wiki/concepts/hot-key.md`, `wiki/concepts/read-scaling.md`, `wiki/index.md`, `wiki/log.md`
 - **Notes**: Operator approved emphasizing caching as a targeted system-design read-path optimization. The ingest expanded the existing caching/read-scaling cluster and added focused pages for cache locations, cache access/write patterns, freshness controls, and cache failure modes.
 - **Open questions**: Add future pages for cache observability, circuit breakers, Bloom filters, Redis, and Memcached when dedicated sources cover them.
+
+## [2026-05-24] ingest | Database Indexing
+
+- **Action**: Ingested `raw/sources/Database Indexing.pdf` into the wiki layer.
+- **Pages touched**: `wiki/sources/2026-05-15--database-indexing.md`, `wiki/concepts/database-indexing.md`, `wiki/concepts/full-table-scan.md`, `wiki/concepts/b-tree-index.md`, `wiki/concepts/hash-index.md`, `wiki/concepts/lsm-tree.md`, `wiki/concepts/geospatial-index.md`, `wiki/concepts/inverted-index.md`, `wiki/concepts/vector-index.md`, `wiki/concepts/composite-index.md`, `wiki/concepts/index-selectivity.md`, `wiki/concepts/query-shape-optimization.md`, `wiki/concepts/read-scaling.md`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: Operator approved emphasizing database indexing as a system-design read-scaling and query-shape optimization cluster. The ingest updated the existing indexing hub and added focused pages for index families, full table scans, composite indexes, and selectivity.
+- **Open questions**: Add a future source on query planners and `EXPLAIN` plans to connect index selection to actual execution behavior.
+
+## [2026-05-24] ingest | Database Transactions
+
+- **Action**: Ingested `raw/sources/Database Transactions.pdf` into the wiki layer.
+- **Pages touched**: `wiki/sources/2026-03-31--database-transactions.md`, `wiki/concepts/database-transactions.md`, `wiki/concepts/acid-transactions.md`, `wiki/concepts/write-ahead-log.md`, `wiki/concepts/transaction-isolation.md`, `wiki/concepts/read-uncommitted.md`, `wiki/concepts/read-committed.md`, `wiki/concepts/repeatable-read.md`, `wiki/concepts/serializable-isolation.md`, `wiki/concepts/dirty-read.md`, `wiki/concepts/non-repeatable-read.md`, `wiki/concepts/phantom-read.md`, `wiki/concepts/multi-version-concurrency-control.md`, `wiki/concepts/lost-update.md`, `wiki/concepts/optimistic-locking.md`, `wiki/concepts/pessimistic-locking.md`, `wiki/concepts/deadlock.md`, `wiki/concepts/two-phase-commit.md`, `wiki/concepts/saga-pattern.md`, `wiki/concepts/cross-shard-transaction.md`, `wiki/concepts/single-shard-transaction.md`, `wiki/concepts/replication-log.md`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: Operator requested emphasis on database-design and system-design concepts. The ingest treats transactions as a correctness-boundary topic and connects local ACID behavior to isolation-level choices, concurrency anomalies, locking strategies, deadlock/retry handling, shard-local invariants, cross-boundary transactions, 2PC, and Saga.
+- **Open questions**: Create a synthesis comparing local ACID transactions, single-shard transactions, cross-shard transactions, 2PC, Saga, replication consistency, and cache freshness as distinct consistency tools.
+
+## [2026-05-24] ingest | Consistent Hashing
+
+- **Action**: Ingested `raw/sources/Consistent Hashing.pdf` into the wiki layer.
+- **Pages touched**: `wiki/sources/2026-05-15--consistent-hashing.md`, `wiki/concepts/consistent-hashing.md`, `wiki/concepts/virtual-nodes.md`, `wiki/concepts/fixed-hash-slots.md`, `wiki/concepts/virtual-buckets.md`, `wiki/concepts/hash-based-sharding.md`, `wiki/concepts/resharding.md`, `wiki/concepts/hot-key.md`, `wiki/concepts/application-level-caching.md`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: Operator approved emphasizing consistent hashing as a system-design routing and ownership concept. The ingest connects hash rings, virtual nodes, fixed hash slots, cache-node routing, rate limiter ownership, WebSocket room ownership, asset cache routing, hot-key limits, and resharding or warmup concerns.
+- **Open questions**: Create a synthesis comparing consistent hashing, virtual buckets, fixed hash slots, and directory-based sharding as ownership-mapping strategies.
