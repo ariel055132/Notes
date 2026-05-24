@@ -1,6 +1,0 @@
----
-tags:
-- DataStructure
----
-
-# Dynamic Programming
