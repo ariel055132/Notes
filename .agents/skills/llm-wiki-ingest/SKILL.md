@@ -1,20 +1,20 @@
 ---
 name: llm-wiki-ingest
-description: Ingest a raw source into the wiki with operator-guided emphasis, then update summaries, related entity/concept pages, index, and log while keeping raw files untouched.
+description: Ingest a raw source into the wiki with operator-guided emphasis, then update summaries, related entity/concept pages, index, and log, and archive the original source file.
 ---
 
 # LLM Wiki Ingest Skill
 
 ## Purpose
-Integrate a newly provided raw source into the wiki while preserving raw-source immutability and maintaining index/log bookkeeping.
+Integrate a newly provided raw source into the wiki while preserving source content integrity, maintaining index/log bookkeeping, and archiving the original source after ingest.
 
 ## Preconditions (must pass before edits)
 1. The operator explicitly requested ingestion.
 2. The source file exists at `raw/sources/<file>` or `raw/assets/<file>`.
-3. The workflow will not modify anything under `raw/`.
+3. The workflow will not modify raw-source contents in place; only a post-ingest move to `raw/archive/` is allowed.
 
 ## Guardrails
-- **Immutable raw files:** Never edit, rename, move, or delete any file under `raw/`.
+- **Raw content integrity:** Never edit file contents under `raw/`; only move the ingested source to `raw/archive/` after ingest completion.
 - **Wiki ownership:** Create/update pages only under `wiki/` (unless operator explicitly overrides).
 - **Append-only log:** Only append a new section to `wiki/log.md`; never rewrite or reorder prior entries.
 - **Index freshness:** Any wiki page change in this workflow requires corresponding `wiki/index.md` updates before completion.
@@ -32,10 +32,11 @@ Integrate a newly provided raw source into the wiki while preserving raw-source 
 5. **Update/create concept pages** in `wiki/concepts/` for abstract ideas mentioned.
 6. **Update `wiki/index.md`** to reflect all new/updated pages.
 7. **Append to `wiki/log.md`** with an ingest entry.
-8. **Move the file** from `raw/sources/` or `raw/assets/` to `raw/archive/` or another operator-specified location.
+8. **Archive the original source file** by moving it from `raw/sources/` or `raw/assets/` to `raw/archive/`.
 
 ## Path Handling Rules
 - Input source roots: `raw/sources/`, `raw/assets/`.
+- Archive target root: `raw/archive/`.
 - Output summary root: `wiki/sources/`.
 - Entity updates: `wiki/entities/`.
 - Concept updates: `wiki/concepts/`.
@@ -46,3 +47,4 @@ Integrate a newly provided raw source into the wiki while preserving raw-source 
 - All entities/concepts mentioned in the source have corresponding created/updated pages.
 - `wiki/index.md` reflects these changes.
 - `wiki/log.md` contains a newly appended ingest entry.
+- Original source file has been moved to `raw/archive/`.
