@@ -29,10 +29,10 @@ This concept covers examples that are relevant, diverse, and clearly separated f
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Zero-Shot Prompting]]
-- [[XML Prompt Structure]]
-- [[Code Review Harnesses]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[zero-shot-prompting|Zero-Shot Prompting]]
+- [[xml-prompt-structure|XML Prompt Structure]]
+- [[code-review-harnesses|Code Review Harnesses]]
 
 ## Open Questions
 

@@ -28,10 +28,10 @@ This concept covers feedback loops for writing, analysis, prompt improvement, an
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[POWER Prompt Framework]]
-- [[Prompt Testing and Versioning]]
-- [[Chain-of-Thought Prompting]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[power-prompt-framework|POWER Prompt Framework]]
+- [[prompt-testing-and-versioning|Prompt Testing and Versioning]]
+- [[chain-of-thought-prompting|Chain-of-Thought Prompting]]
 
 ## Open Questions
 

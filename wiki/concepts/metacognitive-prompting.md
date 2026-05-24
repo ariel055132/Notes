@@ -28,9 +28,9 @@ This concept covers prompts that improve judgment by surfacing constraints, unkn
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Chain-of-Thought Prompting]]
-- [[Iterative Refinement]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[chain-of-thought-prompting|Chain-of-Thought Prompting]]
+- [[iterative-refinement|Iterative Refinement]]
 
 ## Open Questions
 

@@ -28,10 +28,10 @@ This concept covers bug-finding prompts, severity thresholds, confidence reporti
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Few-Shot Prompting]]
-- [[Tool Use]]
-- [[Agentic Systems]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[few-shot-prompting|Few-Shot Prompting]]
+- [[tool-use|Tool Use]]
+- [[agentic-systems|Agentic Systems]]
 
 ## Open Questions
 

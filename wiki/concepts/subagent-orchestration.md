@@ -28,10 +28,10 @@ This concept covers spawning subagents for fan-out research, independent file re
 
 ## Related
 
-- [[Agentic Systems]]
-- [[Tool Use]]
-- [[Parallel Tool Calling]]
-- [[Claude Opus 4.7]]
+- [[agentic-systems|Agentic Systems]]
+- [[tool-use|Tool Use]]
+- [[parallel-tool-calling|Parallel Tool Calling]]
+- [[claude-opus-4-7|Claude Opus 4.7]]
 
 ## Open Questions
 

@@ -28,9 +28,9 @@ This concept covers math, planning, trade-off analysis, ROI estimates, and decis
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Metacognitive Prompting]]
-- [[Iterative Refinement]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[metacognitive-prompting|Metacognitive Prompting]]
+- [[iterative-refinement|Iterative Refinement]]
 
 ## Open Questions
 

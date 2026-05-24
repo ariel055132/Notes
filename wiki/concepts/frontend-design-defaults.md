@@ -28,8 +28,8 @@ This concept covers specifying concrete visual alternatives, asking for visual d
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Claude Opus 4.7]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[claude-opus-4-7|Claude Opus 4.7]]
 
 ## Open Questions
 

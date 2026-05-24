@@ -28,10 +28,10 @@ This concept covers grounded answers using notes, documents, search results, dat
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Long Context Prompting]]
-- [[Tool Use]]
-- [[Prompt Testing and Versioning]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[long-context-prompting|Long Context Prompting]]
+- [[tool-use|Tool Use]]
+- [[prompt-testing-and-versioning|Prompt Testing and Versioning]]
 
 ## Open Questions
 

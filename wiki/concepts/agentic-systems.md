@@ -28,11 +28,11 @@ This concept covers long-horizon reasoning, tool use, context-window management,
 
 ## Related
 
-- [[Tool Use]]
-- [[Parallel Tool Calling]]
-- [[Subagent Orchestration]]
-- [[Adaptive Thinking]]
-- [[Long Context Prompting]]
+- [[tool-use|Tool Use]]
+- [[parallel-tool-calling|Parallel Tool Calling]]
+- [[subagent-orchestration|Subagent Orchestration]]
+- [[adaptive-thinking|Adaptive Thinking]]
+- [[long-context-prompting|Long Context Prompting]]
 
 ## Open Questions
 

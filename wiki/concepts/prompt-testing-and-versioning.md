@@ -28,10 +28,10 @@ This concept covers prompt libraries, git-backed prompt changes, small eval sets
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[POWER Prompt Framework]]
-- [[Iterative Refinement]]
-- [[Retrieval-Augmented Generation]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[power-prompt-framework|POWER Prompt Framework]]
+- [[iterative-refinement|Iterative Refinement]]
+- [[retrieval-augmented-generation|Retrieval-Augmented Generation]]
 
 ## Open Questions
 

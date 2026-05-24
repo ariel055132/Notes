@@ -28,9 +28,9 @@ This concept covers independent searches, file reads, and commands that can safe
 
 ## Related
 
-- [[Tool Use]]
-- [[Agentic Systems]]
-- [[Subagent Orchestration]]
+- [[tool-use|Tool Use]]
+- [[agentic-systems|Agentic Systems]]
+- [[subagent-orchestration|Subagent Orchestration]]
 
 ## Open Questions
 

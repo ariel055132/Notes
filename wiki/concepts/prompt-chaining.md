@@ -28,10 +28,10 @@ This concept covers multi-step workflows such as analyze, brainstorm, estimate, 
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Agentic Systems]]
-- [[Iterative Refinement]]
-- [[Tool Use]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[agentic-systems|Agentic Systems]]
+- [[iterative-refinement|Iterative Refinement]]
+- [[tool-use|Tool Use]]
 
 ## Open Questions
 

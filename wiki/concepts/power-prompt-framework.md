@@ -28,10 +28,10 @@ This concept covers reusable prompt drafting for common work tasks where the use
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Few-Shot Prompting]]
-- [[Prompt Testing and Versioning]]
-- [[Iterative Refinement]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[few-shot-prompting|Few-Shot Prompting]]
+- [[prompt-testing-and-versioning|Prompt Testing and Versioning]]
+- [[iterative-refinement|Iterative Refinement]]
 
 ## Open Questions
 

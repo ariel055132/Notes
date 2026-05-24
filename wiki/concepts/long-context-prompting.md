@@ -29,11 +29,11 @@ This concept covers placing long source material before the task request, struct
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Retrieval-Augmented Generation]]
-- [[Prompt Chaining]]
-- [[XML Prompt Structure]]
-- [[Agentic Systems]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[retrieval-augmented-generation|Retrieval-Augmented Generation]]
+- [[prompt-chaining|Prompt Chaining]]
+- [[xml-prompt-structure|XML Prompt Structure]]
+- [[agentic-systems|Agentic Systems]]
 
 ## Open Questions
 

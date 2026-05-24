@@ -19,9 +19,9 @@ This concept covers clear instructions, task context, structured examples, role 
 
 ## Contrasts
 
-- **Model configuration**: Prompt engineering steers behavior through text and structure, while settings such as [[Effort Parameter]] change runtime tradeoffs. [[2026-05-24--prompting-best-practices|Prompting best practices]]
+- **Model configuration**: Prompt engineering steers behavior through text and structure, while settings such as [[effort-parameter|Effort Parameter]] change runtime tradeoffs. [[2026-05-24--prompting-best-practices|Prompting best practices]]
 - **Tool implementation**: Prompt engineering can instruct when to use tools, but the tools themselves belong to the surrounding application or agent harness. [[2026-05-24--prompting-best-practices|Prompting best practices]] [[2025-06-13--prompt-engineering-in-2025-complete-guide|Prompt Engineering in 2025]]
-- **Prompt testing**: Prompt engineering designs the prompt, while [[Prompt Testing and Versioning]] checks whether the prompt remains reliable across real inputs and model changes. [[2025-06-13--prompt-engineering-in-2025-complete-guide|Prompt Engineering in 2025]]
+- **Prompt testing**: Prompt engineering designs the prompt, while [[prompt-testing-and-versioning|Prompt Testing and Versioning]] checks whether the prompt remains reliable across real inputs and model changes. [[2025-06-13--prompt-engineering-in-2025-complete-guide|Prompt Engineering in 2025]]
 
 ## Evidence
 
@@ -30,19 +30,19 @@ This concept covers clear instructions, task context, structured examples, role 
 
 ## Related
 
-- [[POWER Prompt Framework]]
-- [[Zero-Shot Prompting]]
-- [[Few-Shot Prompting]]
-- [[Chain-of-Thought Prompting]]
-- [[Retrieval-Augmented Generation]]
-- [[Metacognitive Prompting]]
-- [[Iterative Refinement]]
-- [[Prompt Chaining]]
-- [[Prompt Testing and Versioning]]
-- [[XML Prompt Structure]]
-- [[Long Context Prompting]]
-- [[Tool Use]]
-- [[Agentic Systems]]
+- [[power-prompt-framework|POWER Prompt Framework]]
+- [[zero-shot-prompting|Zero-Shot Prompting]]
+- [[few-shot-prompting|Few-Shot Prompting]]
+- [[chain-of-thought-prompting|Chain-of-Thought Prompting]]
+- [[retrieval-augmented-generation|Retrieval-Augmented Generation]]
+- [[metacognitive-prompting|Metacognitive Prompting]]
+- [[iterative-refinement|Iterative Refinement]]
+- [[prompt-chaining|Prompt Chaining]]
+- [[prompt-testing-and-versioning|Prompt Testing and Versioning]]
+- [[xml-prompt-structure|XML Prompt Structure]]
+- [[long-context-prompting|Long Context Prompting]]
+- [[tool-use|Tool Use]]
+- [[agentic-systems|Agentic Systems]]
 
 ## Open Questions
 

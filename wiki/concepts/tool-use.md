@@ -30,12 +30,12 @@ This concept covers when to trigger tools, how explicit prompts can default the 
 
 ## Related
 
-- [[Agentic Systems]]
-- [[Parallel Tool Calling]]
-- [[Adaptive Thinking]]
-- [[Subagent Orchestration]]
-- [[Prompt Engineering]]
-- [[Retrieval-Augmented Generation]]
+- [[agentic-systems|Agentic Systems]]
+- [[parallel-tool-calling|Parallel Tool Calling]]
+- [[adaptive-thinking|Adaptive Thinking]]
+- [[subagent-orchestration|Subagent Orchestration]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[retrieval-augmented-generation|Retrieval-Augmented Generation]]
 
 ## Open Questions
 

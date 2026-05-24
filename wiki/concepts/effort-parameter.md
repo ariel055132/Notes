@@ -28,10 +28,10 @@ This concept covers choosing lower effort for scoped latency-sensitive work and 
 
 ## Related
 
-- [[Claude Opus 4.7]]
-- [[Claude Sonnet 4.6]]
-- [[Adaptive Thinking]]
-- [[Agentic Systems]]
+- [[claude-opus-4-7|Claude Opus 4.7]]
+- [[claude-sonnet-4-6|Claude Sonnet 4.6]]
+- [[adaptive-thinking|Adaptive Thinking]]
+- [[agentic-systems|Agentic Systems]]
 
 ## Open Questions
 

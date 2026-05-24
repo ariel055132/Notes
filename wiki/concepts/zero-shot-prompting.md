@@ -28,9 +28,9 @@ This concept covers simple, well-defined tasks where the desired format is stand
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Few-Shot Prompting]]
-- [[POWER Prompt Framework]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[few-shot-prompting|Few-Shot Prompting]]
+- [[power-prompt-framework|POWER Prompt Framework]]
 
 ## Open Questions
 

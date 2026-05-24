@@ -28,11 +28,11 @@ This concept covers multi-step tool use, coding tasks, long-horizon agent loops,
 
 ## Related
 
-- [[Effort Parameter]]
-- [[Tool Use]]
-- [[Agentic Systems]]
-- [[Claude Sonnet 4.6]]
-- [[Claude Opus 4.7]]
+- [[effort-parameter|Effort Parameter]]
+- [[tool-use|Tool Use]]
+- [[agentic-systems|Agentic Systems]]
+- [[claude-sonnet-4-6|Claude Sonnet 4.6]]
+- [[claude-opus-4-7|Claude Opus 4.7]]
 
 ## Open Questions
 

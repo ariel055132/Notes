@@ -28,9 +28,9 @@ This concept covers tag naming, consistency, and nesting when prompt content has
 
 ## Related
 
-- [[Prompt Engineering]]
-- [[Few-Shot Prompting]]
-- [[Long Context Prompting]]
+- [[prompt-engineering|Prompt Engineering]]
+- [[few-shot-prompting|Few-Shot Prompting]]
+- [[long-context-prompting|Long Context Prompting]]
 
 ## Open Questions
 
