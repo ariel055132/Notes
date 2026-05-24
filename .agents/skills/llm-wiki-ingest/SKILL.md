@@ -32,6 +32,7 @@ Integrate a newly provided raw source into the wiki while preserving raw-source 
 5. **Update/create concept pages** in `wiki/concepts/` for abstract ideas mentioned.
 6. **Update `wiki/index.md`** to reflect all new/updated pages.
 7. **Append to `wiki/log.md`** with an ingest entry.
+8. **Move the file** from `raw/sources/` or `raw/assets/` to `raw/archive/` or another operator-specified location.
 
 ## Path Handling Rules
 - Input source roots: `raw/sources/`, `raw/assets/`.

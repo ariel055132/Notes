@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/assets/Prompting best practices.md",
+                "file": "raw/assets/Prompt Engineering in 2025 Complete Guide for ChatGPT, Claude, and Gemini.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prompting best practices"
+              "title": "Prompt Engineering in 2025 Complete Guide for ChatGPT, Claude, and Gemini"
             }
           }
         ]
@@ -186,6 +186,7 @@
   "active": "5f7416a098b7b420",
   "lastOpenFiles": [
     "raw/assets/Prompting best practices.md",
+    "raw/assets/Prompt Engineering in 2025 Complete Guide for ChatGPT, Claude, and Gemini.md",
     "wiki/templates/concept.md",
     "wiki/index.md",
     "wiki/log.md",
@@ -218,7 +219,6 @@
     "LeetCode/Algos/DFS.md",
     "LeetCode/Algos/BinarySearchTrees.md",
     "LeetCode/Algos/Heap.md",
-    "LeetCode/Algos/DP.md",
     "LeetCode/Src/BinarySearchExample.png",
     "LeetCode/Src/MinHeapPush.png",
     "LeetCode/Src/MinHeapHeapifyDown.png"
