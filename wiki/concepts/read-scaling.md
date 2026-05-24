@@ -1,36 +1,41 @@
 ---
 type: concept
 aliases: ["Scaling Reads", "read path scaling", "read-heavy system scaling"]
-tags: [system-design, databases, caching]
+tags: [system-design, databases, caching, replication]
 created: 2026-05-24
 updated: 2026-05-24
-source_count: 1
+source_count: 2
 ---
 
 # Read Scaling
 
 ## Definition
 
-Read scaling is the practice of changing how a system serves repeated high-volume reads so the primary database does less repeated work while users still receive data with acceptable latency and freshness. [[2026-05-14--scaling-reads|Scaling Reads]]
+Read scaling is the practice of changing how a system serves repeated high-volume reads so the primary database does less repeated work while users still receive data with acceptable latency and freshness. [[2026-05-14--scaling-reads|Scaling Reads]] Replication supports read scaling when followers serve read traffic, but that benefit depends on handling replication lag and freshness requirements explicitly. [[2026-05-02--replication|Replication]]
 
 ## Scope
 
-This concept covers read-heavy endpoints, repeated reads of shared data, database query tuning, replicas, sharding, application cache, CDN/edge cache, freshness, invalidation, hot keys, stampedes, and read-path observability. [[2026-05-14--scaling-reads|Scaling Reads]] It does not cover write-heavy scaling as the primary bottleneck, such as high-frequency location updates or collaborative editing conflict resolution. [[2026-05-14--scaling-reads|Scaling Reads]]
+This concept covers read-heavy endpoints, repeated reads of shared data, database query tuning, replicas, sharding, application cache, CDN/edge cache, freshness, invalidation, hot keys, stampedes, replication lag, and read-path observability. [[2026-05-14--scaling-reads|Scaling Reads]] [[2026-05-02--replication|Replication]] It does not cover write-heavy scaling as the primary bottleneck, such as high-frequency location updates or collaborative editing conflict resolution. [[2026-05-14--scaling-reads|Scaling Reads]]
 
 ## Contrasts
 
 - **Write scaling**: Read scaling handles repeated retrieval pressure, while write scaling handles sustained mutation throughput and durability. [[2026-05-14--scaling-reads|Scaling Reads]]
 - **Generic performance optimization**: Read scaling is not just faster code; it changes where reads are served from and how much database work is repeated. [[2026-05-14--scaling-reads|Scaling Reads]]
+- **Replication**: Replication is the mechanism of keeping multiple data copies, while read scaling is one reason to use those copies and one design lens for routing reads. [[2026-05-02--replication|Replication]] [[2026-05-14--scaling-reads|Scaling Reads]]
 
 ## Evidence
 
 - [[2026-05-14--scaling-reads|Scaling Reads]] — The source defines the core problem as repeated reads of the same data overwhelming database CPU, memory, I/O, or network capacity.
+- [[2026-05-02--replication|Replication]] — The source explains that replication can scale reads through followers but makes lag-aware consistency guarantees part of the design.
 
 ## Related
 
 - [[freshness-budget|Freshness Budget]]
 - [[database-indexing|Database Indexing]]
 - [[read-replica|Read Replica]]
+- [[replication|Replication]]
+- [[replication-lag|Replication Lag]]
+- [[read-after-write-consistency|Read-After-Write Consistency]]
 - [[application-level-caching|Application-Level Caching]]
 - [[cdn-and-edge-caching|CDN and Edge Caching]]
 - [[hot-key|Hot Key]]
