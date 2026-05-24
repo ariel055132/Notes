@@ -8,7 +8,7 @@ Build and maintain a persistent, compounding knowledge base. The wiki is not a d
 
 ## Non-negotiables
 
-1. **Raw sources are immutable.** The LLM never edits files in `raw/`. Ever.
+1. **Raw source contents are immutable.** The LLM never edits file contents in `raw/`; it may move completed ingest inputs to `raw/archive/`.
 2. **The LLM owns the wiki layer.** All markdown files under `wiki/` are created, updated, and maintained by the LLM unless explicitly overridden by the operator.
 3. **Every action is logged.** Every ingest, query result filed, and lint pass appends an entry to `wiki/log.md`.
 4. **The index is always current.** `wiki/index.md` must reflect the state of the wiki after every operation that touches pages.
@@ -22,7 +22,8 @@ LLM-wiki/
 ├── README.md          # Human quickstart.
 ├── raw/               # Immutable source documents.
 │   ├── sources/       # Text sources (articles, papers, transcripts).
-│   └── assets/        # Downloaded images, data files.
+│   ├── assets/        # Downloaded images, data files.
+│   └── archive/       # Post-ingest archived original source files.
 ├── wiki/              # LLM-generated markdown. LLM owns this tree.
 │   ├── index.md       # Content catalog. Always up to date.
 │   ├── log.md         # Append-only timeline.
@@ -97,7 +98,7 @@ LLM-wiki/
   ```yaml
   ---
   type: source
-  source_path: raw/sources/original-filename.pdf
+  source_path: raw/archive/original-filename.pdf
   title: "Exact Title of Source"
   author: "Author Name"
   date: YYYY-MM-DD
@@ -160,12 +161,14 @@ LLM-wiki/
 5. Update or create concept pages in `wiki/concepts/` for any abstract ideas mentioned.
 6. Update `wiki/index.md` with new and updated pages.
 7. Append an entry to `wiki/log.md`.
+8. Move the original source file from `raw/sources/` or `raw/assets/` to `raw/archive/`.
 
 **Done Criteria:**
 - Source page exists and is complete.
 - All entities and concepts mentioned have pages (new or updated).
 - `wiki/index.md` reflects all changes.
 - `wiki/log.md` has a new entry.
+- Original source file has been moved to `raw/archive/`.
 
 ## Query Workflow
 

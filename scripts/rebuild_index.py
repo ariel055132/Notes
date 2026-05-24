@@ -11,7 +11,7 @@ DATE_RE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
 
 @dataclass(frozen=True)
 class Page:
-    path: Path; category:str; page_name:str; updated:str; source_count:int; summary:str
+    path: Path; category:str; link_target:str; updated:str; source_count:int; summary:str
 
 def parse_value(v:str):
     v=v.strip()
@@ -68,12 +68,12 @@ def load_pages(sort_by):
             updated=str(fm.get('updated',created)); validate_date(p,'updated',updated)
             sc=fm.get('source_count',0)
             if isinstance(sc,bool) or not isinstance(sc,int) or sc<0: raise ValueError(f"{p}: frontmatter 'source_count' must be a non-negative integer")
-            pages.append(Page(p,folder,first_h1(p),updated,sc,summary_line(p)))
-    pages.sort(key=(lambda x:(x.category,x.updated,x.page_name.lower(),x.path.name)) if sort_by=='updated' else (lambda x:(x.category,x.page_name.lower(),x.path.name)))
+            pages.append(Page(p,folder,p.stem,updated,sc,summary_line(p)))
+    pages.sort(key=(lambda x:(x.category,x.updated,x.link_target.lower(),x.path.name)) if sort_by=='updated' else (lambda x:(x.category,x.link_target.lower(),x.path.name)))
     return pages
 
 def table(rows):
-    return ['| Page | Summary | Sources | Status | Updated |','|------|---------|---------|--------|---------|',* [f"| [[{r.page_name}]] | {r.summary} | {r.source_count} | active | {r.updated} |" for r in rows]]
+    return ['| Page | Summary | Sources | Status | Updated |','|------|---------|---------|--------|---------|',* [f"| [[{r.link_target}]] | {r.summary} | {r.source_count} | active | {r.updated} |" for r in rows]]
 
 def render(pages):
     by={k:[] for k in SECTIONS}

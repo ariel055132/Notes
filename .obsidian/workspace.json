@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e042c1feccf87ec4",
+        "id": "35262cd99511d9f7",
         "type": "tabs",
         "children": [
           {
-            "id": "5f7416a098b7b420",
+            "id": "c4bf340f2374c46c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/assets/Prompt Engineering in 2025 Complete Guide for ChatGPT, Claude, and Gemini.md",
+                "file": "wiki/concepts/zero-shot-prompting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prompt Engineering in 2025 Complete Guide for ChatGPT, Claude, and Gemini"
+              "title": "zero-shot-prompting"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#DataStructure",
+                "query": "tag:#ai",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,8 +94,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SystemDesign/System Design Index.md",
-                "collapseAll": false,
+                "file": "wiki/concepts/zero-shot-prompting.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for System Design Index"
+              "title": "Backlinks for zero-shot-prompting"
             }
           },
           {
@@ -165,8 +165,7 @@
               "title": "Outline of System Design Index"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -183,42 +182,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "5f7416a098b7b420",
+  "active": "c4bf340f2374c46c",
   "lastOpenFiles": [
-    "raw/assets/Prompting best practices.md",
-    "raw/assets/Prompt Engineering in 2025 Complete Guide for ChatGPT, Claude, and Gemini.md",
-    "wiki/templates/concept.md",
     "wiki/index.md",
     "wiki/log.md",
-    "Prompt/Prompting best practices.md",
+    "wiki/sources/2025-06-13--prompt-engineering-in-2025-complete-guide.md",
+    "wiki/entities/claude-sonnet-4-6.md",
+    "wiki/concepts/subagent-orchestration.md",
+    "Claude Haiku 4.5.md",
+    "verification/lint-schema-report.json",
+    "Claude Opus 4.7.md",
+    "Claude Opus 4.6.md",
+    "wiki/sources/2026-05-24--prompting-best-practices.md",
+    "wiki/entities/chatgpt.md",
+    "wiki/concepts/prompt-testing-and-versioning.md",
+    "wiki/concepts/prompt-chaining.md",
+    "wiki/concepts/iterative-refinement.md",
+    "wiki/concepts/metacognitive-prompting.md",
+    "wiki/concepts/retrieval-augmented-generation.md",
+    "wiki/concepts/chain-of-thought-prompting.md",
+    "wiki/concepts/zero-shot-prompting.md",
+    "wiki/concepts/power-prompt-framework.md",
+    "wiki/entities/gemini.md",
+    "wiki/entities/prompt-builder.md",
+    "XML Prompt Structure.md",
+    "Prompt Engineering.md",
+    "Adaptive Thinking.md",
+    "wiki/entities/anthropic.md",
+    "wiki/concepts/frontend-design-defaults.md",
+    "wiki/concepts/code-review-harnesses.md",
     "Prompt",
     "docs",
     "wiki",
-    "How_to_read_book.md",
     "raw/sources",
     "raw",
-    "d.md",
-    "TimeManagement.md",
-    "LeetCode/LeetCodeIndex.md",
-    "LeetCode/LC2_Add_Two_Numbers.md",
-    "LeetCode/LC989_Add_To_Array_Form_Of_Integer.md",
-    "Container/command1.md",
-    "Container/dockerImage.md",
-    "SystemDesign/20260502_Discuss.md",
-    "dev/alias.md",
-    "SystemDesign/System Design Index.md",
-    "2026-05-21.md",
     "Untitled.base",
-    "sense.md",
-    "dev/Copilot.md",
     "dev/Src/Icon.png",
-    "SystemDesign/20260523_Discuss.md",
-    "SystemDesign/20260509_Discuss.md",
     "Untitled.canvas",
-    "LeetCode/Algos/BinarySearch.md",
-    "LeetCode/Algos/DFS.md",
-    "LeetCode/Algos/BinarySearchTrees.md",
-    "LeetCode/Algos/Heap.md",
     "LeetCode/Src/BinarySearchExample.png",
     "LeetCode/Src/MinHeapPush.png",
     "LeetCode/Src/MinHeapHeapifyDown.png"
