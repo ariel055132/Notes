@@ -11,10 +11,14 @@
             "id": "8a8cb2c3cc5e26a9",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "wiki/concepts/database-sharding.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "database-sharding"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5
+    "width": 282.5
   },
   "right": {
     "id": "212c96c582ddb9e4",
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "wiki/concepts/database-sharding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for database-sharding"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "wiki/concepts/database-sharding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from database-sharding"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "wiki/concepts/database-sharding.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": "saga"
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of database-sharding"
             }
           }
         ],
@@ -177,45 +184,46 @@
       "agent-client:Open agent client": false
     }
   },
-  "active": "3fee6a3cd8b4c816",
+  "active": "8a8cb2c3cc5e26a9",
   "lastOpenFiles": [
-    "Untitled 2.canvas",
-    "2026-05-25.md",
-    "Untitled 1.canvas",
-    "wiki/sources/2026-05-15--database-indexing.md",
-    "raw/archive/Distributed Cache.pdf",
-    "wiki/concepts/regional-cache.md",
-    "wiki/concepts/cache-replication.md",
-    "wiki/concepts/cache-fallback-limit.md",
-    "wiki/concepts/cache-routing.md",
-    "wiki/concepts/distributed-cache.md",
-    "wiki/sources/2026-05-15--distributed-cache.md",
-    "raw/archive/Message Queue.pdf",
-    "wiki/concepts/outbox-pattern.md",
-    "wiki/concepts/event-log.md",
-    "wiki/concepts/queue-health-metrics.md",
-    "wiki/concepts/backpressure.md",
-    "wiki/concepts/dead-letter-queue.md",
-    "wiki/concepts/retry-policy.md",
-    "wiki/concepts/idempotent-consumer.md",
-    "wiki/concepts/visibility-timeout.md",
-    "wiki/concepts/message-payload.md",
-    "wiki/concepts/producer-consumer-pattern.md",
-    "wiki/concepts/asynchronous-processing.md",
-    "wiki/concepts/message-queue.md",
     "wiki/sources/2026-05-15--message-queue.md",
-    "Database Indexing.md",
-    "wiki/sources/2026-05-14--scaling-reads.md",
-    "wiki/concepts/freshness-budget.md",
-    "wiki/concepts/read-scaling.md",
-    "raw/archive/Consistent Hashing.pdf",
-    "raw/archive/Database Transactions.pdf",
-    "raw/archive/Database Indexing.pdf",
-    "raw/sources/Zookeeper.pdf",
-    "raw/sources/Distributed Lock.pdf",
-    "raw/sources/Message Queue.pdf",
-    "raw/sources/Distributed Cache.pdf",
-    "raw/sources/Consistent Hashing.pdf",
+    "raw/archive/Database.pdf",
+    "wiki/concepts/base-consistency-model.md",
+    "wiki/concepts/vector-database.md",
+    "wiki/concepts/olap.md",
+    "wiki/concepts/oltp.md",
+    "wiki/concepts/graph-database.md",
+    "wiki/concepts/wide-column-store.md",
+    "wiki/concepts/document-store.md",
+    "wiki/concepts/key-value-store.md",
+    "wiki/concepts/nosql-database.md",
+    "wiki/concepts/relational-database.md",
+    "wiki/concepts/database-workload.md",
+    "wiki/concepts/data-model.md",
+    "wiki/concepts/database-selection.md",
+    "wiki/concepts/database.md",
+    "wiki/sources/2026-04-15--database.md",
+    "raw/sources/Serverless.pdf",
+    "raw/sources/Container.pdf",
+    "raw/sources/Container 30f90cd3ccd880579ce9c8e3ab57e3c9.pdf",
+    "raw/sources/Serverless 30090cd3ccd880278d4de2121fd326f4.pdf",
+    "raw/sources/API Gateway.pdf",
+    "raw/sources/Blob Storage.pdf",
+    "raw/sources/Database.pdf",
+    "raw/sources/Blob Storage 28090cd3ccd88029be9ecb47cd536442.pdf",
+    "wiki/concepts/write-ahead-log.md",
+    "wiki/concepts/acid-transactions.md",
+    "wiki/concepts/saga-pattern.md",
+    "wiki/sources/2026-03-31--database-transactions.md",
+    "wiki/sources/2025-06-13--prompt-engineering-in-2025-complete-guide.md",
+    "wiki/sources/2026-05-15--zookeeper.md",
+    "raw/archive/Zookeeper.pdf",
+    "wiki/concepts/dynamic-configuration.md",
+    "wiki/concepts/service-discovery.md",
+    "wiki/concepts/leader-election.md",
+    "wiki/concepts/zookeeper-atomic-broadcast.md",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
     "dev/Src/Icon.png",
     "Untitled.canvas",
     "LeetCode/Src/BinarySearchExample.png",

@@ -3,15 +3,15 @@ type: concept
 aliases: ["application cache", "cache-aside", "Redis cache", "Memcached cache"]
 tags: [system-design, caching, distributed-cache, databases]
 created: 2026-05-24
-updated: 2026-05-25
-source_count: 4
+updated: 2026-05-26
+source_count: 5
 ---
 
 # Application-Level Caching
 
 ## Definition
 
-Application-level caching is the use of a cache such as Redis or Memcached between the application and database so repeated reads can be served without rerunning the database query. [[2026-05-14--scaling-reads|Scaling Reads]] It should target a specific read path whose data is frequently read, expensive to read, or latency-sensitive, rather than being a generic "add Redis" step. [[2026-05-24--caching|Caching]] In a multi-node cache cluster, the cache layer also needs key routing, failover behavior, warmup, and fallback protection so node changes or failures do not remap most keys or overload the database. [[2026-05-15--consistent-hashing|Consistent Hashing]] [[2026-05-15--distributed-cache|Distributed Cache]]
+Application-level caching is the use of a cache such as Redis or Memcached between the application and database so repeated reads can be served without rerunning the database query. [[2026-05-14--scaling-reads|Scaling Reads]] It should target a specific read path whose data is frequently read, expensive to read, or latency-sensitive, rather than being a generic "add Redis" step. [[2026-05-24--caching|Caching]] In a multi-node cache cluster, the cache layer also needs key routing, failover behavior, warmup, and fallback protection so node changes or failures do not remap most keys or overload the database. [[2026-05-15--consistent-hashing|Consistent Hashing]] [[2026-05-15--distributed-cache|Distributed Cache]] The database overview reinforces that a pure cache requirement should use Redis or Memcached-style cache technology rather than introducing a more complex primary database. [[2026-04-15--database|Database]]
 
 ## Scope
 
@@ -24,6 +24,7 @@ This concept covers cache-aside reads, cache hit/miss behavior, TTL selection, j
 - **Source of Truth**: Application cache accelerates reads but should not replace the source of truth for correctness-critical decisions such as booking inventory, payment state, ledgers, or matching engines. [[2026-05-24--caching|Caching]]
 - **Consistent Hashing**: Application-level caching is the cache layer being routed to, while consistent hashing is one routing strategy for assigning cache keys to cache nodes. [[2026-05-15--consistent-hashing|Consistent Hashing]]
 - **Distributed Cache**: Distributed cache is the multi-node operational form of application-level caching, adding routing, replication, failover, and failure-containment concerns. [[2026-05-15--distributed-cache|Distributed Cache]]
+- **Key-Value Store**: Redis can appear as a key-value store and as a cache implementation, but system design still needs to distinguish durable source-of-truth state from rebuildable cached data. [[2026-04-15--database|Database]]
 
 ## Evidence
 
@@ -31,9 +32,12 @@ This concept covers cache-aside reads, cache hit/miss behavior, TTL selection, j
 - [[2026-05-24--caching|Caching]] — The source frames external cache as one cache location among several and emphasizes miss handling, failure behavior, freshness, hot keys, penetration, and observability.
 - [[2026-05-15--consistent-hashing|Consistent Hashing]] — The source uses Redis cache sharding as a primary example where consistent hashing reduces cache churn during node expansion.
 - [[2026-05-15--distributed-cache|Distributed Cache]] — The source expands external cache into a clustered design problem around routing, hot keys, replication, invalidation, fallback limits, and regional cache.
+- [[2026-04-15--database|Database]] — The source says simple cache needs should use Redis or Memcached rather than over-engineering a database choice.
 
 ## Related
 
+- [[database-selection|Database Selection]]
+- [[key-value-store|Key-Value Store]]
 - [[read-scaling|Read Scaling]]
 - [[freshness-budget|Freshness Budget]]
 - [[cache-aside|Cache-Aside]]
