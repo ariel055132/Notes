@@ -195,9 +195,10 @@
 
 | Page | Summary | Sources | Status | Updated |
 |------|---------|---------|--------|---------|
+| [[2026-05-30--concepts-of-caching]] | Explains core caching concepts: cache placement, hit and miss behavior, cache-aside, read-through, write-through, write-behind, freshness budgets, invalidation, CDN caching, and stampede protection. | 10 | active | 2026-05-30 |
 
 ## Statistics
 
-- **Total pages**: 174
+- **Total pages**: 175
 - **Total sources**: 14
-- **Last updated**: 2026-05-26
+- **Last updated**: 2026-05-30
