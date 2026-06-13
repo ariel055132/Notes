@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/concepts/database-sharding.md",
+                "file": "AGENTS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "database-sharding"
+              "title": "AGENTS"
             }
           }
         ]
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wiki/concepts/database-sharding.md",
+                "file": "AGENTS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from database-sharding"
+              "title": "Outgoing links from AGENTS"
             }
           },
           {
@@ -183,25 +183,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "8a8cb2c3cc5e26a9",
+  "active": "3fee6a3cd8b4c816",
   "lastOpenFiles": [
+    "raw/archive/API Gateway.pdf",
+    "wiki/concepts/edge-gateway.md",
+    "wiki/concepts/api-gateway-boundary.md",
+    "wiki/concepts/api-gateway-observability.md",
+    "wiki/concepts/load-balancer.md",
+    "wiki/concepts/backend-for-frontend.md",
+    "wiki/concepts/request-aggregation.md",
+    "wiki/concepts/request-response-transformation.md",
+    "wiki/concepts/request-id.md",
+    "wiki/concepts/api-timeout.md",
+    "wiki/concepts/request-size-limit.md",
+    "wiki/concepts/cross-origin-resource-sharing.md",
+    "wiki/concepts/tls-termination.md",
+    "wiki/concepts/rate-limiting.md",
+    "wiki/concepts/gateway-authorization.md",
+    "wiki/concepts/gateway-authentication.md",
+    "wiki/concepts/api-versioning.md",
+    "wiki/concepts/api-routing.md",
+    "wiki/concepts/public-api-contract.md",
+    "wiki/concepts/api-gateway.md",
+    "wiki/sources/2026-05-15--api-gateway.md",
+    "wiki/concepts/database-sharding.md",
     "wiki/sources/2026-05-15--message-queue.md",
     "raw/archive/Database.pdf",
     "wiki/concepts/base-consistency-model.md",
     "wiki/concepts/vector-database.md",
     "wiki/concepts/olap.md",
-    "wiki/concepts/oltp.md",
-    "wiki/concepts/graph-database.md",
-    "wiki/concepts/wide-column-store.md",
-    "wiki/concepts/document-store.md",
-    "wiki/concepts/key-value-store.md",
-    "wiki/concepts/nosql-database.md",
-    "wiki/concepts/relational-database.md",
-    "wiki/concepts/database-workload.md",
-    "wiki/concepts/data-model.md",
-    "wiki/concepts/database-selection.md",
-    "wiki/concepts/database.md",
-    "wiki/sources/2026-04-15--database.md",
     "raw/sources/Serverless.pdf",
     "raw/sources/Container.pdf",
     "raw/sources/Container 30f90cd3ccd880579ce9c8e3ab57e3c9.pdf",
@@ -210,17 +220,7 @@
     "raw/sources/Blob Storage.pdf",
     "raw/sources/Database.pdf",
     "raw/sources/Blob Storage 28090cd3ccd88029be9ecb47cd536442.pdf",
-    "wiki/concepts/write-ahead-log.md",
-    "wiki/concepts/acid-transactions.md",
-    "wiki/concepts/saga-pattern.md",
-    "wiki/sources/2026-03-31--database-transactions.md",
-    "wiki/sources/2025-06-13--prompt-engineering-in-2025-complete-guide.md",
-    "wiki/sources/2026-05-15--zookeeper.md",
     "raw/archive/Zookeeper.pdf",
-    "wiki/concepts/dynamic-configuration.md",
-    "wiki/concepts/service-discovery.md",
-    "wiki/concepts/leader-election.md",
-    "wiki/concepts/zookeeper-atomic-broadcast.md",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
     "dev/Src/Icon.png",

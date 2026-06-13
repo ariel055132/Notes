@@ -136,3 +136,17 @@
 - **Pages touched**: `wiki/syntheses/2026-05-30--concepts-of-caching.md`, `wiki/index.md`, `wiki/log.md`
 - **Notes**: The synthesis answers "Please explain the concepts of caching" using the existing caching source and concept cluster, including application-level caching, cache-aside, read-through, write-through, write-behind, freshness budgets, invalidation, stampede protection, and CDN/edge caching.
 - **Open questions**: Consider filing a separate comparison synthesis for application cache, CDN, read replicas, materialized views, and database indexing as read-scaling tools.
+
+## [2026-06-13] ingest | API Gateway
+
+- **Action**: Ingested `raw/sources/API Gateway.pdf` into the wiki layer.
+- **Pages touched**: `wiki/sources/2026-05-15--api-gateway.md`, `wiki/concepts/api-gateway.md`, `wiki/concepts/public-api-contract.md`, `wiki/concepts/api-routing.md`, `wiki/concepts/api-versioning.md`, `wiki/concepts/gateway-authentication.md`, `wiki/concepts/gateway-authorization.md`, `wiki/concepts/rate-limiting.md`, `wiki/concepts/tls-termination.md`, `wiki/concepts/cross-origin-resource-sharing.md`, `wiki/concepts/request-size-limit.md`, `wiki/concepts/api-timeout.md`, `wiki/concepts/request-id.md`, `wiki/concepts/request-response-transformation.md`, `wiki/concepts/request-aggregation.md`, `wiki/concepts/backend-for-frontend.md`, `wiki/concepts/load-balancer.md`, `wiki/concepts/api-gateway-observability.md`, `wiki/concepts/api-gateway-boundary.md`, `wiki/concepts/edge-gateway.md`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: Operator requested spelling out BFF as `Backend For Frontend`. The ingest emphasizes API Gateway as the external API contract and policy layer for routing, authentication, coarse authorization, rate limiting, TLS, CORS, request ID propagation, versioning, light transformation, observability, and load-balancer contrast. It also preserves the source's boundary warning: the gateway should not absorb core domain decisions, data-level authorization, transaction outcomes, idempotency decisions, or long-running work that belongs in backend services, queues, workers, object storage, and data stores. Product names are treated as examples rather than dedicated entity pages.
+- **Open questions**: Create a synthesis comparing API Gateway, load balancer, reverse proxy, service mesh ingress, CDN edge worker, and Backend For Frontend as adjacent traffic-entry patterns.
+
+## [2026-06-13] lint | Wiki health check
+
+- **Action**: Ran a full wiki health check covering schema, log contract, index freshness, wikilink resolution, source-path resolution, orphan pages, source-count consistency, missing pages, stale claims, contradictions, and data gaps.
+- **Pages touched**: `verification/lint-schema-report.json`, `wiki/log.md`
+- **Notes**: Schema checker reported 0 issues across 209 scanned files; strict wikilink and source-path checks found 0 broken links and 0 missing source paths. Findings requiring operator approval before fixes: `wiki/index.md` is out of date, `wiki/syntheses/2026-05-30--concepts-of-caching.md` has no inbound wiki links, 59 entity/concept pages have frontmatter `source_count` lower than their cited source-page count, and several recurring terms lack dedicated pages.
+- **Open questions**: Approve whether to rebuild `wiki/index.md`, link the caching synthesis from related caching pages, normalize `source_count` fields, and create missing concept pages for topics such as Bloom Filter, Circuit Breaker, Service Mesh, mTLS, Reverse Proxy, GraphQL, Redis, and Memcached.

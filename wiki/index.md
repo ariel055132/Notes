@@ -172,6 +172,26 @@
 | [[two-phase-commit]]                    | Two-phase commit coordinates distributed commits through prepare and commit/abort phases, trading stronger consistency for availability and blocking risk. [[2026-03-31--database-transactions\|Database Transactions]]                                                                                                                                        | 1       | active | 2026-05-24 |
 | [[saga-pattern]]                        | The Saga pattern breaks a distributed transaction into local transactions plus compensating actions, favoring availability and fault tolerance over one global ACID commit. [[2026-03-31--database-transactions\|Database Transactions]]                                                                                                                     | 1       | active | 2026-05-24 |
 
+| [[api-gateway]] | API Gateway is the public entry point and policy layer that receives external API traffic, applies cross-cutting controls, and routes requests to internal backend services. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[public-api-contract]] | Public API contract is the stable client-facing request and response surface that hides internal service topology and implementation changes. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[api-routing]] | API routing maps incoming requests to backend services or handlers by host, path, method, header, or API version. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[api-versioning]] | API versioning exposes separate public API versions so clients can migrate while the system routes old and new contract shapes appropriately. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[gateway-authentication]] | Gateway authentication verifies request identity at the API entry point, such as validating JWTs or API keys and forwarding trusted identity context. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[gateway-authorization]] | Gateway authorization applies coarse route, role, API-key, or tenant-member checks while leaving data-level authorization to backend services. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[rate-limiting]] | Rate limiting controls request volume by IP, user, tenant, API key, endpoint, or route group, and distributed gateways need shared counters or a rate-limit service. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[tls-termination]] | TLS termination centralizes public certificate handling and HTTPS decryption at a gateway, edge proxy, or load balancer. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[cross-origin-resource-sharing]] | Cross-Origin Resource Sharing controls browser cross-origin API access policy and can be centralized at the gateway. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[request-size-limit]] | Request size limit rejects oversized request bodies at the gateway and steers large blobs toward object-storage upload flows. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[api-timeout]] | API timeout bounds synchronous HTTP request duration so slow backends or long tasks do not tie up gateway connections. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[request-id]] | Request ID is a correlation identifier created or propagated by the gateway so logs, metrics, and traces can be joined across services. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[request-response-transformation]] | Request/response transformation makes lightweight contract changes at the gateway, such as adding headers, adapting fields, or standardizing error shape. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[request-aggregation]] | Request aggregation gathers data from multiple backend services for one client-facing endpoint, but should not turn a shared gateway into a broad orchestration layer. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[backend-for-frontend]] | Backend For Frontend is a client-specific backend layer for web, mobile, or partner API shapes. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[load-balancer]] | A load balancer distributes traffic across healthy service or gateway instances, distinct from gateway-level API contract and policy handling. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[api-gateway-observability]] | API Gateway observability tracks route traffic, latency, errors, auth failures, rate-limit behavior, request rejection, timeouts, and upstream health. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[api-gateway-boundary]] | API Gateway boundary is the rule that gateways enforce entry policy and API contract concerns without absorbing core domain decisions or long-running work. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+| [[edge-gateway]] | Edge gateway moves selected auth, redirect, cache, bot-protection, or lightweight routing logic closer to users while preserving source-of-truth boundaries. [[2026-05-15--api-gateway\|API Gateway]] | 1 | active | 2026-06-13 |
+
 ## Sources
 
 | Page | Summary | Sources | Status | Updated |
@@ -190,6 +210,7 @@
 | [[2026-05-15--cdn-content-delivery-network]] | CDN (Content Delivery Network) explains edge caching as a read-path layer for shareable repeated content, with emphasis on cache-key design, TTL/versioned URL/purge strategy, signed URLs, object-storage origin boundaries, miss-storm protection, and CDN observability. | 0 | active | 2026-05-26 |
 | [[2026-05-15--distributed-lock]] | Distributed Lock explains short lease-based coordination for shared-resource critical sections, emphasizing when not to use a lock, database and single-writer alternatives, owner-token release safety, fencing tokens, idempotency, and lock observability. | 0 | active | 2026-05-26 |
 | [[2026-05-15--zookeeper]] | Zookeeper explains ZooKeeper as a distributed coordination control plane for small correctness-critical metadata, covering znodes, ephemeral and sequential znodes, watches, sessions, ensembles, ZAB, leader election, service discovery, distributed locks, dynamic config, modern alternatives, and operational metrics. | 0 | active | 2026-05-26 |
+| [[2026-05-15--api-gateway]] | API Gateway explains the gateway as the external API contract and policy layer for multi-service systems. It emphasizes routing, authentication, coarse authorization, rate limiting, TLS, CORS, request IDs, versioning, transformation, Backend For Frontend boundaries, load-balancer contrast, and observability, while keeping domain decisions and long-running work in backend services, queues, workers, and data stores. | 0 | active | 2026-06-13 |
 
 ## Syntheses
 
@@ -199,6 +220,6 @@
 
 ## Statistics
 
-- **Total pages**: 175
-- **Total sources**: 14
-- **Last updated**: 2026-05-30
+- **Total pages**: 208
+- **Total sources**: 16
+- **Last updated**: 2026-06-13
