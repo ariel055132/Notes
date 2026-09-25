@@ -3,8 +3,8 @@ type: concept
 aliases: ["SSL termination", "TLS offload", "certificate termination", "HTTPS termination"]
 tags: [system-design, api-gateway, security, networking]
 created: 2026-06-13
-updated: 2026-06-13
-source_count: 1
+updated: 2026-09-25
+source_count: 2
 ---
 
 # TLS Termination
@@ -25,6 +25,8 @@ This concept covers centralizing public certificate management so backend servic
 ## Evidence
 
 - [[2026-05-15--api-gateway|API Gateway]] — The source describes gateway-level TLS handling and the option of mTLS from gateway to backend services.
+
+- [[2026-09-25--personal-information-feed-architecture|FreshRSS × NetNewsWire 架構筆記]] — 第 2、3 節以 Caddy 集中處理 HTTPS 與憑證，再轉交 Docker 內部的 FreshRSS；此為對話整理的架構範例，非服務實測證明。
 
 ## Related
 

@@ -249,6 +249,40 @@
           "method": "pdfplumber-text-layer-and-line-table-candidates-v1"
         }
       ]
+    },
+    "personal-information-feed-architecture": {
+      "source_id": "personal-information-feed-architecture",
+      "source_type": "article",
+      "source_url": "",
+      "title": "建立自己的資訊流：FreshRSS × NetNewsWire 架構筆記",
+      "source_page": "wiki/sources/2026-09-25--personal-information-feed-architecture.md",
+      "source_path": "raw/imports/personal-information-feed-architecture/8d79521ab8361fe47cb12158059d3ede27ed5b6de356e6498b5103d06dc7c15a.md",
+      "current_sha256": "8d79521ab8361fe47cb12158059d3ede27ed5b6de356e6498b5103d06dc7c15a",
+      "processing_status": "ready",
+      "coverage": "full",
+      "confidence": "medium",
+      "versions": [
+        {
+          "sha256": "8d79521ab8361fe47cb12158059d3ede27ed5b6de356e6498b5103d06dc7c15a",
+          "source_path": "raw/imports/personal-information-feed-architecture/8d79521ab8361fe47cb12158059d3ede27ed5b6de356e6498b5103d06dc7c15a.md",
+          "extraction_path": "derived/personal-information-feed-architecture/8d79521ab8361fe47cb12158059d3ede27ed5b6de356e6498b5103d06dc7c15a-6d45143d630168ef.json",
+          "extraction_sha256": "6d45143d630168ef9c76474266e0fd702d68652f0dde4e1a09cc50b59e19b7d2",
+          "imported_at": "2026-09-25",
+          "upstream_path": "/Users/adrianli/Documents/GitHub/Notes/SystemDesign/personal-information-feed-architecture.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-25",
+              "status": "ready",
+              "note": "已核讀完整架構筆記第 1–6 節、兩段 Mermaid 圖與表格；核對匿名化及完整檔案保存，保留 source-notes、medium confidence，不聲稱重新驗證實際部署。另在 TLS Termination 概念頁加入來源關聯。",
+              "warnings_acknowledged": false
+            }
+          ]
+        }
+      ]
     }
   }
 }

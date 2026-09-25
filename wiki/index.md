@@ -177,7 +177,7 @@
 | [[stale-while-revalidate]] | Stale-while-revalidate is a caching pattern where a read path returns stale cached data within a permitted window while refreshing the cache asynchronously in the background. [[2026-05-14--scaling-reads\|Scaling Reads]] [[2026-05-24--caching\|Caching]] In CDN design, it can let an edge return slightly old public content while refreshing from origin, if the freshness budget permits that behavior. [[2026-05-15--cdn-content-delivery-network\|CDN (Content Delivery Network)]] | 3 | needs-review | 2026-05-26 |
 | [[subagent-orchestration]] | Subagent orchestration is the practice of delegating independent workstreams to separate agent contexts when parallelism, isolation, or specialized focus is useful. [[2026-05-24--prompting-best-practices\|Prompting best practices]] | 1 | needs-review | 2026-05-24 |
 | [[synchronous-replication]] | Synchronous replication is a replication mode where the leader waits for at least one follower to receive and confirm a write before telling the client the write has completed. [[2026-05-02--replication\|Replication]] | 1 | needs-review | 2026-05-24 |
-| [[tls-termination]] | TLS termination is the point where encrypted client HTTPS traffic is decrypted and public certificate handling is centralized, commonly at an API Gateway, edge proxy, or load balancer. [[2026-05-15--api-gateway\|API Gateway]] | 1 | needs-review | 2026-06-13 |
+| [[tls-termination]] | TLS termination is the point where encrypted client HTTPS traffic is decrypted and public certificate handling is centralized, commonly at an API Gateway, edge proxy, or load balancer. [[2026-05-15--api-gateway\|API Gateway]] | 2 | needs-review | 2026-09-25 |
 | [[tool-use]] | Tool use is the model behavior of invoking external capabilities to inspect state, search, read files, retrieve context, modify artifacts, run commands, or otherwise act beyond text generation. [[2026-05-24--prompting-best-practices\|Prompting best practices]] [[2025-06-13--prompt-engineering-in-2025-complete-guide\|Prompt Engineering in 2025]] | 2 | needs-review | 2026-05-24 |
 | [[transaction-isolation]] | Transaction isolation is the ACID property that controls how concurrently running transactions can observe and affect one another. [[2026-03-31--database-transactions\|Database Transactions]] | 1 | needs-review | 2026-05-24 |
 | [[ttl-jitter]] | TTL jitter is the practice of adding random variation to cache expiration times so many keys do not expire at exactly the same moment. [[2026-05-24--caching\|Caching]] In distributed cache systems, it helps prevent synchronized misses from turning into database fallback spikes. [[2026-05-15--distributed-cache\|Distributed Cache]] | 2 | needs-review | 2026-05-25 |
@@ -227,6 +227,7 @@
 | [[2026-09-24--karpathy-llm-wiki]] | 作者提出由 AI 持續整理連結式 Wiki 的工作方法。本機保存的是原文閱讀筆記，非文章全文。 | 1 | ready | 2026-09-24 |
 | [[2026-09-24--techporn-ep286]] | 來源是程人頻道 EP286 的已完成分析報告。報告將 LLM Wiki 解讀為把原始資料整理成可更新、互相連結的知識頁；它也提醒，資料累積與人的理解是不同結果。這是對影片的二手分析，不是音訊或逐字稿。 | 1 | ready | 2026-09-24 |
 | [[2026-09-24--techporn-ep292]] | 來源是程人頻道 EP292 的已完成分析報告。它討論 AI 長時間執行工作後，人如何保持對需求、結果與失敗條件的理解。此頁採用需求釐清、驗收與理解關卡的內容，不將節目當時對個別模型的體感當成現行效能結論。 | 1 | ready | 2026-09-24 |
+| [[2026-09-25--personal-information-feed-architecture]] | 這份對話整理筆記描述以 FreshRSS 集中收集內容、NetNewsWire 負責閱讀的自架資訊流。DigitalOcean 提供持續運作的主機，Docker Compose 管理服務，Cloudflare DNS 與 Caddy 分別負責網域解析及 HTTPS 入口。原筆記保留兩張 Mermaid 架構圖，區分收集與閱讀同步，並說明持久化、備份及維護責任。這是使用者與助理整理的架構紀錄，已隱藏實際網域；不作為目前服務部署或備份已驗證完成的證明。 | 1 | ready | 2026-09-25 |
 
 ## Syntheses
 
@@ -237,6 +238,6 @@
 
 ## Statistics
 
-- **Total pages**: 213
-- **Total sources**: 20
-- **Last updated**: 2026-09-24
+- **Total pages**: 214
+- **Total sources**: 21
+- **Last updated**: 2026-09-25

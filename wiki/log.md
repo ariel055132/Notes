@@ -269,3 +269,24 @@
 - **Pages touched**: `.agents/skills/llm-wiki-ingest/SKILL.md`, `.agents/skills/llm-wiki-ingest/agents/openai.yaml`, `README.md`
 - **Notes**: 此次只更新 skill 與使用說明，沒有匯入新文件或改寫來源摘要。
 - **Open questions**: 遇到不支援格式或無法辨識的圖表，仍需說明限制並保留待核讀狀態。
+
+## [2026-09-25] ingest | 建立自己的資訊流：FreshRSS × NetNewsWire 架構筆記
+
+- **Action**: Imported article; status=draft; SHA-256=8d79521ab8361fe47cb12158059d3ede27ed5b6de356e6498b5103d06dc7c15a.
+- **Pages touched**: `wiki/sources/2026-09-25--personal-information-feed-architecture.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-25] review | 建立自己的資訊流：FreshRSS × NetNewsWire 架構筆記
+
+- **Action**: Status=ready; 已核讀完整架構筆記第 1–6 節、兩段 Mermaid 圖與表格；核對匿名化及完整檔案保存，保留 source-notes、medium confidence，不聲稱重新驗證實際部署。另在 TLS Termination 概念頁加入來源關聯。
+- **Pages touched**: `wiki/sources/2026-09-25--personal-information-feed-architecture.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-25] lint | FreshRSS × NetNewsWire 架構筆記匯入檢查
+
+- **Action**: 已通過索引一致性、嚴格 schema 與 log contract 檢查，並核對原筆記逐位元相同、兩段 Mermaid 原始碼完整及網域匿名化。
+- **Pages touched**: `SystemDesign/personal-information-feed-architecture.md`, `wiki/sources/2026-09-25--personal-information-feed-architecture.md`, `wiki/concepts/tls-termination.md`, `inbox/sources.json`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: 新來源卡標為 ready；此狀態僅指完整核讀筆記。使用者明確要求 Git 提交與推送，既有 Obsidian 工作區修改保留。
+- **Open questions**: 實際服務部署與備份還原未於本次匯入重新測試；內容處理另行整理。
