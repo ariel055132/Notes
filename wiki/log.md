@@ -150,3 +150,122 @@
 - **Pages touched**: `verification/lint-schema-report.json`, `wiki/log.md`
 - **Notes**: Schema checker reported 0 issues across 209 scanned files; strict wikilink and source-path checks found 0 broken links and 0 missing source paths. Findings requiring operator approval before fixes: `wiki/index.md` is out of date, `wiki/syntheses/2026-05-30--concepts-of-caching.md` has no inbound wiki links, 59 entity/concept pages have frontmatter `source_count` lower than their cited source-page count, and several recurring terms lack dedicated pages.
 - **Open questions**: Approve whether to rebuild `wiki/index.md`, link the caching synthesis from related caching pages, normalize `source_count` fields, and create missing concept pages for topics such as Bloom Filter, Circuit Breaker, Service Mesh, mTLS, Reverse Proxy, GraphQL, Redis, and Memcached.
+
+## [2026-09-24] ingest | EP286 | 讓 AI 成為第二大腦
+
+- **Action**: Imported video-report; status=draft; SHA-256=efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e.
+- **Pages touched**: `wiki/sources/2026-09-24--techporn-ep286.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] ingest | EP292 | AI 能自己寫一整晚，工程師還剩什麼？Fabal 5、GPT 5.6 實測與下一代開發！
+
+- **Action**: Imported video-report; status=draft; SHA-256=2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9.
+- **Pages touched**: `wiki/sources/2026-09-24--techporn-ep292.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] ingest | Prompt Engineering in 2025: Complete Guide for ChatGPT, Claude, and Gemini
+
+- **Action**: Imported article; status=needs-review; SHA-256=64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b.
+- **Pages touched**: `wiki/sources/2025-06-13--prompt-engineering-in-2025-complete-guide.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] ingest | Prompting best practices
+
+- **Action**: Imported article; status=needs-review; SHA-256=ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a.
+- **Pages touched**: `wiki/sources/2026-05-24--prompting-best-practices.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] ingest | LLM Wiki — 原文閱讀筆記
+
+- **Action**: Imported article; status=draft; SHA-256=151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea.
+- **Pages touched**: `wiki/sources/2026-09-24--karpathy-llm-wiki.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] ingest | Effective context engineering for AI agents — 閱讀筆記
+
+- **Action**: Imported article; status=draft; SHA-256=d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a.
+- **Pages touched**: `wiki/sources/2026-09-24--anthropic-context-engineering.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] ingest | Caching
+
+- **Action**: Imported pdf; status=needs-review; SHA-256=1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a.
+- **Pages touched**: `wiki/sources/2026-05-24--caching.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] review | EP286 | 讓 AI 成為第二大腦
+
+- **Action**: Status=ready; 已核讀完整上游報告；採核心重點、批判分析與使用者既有心得，保留轉錄和時間碼限制。未重新驗證原音。
+- **Pages touched**: `wiki/sources/2026-09-24--techporn-ep286.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] review | EP292 | AI 能自己寫一整晚，工程師還剩什麼？Fabal 5、GPT 5.6 實測與下一代開發！
+
+- **Action**: Status=ready; 已核讀完整上游報告；採需求、驗收和理解關卡，跨到知識管理的應用標為助理推論。
+- **Pages touched**: `wiki/sources/2026-09-24--techporn-ep292.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] review | Prompt Engineering in 2025: Complete Guide for ChatGPT, Claude, and Gemini
+
+- **Action**: Status=ready; 已核讀本機歷史剪藏文字；只採提示與測試流程，圖像和當前版本未驗證，coverage保留partial。
+- **Pages touched**: `wiki/sources/2025-06-13--prompt-engineering-in-2025-complete-guide.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] review | Prompting best practices
+
+- **Action**: Status=ready; 已核讀本機歷史剪藏；只採上下文與狀態管理。發布日未知，剪藏日不作發布日；保留partial。
+- **Pages touched**: `wiki/sources/2026-05-24--prompting-best-practices.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] review | LLM Wiki — 原文閱讀筆記
+
+- **Action**: Status=ready; 已核讀原作者正文的架構、操作和索引部分；本機只保存短閱讀筆記，evidence_level=source-notes且partial。
+- **Pages touched**: `wiki/sources/2026-09-24--karpathy-llm-wiki.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] review | Effective context engineering for AI agents — 閱讀筆記
+
+- **Action**: Status=ready; 已核讀相關原文小節；本機只保存短閱讀筆記，未使用圖片細節，保留source-notes及partial。
+- **Pages touched**: `wiki/sources/2026-09-24--anthropic-context-engineering.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] query | AI 輔助學習與知識管理試作
+
+- **Action**: 整合六份文件（四個新來源頁、兩個既有來源頁），區分作者主張、助理推論、使用者已提供觀點與來源相依性；未量測學習成效。
+- **Pages touched**: `wiki/syntheses/2026-09-24--ai-learning-knowledge-management.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] ingest | Caching
+
+- **Action**: Imported pdf; status=needs-review; SHA-256=1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a.
+- **Pages touched**: `wiki/sources/2026-05-24--caching.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-24] lint | 第一輪索引、中文查詢與匯入驗收
+
+- **Action**: 完成 39 項測試、索引／schema／log 驗證、七題實際查詢與來源快照完整性核對；PDF 原始檔保持不變。
+- **Pages touched**: `verification/first-round-validation.md`, `verification/first-round-validation.json`
+- **Notes**: 六份主題來源已核讀；PDF 圖表與浮水印限制保留 needs-review。
+- **Open questions**: 詞彙搜尋尚非任意語意查詢；圖表正確性仍須逐頁核讀。
+
+## [2026-09-24] maintenance | 單一路徑的文件解析 skill 入口
+
+- **Action**: 更新 llm-wiki-ingest，支援只提供檔案路徑即完成繁中解析、摘要、關聯與入庫；明確處理既有來源、PDF 依賴及未完成的來源卡。
+- **Pages touched**: `.agents/skills/llm-wiki-ingest/SKILL.md`, `.agents/skills/llm-wiki-ingest/agents/openai.yaml`, `README.md`
+- **Notes**: 此次只更新 skill 與使用說明，沒有匯入新文件或改寫來源摘要。
+- **Open questions**: 遇到不支援格式或無法辨識的圖表，仍需說明限制並保留待核讀狀態。

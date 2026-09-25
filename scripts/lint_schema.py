@@ -9,10 +9,16 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
+
+try:
+    from .rebuild_index import parse_frontmatter_text, load_pages, STATUSES, validate_date
+except ImportError:
+    from rebuild_index import parse_frontmatter_text, load_pages, STATUSES, validate_date
 
 REQUIRED_FRONTMATTER = {
-    "entity": ["type", "aliases", "tags", "created", "updated", "source_count"],
-    "concept": ["type", "aliases", "tags", "created", "updated", "source_count"],
+    "entity": ["type", "aliases", "tags", "created", "updated"],
+    "concept": ["type", "aliases", "tags", "created", "updated"],
     "source": ["type", "source_path", "title", "author", "date", "tags", "created"],
     "synthesis": ["type", "question", "tags", "created", "updated"],
 }
@@ -78,32 +84,10 @@ class Issue:
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, Any], str]:
-    if not text.startswith("---\n"):
+    try:
+        return parse_frontmatter_text(text)
+    except ValueError:
         return {}, text
-    parts = text.split("\n---\n", 1)
-    if len(parts) != 2:
-        return {}, text
-
-    frontmatter_block = parts[0][4:]
-    body = parts[1]
-    frontmatter: dict[str, Any] = {}
-
-    for line in frontmatter_block.splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or ":" not in line:
-            continue
-        key, raw_value = line.split(":", 1)
-        key = key.strip()
-        value = raw_value.strip()
-        if value.startswith("[") and value.endswith("]"):
-            items = [v.strip().strip('"\'') for v in value[1:-1].split(",") if v.strip()]
-            frontmatter[key] = items
-        elif value in {"[]", ""}:
-            frontmatter[key] = [] if value == "[]" else ""
-        else:
-            frontmatter[key] = value.strip('"\'')
-
-    return frontmatter, body
 
 
 def page_name(md_file: Path) -> str:
@@ -140,6 +124,8 @@ def build_link_target_index(root: Path) -> set[str]:
         frontmatter, body = parse_frontmatter(text)
 
         targets.add(path.stem)
+        targets.add(path.relative_to(root).with_suffix("").as_posix())
+        targets.add("wiki/" + path.relative_to(root).with_suffix("").as_posix())
 
         title = first_h1_from_body(body)
         if title:
@@ -157,7 +143,7 @@ def build_link_target_index(root: Path) -> set[str]:
 def build_page_index_by_dir(root: Path) -> dict[str, set[str]]:
     by_dir: dict[str, set[str]] = {}
     for folder in INDEX_SECTION_TO_DIR.values():
-        by_dir[folder] = {path.stem for path in (root / folder).glob("*.md")}
+        by_dir[folder] = {target for path in (root / folder).rglob("*.md") for target in (path.stem, path.relative_to(root).with_suffix("").as_posix())}
     return by_dir
 
 
@@ -221,6 +207,12 @@ def check_index(index_path: Path, wiki_root: Path, known_pages_by_dir: dict[str,
 
     text = index_path.read_text(encoding="utf-8")
     expected_header = ["Page", "Summary", "Sources", "Status", "Updated"]
+    try:
+        derived_pages = load_pages("name", wiki_root)
+    except ValueError as exc:
+        issues.append(Issue("invalid_catalog_metadata", "high", rel, str(exc)))
+        return issues
+    expected_rows = {folder: {page.link_target: page for page in derived_pages if page.category == folder} for folder in INDEX_SECTION_TO_DIR.values()}
 
     for section, folder in INDEX_SECTION_TO_DIR.items():
         found_section, rows = section_table_lines(text, section)
@@ -235,6 +227,7 @@ def check_index(index_path: Path, wiki_root: Path, known_pages_by_dir: dict[str,
         if header_cells != expected_header:
             issues.append(Issue("invalid_index_header", "high", rel, f"`## {section}` table header must be `{expected_header}`."))
 
+        seen: set[str] = set()
         for row in rows[2:]:
             cells = split_markdown_row(row)
             if len(cells) != 5:
@@ -253,6 +246,18 @@ def check_index(index_path: Path, wiki_root: Path, known_pages_by_dir: dict[str,
             target = match.group(1).strip()
             if target not in known_pages_by_dir.get(folder, set()):
                 issues.append(Issue("broken_index_page_link", "medium", rel, f"Index link `[[{target}]]` in `## {section}` does not resolve to `wiki/{folder}/`."))
+
+            if target in seen:
+                issues.append(Issue("duplicate_index_page", "high", rel, f"Duplicate index entry: {target}"))
+            seen.add(target)
+            expected = expected_rows[folder].get(target)
+            if expected is not None:
+                if cells[2] != str(expected.source_count):
+                    issues.append(Issue("incorrect_source_count", "high", rel, f"{target}: expected {expected.source_count} distinct direct sources, got {cells[2]}."))
+                if cells[3] != expected.status:
+                    issues.append(Issue("incorrect_index_status", "high", rel, f"{target}: expected status {expected.status}, got {cells[3]}."))
+        for target in sorted(set(expected_rows[folder]) - seen):
+            issues.append(Issue("missing_index_page", "high", rel, f"Missing catalog entry for wiki/{folder}/{target}."))
 
     return issues
 
@@ -297,10 +302,44 @@ def check_file(md_file: Path, wiki_root: Path, known_link_targets: set[str]) -> 
         if section not in body:
             issues.append(Issue("missing_section", "high", rel, f"Missing required section heading `{section}` for type `{page_type}`."))
 
+    expected_type = {"entities": "entity", "concepts": "concept", "sources": "source", "syntheses": "synthesis"}.get(md_file.relative_to(wiki_root).parts[0])
+    if page_type != expected_type:
+        issues.append(Issue("type_path_mismatch", "high", rel, f"Expected type {expected_type} for this folder."))
+    for field in ("tags", "aliases"):
+        if field in frontmatter and (not isinstance(frontmatter[field], list) or any(not isinstance(item, str) for item in frontmatter[field])):
+            issues.append(Issue("invalid_list", "high", rel, f"{field} must be a list of strings."))
+    for field in ("created", "updated"):
+        if field in frontmatter:
+            try:
+                validate_date(md_file, field, frontmatter[field])
+            except ValueError as exc:
+                issues.append(Issue("invalid_date", "high", rel, str(exc)))
+    for field in ("status", "processing_status"):
+        if field in frontmatter and frontmatter[field] not in STATUSES:
+            issues.append(Issue("invalid_processing_status", "high", rel, f"{field} must be one of {sorted(STATUSES)}."))
+
     if page_type == "source":
         source_path = str(frontmatter.get("source_path", ""))
-        if not (source_path.startswith("raw/sources/") or source_path.startswith("raw/assets/") or source_path.startswith("raw/archive/")):
-            issues.append(Issue("invalid_source_path", "high", rel, "`source_path` must be under `raw/sources/`, `raw/assets/`, or `raw/archive/`."))
+        parts = Path(source_path).parts
+        if not parts or parts[0] != "raw" or len(parts) < 2 or ".." in parts or Path(source_path).is_absolute():
+            issues.append(Issue("invalid_source_path", "high", rel, "source_path must be a relative path inside raw/ without traversal."))
+        metadata_enums = {
+            "source_type": {"pdf", "article", "video-report", "video_report", "web", "note", "document"},
+            "coverage": {"none", "partial", "full", "unknown"},
+            "confidence": {"low", "medium", "high", "unknown"},
+            "evidence_level": {"original-document", "secondary-summary", "source-notes"},
+            "analysis_level": {"quick-screen", "full-transcript"},
+            "transcript_coverage": {"none", "partial", "full", "unknown"},
+        }
+        for key, accepted in metadata_enums.items():
+            if key in frontmatter and frontmatter[key] not in accepted:
+                issues.append(Issue("invalid_source_metadata", "high", rel, f"{key} must be one of {sorted(accepted)}."))
+        for key in ("source_id", "source_type", "processing_status"):
+            if "source_id" in frontmatter and not frontmatter.get(key):
+                issues.append(Issue("missing_source_metadata", "high", rel, f"Registered sources require {key}."))
+        source_url = frontmatter.get("source_url")
+        if source_url and (not isinstance(source_url, str) or urlparse(source_url).scheme not in {"http", "https"} or not urlparse(source_url).netloc):
+            issues.append(Issue("invalid_source_url", "high", rel, "source_url must be HTTP(S) or empty when unknown."))
 
     if "## Related" in body:
         links = related_section_links(body)

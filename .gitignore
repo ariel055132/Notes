@@ -1,3 +1,9 @@
 raw/archive/*
 raw/sources
 raw/assets
+raw/imports/
+derived/
+.notes-import.lock
+__pycache__/
+*.pyc
+.venv/

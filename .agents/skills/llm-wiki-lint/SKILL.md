@@ -1,93 +1,20 @@
 ---
 name: llm-wiki-lint
-description: Run a full wiki health check by finding contradictions, stale claims, orphan pages, missing pages, broken links, and data gaps, then deliver a severity-ranked report, apply operator-approved fixes, and record the lint run in the log.
-
+description: Check Notes indexing, provenance, review status and semantic consistency; distinguish deterministic validation from factual review.
 ---
-# LLM Wiki Lint Skill
 
-## Purpose
-Run a structural and logical health check of the wiki, then coordinate and apply agreed fixes.
+# Notes health check
 
-## When to Use
+Read `AGENTS.md`. Run the read-only checks first:
 
-Use this skill when the operator asks to health-check the wiki, or periodically (e.g., after every 10 ingests or when the wiki feels unwieldy).
+```sh
+python3 scripts/rebuild_index.py --check
+python3 scripts/lint_schema.py --strict
+python3 scripts/validate_log.py
+```
 
-## Inputs
+For the requested scope, inspect broken links, outdated claims, contradictions, source provenance, missing evidence, and useful navigation links. A passing schema check does not verify factual truth or diagram/table extraction. Source counts are generated from distinct directly referenced source identities, not from stale frontmatter hints.
 
-- Optional: specific area to focus on (e.g., "check for contradictions in the AI section").
+Report concrete findings with file/section, severity and the evidence for the finding. Distinguish full scans from sampled semantic checks. Fix issues already covered by the operator's authorization; ask only for changes outside it. Do not create every missing noun as a page. Never resolve a contradiction by silently deleting the older claim or its source.
 
-## Checks
-
-### 1. Contradictions
-
-- Scan for claims on different pages that conflict.
-- Look for: opposite facts, inconsistent dates, contradictory opinions attributed to the same source.
-- Report each contradiction with: page A, page B, the conflicting claims, and severity (high/medium/low).
-
-### 2. Stale Claims
-
-- Identify assertions that newer sources have superseded.
-- Look for: outdated statistics, deprecated technologies, revised theories.
-- Report with: page, claim, why it's stale, and what should replace it.
-
-### 3. Orphan Pages
-
-- Find pages with no inbound wikilinks.
-- A page is an orphan if no other page links to it.
-- Report with: page name, reason it might be orphaned, and suggested pages to link from.
-
-### 4. Missing Pages
-
-- Identify important concepts or entities mentioned in existing pages but lacking their own dedicated page.
-- Report with: where it's mentioned, why it deserves a page, and suggested page type (entity/concept).
-
-### 5. Broken Links
-
-- Find wikilinks pointing to non-existent pages.
-- Report with: source page, broken link text, and suggested fix (create page or remove link).
-
-### 6. Data Gaps
-
-- Note areas where additional sources or web search could fill holes.
-- Report with: topic, why it's important, and suggested sources or searches.
-
-## Step-by-Step Process
-
-1. **Run schema checker first**: `python scripts/lint_schema.py --wiki-root wiki --json-out verification/lint-schema-report.json --strict` to validate frontmatter, headings, source paths, and `## Related` cross-links.
-2. **Scan all pages** in `wiki/` (excluding templates) for semantic lint checks.
-3. **Run each check** above, documenting findings.
-4. **Produce a lint report**.
-   - Can be a temporary synthesis page in `wiki/syntheses/` or inline in chat.
-   - Group findings by check type.
-   - Rate each finding by severity (high/medium/low).
-5. **Discuss fixes with the operator**.
-   - Present findings.
-   - Suggest specific fixes.
-   - Ask for confirmation before applying.
-6. **Apply agreed fixes**.
-7. **Append an entry to `wiki/log.md`**.
-   - Format: `## [YYYY-MM-DD] lint | Wiki health check`
-   - Include: checks run, issues found, fixes applied, open questions.
-
-## Output Contract
-
-- Report lists all found issues with severity.
-- Agreed fixes are applied.
-- `wiki/log.md` is updated.
-
-## Guardrails
-
-- Do not delete pages without operator confirmation.
-- Do not fix contradictions by removing older claims; instead, add context about how understanding has evolved.
-- Prioritize high-severity issues (contradictions, broken links) over cosmetic ones.
-- If the wiki is very large, focus on a specific subset or ask the operator for priorities.
-
-## Verification Checklist
-
-- [ ] `scripts/lint_schema.py` run with machine-readable JSON output captured.
-- [ ] All pages in `wiki/` scanned.
-- [ ] Six checks completed.
-- [ ] Lint report produced.
-- [ ] Operator consulted on fixes.
-- [ ] Agreed fixes applied.
-- [ ] `wiki/log.md` appended.
+Preserve raw documents and user judgments. No bulk/recursive deletion. After actual changes rebuild/check the index, validate schema/log, run relevant tests, and append an operation entry. A read-only assessment needs no fabricated edit history or recurring automation.

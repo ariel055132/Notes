@@ -1,11 +1,24 @@
 ---
-type: source
-source_path: raw/assets/Prompting best practices.md
+type: "source"
+source_path: "raw/imports/anthropic-prompt-guide/ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a.md"
 title: "Prompting best practices"
 author: "Anthropic"
-date: 2026-05-24
-tags: [prompt-engineering, claude, tool-use, agentic-systems]
-created: 2026-05-24
+date: "unknown"
+tags: ["prompt-engineering", "claude", "tool-use", "agentic-systems", "ai-learning", "knowledge-management"]
+created: "2026-05-24"
+source_id: "anthropic-prompt-guide"
+source_type: "article"
+source_url: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+published_date: null
+updated: "2026-09-24"
+processing_status: "ready"
+coverage: "partial"
+confidence: "medium"
+evidence_level: "original-document"
+extraction_path: "derived/anthropic-prompt-guide/ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a-094a6b31cf737821.json"
+upstream_sha256: "ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a"
+captured_at: "2026-05-24"
+review_scope: "Historical local clip: task clarity, evidence metadata and evaluation workflow only."
 ---
 
 # Prompting best practices
@@ -64,3 +77,9 @@ Anthropic's guide presents prompt engineering as the practice of making instruct
 - Compare these practices against non-Anthropic prompting guides to separate vendor-specific advice from model-agnostic principles.
 - Add examples of prompts used in this wiki's own ingest, query, and lint workflows to build a local prompt pattern library.
 - Track whether the model-specific claims about Claude Opus 4.7 and Claude Sonnet 4.6 remain current in future Anthropic documentation.
+
+## 本輪閱讀範圍與限制
+
+本輪核读 2026-05-24 本機剪藏，採用需求、上下文與驗收方法；沒有把模型專屬建議當作目前所有模型的通用行為，也未證明能提高個人學習成效。遠端圖片和現行網頁版本未逐一比對，因此 coverage 保留 partial。
+
+相關主題：[[2026-09-24--ai-learning-knowledge-management|AI 輔助學習與知識管理]]。

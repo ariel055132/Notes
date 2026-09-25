@@ -1,0 +1,4290 @@
+{
+  "audit_date": "2026-09-24",
+  "source_root": "/Users/adrianli/Documents/GitHub/Notes",
+  "scope": "All local PDFs under raw/ and AWS/source/; page-level metrics cover all pages. Visual review is a separate sample, not all pages.",
+  "method": {
+    "extractor": "scripts/pdf_extract.py",
+    "extractor_sha256": "8ef93d4c492fc0b3196f8b1a4fe98a1188a6cfb4ad800513fb71fa304baaf1f4",
+    "ocr_performed": false,
+    "text_truncated": false,
+    "source_files_modified": false,
+    "table_strategy": "pdfplumber line candidates, unverified",
+    "rotation": "matrix-based detection; all rotated glyphs retained",
+    "meaning_accuracy_scored": false,
+    "all_sha256_match_original_notes_files": true
+  },
+  "documents": [
+    {
+      "path": "AWS/source/AmazonS3Outpost.pdf",
+      "sha256": "ec7a458b4db7817c2b2f0c872a58ac473592a1d599a928d7d47766f507a49d7f",
+      "bytes": 1385653,
+      "status": "needs-review",
+      "page_count": 37,
+      "extracted_characters": 13991,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 237,
+          "glyph_count": 232,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 163,
+          "glyph_count": 158,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 3,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 104,
+          "glyph_count": 103,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 881,
+          "glyph_count": 836,
+          "rotated_glyphs": 0,
+          "image_count": 1,
+          "line_curve_count": 2836,
+          "rectangle_count": 50,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 737,
+          "glyph_count": 720,
+          "rotated_glyphs": 0,
+          "image_count": 6,
+          "line_curve_count": 8,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 368,
+          "glyph_count": 360,
+          "rotated_glyphs": 0,
+          "image_count": 1,
+          "line_curve_count": 60,
+          "rectangle_count": 12,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 2,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 452,
+          "glyph_count": 446,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 0,
+          "rectangle_count": 3,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 512,
+          "glyph_count": 493,
+          "rotated_glyphs": 0,
+          "image_count": 10,
+          "line_curve_count": 1,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 299,
+          "glyph_count": 293,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 20,
+          "rectangle_count": 4,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 351,
+          "glyph_count": 344,
+          "rotated_glyphs": 0,
+          "image_count": 5,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 387,
+          "glyph_count": 382,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 17,
+          "rectangle_count": 3,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 12,
+          "extracted_characters": 228,
+          "glyph_count": 222,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 25,
+          "rectangle_count": 12,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 13,
+          "extracted_characters": 351,
+          "glyph_count": 346,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 6,
+          "rectangle_count": 12,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 14,
+          "extracted_characters": 362,
+          "glyph_count": 356,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 6,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 15,
+          "extracted_characters": 356,
+          "glyph_count": 352,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 14,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 16,
+          "extracted_characters": 230,
+          "glyph_count": 211,
+          "rotated_glyphs": 0,
+          "image_count": 4,
+          "line_curve_count": 1,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 17,
+          "extracted_characters": 434,
+          "glyph_count": 424,
+          "rotated_glyphs": 0,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 18,
+          "extracted_characters": 100,
+          "glyph_count": 99,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 19,
+          "extracted_characters": 330,
+          "glyph_count": 322,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 1,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 20,
+          "extracted_characters": 339,
+          "glyph_count": 331,
+          "rotated_glyphs": 0,
+          "image_count": 4,
+          "line_curve_count": 1,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 21,
+          "extracted_characters": 371,
+          "glyph_count": 359,
+          "rotated_glyphs": 0,
+          "image_count": 4,
+          "line_curve_count": 15,
+          "rectangle_count": 4,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 22,
+          "extracted_characters": 422,
+          "glyph_count": 414,
+          "rotated_glyphs": 0,
+          "image_count": 1,
+          "line_curve_count": 12,
+          "rectangle_count": 5,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 23,
+          "extracted_characters": 239,
+          "glyph_count": 231,
+          "rotated_glyphs": 0,
+          "image_count": 1,
+          "line_curve_count": 23,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 24,
+          "extracted_characters": 553,
+          "glyph_count": 536,
+          "rotated_glyphs": 0,
+          "image_count": 5,
+          "line_curve_count": 23,
+          "rectangle_count": 4,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 25,
+          "extracted_characters": 489,
+          "glyph_count": 476,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 18,
+          "rectangle_count": 4,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 26,
+          "extracted_characters": 378,
+          "glyph_count": 372,
+          "rotated_glyphs": 0,
+          "image_count": 1,
+          "line_curve_count": 49,
+          "rectangle_count": 5,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 27,
+          "extracted_characters": 94,
+          "glyph_count": 93,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 28,
+          "extracted_characters": 303,
+          "glyph_count": 298,
+          "rotated_glyphs": 0,
+          "image_count": 1,
+          "line_curve_count": 20,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 29,
+          "extracted_characters": 449,
+          "glyph_count": 433,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 22,
+          "rectangle_count": 5,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 30,
+          "extracted_characters": 498,
+          "glyph_count": 477,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 37,
+          "rectangle_count": 6,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 31,
+          "extracted_characters": 522,
+          "glyph_count": 498,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 49,
+          "rectangle_count": 7,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 32,
+          "extracted_characters": 478,
+          "glyph_count": 456,
+          "rotated_glyphs": 0,
+          "image_count": 4,
+          "line_curve_count": 40,
+          "rectangle_count": 7,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 33,
+          "extracted_characters": 430,
+          "glyph_count": 424,
+          "rotated_glyphs": 0,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 34,
+          "extracted_characters": 481,
+          "glyph_count": 459,
+          "rotated_glyphs": 0,
+          "image_count": 4,
+          "line_curve_count": 40,
+          "rectangle_count": 7,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 35,
+          "extracted_characters": 442,
+          "glyph_count": 432,
+          "rotated_glyphs": 0,
+          "image_count": 3,
+          "line_curve_count": 31,
+          "rectangle_count": 4,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 36,
+          "extracted_characters": 453,
+          "glyph_count": 447,
+          "rotated_glyphs": 0,
+          "image_count": 5,
+          "line_curve_count": 0,
+          "rectangle_count": 6,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 37,
+          "extracted_characters": 168,
+          "glyph_count": 163,
+          "rotated_glyphs": 0,
+          "image_count": 2,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 720.0,
+          "height": 405.0,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/API Gateway.pdf",
+      "sha256": "b1afaf3af515c6d8d9fad5f223cd7fa72fd399e1afb921551ebaf1b49c0883c7",
+      "bytes": 1571746,
+      "status": "needs-review",
+      "page_count": 12,
+      "extracted_characters": 9353,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 317,
+          "glyph_count": 297,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 9,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 884,
+          "glyph_count": 842,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 10,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 14,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 894,
+          "glyph_count": 867,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 58,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 10,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 781,
+          "glyph_count": 753,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 14,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 7,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 689,
+          "glyph_count": 701,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 9,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 8,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 1047,
+          "glyph_count": 1009,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 16,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 730,
+          "glyph_count": 707,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 11,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 8,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 815,
+          "glyph_count": 770,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 45,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 27,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 912,
+          "glyph_count": 897,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 10,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 1078,
+          "glyph_count": 1042,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 8,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 885,
+          "glyph_count": 847,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 21,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 8,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 12,
+          "extracted_characters": 321,
+          "glyph_count": 301,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 3,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/CDN (Content Delivery Network).pdf",
+      "sha256": "b3bf16f41b6a6843843ae81f6002ab9532591a9363682f118e97ac7b6647a8e5",
+      "bytes": 1079248,
+      "status": "needs-review",
+      "page_count": 5,
+      "extracted_characters": 3606,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 774,
+          "glyph_count": 739,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 27,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 17,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 848,
+          "glyph_count": 798,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 45,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 22,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 862,
+          "glyph_count": 815,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 45,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 20,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 821,
+          "glyph_count": 773,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 45,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 19,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 301,
+          "glyph_count": 275,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 32,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 6,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Caching.pdf",
+      "sha256": "1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a",
+      "bytes": 1541119,
+      "status": "needs-review",
+      "page_count": 11,
+      "extracted_characters": 10683,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 1059,
+          "glyph_count": 1020,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 15,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 20,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 1038,
+          "glyph_count": 972,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 58,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 8,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 930,
+          "glyph_count": 885,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 8,
+          "rectangle_count": 27,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 9,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 875,
+          "glyph_count": 836,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 12,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 984,
+          "glyph_count": 936,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 38,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 16,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 920,
+          "glyph_count": 873,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 12,
+          "rectangle_count": 32,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 18,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 887,
+          "glyph_count": 846,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 16,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 21,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 816,
+          "glyph_count": 779,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 12,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 6,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 1077,
+          "glyph_count": 1035,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 11,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 13,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 988,
+          "glyph_count": 945,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 13,
+          "rectangle_count": 2,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 8,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 1109,
+          "glyph_count": 1073,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 4,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 18,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Consistent Hashing.pdf",
+      "sha256": "8a50de08ad94ba79d28b3b876c1a64d559709869e8adfc31d461b3236f89c6e7",
+      "bytes": 1511001,
+      "status": "needs-review",
+      "page_count": 11,
+      "extracted_characters": 5962,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 710,
+          "glyph_count": 678,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 11,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 12,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 438,
+          "glyph_count": 411,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 9,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 197,
+          "glyph_count": 180,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 13,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 233,
+          "glyph_count": 215,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 9,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 397,
+          "glyph_count": 376,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 9,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 247,
+          "glyph_count": 229,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 0,
+          "warnings": [
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 800,
+          "glyph_count": 765,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 22,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 16,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 679,
+          "glyph_count": 638,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 45,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 11,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 835,
+          "glyph_count": 801,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 7,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 16,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 937,
+          "glyph_count": 895,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 29,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 20,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 489,
+          "glyph_count": 466,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 3,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 6,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Database Indexing.pdf",
+      "sha256": "0e478aa6f0e2049292ba94100b26e345f8db0dc05e88dbd475320a6d01e4b776",
+      "bytes": 855730,
+      "status": "needs-review",
+      "page_count": 4,
+      "extracted_characters": 2968,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 787,
+          "glyph_count": 735,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 53,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 11,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 736,
+          "glyph_count": 691,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 16,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 7,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 1113,
+          "glyph_count": 1074,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 10,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 17,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 332,
+          "glyph_count": 308,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 3,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 10,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Database Transactions.pdf",
+      "sha256": "39cd82908d34e7ac98d3b5257be8b77c2f93f0c9d0d9b3ae215fa2411716c53e",
+      "bytes": 2091316,
+      "status": "needs-review",
+      "page_count": 9,
+      "extracted_characters": 8124,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 873,
+          "glyph_count": 835,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 30,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 989,
+          "glyph_count": 938,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 53,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 36,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 940,
+          "glyph_count": 898,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 26,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 913,
+          "glyph_count": 882,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 30,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 890,
+          "glyph_count": 855,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 17,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 882,
+          "glyph_count": 846,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 31,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 1170,
+          "glyph_count": 1131,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 50,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 1082,
+          "glyph_count": 1043,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 4,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 26,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 385,
+          "glyph_count": 362,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 11,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Database.pdf",
+      "sha256": "30797a53547cdbce8d89a23507d5946f80d109b7ecdf4b3c46d6f7b52e30f95c",
+      "bytes": 1732906,
+      "status": "needs-review",
+      "page_count": 7,
+      "extracted_characters": 4992,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 593,
+          "glyph_count": 565,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 27,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 212,
+          "glyph_count": 194,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 9,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 857,
+          "glyph_count": 822,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 36,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 976,
+          "glyph_count": 937,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 39,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 1135,
+          "glyph_count": 1095,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 25,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 805,
+          "glyph_count": 784,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 9,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 24,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 414,
+          "glyph_count": 390,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 8,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 13,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Distributed Cache.pdf",
+      "sha256": "bcc2f5d3c23c58e26ecc3704562afa70434fb2d86534e76ce50568bc75c0ca9d",
+      "bytes": 1356897,
+      "status": "needs-review",
+      "page_count": 8,
+      "extracted_characters": 7146,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 1003,
+          "glyph_count": 957,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 27,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 22,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 707,
+          "glyph_count": 680,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 45,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 977,
+          "glyph_count": 916,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 63,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 2,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 20,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 985,
+          "glyph_count": 932,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 55,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 2,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 6,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 958,
+          "glyph_count": 908,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 39,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 871,
+          "glyph_count": 837,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 17,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 957,
+          "glyph_count": 896,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 52,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 688,
+          "glyph_count": 664,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 10,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Distributed Lock.pdf",
+      "sha256": "7df761850beac66d3ba60854c8ce6453e364c722e2e5d20811d5bc7c4beb5f45",
+      "bytes": 1026766,
+      "status": "needs-review",
+      "page_count": 5,
+      "extracted_characters": 3986,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 808,
+          "glyph_count": 773,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 27,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 17,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 776,
+          "glyph_count": 747,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 27,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 16,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 860,
+          "glyph_count": 826,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 23,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 21,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 820,
+          "glyph_count": 773,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 45,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 22,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 722,
+          "glyph_count": 671,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 52,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 20,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Message Queue.pdf",
+      "sha256": "2c635eb504f7ece147f852018dc602f3e98e4ceaed41594958f4c74a60707c84",
+      "bytes": 1142037,
+      "status": "needs-review",
+      "page_count": 4,
+      "extracted_characters": 3380,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 820,
+          "glyph_count": 780,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 27,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 31,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 955,
+          "glyph_count": 920,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 25,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 951,
+          "glyph_count": 906,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 38,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 21,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 654,
+          "glyph_count": 604,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 64,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 2,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 24,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Replication.pdf",
+      "sha256": "7ffd753e069243b723d7bf499889ed67231e38ec25266cfaf357ed394797dd35",
+      "bytes": 3618304,
+      "status": "needs-review",
+      "page_count": 17,
+      "extracted_characters": 16107,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 859,
+          "glyph_count": 822,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 18,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 882,
+          "glyph_count": 848,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 24,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 1234,
+          "glyph_count": 1191,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 23,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 907,
+          "glyph_count": 879,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 30,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 550,
+          "glyph_count": 522,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 46,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 540,
+          "glyph_count": 515,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 22,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 750,
+          "glyph_count": 709,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 32,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 28,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 1104,
+          "glyph_count": 1064,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 12,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 39,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 1103,
+          "glyph_count": 1065,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 604,
+          "glyph_count": 573,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 5,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 13,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 1197,
+          "glyph_count": 1157,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 28,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 12,
+          "extracted_characters": 1258,
+          "glyph_count": 1216,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 54,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        },
+        {
+          "page": 13,
+          "extracted_characters": 1339,
+          "glyph_count": 1305,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 2,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 34,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 14,
+          "extracted_characters": 1070,
+          "glyph_count": 1033,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 45,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 15,
+          "extracted_characters": 900,
+          "glyph_count": 863,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 2,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 32,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 16,
+          "extracted_characters": 1026,
+          "glyph_count": 966,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 42,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 37,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 17,
+          "extracted_characters": 784,
+          "glyph_count": 757,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 4,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 12,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Scaling Reads.pdf",
+      "sha256": "0f943292aae0d960a7c94a0a1c076cc907a152908f4e40da9d48f880b753f4f6",
+      "bytes": 2005175,
+      "status": "needs-review",
+      "page_count": 16,
+      "extracted_characters": 14015,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 736,
+          "glyph_count": 700,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 4,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 27,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 631,
+          "glyph_count": 602,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 7,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 22,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 1004,
+          "glyph_count": 964,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 13,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 33,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 796,
+          "glyph_count": 758,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 10,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 12,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 1040,
+          "glyph_count": 1002,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 2,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 12,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 790,
+          "glyph_count": 754,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 10,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 1007,
+          "glyph_count": 966,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 12,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 20,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 859,
+          "glyph_count": 820,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 14,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 24,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 629,
+          "glyph_count": 592,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 18,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 21,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 912,
+          "glyph_count": 871,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 10,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 27,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 857,
+          "glyph_count": 818,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 12,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 31,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 12,
+          "extracted_characters": 1415,
+          "glyph_count": 1376,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 10,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 46,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 13,
+          "extracted_characters": 949,
+          "glyph_count": 1010,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 8,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 20,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 14,
+          "extracted_characters": 984,
+          "glyph_count": 940,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 15,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 26,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 15,
+          "extracted_characters": 1100,
+          "glyph_count": 1057,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 14,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 25,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 16,
+          "extracted_characters": 306,
+          "glyph_count": 287,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 11,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Sharding.pdf",
+      "sha256": "867c1034e7e4c15b41f1c60b92f1f7e8967e988f2354ff496a5e561116bb5975",
+      "bytes": 1814298,
+      "status": "needs-review",
+      "page_count": 11,
+      "extracted_characters": 11538,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 1066,
+          "glyph_count": 1014,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 31,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 29,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 1105,
+          "glyph_count": 1054,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 31,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 26,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 981,
+          "glyph_count": 943,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 15,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 27,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 970,
+          "glyph_count": 918,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 23,
+          "rectangle_count": 31,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 33,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 835,
+          "glyph_count": 802,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 6,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 966,
+          "glyph_count": 915,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 7,
+          "rectangle_count": 40,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 32,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 1159,
+          "glyph_count": 1116,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 10,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 35,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 1373,
+          "glyph_count": 1325,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 29,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 34,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 1211,
+          "glyph_count": 1171,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 15,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 33,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 997,
+          "glyph_count": 957,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 12,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 17,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 875,
+          "glyph_count": 843,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 17,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/archive/Zookeeper.pdf",
+      "sha256": "25c5840ee0b342ed24446de6cc65c2181a372e78bd38721e558d28b8f3adc605",
+      "bytes": 1623938,
+      "status": "needs-review",
+      "page_count": 13,
+      "extracted_characters": 12721,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 1033,
+          "glyph_count": 997,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 20,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 1077,
+          "glyph_count": 1033,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 27,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 31,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 798,
+          "glyph_count": 762,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 32,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 8,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 750,
+          "glyph_count": 726,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 40,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 14,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 1038,
+          "glyph_count": 991,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 6,
+          "rectangle_count": 31,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 10,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 1183,
+          "glyph_count": 1146,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 23,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 1065,
+          "glyph_count": 1017,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 38,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 21,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 1009,
+          "glyph_count": 967,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 13,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 12,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 1090,
+          "glyph_count": 1050,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 14,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 26,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 1146,
+          "glyph_count": 1114,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 10,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 954,
+          "glyph_count": 911,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 32,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 19,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 12,
+          "extracted_characters": 1032,
+          "glyph_count": 990,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 10,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 16,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 13,
+          "extracted_characters": 546,
+          "glyph_count": 522,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 9,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/sources/Blob Storage.pdf",
+      "sha256": "d5cefa3c825ada6a2441db2f476354a9f6bca19f6cada1267e89cb9c9d094f22",
+      "bytes": 2448576,
+      "status": "needs-review",
+      "page_count": 11,
+      "extracted_characters": 9720,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 1010,
+          "glyph_count": 969,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 2,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 34,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 1068,
+          "glyph_count": 1058,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 12,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 35,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 820,
+          "glyph_count": 759,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 76,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 34,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 598,
+          "glyph_count": 702,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 870,
+          "glyph_count": 879,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 4,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 883,
+          "glyph_count": 853,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 24,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 872,
+          "glyph_count": 939,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 14,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 1095,
+          "glyph_count": 1054,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 63,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 880,
+          "glyph_count": 841,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 9,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 28,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 1216,
+          "glyph_count": 1174,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 37,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 408,
+          "glyph_count": 384,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 18,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/sources/Container.pdf",
+      "sha256": "c54a7a76708cf30eb507ac16ec464bbfdd34b85a233297fefbdb2dc2d602b288",
+      "bytes": 2248146,
+      "status": "needs-review",
+      "page_count": 10,
+      "extracted_characters": 8584,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 838,
+          "glyph_count": 799,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 27,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 47,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 689,
+          "glyph_count": 649,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 30,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 30,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 916,
+          "glyph_count": 875,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 27,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 1024,
+          "glyph_count": 986,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 47,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 759,
+          "glyph_count": 953,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 15,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 874,
+          "glyph_count": 835,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 1,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 28,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 1020,
+          "glyph_count": 980,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 40,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 934,
+          "glyph_count": 933,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 35,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 792,
+          "glyph_count": 813,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 18,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 738,
+          "glyph_count": 707,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 21,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "raw/sources/Serverless.pdf",
+      "sha256": "6a0ccc4debb34f29c152ae51368812beaa05920fe48bc2394533cedb500e646e",
+      "bytes": 2550002,
+      "status": "needs-review",
+      "page_count": 11,
+      "extracted_characters": 9253,
+      "method": "pdfplumber-text-layer-and-line-table-candidates-v1",
+      "extractor_version": "0.11.9",
+      "warnings": [
+        "page-review-required: see per-page warnings before synthesis"
+      ],
+      "pages": [
+        {
+          "page": 1,
+          "extracted_characters": 430,
+          "glyph_count": 406,
+          "rotated_glyphs": 13,
+          "image_count": 2,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 13,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review"
+          ]
+        },
+        {
+          "page": 2,
+          "extracted_characters": 959,
+          "glyph_count": 919,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 5,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 34,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 3,
+          "extracted_characters": 847,
+          "glyph_count": 798,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 80,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 33,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 4,
+          "extracted_characters": 510,
+          "glyph_count": 475,
+          "rotated_glyphs": 13,
+          "image_count": 1,
+          "line_curve_count": 0,
+          "rectangle_count": 30,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 1,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 22,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "images-not-interpreted: text inside images and relationships require page review",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams",
+            "table-candidates-unverified: merged cells, column order and meaning require review"
+          ]
+        },
+        {
+          "page": 5,
+          "extracted_characters": 1064,
+          "glyph_count": 1030,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 2,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 27,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 6,
+          "extracted_characters": 821,
+          "glyph_count": 871,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 3,
+          "rectangle_count": 6,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 18,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 7,
+          "extracted_characters": 988,
+          "glyph_count": 949,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 44,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        },
+        {
+          "page": 8,
+          "extracted_characters": 1156,
+          "glyph_count": 1126,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 1,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 42,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 9,
+          "extracted_characters": 929,
+          "glyph_count": 917,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 28,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 10,
+          "extracted_characters": 1079,
+          "glyph_count": 1072,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 2,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 25,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified",
+            "vector-layout-unverified: rules/shapes may be tables or diagrams"
+          ]
+        },
+        {
+          "page": 11,
+          "extracted_characters": 470,
+          "glyph_count": 446,
+          "rotated_glyphs": 13,
+          "image_count": 0,
+          "line_curve_count": 0,
+          "rectangle_count": 0,
+          "width": 595.91998,
+          "height": 842.88,
+          "table_candidates": 0,
+          "encoding_marker_count": 0,
+          "cjk_radical_codepoints": 24,
+          "warnings": [
+            "cjk-radical-codepoints: normalize only in search, retain evidence",
+            "rotated-text-retained: possible watermark/diagram labels; reading order unverified"
+          ]
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "documents": 18,
+    "pages": 202,
+    "status_counts": {
+      "needs-review": 18
+    },
+    "extracted_characters": 156129,
+    "zero_text_pages": 0,
+    "pages_with_images": 58,
+    "embedded_image_objects": 128,
+    "pages_with_table_candidates": 53,
+    "table_candidates": 57,
+    "pages_with_rotated_glyphs": 165,
+    "rotated_glyphs": 2145,
+    "pages_with_encoding_markers": 0,
+    "pages_with_cjk_radical_codepoints": 164
+  },
+  "visual_review": {
+    "reviewed_pages": 12,
+    "reviewed_documents": 9,
+    "renderer": "Poppler pdftoppm, PNG long side 1800 px",
+    "review_scope": "Representative sampling only; each listed complete page image inspected, not all 202 pages.",
+    "samples": [
+      {
+        "path": "raw/archive/Caching.pdf",
+        "page": 4,
+        "finding": "原頁正文清楚；斜向 buildmoat.org 浮水印可辨。抽取會把浮水印字母交錯插入正文。"
+      },
+      {
+        "path": "raw/archive/Caching.pdf",
+        "page": 10,
+        "finding": "原頁 invalidation 清楚，抽取變成 invalidatuion；文字層存在不等於詞彙無誤。"
+      },
+      {
+        "path": "raw/archive/Replication.pdf",
+        "page": 5,
+        "finding": "時序圖清楚顯示 user/leader/follower 與箭頭；圖內 insert into comments、User 1234 不在抽取文字中。"
+      },
+      {
+        "path": "raw/archive/Replication.pdf",
+        "page": 16,
+        "finding": "原頁四欄、表頭加三種架構共四列；新 adapter 能取得 4x4 候選，但列欄意義仍須核對。"
+      },
+      {
+        "path": "AWS/source/AmazonS3Outpost.pdf",
+        "page": 6,
+        "finding": "五欄圖示加文字投影片清楚；偵測到的兩個 table candidates 其實來自圖形，不能當真實表格。"
+      },
+      {
+        "path": "AWS/source/AmazonS3Outpost.pdf",
+        "page": 22,
+        "finding": "S3 Outposts 投影片文字可讀，含圖示與視覺強調；頁腳為 2020 年，內容不應當成當前規格。"
+      },
+      {
+        "path": "raw/archive/Database Indexing.pdf",
+        "page": 1,
+        "finding": "原頁三欄、六個案例加表頭的表格清楚；偵測器受 inline code 框影響給出 9x6 候選，不能直接採信。"
+      },
+      {
+        "path": "raw/archive/CDN (Content Delivery Network).pdf",
+        "page": 3,
+        "finding": "原頁同時有流程 code block 與三欄表格；純文字未保留 code fence，浮水印與表格需版面核對。"
+      },
+      {
+        "path": "raw/archive/Consistent Hashing.pdf",
+        "page": 4,
+        "finding": "hash ring 圖的節點、箭頭與黃色區間清楚；圖的區間關係不能僅由正文完整重建。"
+      },
+      {
+        "path": "raw/sources/Blob Storage.pdf",
+        "page": 3,
+        "finding": "五欄儲存分層表格清楚；成本、延遲與 retrieval fee 必須保持橫向列對應，不能混成關鍵字。"
+      },
+      {
+        "path": "raw/sources/Container.pdf",
+        "page": 2,
+        "finding": "原頁有跨頁表格與 Dockerfile 片段；範例換行和指令需要保留，不能用每頁前14 blocks作原始依據。"
+      },
+      {
+        "path": "raw/sources/Serverless.pdf",
+        "page": 4,
+        "finding": "原頁的 image upload -> S3 -> Lambda -> thumbnail -> S3 流程圖清楚；箭頭和回折路徑需視覺解讀。"
+      }
+    ]
+  },
+  "conclusion": {
+    "source_quality": "Sampled originals are readable enough for source-backed knowledge work; not a full visual validation of all PDFs.",
+    "extraction_quality": "All 18 documents require review before faithful synthesis; status does not mean damaged files.",
+    "raw_source_action": "Keep original PDFs immutable. No need to replace the collection based on current evidence.",
+    "limitations": [
+      "No OCR or semantic accuracy benchmark performed.",
+      "Table detection produces false positives and structural errors; all candidates are unverified.",
+      "Rotated text is retained to avoid deleting valid diagram labels.",
+      "No full extracted text or source screenshots are saved in tracked audit artifacts.",
+      "Sampled pages do not establish an all-document error rate."
+    ]
+  },
+  "document_converter_review": {
+    "script": "/Users/adrianli/Documents/Codex/DocumentConverter/scripts/phase1_pdf_explore.py",
+    "rules": "/Users/adrianli/Documents/Codex/DocumentConverter/rules/pdf.md",
+    "existing_run": "/Users/adrianli/Documents/Codex/DocumentConverter/runs/2026-06-02",
+    "main_executed": false,
+    "findings": [
+      {
+        "severity": "high",
+        "line": 247,
+        "issue": "Page Notes truncates to first 14 blocks; headings to160 chars, ordinary blocks520. Existing Replication candidate omits71 blocks across9 pages; Container omits108 across10; CDN omits52 across4. Diagnostic compact output is not full evidence."
+      },
+      {
+        "severity": "high",
+        "line": 192,
+        "issue": "Bad-font gate examines first8 pages only; may miss corruption later. Blank pages set partial but summary generation continues. No OCR fallback implemented."
+      },
+      {
+        "severity": "high",
+        "line": 95,
+        "issue": "Existing same-filename raw copy is reused without hash comparison, while extraction and SHA are from current Downloads input. Provenance may point to stale bytes."
+      },
+      {
+        "severity": "medium",
+        "line": 434,
+        "issue": "Rules require watermark removal, table reconstruction, code fences and visual review; implementation mostly detects/warns rather than satisfying these requirements."
+      },
+      {
+        "severity": "medium",
+        "line": 171,
+        "issue": "Compact Summary returns first12 regex matches (including titles/incomplete lines), not balanced document synthesis. Source Map hardcodes pages1-8 instead of actual selected pages."
+      },
+      {
+        "severity": "medium",
+        "line": 275,
+        "issue": "Table-like detection uses broad whitespace/word regex after whitespace normalization; count is not a table accuracy metric."
+      },
+      {
+        "severity": "medium",
+        "line": 14,
+        "issue": "Hard-coded Downloads sources and run date; main overwrites rules and prior outputs; inappropriate as shared ingestion API."
+      },
+      {
+        "severity": "positive",
+        "line": 95,
+        "issue": "Already records source paths, hash and page references; existing Tencent example is honestly blocked for font-map corruption. Useful diagnostic prototype."
+      }
+    ]
+  }
+}

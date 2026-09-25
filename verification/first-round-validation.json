@@ -1,0 +1,521 @@
+{
+  "date": "2026-09-24",
+  "reviewed_checkout": "/private/tmp/notes-knowledge-v1",
+  "delivery_target": "/Users/adrianli/Documents/GitHub/Notes",
+  "automated_test_count": 39,
+  "topic_source_count": 6,
+  "registered_source_count": 7,
+  "wiki_content_pages": 213,
+  "wiki_source_pages": 20,
+  "queries": [
+    {
+      "question": "AI 輔助學習與知識管理",
+      "expected_paths": [
+        "wiki/syntheses/2026-09-24--ai-learning-knowledge-management.md"
+      ],
+      "within_top": 1,
+      "passed": true,
+      "result": {
+        "mode": "evidence-search",
+        "query": "AI 輔助學習與知識管理",
+        "matched": true,
+        "notice": "以下為資料摘錄，未生成答案；引用代表可追溯，不代表已驗證正確。",
+        "results": [
+          {
+            "file": "wiki/syntheses/2026-09-24--ai-learning-knowledge-management.md",
+            "heading": "AI 輔助學習與知識管理 > 已確認的使用者方向",
+            "line": 40,
+            "excerpt": "- EP286 報告記錄了 2026-09-23 使用者希望 AI 統整工作與學習資料、形成個人決策與知識庫的方向；沒有推定已完整收聽。看完後的一句話",
+            "score": 16.306,
+            "status": "ready",
+            "collection": "wiki",
+            "citations": [
+              "2026-09-24--techporn-ep286"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "wiki/sources/2026-09-24--techporn-ep286.md",
+            "heading": "AI 第二大腦：從影片報告到知識整理 > Key Claims",
+            "line": 40,
+            "excerpt": "- **已記錄的使用者方向**：希望 AI 統整工作與學習資料，建立個人的決策與知識庫。定位：「看完後的一句話」，2026-09-23；未推定已完整收聽。",
+            "score": 9.4153,
+            "status": "ready",
+            "collection": "wiki",
+            "citations": [],
+            "page_refs": [],
+            "source_path": "raw/imports/techporn-ep286/efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e.md",
+            "source_url": "https://techporn.io/podcast/dada4ae4-d615-4b3c-a741-dacaa37cf8bb",
+            "coverage": "full"
+          }
+        ],
+        "skipped_files": []
+      }
+    },
+    {
+      "question": "快取失效",
+      "expected_paths": [
+        "wiki/concepts/cache-invalidation.md"
+      ],
+      "within_top": 3,
+      "passed": true,
+      "result": {
+        "mode": "evidence-search",
+        "query": "快取失效",
+        "matched": true,
+        "notice": "以下為資料摘錄，未生成答案；引用代表可追溯，不代表已驗證正確。",
+        "results": [
+          {
+            "file": "wiki/syntheses/2026-05-30--concepts-of-caching.md",
+            "heading": "Concepts of Caching > Answer / Analysis",
+            "line": 27,
+            "excerpt": "Cache invalidation is the mechanism for keeping cached data within that freshness budget. Common strategies include short TTLs, write-time delete or update, event-driven invalidation, distributed invalidation events, versioned keys, CDN purge, and versioned URLs. Cache Invalidation",
+            "score": 27.4556,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "cache-invalidation"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "wiki/concepts/cache-invalidation.md",
+            "heading": "Cache Invalidation > Definition",
+            "line": 14,
+            "excerpt": "Cache invalidation is the set of strategies used to stop stale cached data from being served beyond the system's acceptable freshness or correctness limits. Scaling Reads It includes write-time deletion or update, event-driven purge, versioned keys, short TTLs, distributed invalidation events, and CDN-specific choices such as versioned URLs versus global purge. Caching Distributed Cache CDN (Content Delivery Network)",
+            "score": 22.4266,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "2026-05-14--scaling-reads",
+              "2026-05-24--caching",
+              "2026-05-15--distributed-cache",
+              "2026-05-15--cdn-content-delivery-network"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "wiki/concepts/cache-stampede.md",
+            "heading": "Cache Stampede > Contrasts",
+            "line": 23,
+            "excerpt": "- **Cache Invalidation**: Cache invalidation handles freshness after writes, while cache stampede prevention handles backend protection during cache misses or expirations. Scaling Reads",
+            "score": 18.281,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "2026-05-14--scaling-reads"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          }
+        ],
+        "skipped_files": []
+      }
+    },
+    {
+      "question": "缓存失效",
+      "expected_paths": [
+        "wiki/concepts/cache-invalidation.md"
+      ],
+      "within_top": 3,
+      "passed": true,
+      "result": {
+        "mode": "evidence-search",
+        "query": "缓存失效",
+        "matched": true,
+        "notice": "以下為資料摘錄，未生成答案；引用代表可追溯，不代表已驗證正確。",
+        "results": [
+          {
+            "file": "wiki/syntheses/2026-05-30--concepts-of-caching.md",
+            "heading": "Concepts of Caching > Answer / Analysis",
+            "line": 27,
+            "excerpt": "Cache invalidation is the mechanism for keeping cached data within that freshness budget. Common strategies include short TTLs, write-time delete or update, event-driven invalidation, distributed invalidation events, versioned keys, CDN purge, and versioned URLs. Cache Invalidation",
+            "score": 27.4556,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "cache-invalidation"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "wiki/concepts/cache-invalidation.md",
+            "heading": "Cache Invalidation > Definition",
+            "line": 14,
+            "excerpt": "Cache invalidation is the set of strategies used to stop stale cached data from being served beyond the system's acceptable freshness or correctness limits. Scaling Reads It includes write-time deletion or update, event-driven purge, versioned keys, short TTLs, distributed invalidation events, and CDN-specific choices such as versioned URLs versus global purge. Caching Distributed Cache CDN (Content Delivery Network)",
+            "score": 22.4266,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "2026-05-14--scaling-reads",
+              "2026-05-24--caching",
+              "2026-05-15--distributed-cache",
+              "2026-05-15--cdn-content-delivery-network"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "wiki/concepts/cache-stampede.md",
+            "heading": "Cache Stampede > Contrasts",
+            "line": 23,
+            "excerpt": "- **Cache Invalidation**: Cache invalidation handles freshness after writes, while cache stampede prevention handles backend protection during cache misses or expirations. Scaling Reads",
+            "score": 18.281,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "2026-05-14--scaling-reads"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          }
+        ],
+        "skipped_files": []
+      }
+    },
+    {
+      "question": "最小權限",
+      "expected_paths": [
+        "AWS/AWS_IAM.md"
+      ],
+      "within_top": 1,
+      "passed": true,
+      "result": {
+        "mode": "evidence-search",
+        "query": "最小權限",
+        "matched": true,
+        "notice": "以下為資料摘錄，未生成答案；引用代表可追溯，不代表已驗證正確。",
+        "results": [
+          {
+            "file": "AWS/AWS_IAM.md",
+            "heading": "AWS Identity and Access Management (IAM) > AWS IAM Best practices",
+            "line": 154,
+            "excerpt": "6. Apply Least-privilege permissions (give users the permission they need only)",
+            "score": 12.6638,
+            "status": "unknown",
+            "collection": "legacy",
+            "citations": [],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "AWS/Question/27.md",
+            "heading": "Question 27 > Explanation",
+            "line": 18,
+            "excerpt": "* You can limit the share to view-only access, satisfying the principle of least privilege.",
+            "score": 9.1437,
+            "status": "unknown",
+            "collection": "legacy",
+            "citations": [],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "AWS/Question/779_discuss.md",
+            "heading": "779_discuss",
+            "line": 13,
+            "excerpt": "By explicitly denying the elasticfilesystem:ClientWrite action for the IAM roles of the EC2 instances, you are creating a \"deny-by-default\" rule that cannot be overridden by the client-side mount options. This is a robust and secure way to enforce the read-only requirement. It aligns with the principle of least privilege and uses AWS's native IAM access control mechanisms to their full potential.",
+            "score": 7.5521,
+            "status": "unknown",
+            "collection": "legacy",
+            "citations": [],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          }
+        ],
+        "skipped_files": []
+      }
+    },
+    {
+      "question": "如何避免 AI 讓我累積理解債",
+      "expected_paths": [
+        "wiki/sources/2026-09-24--techporn-ep292.md"
+      ],
+      "within_top": 1,
+      "passed": true,
+      "result": {
+        "mode": "evidence-search",
+        "query": "如何避免 AI 讓我累積理解債",
+        "matched": true,
+        "notice": "以下為資料摘錄，未生成答案；引用代表可追溯，不代表已驗證正確。",
+        "results": [
+          {
+            "file": "wiki/sources/2026-09-24--techporn-ep292.md",
+            "heading": "AI 長任務與理解債 > Summary",
+            "line": 34,
+            "excerpt": "來源是程人頻道 EP292 的已完成分析報告。它討論 AI 長時間執行工作後，人如何保持對需求、結果與失敗條件的理解。此頁採用需求釐清、驗收與理解關卡的內容，不將節目當時對個別模型的體感當成現行效能結論。",
+            "score": 20.4984,
+            "status": "ready",
+            "collection": "wiki",
+            "citations": [],
+            "page_refs": [],
+            "source_path": "raw/imports/techporn-ep292/2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9.md",
+            "source_url": "https://techporn.io/podcast/7ee81785-ef27-4780-90e9-f6c762a93368",
+            "coverage": "full"
+          },
+          {
+            "file": "wiki/syntheses/2026-09-24--ai-learning-knowledge-management.md",
+            "heading": "AI 輔助學習與知識管理 > Answer / Analysis",
+            "line": 21,
+            "excerpt": "**來源主張與報告評估：資料整理可以交給 AI，理解與判斷仍需驗收。** EP286 報告討論把資料編整為可重用知識頁，也指出筆記增加不等於人理解更深。EP292 報告把焦點放在明確需求、完成條件與理解關卡。兩份報告均是已完成的音訊轉錄分析，這輪沒有重新取得原音或逐字稿。EP286，核心重點／批判分析 EP292，核心重點／實際解讀",
+            "score": 18.5433,
+            "status": "ready",
+            "collection": "wiki",
+            "citations": [
+              "2026-09-24--techporn-ep286",
+              "2026-09-24--techporn-ep292"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "wiki/entities/anthropic.md",
+            "heading": "Anthropic > Identity",
+            "line": 14,
+            "excerpt": "Anthropic is the AI company that publishes the prompting guide and develops the Claude model family. Prompting best practices",
+            "score": 17.2644,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "2026-05-24--prompting-best-practices"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          }
+        ],
+        "skipped_files": []
+      }
+    },
+    {
+      "question": "知識庫一定要向量資料庫嗎",
+      "expected_paths": [
+        "wiki/concepts/vector-database.md"
+      ],
+      "within_top": 1,
+      "passed": true,
+      "result": {
+        "mode": "evidence-search",
+        "query": "知識庫一定要向量資料庫嗎",
+        "matched": true,
+        "notice": "以下為資料摘錄，未生成答案；引用代表可追溯，不代表已驗證正確。",
+        "results": [
+          {
+            "file": "wiki/concepts/vector-database.md",
+            "heading": "Vector Database > Definition",
+            "line": 14,
+            "excerpt": "A vector database stores or indexes embeddings so systems can retrieve items by semantic or similarity distance rather than exact key, term, or relational predicates. Database",
+            "score": 21.6155,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "2026-04-15--database"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "wiki/concepts/database-indexing.md",
+            "heading": "Database Indexing > Contrasts",
+            "line": 25,
+            "excerpt": "- **Vector Database**: Database indexing covers many access-path families, while vector databases specialize in embedding similarity search. Database",
+            "score": 13.1236,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "2026-04-15--database"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          },
+          {
+            "file": "wiki/concepts/vector-index.md",
+            "heading": "Vector Index > Contrasts",
+            "line": 24,
+            "excerpt": "- **Vector Database**: Vector index is the retrieval structure or capability, while vector database is the broader storage and serving system for embedding similarity workloads. Database",
+            "score": 13.1236,
+            "status": "needs-review",
+            "collection": "wiki",
+            "citations": [
+              "2026-04-15--database"
+            ],
+            "page_refs": [],
+            "source_path": null,
+            "source_url": null,
+            "coverage": "unknown"
+          }
+        ],
+        "skipped_files": []
+      }
+    },
+    {
+      "question": "量子海豚餐廳評價",
+      "expected_paths": [],
+      "within_top": 0,
+      "passed": true,
+      "result": {
+        "mode": "evidence-search",
+        "query": "量子海豚餐廳評價",
+        "matched": false,
+        "notice": "以下為資料摘錄，未生成答案；引用代表可追溯，不代表已驗證正確。",
+        "results": [],
+        "skipped_files": []
+      }
+    }
+  ],
+  "integrity": [
+    {
+      "source_id": "techporn-ep286",
+      "source_path": "raw/imports/techporn-ep286/efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e.md",
+      "extraction_path": "derived/techporn-ep286/efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e-e12b4a94a96d3d9f.json",
+      "sha256": "efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e",
+      "upstream_matches": true
+    },
+    {
+      "source_id": "techporn-ep292",
+      "source_path": "raw/imports/techporn-ep292/2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9.md",
+      "extraction_path": "derived/techporn-ep292/2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9-f530b12c67b149df.json",
+      "sha256": "2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9",
+      "upstream_matches": true
+    },
+    {
+      "source_id": "prompt-builder-guide",
+      "source_path": "raw/imports/prompt-builder-guide/64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b.md",
+      "extraction_path": "derived/prompt-builder-guide/64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b-be50c169d2843a64.json",
+      "sha256": "64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b",
+      "upstream_matches": true
+    },
+    {
+      "source_id": "anthropic-prompt-guide",
+      "source_path": "raw/imports/anthropic-prompt-guide/ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a.md",
+      "extraction_path": "derived/anthropic-prompt-guide/ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a-094a6b31cf737821.json",
+      "sha256": "ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a",
+      "upstream_matches": true
+    },
+    {
+      "source_id": "karpathy-llm-wiki",
+      "source_path": "raw/imports/karpathy-llm-wiki/151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea.md",
+      "extraction_path": "derived/karpathy-llm-wiki/151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea-af15ff99cf4e1b25.json",
+      "sha256": "151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea",
+      "upstream_matches": true
+    },
+    {
+      "source_id": "anthropic-context-engineering",
+      "source_path": "raw/imports/anthropic-context-engineering/d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a.md",
+      "extraction_path": "derived/anthropic-context-engineering/d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a-dd1dfd1d8d17a73d.json",
+      "sha256": "d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a",
+      "upstream_matches": true
+    },
+    {
+      "source_id": "buildmoat-caching",
+      "source_path": "raw/imports/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a.pdf",
+      "extraction_path": "derived/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a-8d957cd106490305.json",
+      "sha256": "1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a",
+      "upstream_matches": true
+    },
+    {
+      "source_id": "buildmoat-caching",
+      "source_path": "raw/imports/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a.pdf",
+      "extraction_path": "derived/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a-d55f001070c8a91f.json",
+      "sha256": "1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a",
+      "upstream_matches": true
+    }
+  ],
+  "original_pdf_hashes_unchanged": 18,
+  "checks": [
+    {
+      "command": [
+        "/Users/adrianli/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_article_notes_keep_evidence_level_and_multiline_author (test_import_source.ImportTests.test_article_notes_keep_evidence_level_and_multiline_author) ... ok\ntest_blocked_extraction_cannot_be_laundered_through_draft (test_import_source.ImportTests.test_blocked_extraction_cannot_be_laundered_through_draft) ... ok\ntest_blocks_source_id_and_page_traversal (test_import_source.ImportTests.test_blocks_source_id_and_page_traversal) ... ok\ntest_html_uses_article_and_excludes_scripts (test_import_source.ImportTests.test_html_uses_article_and_excludes_scripts) ... ok\ntest_missing_extraction_is_not_success_and_reextract_recovers (test_import_source.ImportTests.test_missing_extraction_is_not_success_and_reextract_recovers) ... ok\ntest_placeholder_cannot_be_marked_ready (test_import_source.ImportTests.test_placeholder_cannot_be_marked_ready) ... ok\ntest_reextract_records_changed_extraction_without_replacing_raw (test_import_source.ImportTests.test_reextract_records_changed_extraction_without_replacing_raw) ... ok\ntest_revision_does_not_erase_known_metadata (test_import_source.ImportTests.test_revision_does_not_erase_known_metadata) ... ok\ntest_revision_preserves_curated_page_and_old_snapshot (test_import_source.ImportTests.test_revision_preserves_curated_page_and_old_snapshot) ... ok\ntest_same_source_is_idempotent_and_keeps_original (test_import_source.ImportTests.test_same_source_is_idempotent_and_keeps_original) ... ok\ntest_same_video_id_different_url_uses_one_identity (test_import_source.ImportTests.test_same_video_id_different_url_uses_one_identity) ... ok\ntest_snapshot_integrity_checked_on_review (test_import_source.ImportTests.test_snapshot_integrity_checked_on_review) ... ok\ntest_url_dedup_ignores_tracking (test_import_source.ImportTests.test_url_dedup_ignores_tracking) ... ok\ntest_video_report_preserves_partial_evidence (test_import_source.ImportTests.test_video_report_preserves_partial_evidence) ... ok\ntest_all_pages_including_nested_and_duplicate_stems_are_catalogued_once (test_index.IndexTests.test_all_pages_including_nested_and_duplicate_stems_are_catalogued_once) ... ok\ntest_distinct_source_references_ignore_manual_counts_and_deduplicate_versions (test_index.IndexTests.test_distinct_source_references_ignore_manual_counts_and_deduplicate_versions) ... ok\ntest_status_is_not_assumed_ready_and_processing_status_wins (test_index.IndexTests.test_status_is_not_assumed_ready_and_processing_status_wins) ... ok\ntest_yaml_quotes_block_lists_and_calendar_validation (test_index.IndexTests.test_yaml_quotes_block_lists_and_calendar_validation) ... ok\ntest_all_pages_and_late_content_retained_source_immutable (test_pdf_extract.PdfExtractTests.test_all_pages_and_late_content_retained_source_immutable) ... ok\ntest_bad_mapping_blocks_whole_document_and_cjk_is_not_discarded (test_pdf_extract.PdfExtractTests.test_bad_mapping_blocks_whole_document_and_cjk_is_not_discarded) ... ok\ntest_corrupt_missing_and_encrypted_files_blocked (test_pdf_extract.PdfExtractTests.test_corrupt_missing_and_encrypted_files_blocked) ... ok\ntest_diagonal_label_retained_and_flagged_even_if_upright (test_pdf_extract.PdfExtractTests.test_diagonal_label_retained_and_flagged_even_if_upright) ... ok\ntest_font_bbox_log_flood_is_counted_other_logs_and_threads_survive (test_pdf_extract.PdfExtractTests.test_font_bbox_log_flood_is_counted_other_logs_and_threads_survive) ... ok\ntest_image_only_page_blocked_and_mixed_document_review (test_pdf_extract.PdfExtractTests.test_image_only_page_blocked_and_mixed_document_review) ... ok\ntest_page_failure_does_not_discard_later_pages (test_pdf_extract.PdfExtractTests.test_page_failure_does_not_discard_later_pages) ... ok\ntest_real_open_error_is_not_hidden_by_font_bbox_capture (test_pdf_extract.PdfExtractTests.test_real_open_error_is_not_hidden_by_font_bbox_capture) ... ok\ntest_table_cells_preserved_as_unverified_candidates (test_pdf_extract.PdfExtractTests.test_table_cells_preserved_as_unverified_candidates) ... ok\ntest_index_checks_coverage_dedup_count_and_status (test_schema.SchemaTests.test_index_checks_coverage_dedup_count_and_status) ... ok\ntest_new_import_metadata_accepts_unknown_coverage_and_raw_snapshot (test_schema.SchemaTests.test_new_import_metadata_accepts_unknown_coverage_and_raw_snapshot) ... ok\ntest_source_path_traversal_and_invalid_coverage_rejected (test_schema.SchemaTests.test_source_path_traversal_and_invalid_coverage_rejected) ... ok\ntest_aliases_tags_and_chinese_text_are_searchable (test_search.SearchTests.test_aliases_tags_and_chinese_text_are_searchable) ... ok\ntest_cli_json_returns_evidence_contract_and_no_hit (test_search.SearchTests.test_cli_json_returns_evidence_contract_and_no_hit) ... ok\ntest_draft_blocked_placeholder_and_code_are_not_evidence (test_search.SearchTests.test_draft_blocked_placeholder_and_code_are_not_evidence) ... ok\ntest_english_traditional_simplified_and_mixed_queries_find_english_evidence (test_search.SearchTests.test_english_traditional_simplified_and_mixed_queries_find_english_evidence) ... ok\ntest_evidence_locations_citations_and_legacy_opt_out (test_search.SearchTests.test_evidence_locations_citations_and_legacy_opt_out) ... ok\ntest_navigation_and_link_only_fragments_are_not_evidence (test_search.SearchTests.test_navigation_and_link_only_fragments_are_not_evidence) ... ok\ntest_no_evidence_and_open_questions_do_not_become_answers (test_search.SearchTests.test_no_evidence_and_open_questions_do_not_become_answers) ... ok\ntest_specific_compound_concept_beats_generic_database_and_metadata_match (test_search.SearchTests.test_specific_compound_concept_beats_generic_database_and_metadata_match) ... ok\ntest_specific_principle_beats_permission_context_and_tiny_fragment (test_search.SearchTests.test_specific_principle_beats_permission_context_and_tiny_fragment) ... ok\n\n----------------------------------------------------------------------\nRan 39 tests in 0.290s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/rebuild_index.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "output": "wiki/index.md is up to date.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/lint_schema.py",
+        "--strict"
+      ],
+      "exit_code": 0,
+      "output": "Schema Lint Report\n==================\nFiles scanned: 214\nTotal issues: 0 (high=0, medium=0, low=0)\n\nNo schema issues found.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_log.py"
+      ],
+      "exit_code": 0,
+      "output": "Log contract validation passed (37 entries, non-decreasing dates, required bullets present).\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "additional_checks": [
+    "Three project SKILL.md files passed quick_validate.py with temporary PyYAML dependency.",
+    "Source video repo index check (137 reports) and all 4 tests passed; source reports not changed."
+  ],
+  "limitations": [
+    "PDF coverage is text-layer-only; no OCR or automatic figure/table semantic verification.",
+    "Search is offline lexical retrieval with curated bilingual aliases, not unrestricted semantic inference.",
+    "ready means reviewed within stated coverage, not independently proven true.",
+    "Raw snapshots and extraction JSON are gitignored and need local backup.",
+    "CLI does not fetch URLs or automatically synchronize or push GitHub."
+  ]
+}

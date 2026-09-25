@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "techporn-ep286": {
+      "source_id": "techporn-ep286",
+      "source_type": "video-report",
+      "source_url": "https://techporn.io/podcast/dada4ae4-d615-4b3c-a741-dacaa37cf8bb",
+      "title": "EP286 | 讓 AI 成為第二大腦",
+      "source_page": "wiki/sources/2026-09-24--techporn-ep286.md",
+      "source_path": "raw/imports/techporn-ep286/efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e.md",
+      "current_sha256": "efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e",
+      "processing_status": "ready",
+      "coverage": "full",
+      "confidence": "medium",
+      "versions": [
+        {
+          "sha256": "efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e",
+          "source_path": "raw/imports/techporn-ep286/efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e.md",
+          "extraction_path": "derived/techporn-ep286/efb6cb0dd29883d39013193ba8dd79573f38b80189949b3210bea12a3578c77e-e12b4a94a96d3d9f.json",
+          "extraction_sha256": "e12b4a94a96d3d9f39a94d8e51944afd92334a5cc5950b353e8eb2916843fe24",
+          "imported_at": "2026-09-24",
+          "upstream_path": "/Users/adrianli/Documents/Codex/video-content-filter-assistant/summaries/2026-09-21-dada4ae4-d615-4b3c-a741-dacaa37cf8bb-AI第二大腦與知識編譯.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-24",
+              "status": "ready",
+              "note": "已核讀完整上游報告；採核心重點、批判分析與使用者既有心得，保留轉錄和時間碼限制。未重新驗證原音。",
+              "warnings_acknowledged": false
+            }
+          ]
+        }
+      ],
+      "video_id": "dada4ae4-d615-4b3c-a741-dacaa37cf8bb"
+    },
+    "techporn-ep292": {
+      "source_id": "techporn-ep292",
+      "source_type": "video-report",
+      "source_url": "https://techporn.io/podcast/7ee81785-ef27-4780-90e9-f6c762a93368",
+      "title": "EP292 | AI 能自己寫一整晚，工程師還剩什麼？Fabal 5、GPT 5.6 實測與下一代開發！",
+      "source_page": "wiki/sources/2026-09-24--techporn-ep292.md",
+      "source_path": "raw/imports/techporn-ep292/2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9.md",
+      "current_sha256": "2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9",
+      "processing_status": "ready",
+      "coverage": "full",
+      "confidence": "medium",
+      "versions": [
+        {
+          "sha256": "2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9",
+          "source_path": "raw/imports/techporn-ep292/2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9.md",
+          "extraction_path": "derived/techporn-ep292/2ff6fe7b05268c8f1a0a381ef7d4627d3fb23e2c6a67050182a151e7ca89c7a9-f530b12c67b149df.json",
+          "extraction_sha256": "f530b12c67b149df6f8679acc25ec84686b4ec98d79e6ce32a3c58d891039725",
+          "imported_at": "2026-09-24",
+          "upstream_path": "/Users/adrianli/Documents/Codex/video-content-filter-assistant/summaries/2026-09-21-7ee81785-ef27-4780-90e9-f6c762a93368-AI長任務與理解債.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-24",
+              "status": "ready",
+              "note": "已核讀完整上游報告；採需求、驗收和理解關卡，跨到知識管理的應用標為助理推論。",
+              "warnings_acknowledged": false
+            }
+          ]
+        }
+      ],
+      "video_id": "7ee81785-ef27-4780-90e9-f6c762a93368"
+    },
+    "prompt-builder-guide": {
+      "source_id": "prompt-builder-guide",
+      "source_type": "article",
+      "source_url": "https://promptbuilder.cc/blog/prompt-engineering-in-2025-complete-guide",
+      "title": "Prompt Engineering in 2025: Complete Guide for ChatGPT, Claude, and Gemini",
+      "source_page": "wiki/sources/2025-06-13--prompt-engineering-in-2025-complete-guide.md",
+      "source_path": "raw/imports/prompt-builder-guide/64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b.md",
+      "current_sha256": "64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b",
+      "processing_status": "ready",
+      "coverage": "partial",
+      "confidence": "medium",
+      "versions": [
+        {
+          "sha256": "64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b",
+          "source_path": "raw/imports/prompt-builder-guide/64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b.md",
+          "extraction_path": "derived/prompt-builder-guide/64c289db7934357690429d1d462fe8f52b169b99c4ffc0ab75030630542e4f5b-be50c169d2843a64.json",
+          "extraction_sha256": "be50c169d2843a64475627101fefd66b25cf101a1eb754f8a8581ce98e9cca2c",
+          "imported_at": "2026-09-24",
+          "upstream_path": "/Users/adrianli/Documents/GitHub/Notes/raw/assets/Prompt Engineering in 2025 Complete Guide for ChatGPT, Claude, and Gemini.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-24",
+              "status": "ready",
+              "note": "已核讀本機歷史剪藏文字；只採提示與測試流程，圖像和當前版本未驗證，coverage保留partial。",
+              "warnings_acknowledged": false
+            }
+          ]
+        }
+      ]
+    },
+    "anthropic-prompt-guide": {
+      "source_id": "anthropic-prompt-guide",
+      "source_type": "article",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+      "title": "Prompting best practices",
+      "source_page": "wiki/sources/2026-05-24--prompting-best-practices.md",
+      "source_path": "raw/imports/anthropic-prompt-guide/ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a.md",
+      "current_sha256": "ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a",
+      "processing_status": "ready",
+      "coverage": "partial",
+      "confidence": "medium",
+      "versions": [
+        {
+          "sha256": "ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a",
+          "source_path": "raw/imports/anthropic-prompt-guide/ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a.md",
+          "extraction_path": "derived/anthropic-prompt-guide/ff14a34585f6ac5eff1fd20fd41bdc7798b30b0f4cb76869170d51648b357f3a-094a6b31cf737821.json",
+          "extraction_sha256": "094a6b31cf7378219ad04d66f9774ccf3a2d4202084f7245ac7fb9856fa94ae3",
+          "imported_at": "2026-09-24",
+          "upstream_path": "/Users/adrianli/Documents/GitHub/Notes/raw/assets/Prompting best practices.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-24",
+              "status": "ready",
+              "note": "已核讀本機歷史剪藏；只採上下文與狀態管理。發布日未知，剪藏日不作發布日；保留partial。",
+              "warnings_acknowledged": false
+            }
+          ]
+        }
+      ]
+    },
+    "karpathy-llm-wiki": {
+      "source_id": "karpathy-llm-wiki",
+      "source_type": "article",
+      "source_url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+      "title": "LLM Wiki — 原文閱讀筆記",
+      "source_page": "wiki/sources/2026-09-24--karpathy-llm-wiki.md",
+      "source_path": "raw/imports/karpathy-llm-wiki/151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea.md",
+      "current_sha256": "151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea",
+      "processing_status": "ready",
+      "coverage": "partial",
+      "confidence": "medium",
+      "versions": [
+        {
+          "sha256": "151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea",
+          "source_path": "raw/imports/karpathy-llm-wiki/151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea.md",
+          "extraction_path": "derived/karpathy-llm-wiki/151bafc20e884ba51881a028dda32c8cce20863637eaee91747119c1cb5429ea-af15ff99cf4e1b25.json",
+          "extraction_sha256": "af15ff99cf4e1b25b9896a9eddeff6c3ab67d08c958e92ce20e01f1c53e9cd22",
+          "imported_at": "2026-09-24",
+          "upstream_path": "/private/tmp/notes-v1-web-notes/karpathy-llm-wiki.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-24",
+              "status": "ready",
+              "note": "已核讀原作者正文的架構、操作和索引部分；本機只保存短閱讀筆記，evidence_level=source-notes且partial。",
+              "warnings_acknowledged": false
+            }
+          ]
+        }
+      ]
+    },
+    "anthropic-context-engineering": {
+      "source_id": "anthropic-context-engineering",
+      "source_type": "article",
+      "source_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Effective context engineering for AI agents — 閱讀筆記",
+      "source_page": "wiki/sources/2026-09-24--anthropic-context-engineering.md",
+      "source_path": "raw/imports/anthropic-context-engineering/d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a.md",
+      "current_sha256": "d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a",
+      "processing_status": "ready",
+      "coverage": "partial",
+      "confidence": "medium",
+      "versions": [
+        {
+          "sha256": "d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a",
+          "source_path": "raw/imports/anthropic-context-engineering/d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a.md",
+          "extraction_path": "derived/anthropic-context-engineering/d20a7f5570e54883aa86fabd1ecff57d028b94b10c38c77d067ab3d21f0b395a-dd1dfd1d8d17a73d.json",
+          "extraction_sha256": "dd1dfd1d8d17a73df4aacd560fc6720a5e266b2e017e9810cc179d6dfb8380bb",
+          "imported_at": "2026-09-24",
+          "upstream_path": "/private/tmp/notes-v1-web-notes/anthropic-context-engineering.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-24",
+              "status": "ready",
+              "note": "已核讀相關原文小節；本機只保存短閱讀筆記，未使用圖片細節，保留source-notes及partial。",
+              "warnings_acknowledged": false
+            }
+          ]
+        }
+      ]
+    },
+    "buildmoat-caching": {
+      "source_id": "buildmoat-caching",
+      "source_type": "pdf",
+      "source_url": "",
+      "title": "Caching",
+      "source_page": "wiki/sources/2026-05-24--caching.md",
+      "source_path": "raw/imports/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a.pdf",
+      "current_sha256": "1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a",
+      "processing_status": "needs-review",
+      "coverage": "partial",
+      "confidence": "low",
+      "versions": [
+        {
+          "sha256": "1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a",
+          "source_path": "raw/imports/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a.pdf",
+          "extraction_path": "derived/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a-8d957cd106490305.json",
+          "extraction_sha256": "8d957cd1064903053c3f2e5f0bc81911bf4b6c4cb0b460968e66b5c75e86eafe",
+          "imported_at": "2026-09-24",
+          "upstream_path": "/Users/adrianli/Documents/GitHub/Notes/raw/archive/Caching.pdf",
+          "processing_status": "needs-review",
+          "extraction_status": "needs-review",
+          "warnings": [
+            "page-review-required: see per-page warnings before synthesis"
+          ],
+          "method": "pdfplumber-text-layer-and-line-table-candidates-v1"
+        },
+        {
+          "sha256": "1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a",
+          "source_path": "raw/imports/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a.pdf",
+          "extraction_path": "derived/buildmoat-caching/1327a78d257db55e4ec37f89fe729e02988be48b7fe983624958edfe0cbf302a-d55f001070c8a91f.json",
+          "extraction_sha256": "d55f001070c8a91f347628779817019125538de89adb04c985dba73b8f4f0c0b",
+          "imported_at": "2026-09-24",
+          "upstream_path": "/Users/adrianli/Documents/GitHub/Notes/raw/archive/Caching.pdf",
+          "processing_status": "needs-review",
+          "extraction_status": "needs-review",
+          "warnings": [
+            "font-bbox-warning: 110 repeated parser warnings captured; font geometry requires review",
+            "page-review-required: see document and per-page warnings before synthesis"
+          ],
+          "method": "pdfplumber-text-layer-and-line-table-candidates-v1"
+        }
+      ]
+    }
+  }
+}

@@ -8,8 +8,8 @@ Build and maintain a persistent, compounding knowledge base. The wiki is not a d
 
 ## Non-negotiables
 
-1. **Raw source contents are immutable.** The LLM never edits file contents in `raw/`; it may move completed ingest inputs to `raw/archive/`.
-2. **The LLM owns the wiki layer.** All markdown files under `wiki/` are created, updated, and maintained by the LLM unless explicitly overridden by the operator.
+1. **Raw source contents are immutable.** Never edit raw contents. New imports create content-addressed snapshots in `raw/imports/`; originals stay where the user kept them. Existing archives remain valid.
+2. **The LLM maintains the wiki layer.** Preserve operator-authored judgments and distinguish source claims, assistant inference and confirmed personal views. Never invent a personal reflection.
 3. **Every action is logged.** Every ingest, query result filed, and lint pass appends an entry to `wiki/log.md`.
 4. **The index is always current.** `wiki/index.md` must reflect the state of the wiki after every operation that touches pages.
 5. **Cross-references are first-class.** Every page must link to related pages. Orphan pages are bugs.
@@ -20,12 +20,15 @@ Build and maintain a persistent, compounding knowledge base. The wiki is not a d
 LLM-wiki/
 ├── AGENTS.md          # This file. Authoritative schema.
 ├── README.md          # Human quickstart.
-├── raw/               # Immutable source documents.
+├── inbox/sources.json  # Source identity, revisions and processing state.
+├── derived/           # Local ignored full extraction evidence, never treated as a summary.
+├── raw/               # Immutable source documents; local backup required separately from Git.
+│   ├── imports/       # Content-addressed snapshots from the common importer.
 │   ├── sources/       # Text sources (articles, papers, transcripts).
 │   ├── assets/        # Downloaded images, data files.
 │   └── archive/       # Post-ingest archived original source files.
 ├── wiki/              # LLM-generated markdown. LLM owns this tree.
-│   ├── index.md       # Content catalog. Always up to date.
+│   ├── index.md       # Generated catalog; do not edit by hand.
 │   ├── log.md         # Append-only timeline.
 │   ├── entities/      # Concrete things (people, places, organizations, products).
 │   ├── concepts/      # Abstract ideas (theories, frameworks, methodologies).
@@ -98,12 +101,19 @@ LLM-wiki/
   ```yaml
   ---
   type: source
-  source_path: raw/archive/original-filename.pdf
+  source_path: raw/imports/source-id/sha256.pdf
   title: "Exact Title of Source"
   author: "Author Name"
-  date: YYYY-MM-DD
+  date: YYYY-MM-DD # or "unknown"; never substitute capture date for publication
   tags: [tag-one, tag-two]
   created: YYYY-MM-DD
+  source_id: stable-id
+  source_type: pdf # article | video-report
+  source_url: "https://example.com/original"
+  processing_status: needs-review # draft | ready | blocked
+  coverage: partial # unknown | none | full
+  confidence: low # medium | high
+  evidence_level: original-document # secondary-summary | source-notes
   ---
   ```
 - Sections:
@@ -140,9 +150,9 @@ LLM-wiki/
 
 ## Citation Rules
 
-1. Every claim in a wiki page must cite at least one source page or synthesis page.
+1. Substantive source-based claims must cite supporting source pages and a page/section locator when available. A synthesis is a navigation aid, not independent evidence. Label assistant inference and personal views explicitly.
 2. Use Obsidian wikilink syntax: `[[Page Name]]` or `[[Page Name|display text]]`.
-3. In source pages, cite the raw source file path in `source_path` frontmatter.
+3. Source cards record snapshot path, canonical URL, source ID, version hash, coverage and review state. Direct quotes reproduce source wording; mark translations and paraphrases. Preserve extraction warnings and inherited video report limits.
 4. When updating a page based on a new source, append the new citation—do not remove old ones unless they are factually incorrect.
 
 ## Ingest Workflow
@@ -150,34 +160,32 @@ LLM-wiki/
 **Goal:** Integrate a new raw source into the wiki.
 
 **Preconditions:**
-- Source file exists in `raw/sources/` or `raw/assets/`.
-- The operator has requested ingestion.
+- The operator has requested ingestion; a known topic/focus from the conversation is sufficient guidance.
+- Input is a local saved article (Markdown/text/HTML), PDF or completed video analysis report. URLs are provenance; the CLI does not fetch websites or media.
 
 **Steps:**
-1. Read the raw source. If the source references images, read them separately after reading the text.
-2. Discuss key takeaways with the operator. Summarize the main points. Ask what to emphasize, what connections to draw, what to prioritize. This is a conversation, not a report — the operator's judgment shapes what gets extracted and how it's framed.
-3. Write a source summary page in `wiki/sources/`.
-4. Update or create entity pages in `wiki/entities/` for any concrete things mentioned.
-5. Update or create concept pages in `wiki/concepts/` for any abstract ideas mentioned.
-6. Update `wiki/index.md` with new and updated pages.
-7. Append an entry to `wiki/log.md`.
-8. Move the original source file from `raw/sources/` or `raw/assets/` to `raw/archive/`.
+1. Use `scripts/import_source.py add` to snapshot, extract and register the source. Use `--existing-page` for an already curated source; do not create duplicate cards. Source ID identifies the work, SHA identifies a saved version.
+2. Read the complete extraction and its warnings. Inspect relevant PDF images/tables against original pages; do not infer missing visual content. Keep uncertain evidence `needs-review` or `blocked`.
+3. Curate the source card, replacing its `REVIEW_REQUIRED` placeholder only after reading the evidence. Preserve page/section references, limitations and the operator's supplied views. If intent is genuinely unclear, ask a focused question while continuing independent work.
+4. Update only useful existing concepts or create topic syntheses. Do not create a page for every mentioned noun; recurring concepts or an actual query justify pages.
+5. Use `scripts/import_source.py review` with a concrete review note. `ready` means the recorded scope was reviewed, not that all author claims are true. Never erase coverage or warnings to reach `ready`.
+6. Rebuild/check the index, validate the log and schema, and run relevant tests. The importer logs its operations; append a separate entry for manually written syntheses.
 
 **Done Criteria:**
 - Source page exists and is complete.
-- All entities and concepts mentioned have pages (new or updated).
+- Relevant concepts and syntheses are linked; incidental entities need no dedicated page.
 - `wiki/index.md` reflects all changes.
 - `wiki/log.md` has a new entry.
-- Original source file has been moved to `raw/archive/`.
+- Original source is unchanged, snapshot hash matches, and local extraction/review state is recorded.
 
 ## Query Workflow
 
 **Goal:** Answer a question using the wiki as the primary knowledge source.
 
 **Steps:**
-1. Read `wiki/index.md` to find relevant pages.
-2. Read relevant entity, concept, source, and synthesis pages.
-3. Synthesize an answer with citations (wikilinks to pages used). Answers can take different forms: a markdown page, a comparison table, a slide deck (Marp), a chart (matplotlib), or a canvas. Choose the format that best fits the question.
+1. Use `scripts/wiki_qa_bot.py --question "..." --json` and the generated index to find evidence. Search includes the existing AWS, Stock, Container and SystemDesign folders.
+2. Read the returned passages and their source cards; follow references to original pages for consequential details. Search returns lexical evidence excerpts, not a generated factual answer or arbitrary multilingual semantic search.
+3. Synthesize an answer in the operator's language with per-claim citations. Preserve `needs-review`/partial/secondary-source limitations, conflicts and unknowns. Open questions are not established answers. If evidence is insufficient, say what is missing.
 4. Present the answer to the operator.
 5. If the answer is reusable or represents new synthesis, file it as a new synthesis page in `wiki/syntheses/` and update `wiki/index.md` and `wiki/log.md`.
 
@@ -213,8 +221,8 @@ LLM-wiki/
 
 ### `wiki/index.md`
 
-- Append-only for new pages.
-- Modify existing entries when pages are updated (change `updated` date and summary if needed).
+- Generate with `python3 scripts/rebuild_index.py`; verify with `--check`.
+- Derive source counts from unique direct source-page references (deduplicate `source_id`); a source card itself counts as one. Existing frontmatter counters are legacy hints, not authoritative statistics or independent corroboration counts.
 - Group by: Entities, Concepts, Sources, Syntheses.
 - Each entry: `| [[Page Name]] | One-line summary | Source count | Status | Updated |`
 

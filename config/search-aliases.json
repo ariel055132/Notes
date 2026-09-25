@@ -1,0 +1,180 @@
+{
+  "description": "Small curated cross-language vocabulary, not a translation model. Add domain synonyms to improve recall; values are equivalent terms, not answers.",
+  "groups": {
+    "cache": [
+      "cache",
+      "caching",
+      "cached",
+      "快取",
+      "緩存",
+      "缓存"
+    ],
+    "cache-invalidation": [
+      "cache invalidation",
+      "快取失效",
+      "快取失效策略",
+      "緩存失效",
+      "缓存失效"
+    ],
+    "cache-stampede": [
+      "cache stampede",
+      "快取擊穿",
+      "缓存击穿"
+    ],
+    "replication": [
+      "replication",
+      "副本複寫",
+      "複寫",
+      "复制",
+      "資料複製"
+    ],
+    "sharding": [
+      "sharding",
+      "shard",
+      "分片",
+      "資料分片"
+    ],
+    "consistency": [
+      "consistency",
+      "一致性"
+    ],
+    "latency": [
+      "latency",
+      "延遲",
+      "延迟"
+    ],
+    "database": [
+      "database",
+      "databases",
+      "資料庫",
+      "数据库"
+    ],
+    "load-balancing": [
+      "load balancing",
+      "load balancer",
+      "負載平衡",
+      "负载均衡"
+    ],
+    "distributed-systems": [
+      "distributed systems",
+      "distributed system",
+      "分散式系統",
+      "分布式系统"
+    ],
+    "ai": [
+      "AI",
+      "artificial intelligence",
+      "人工智慧",
+      "人工智能"
+    ],
+    "llm": [
+      "LLM",
+      "LLMs",
+      "large language model",
+      "large language models",
+      "大型語言模型",
+      "大語言模型",
+      "大语言模型"
+    ],
+    "knowledge-management": [
+      "knowledge management",
+      "知識管理",
+      "知识管理"
+    ],
+    "knowledge-base": [
+      "knowledge base",
+      "knowledge bases",
+      "知識庫",
+      "知识库"
+    ],
+    "second-brain": [
+      "second brain",
+      "第二大腦",
+      "第二大脑"
+    ],
+    "learning": [
+      "learning",
+      "學習",
+      "学习"
+    ],
+    "notes": [
+      "notes",
+      "note taking",
+      "note-taking",
+      "筆記",
+      "笔记"
+    ],
+    "retrieval": [
+      "retrieval",
+      "檢索",
+      "检索"
+    ],
+    "rag": [
+      "RAG",
+      "retrieval augmented generation",
+      "retrieval-augmented generation",
+      "檢索增強生成",
+      "检索增强生成"
+    ],
+    "prompting": [
+      "prompting",
+      "prompt engineering",
+      "prompt",
+      "提示工程",
+      "提示詞",
+      "提示词"
+    ],
+    "context": [
+      "context",
+      "上下文",
+      "脈絡"
+    ],
+    "citation": [
+      "citation",
+      "citations",
+      "引用",
+      "引文"
+    ],
+    "summarization": [
+      "summarization",
+      "summary",
+      "summaries",
+      "摘要"
+    ],
+    "container": [
+      "container",
+      "containers",
+      "容器"
+    ],
+    "permissions": [
+      "permissions",
+      "permission",
+      "權限",
+      "权限"
+    ],
+    "least-privilege": [
+      "least privilege",
+      "least-privilege",
+      "最小權限",
+      "最小权限"
+    ],
+    "vector-database": [
+      "vector database",
+      "vector databases",
+      "vector-database",
+      "向量資料庫",
+      "向量数据库"
+    ],
+    "vector-index": [
+      "vector index",
+      "vector indexes",
+      "向量索引"
+    ],
+    "semantic-search": [
+      "semantic search",
+      "語意搜尋",
+      "語義搜尋",
+      "语义搜索"
+    ]
+  }
+}

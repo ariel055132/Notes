@@ -1,0 +1,4 @@
+interface:
+  display_name: "Notes 文件解析與入庫"
+  short_description: "提供本機文件路徑，完成繁中摘要、來源核讀、相關筆記連結與索引更新"
+  default_prompt: "$llm-wiki-ingest 請解析並匯入我提供的本機文件，整理成繁體中文摘要並更新 Notes。"
