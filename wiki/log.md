@@ -388,3 +388,10 @@
 - **Pages touched**: `.agents/skills/video-analyze/`, `README.md`, `reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md`, `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`, `wiki/log.md`, `wiki/syntheses/2026-09-24--ai-learning-knowledge-management.md`, `wiki/syntheses/2026-09-25--video-notes-cli-workflow.md`
 - **Notes**: 發布目標為 origin/main（ariel055132/Notes）；本次包含先前已完成的影片技能與流程文件。Obsidian 視窗狀態保留在本機；原始快照與擷取證據沿用 Git 忽略設定。
 - **Open questions**: 待 Git 提交與推送完成後補記實際結果；共用自動發布流程仍未建立。
+
+## [2026-09-26] publish | 影片分析流程與 iPhone 報告已推送 GitHub
+
+- **Action**: 完成提交 `4852cb81a34f0ffbe8ee6d86c9f0af714511ee61`（Add video analysis workflow and reviewed iPhone report），並成功推送至 `https://github.com/ariel055132/Notes.git` 的 `main`；遠端回覆 `379d398..4852cb8 main -> main`。
+- **Pages touched**: 本次內容提交共 11 份檔案；發布結果補記於 `reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md` 與 `wiki/log.md`。
+- **Notes**: 推送涵蓋影片技能與範本、README、影片報告、個人心得及觀看確認、來源卡、登記檔、索引與相關流程綜整。保留 Obsidian 工作區修改於本機，原始快照與擷取結果沿用 Git 忽略設定。僅補記發布結果，未建立額外來源版本。
+- **Open questions**: 共用自動發布流程尚未建立；本次 GitHub 發布由使用者明確指示完成。

@@ -169,7 +169,7 @@ confidence: medium
 - 個人回饋日期：2026-09-25；`reflection_status: provided`，原話見上節。
 - 實際觀看方式：已觀看；2026-09-26 由使用者確認，`viewing_status: full`。
 - 入庫結果：2026-09-25 已完成，來源卡為 [iPhone 評測與新特性](../../wiki/sources/2026-09-25--youtube-lsudycjijs8.md)，`source_id: youtube-lsudycjijs8`、核讀狀態 `ready`；保留 `secondary-summary`／`full`／`medium`。2026-09-26 已同步觀看狀態的新版本並完成核讀；同一 source_id 保留兩份歷史版本，仍為一份來源證據。此次僅補記完成結果，不再觸發快照。
-- 發布結果：未執行 Git commit／push；本 repo README 記錄共用自動發布流程尚未建立。
+- 發布結果：2026-09-26 依使用者明確指示，已提交並推送至 `ariel055132/Notes` 的 `main`；內容提交為 [4852cb8](https://github.com/ariel055132/Notes/commit/4852cb81a34f0ffbe8ee6d86c9f0af714511ee61)。發布結果另以紀錄提交同步；這是本次手動發布，共用自動發布流程仍未建立。僅補記結果，不觸發重新入庫。
 - 檢查方式：本 repo 尚無專用影片報告索引器或驗證工具；本次按技能範本核對必備段落、來源 ID、雙評分、狀態與時間範圍，不以 Wiki schema 檢查替代影片報告驗證。
 
 ## 媒體清理狀態
