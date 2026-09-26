@@ -228,16 +228,18 @@
 | [[2026-09-24--techporn-ep286]] | 來源是程人頻道 EP286 的已完成分析報告。報告將 LLM Wiki 解讀為把原始資料整理成可更新、互相連結的知識頁；它也提醒，資料累積與人的理解是不同結果。這是對影片的二手分析，不是音訊或逐字稿。 | 1 | ready | 2026-09-24 |
 | [[2026-09-24--techporn-ep292]] | 來源是程人頻道 EP292 的已完成分析報告。它討論 AI 長時間執行工作後，人如何保持對需求、結果與失敗條件的理解。此頁採用需求釐清、驗收與理解關卡的內容，不將節目當時對個別模型的體感當成現行效能結論。 | 1 | ready | 2026-09-24 |
 | [[2026-09-25--personal-information-feed-architecture]] | 這份對話整理筆記描述以 FreshRSS 集中收集內容、NetNewsWire 負責閱讀的自架資訊流。DigitalOcean 提供持續運作的主機，Docker Compose 管理服務，Cloudflare DNS 與 Caddy 分別負責網域解析及 HTTPS 入口。原筆記保留兩張 Mermaid 架構圖，區分收集與閱讀同步，並說明持久化、備份及維護責任。這是使用者與助理整理的架構紀錄，已隱藏實際網域；不作為目前服務部署或備份已驗證完成的證明。 | 1 | ready | 2026-09-25 |
+| [[2026-09-25--youtube-lsudycjijs8]] | 這份已完成的影片分析報告整理 Edwin H. 對 iPhone 18 Pro／Pro Max 的效能、相機、快充及換機 Q&A，並延伸討論 iPhone Duo。使用者在 2026-09-25 確認其價值是快速了解兩款手機的新特性，未表達購買承諾，並於 2026-09-26 補充已觀看。報告以完整字幕分析為基礎，將作者測試、助理評析及官方文件查證分開，觀看建議為挑重點段落，推薦 7/10、品質 18/25。此頁保存的是二手分析報告與個人心得，並未保存完整逐字稿或取得可重現的產品測試資料。 | 1 | ready | 2026-09-26 |
 
 ## Syntheses
 
 | Page | Summary | Sources | Status | Updated |
 |------|---------|---------|--------|---------|
 | [[2026-05-30--concepts-of-caching]] | Explain the core concepts of caching in system design, with emphasis on cache placement, read/write patterns, freshness, invalidation, and failure modes. | 1 | needs-review | 2026-05-30 |
-| [[2026-09-24--ai-learning-knowledge-management]] | 如何把影片報告、文章和 PDF 整理成能找到依據、比較觀點、持續更新的知識庫？這份試作整理六份文件，以下標示來源主張、助理推論與使用者已提供的方向。目標是驗證查詢與追溯流程，尚未測量學習成效。 | 6 | ready | 2026-09-24 |
+| [[2026-09-24--ai-learning-knowledge-management]] | 如何把影片報告、文章和 PDF 整理成能找到依據、比較觀點、持續更新的知識庫？這份試作整理六份文件，以下標示來源主張、助理推論與使用者已提供的方向。目標是驗證查詢與追溯流程，尚未測量學習成效。 | 6 | ready | 2026-09-25 |
+| [[2026-09-25--video-notes-cli-workflow]] | 讓使用者在同一個 Codex CLI 入口完成影片篩選、個人回饋與知識整理，並留下未來決策可回查的資料。本文保存 2026-09-25 的初始整合提案；後續已確認採單一 Notes repo，並依使用者指示新增 video-analyze skill，其餘尚未完成的部分仍屬設計建議。 | 1 | draft | 2026-09-25 |
 
 ## Statistics
 
-- **Total pages**: 214
-- **Total sources**: 21
-- **Last updated**: 2026-09-25
+- **Total pages**: 216
+- **Total sources**: 22
+- **Last updated**: 2026-09-26

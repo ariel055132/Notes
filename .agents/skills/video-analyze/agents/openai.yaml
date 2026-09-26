@@ -1,0 +1,3 @@
+interface:
+  display_name: "影片分析與觀看建議"
+  short_description: "分析影片與 Podcast，產出觀看建議並在個人心得後接續 Notes 入庫"

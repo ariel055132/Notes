@@ -290,3 +290,101 @@
 - **Pages touched**: `SystemDesign/personal-information-feed-architecture.md`, `wiki/sources/2026-09-25--personal-information-feed-architecture.md`, `wiki/concepts/tls-termination.md`, `inbox/sources.json`, `wiki/index.md`, `wiki/log.md`
 - **Notes**: 新來源卡標為 ready；此狀態僅指完整核讀筆記。使用者明確要求 Git 提交與推送，既有 Obsidian 工作區修改保留。
 - **Open questions**: 實際服務部署與備份還原未於本次匯入重新測試；內容處理另行整理。
+
+## [2026-09-25] query | 影片分析與 Notes 的 CLI 整合流程提案
+
+- **Action**: 核對兩個專案的現行規範、報告格式、Notes 匯入程式、既有來源卡與官方 CLI 文件；整理操作入口與流程交接建議，保存為 draft synthesis。
+- **Pages touched**: `wiki/syntheses/2026-09-25--video-notes-cli-workflow.md`, `wiki/syntheses/2026-09-24--ai-learning-knowledge-management.md`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: 明確區分現況、使用者方向與助理提案；未變更流程規範、匯入原始資料、建立 skill、執行影片分析或 GitHub 發布。保留既有 Obsidian 工作區變更。
+- **Open questions**: 實作時確定預設入庫條件、Notes 發布範圍，以及首個決策驗收問題。
+
+## [2026-09-25] lint | CLI 流程提案的文件一致性檢查
+
+- **Action**: 執行索引一致性、strict schema、log contract 與 diff 空白檢查，全部通過；schema 掃描 216 份文件，沒有問題。
+- **Pages touched**: `wiki/syntheses/2026-09-25--video-notes-cli-workflow.md`, `wiki/syntheses/2026-09-24--ai-learning-knowledge-management.md`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: 此為文件結構與紀錄驗證，未進行全庫語意矛盾審查，也不表示提案流程已實作或通過端到端測試。
+- **Open questions**: 後續實作仍須驗收去重、版本更新、略過／未看先保留與發布失敗接續。
+
+## [2026-09-25] maintenance | 啟用 Notes 專案的 video-analyze skill
+
+- **Action**: 依使用者明確指示，將已確認的 skill 初稿、影片報告範本及顯示資訊加入 `.agents/skills/video-analyze/`，並補上 README 使用入口與提案進度。
+- **Pages touched**: `.agents/skills/video-analyze/SKILL.md`, `.agents/skills/video-analyze/assets/video-summary.md`, `.agents/skills/video-analyze/agents/openai.yaml`, `README.md`, `wiki/syntheses/2026-09-25--video-notes-cli-workflow.md`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: 保留完整分析／初篩、雙評分、個人回饋後預設入庫及四組獨立狀態；沿用 llm-wiki-ingest 維護來源快照與 Wiki。未搬移既有報告，未執行影片分析、提醒或 GitHub 發布；媒體流程實測依使用者安排由另一對話進行。
+- **Open questions**: 完整素材取得與轉錄的驗證結果、共用發布流程仍待後續整合。
+
+## [2026-09-25] lint | video-analyze 啟用與文件驗證
+
+- **Action**: 通過 skill-creator quick_validate、資源路徑與 ingest 依賴檢查、Wiki 索引一致性、strict schema、log contract 與 diff 空白檢查。Codex CLI 的 skills/list 實際回報 video-analyze 為 repo scope、enabled=true，無同名重複項。
+- **Pages touched**: `.agents/skills/video-analyze/SKILL.md`, `.agents/skills/video-analyze/assets/video-summary.md`, `.agents/skills/video-analyze/agents/openai.yaml`, `README.md`, `wiki/syntheses/2026-09-25--video-notes-cli-workflow.md`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: 僅驗證技能載入與文件結構，未呼叫模型、建立新對話或執行素材取得／轉錄。驗證器依賴僅安裝於暫存目錄，沒有變更系統或專案 Python 依賴。
+- **Open questions**: 完整影片流程實測與共用發布流程仍由後續工作處理。
+
+## [2026-09-25] query | Edwin H. iPhone 評測完整字幕分析
+
+- **Action**: 依 video-analyze 技能完成 YouTube lsUdyCJijS8 的 full-transcript 分析，完整核讀 1,214 段非自動粵語字幕，核對片長、段間缺口及自動字幕片尾，另查證 Apple／Samsung 官方產品文件。
+- **Pages touched**: `reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md`, `wiki/log.md`
+- **Notes**: 建議 selected-sections，推薦 7/10、品質 18/25、confidence medium。報告保留標題差異、片尾無字幕時間、視覺與實測限制，修正 Fold8 立體聲說法並補充 AVS 快充條件。必備段落、評分、來源去重及狀態檢查通過，Wiki 索引已核對為最新，無新 Wiki 頁面需加入。暫存資料逐一依明確路徑刪除；沒有下載影音。個人回饋及入庫取捨仍 pending，觀看狀態 unknown；未執行入庫或 Git commit／push。
+- **Open questions**: 使用者的一句話心得或保留取捨；相機原始畫面與測試條件尚未獨立驗證。
+
+## [2026-09-25] ingest | 鏡頭原來可以... iPhone 18 Pro Max 終極評測 + iPhone Duo Q&A
+
+- **Action**: Imported video-report; status=draft; SHA-256=4d783cd7e035eeff0273e1567d18838af07687ad3a6a553e54ab70a2f17f6b7c.
+- **Pages touched**: `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-25] review | 鏡頭原來可以... iPhone 18 Pro Max 終極評測 + iPhone Duo Q&A
+
+- **Action**: Status=ready; 完整核讀報告全部 16 個主要段落及 2026-09-25 使用者原話；快照與輸入逐位元相同、SHA-256 和完整擷取一致，無機器擷取警示。保留 full-transcript／full／medium／secondary-summary、片尾時間與視覺未核讀限制、官方查證與作者測試的區別；觀看方式 unknown，心得 provided，依預設流程 keep。未重新取得字幕或驗證產品測試。
+- **Pages touched**: `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-25] ingest | iPhone 評測心得與新特性參考入庫
+
+- **Action**: 原文保存使用者關於快速了解 iPhone 18 Pro／Pro Max 新特性的心得；依 video-analyze 具體回饋規則將 pending 改為 keep，交接 llm-wiki-ingest 完成報告快照、全文核讀與來源卡整理。
+- **Pages touched**: `reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md`, `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: 心得 provided、觀看方式 unknown；未推定購買、換機或完整觀看。來源為 secondary-summary，繼承 full-transcript／full／medium、7/10 與 18/25。已連結既有知識管理綜整作為整理方法脈絡，沒有新建零散產品頁；ready 僅表示保存報告的記錄範圍已核讀。上游報告僅補記入庫結果，不因此重複建立版本；未執行 Git commit／push。
+- **Open questions**: 視覺證據、原始測試條件及產品未來安排仍受上游限制；目前未提出特定選購問題。
+
+## [2026-09-25] lint | iPhone 影片回饋入庫驗證
+
+- **Action**: 通過索引一致性、strict schema（217 頁零問題）、日誌契約、diff 空白檢查，以及 14 項共用匯入測試。
+- **Pages touched**: `wiki/log.md`；已核對 `reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md`, `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: 同一影片僅一個 source_id 與一份版本；不可變報告及擷取檔雜湊一致，原話與 provided／unknown／keep 狀態在上游、快照和來源卡一致。上游相對快照僅增加入庫結果紀錄；中文新特性查詢能找到 ready 來源卡。
+- **Open questions**: 結構與檢索驗證不代表影片實測已獨立重現；原有限制繼續保留。
+
+## [2026-09-26] ingest | 鏡頭原來可以... iPhone 18 Pro Max 終極評測 + iPhone Duo Q&A
+
+- **Action**: Imported video-report; status=needs-review; SHA-256=6379409e7b8b0240a8e4a78211530041824af184e8b3034ed7965dac00c5439e.
+- **Pages touched**: `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-26] review | 鏡頭原來可以... iPhone 18 Pro Max 終極評測 + iPhone Duo Q&A
+
+- **Action**: Status=ready; 已核讀新版本完整報告及 2026-09-26 觀看確認原話「已觀看過了」，將 viewing_status 更新為 full。原有 2026-09-25 心得、provided／keep、雙評分與 full-transcript／full／medium／secondary-summary 均保留；確認日期不代替觀看日期。新舊快照與擷取雜湊完整，沒有新產品分析或實測。
+- **Pages touched**: `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: Original files retained; local snapshot and provenance recorded.
+- **Open questions**: Review extraction limitations and source claims before relying on them.
+
+## [2026-09-26] ingest | 記錄 iPhone 評測已觀看確認
+
+- **Action**: 保存使用者原話「已觀看過了」，將上游報告與來源卡的 viewing_status 由 unknown 更新為 full，沿用 youtube-lsudycjijs8 建立新版本並核讀為 ready。
+- **Pages touched**: `reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md`, `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`, `wiki/log.md`
+- **Notes**: 保留 2026-09-25 原心得與 provided／keep、評分、覆蓋和信心。觀看確認日期為 2026-09-26，未推定實際觀看日期、購買決策或額外心得。舊版本與原始證據均未改動；只是同一來源的新版本，不新增獨立證據數。未執行 Git commit／push。
+- **Open questions**: 原有視覺、原音與實測限制仍適用於助理分析。
+
+## [2026-09-26] lint | 觀看狀態更新驗證
+
+- **Action**: 通過索引一致性、strict schema（217 頁零問題）、日誌契約、diff 空白與觀看狀態一致性檢查。
+- **Pages touched**: `wiki/log.md`；核對影片報告、`wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`
+- **Notes**: 原心得與觀看確認在上游、最新快照及來源卡中一致，均為 provided／full／keep。兩份歷史快照及擷取雜湊完整，同一來源仍只計一次；上游相對快照僅補記完成結果。
+- **Open questions**: 本次沒有新的內容分析或產品查證。
+
+## [2026-09-26] lint | 影片分析與心得 GitHub 發布前檢查
+
+- **Action**: 依使用者明確要求準備提交並推送影片分析相關更新；索引一致性、strict schema（217 頁零問題）、日誌契約、diff 空白檢查與 14 項共用匯入測試全部通過。
+- **Pages touched**: `.agents/skills/video-analyze/`, `README.md`, `reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md`, `wiki/sources/2026-09-25--youtube-lsudycjijs8.md`, `inbox/sources.json`, `wiki/index.md`, `wiki/log.md`, `wiki/syntheses/2026-09-24--ai-learning-knowledge-management.md`, `wiki/syntheses/2026-09-25--video-notes-cli-workflow.md`
+- **Notes**: 發布目標為 origin/main（ariel055132/Notes）；本次包含先前已完成的影片技能與流程文件。Obsidian 視窗狀態保留在本機；原始快照與擷取證據沿用 Git 忽略設定。
+- **Open questions**: 待 Git 提交與推送完成後補記實際結果；共用自動發布流程仍未建立。

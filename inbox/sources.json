@@ -283,6 +283,61 @@
           ]
         }
       ]
+    },
+    "youtube-lsudycjijs8": {
+      "source_id": "youtube-lsudycjijs8",
+      "source_type": "video-report",
+      "source_url": "https://www.youtube.com/watch?v=lsUdyCJijS8",
+      "title": "鏡頭原來可以... iPhone 18 Pro Max 終極評測 + iPhone Duo Q&A",
+      "source_page": "wiki/sources/2026-09-25--youtube-lsudycjijs8.md",
+      "source_path": "raw/imports/youtube-lsudycjijs8/6379409e7b8b0240a8e4a78211530041824af184e8b3034ed7965dac00c5439e.md",
+      "current_sha256": "6379409e7b8b0240a8e4a78211530041824af184e8b3034ed7965dac00c5439e",
+      "processing_status": "ready",
+      "coverage": "full",
+      "confidence": "medium",
+      "versions": [
+        {
+          "sha256": "4d783cd7e035eeff0273e1567d18838af07687ad3a6a553e54ab70a2f17f6b7c",
+          "source_path": "raw/imports/youtube-lsudycjijs8/4d783cd7e035eeff0273e1567d18838af07687ad3a6a553e54ab70a2f17f6b7c.md",
+          "extraction_path": "derived/youtube-lsudycjijs8/4d783cd7e035eeff0273e1567d18838af07687ad3a6a553e54ab70a2f17f6b7c-4c6573ec61ccbcf1.json",
+          "extraction_sha256": "4c6573ec61ccbcf160c8148e479fa2f2e6eebe78345a5efa5c6646a130cea340",
+          "imported_at": "2026-09-25",
+          "upstream_path": "/Users/adrianli/Documents/GitHub/Notes/reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-25",
+              "status": "ready",
+              "note": "完整核讀報告全部 16 個主要段落及 2026-09-25 使用者原話；快照與輸入逐位元相同、SHA-256 和完整擷取一致，無機器擷取警示。保留 full-transcript／full／medium／secondary-summary、片尾時間與視覺未核讀限制、官方查證與作者測試的區別；觀看方式 unknown，心得 provided，依預設流程 keep。未重新取得字幕或驗證產品測試。",
+              "warnings_acknowledged": false
+            }
+          ]
+        },
+        {
+          "sha256": "6379409e7b8b0240a8e4a78211530041824af184e8b3034ed7965dac00c5439e",
+          "source_path": "raw/imports/youtube-lsudycjijs8/6379409e7b8b0240a8e4a78211530041824af184e8b3034ed7965dac00c5439e.md",
+          "extraction_path": "derived/youtube-lsudycjijs8/6379409e7b8b0240a8e4a78211530041824af184e8b3034ed7965dac00c5439e-b2692b29ffe9d10e.json",
+          "extraction_sha256": "b2692b29ffe9d10e62f6fd4f83987b088c6e95a0662a2eb5ebbfa2045440a853",
+          "imported_at": "2026-09-26",
+          "upstream_path": "/Users/adrianli/Documents/GitHub/Notes/reports/videos/2026-09-25-lsUdyCJijS8-iphone-18-pro-max-review.md",
+          "processing_status": "ready",
+          "extraction_status": "ready",
+          "warnings": [],
+          "method": "utf8-text",
+          "reviews": [
+            {
+              "date": "2026-09-26",
+              "status": "ready",
+              "note": "已核讀新版本完整報告及 2026-09-26 觀看確認原話「已觀看過了」，將 viewing_status 更新為 full。原有 2026-09-25 心得、provided／keep、雙評分與 full-transcript／full／medium／secondary-summary 均保留；確認日期不代替觀看日期。新舊快照與擷取雜湊完整，沒有新產品分析或實測。",
+              "warnings_acknowledged": false
+            }
+          ]
+        }
+      ],
+      "video_id": "lsUdyCJijS8"
     }
   }
 }

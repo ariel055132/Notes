@@ -4,7 +4,7 @@ question: "如何把影片報告、文章和 PDF 整理成可回查證據、更�
 aliases: ["AI 輔助學習", "AI 第二大腦", "個人知識庫", "知識管理", "理解債", "AI learning", "knowledge management"]
 tags: [ai-learning, knowledge-management, llm-wiki, context-engineering, evidence]
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-25
 processing_status: ready
 confidence: medium
 source_count: 6
@@ -55,6 +55,10 @@ source_count: 6
 ## Implications
 
 本輪實作的驗收重點是：中文能找到英文與中文筆記；每份來源有可回查版本與狀態；同來源更新不重複建頁；已有的限制和個人觀點不被整理流程抹掉。這些是針對本專案的驗收條件，尚不等於已提升學習成果。
+
+## Related
+
+- [[2026-09-25--video-notes-cli-workflow|影片分析與 Notes 的 CLI 整合流程提案]]：操作入口、個人回饋、來源快照與未來決策資料的設計草案，尚未實作。
 
 ## Follow-up Questions
 

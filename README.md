@@ -29,6 +29,20 @@ $llm-wiki-ingest "/Users/adrianli/Downloads/文件名稱.pdf"
 
 這是 Notes 專案的 skill；在 Notes 中用 `/skills` 或輸入 `$` 選取 `llm-wiki-ingest`。若更新沒有出現，重新啟動 Codex。完整流程見 [skill](.agents/skills/llm-wiki-ingest/SKILL.md)；[官方 skill 使用說明](https://learn.chatgpt.com/docs/build-skills)。
 
+## 用 Codex 分析影片或 Podcast
+
+在 Notes 根目錄啟動 Codex CLI，於 **Codex 對話輸入框**輸入：
+
+```text
+$video-analyze 請分析這支影片：https://www.youtube.com/watch?v=VIDEO_ID
+```
+
+也可提供本機音訊、影片、字幕或逐字稿路徑。一般分析以完整逐字稿為目標；明確要求「快速篩選」時使用初篩。報告預設保存於 `reports/videos/`，每支來源一份，包含觀看建議、雙評分與證據限制。
+
+回覆對應報告的具體心得後，若沒有已設定的「稍後／不入庫」取捨，Codex 會接續 `llm-wiki-ingest` 整理到 Notes。只回「好／收到」不觸發；也可以明確要求未看先保留。心得、觀看情況、入庫選擇與分析狀態分開記錄。
+
+規則與範本見 [video-analyze skill](.agents/skills/video-analyze/SKILL.md)。可在 `/skills` 或 `$` 選單找到 `video-analyze`；既有 CLI 工作階段若尚未顯示，重新啟動 Codex。媒體取得與轉錄依實際可用工具執行；此 skill 不代表已啟用背景處理、提醒或 GitHub 自動發布。
+
 ## 中文查詢
 
 在 Notes 根目錄執行：
@@ -70,7 +84,7 @@ python3 scripts/import_source.py review SOURCE_ID --status ready --note '已核�
 
 ## 與影片篩選專案的分工
 
-`video-content-filter-assistant` 維護正式影片報告；Notes 接收選定報告的快照並整理跨來源知識。正式報告仍在原專案，Notes 不回寫上游。這輪已實際匯入兩份報告，未建立背景監控、排程或 GitHub 自動發布。
+Notes 已加入 `video-analyze`，新分析可以直接在本 repo 產生報告並接續知識入庫。既有 `video-content-filter-assistant` 報告仍留在原專案，沒有搬移；Notes 也可繼續接收選定舊報告的快照，且不回寫上游。已實際匯入的兩份影片報告仍沿用原來源身分。背景監控、排程與 GitHub 自動發布尚未建立。
 
 ## 維護與驗證
 
